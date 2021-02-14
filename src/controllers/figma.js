@@ -12,7 +12,7 @@ module.exports = class FigmaController{
   ////////////////////////////////////////////////////////////////////////////////////
 
   get client(){
-    return Figma(this._config.figmaPersonalToken)
+    return Figma(this._config.figma_personal_token)
   }
 
   /**
@@ -48,7 +48,7 @@ module.exports = class FigmaController{
   computeImageList() {
     return new Promise((resolve, reject) => {
       let ids = this.icons.map(i => i.id).join(',')
-      this.client.get(`/images/${this._config.fileId}?ids=${ids}&format=svg`)
+      this.client.get(`/images/${this._config.figma_file_id}?ids=${ids}&format=svg`)
         .then((res) => {
           let images = res.data.images
           this._icons.forEach(i => i.path = images[i.id])
@@ -63,7 +63,7 @@ module.exports = class FigmaController{
    */
   fetch(){
     return new Promise((resolve, reject) => {
-      this.client.get(`/files/${this._config.fileId}`)
+      this.client.get(`/files/${this._config.figma_file_id}`)
       .then((res) => {
         this._document = res.data.document
         resolve()
@@ -105,7 +105,7 @@ module.exports = class FigmaController{
       .then(this.findIcons.bind(this))
       .then(this.computeImageList.bind(this))
       .then(() => {
-        this._spinner.succeed(`${this.icons.length + 1} icon(s) found`)
+        this._spinner.succeed(`${this.icons.length} icon(s) found`)
         return resolve()
       })
       .catch(e => {

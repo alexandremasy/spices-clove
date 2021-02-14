@@ -97,10 +97,9 @@ module.exports = class FileSystemController {
    */
   download(){
     return new Promise((resolve, reject) => {
+      this._spinner.start('Downloading')
       Promise.all(this.icons.map((i, j) => this.downloadImage({ index: j, name: i.name, url: i.path })))
-      .then(() => {
-        return resolve()
-      })
+      .then(() => resolve())
       .catch(e => reject(e))
     })
   }
@@ -148,15 +147,7 @@ module.exports = class FileSystemController {
    */
   run(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Preparing the output folder')
-      
-      this.deleteOutputDirectory()
-      .then( this.createOutputDirectory.bind(this) )
-      .then(() => {
-        this._spinner.succeed();
-        this._spinner.start('Downloading')
-      })
-      .then( this.download.bind(this) )
+      this.download.bind(this)
       .then(() => {
         this._spinner.succeed();
         this._spinner.start('Creating the sprite')

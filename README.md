@@ -1,78 +1,44 @@
-# figma-export-icons
+# Spices - Icons
 
- <a href="https://www.npmjs.com/package/figma-export-icons"><img src="https://badgen.net/npm/v/figma-export-icons" alt="Version"></a>
- <a href="https://www.npmjs.com/package/figma-export-icons"><img src="https://badgen.net/npm/dm/figma-export-icons" alt="Downloads"></a>
+1. Find out the list of icons in Figma
+2. Export the icons from Figma as svg
+3. Create the svg sprite
+4. Increment the version number (minor)
+5. Via CI - Upload the new version to s3
 
- > Command line script to export and download icons from a Figma file using the Figma REST api.
- 
-## Description
- 
- Running the script will bring up a wizard to fill in the config for fetching the assets. You can also provide the icons-config.json yourself, then the wizard is skipped. 
- After the config is provided, the figma file is fetched and parsed to find the icons frame, the files are downloaded and put locally in the directory provided in the config.
- 
- example config file:
- 
- ```json
-{
-  "figmaPersonalToken": "YOUR_PERSONAL_TOKEN",
-  "fileId": "FILE_ID",
-  "page": "Identity",
-  "frame": "Icons",
-  "iconsPath": "assets/svg/icons"
-}
-```
- 
-## Features
- 
- - Wizard to generate config, you will be prompted for any missing key
- - icons-config.json is automatically added to .gitignore if it exists
- - Directory to save the icons is created if it doesn't exist
- - Icons are deleted from local directory when fetching new 
- - Icons with the same name are marked with `${iconName}-duplicate-name.svg` so you can easily spot them and fix figma file
- - Running the script with `-c` will clear the config and run the wizard again
- - You can use a custom path to your configuration file with `--config=path/to/config.json`
- 
- ## Installation
- 
- Install the cli globally so you can use it on any directory
- 
- ```sh
- npm install -g figma-export-icons
+## Commands
+
+```shell
+yarn ci [step]
 ```
 
- Or if you prefer install it in your project
- 
-```sh
-npm install figma-export-icons --save
-```
- 
-## Usage
- 
- If you have installed the module globally:
- ```sh
- $ export-icons
-```
- 
- If you have installed it locally:
- 
- Create a script in your package.json
- ```js
-scripts: {
-  'export-icons': 'export-icons'
-}
-```
-and run 
-```sh
-npm run export-icons
-```
+`before` 
 
-OR
+Sanity checks for publishing a new version.
+Will clean up and create the output folders
 
-run it directly with: 
-```sh
-npx export-icons
-```
+`build` 
 
-## Credits
+1. Find the list of icons in Figma
+2. Download the icons in the output folder
+3. Generate the svg sprite
 
-This script was developed and is part of our tools at [Qikker Online](https://qikkeronline.com).
+`deploy` 
+
+Deploy the svg sprite to a s3 bucket
+
+`publish` 
+
+Make sure everyone knows about the bundle deploiement.
+Will publish a note on the discord channel. 
+
+`version` 
+
+Finds out the proper version of the bundle.
+
+
+--------------------
+TODO
+
+- Implement the versionning
+- Implement the changelog 

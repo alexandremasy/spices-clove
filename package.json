@@ -22,7 +22,8 @@
     "url": "git+ssh://git@bitbucket.org:infinity-mobile/pepper.git"
   },
   "scripts": {
-    "icon": "node src/cli.js"
+    "bundle": "yarn ci build",
+    "ci": "node ./src/ci.js"
   },
   "version": "1.0.0"
 }
