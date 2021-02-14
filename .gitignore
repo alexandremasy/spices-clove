@@ -4,4 +4,4 @@ node_modules
 .env
 
 icons-config.json
-icons
+dist

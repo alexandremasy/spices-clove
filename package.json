@@ -11,7 +11,8 @@
     "mkdirp": "^0.5.1",
     "ora": "^3.4.0",
     "prompts": "^2.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "svgstore": "^3.0.0-2"
   },
   "description": "Generate icons sprice from a figma file",
   "license": "SEE LICENSE IN license.md",

@@ -4,6 +4,7 @@ const fs = require('fs')
 const mkdirp = require('mkdirp')
 const axios = require('axios')
 const rimraf = require('rimraf')
+const svgstore = require('svgstore')
 
 module.exports = class FileSystemController {
 
@@ -70,9 +71,12 @@ module.exports = class FileSystemController {
    * @returns {Promise}
    */
   createOutputDirectory(){
-    return this.outputPathExists ?
-           Promise.resolve() :
-           mkdirp(this.outputPath)
+    return new Promise((resolve, reject) => {
+      mkdirp.sync(this.outputPath)
+      mkdirp.sync(path.resolve(this.outputPath, 'icons'))
+
+      resolve()
+    })
   }
 
   /**
@@ -113,7 +117,7 @@ module.exports = class FileSystemController {
     return new Promise((resolve, reject) => {
       this._spinner.text = `Downloading ${this._current} / ${ this.nIcons }`
       
-      const image = path.resolve(this.outputPath, `${name}.svg`)
+      const image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
       const writer = fs.createWriteStream(image)
       
       axios.get(url, {responseType: 'stream'})
@@ -144,16 +148,44 @@ module.exports = class FileSystemController {
    */
   run(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Downloading the icons')
-
+      this._spinner.start('Preparing the output folder')
+      
       this.deleteOutputDirectory()
       .then( this.createOutputDirectory.bind(this) )
+      .then(() => {
+        this._spinner.succeed();
+        this._spinner.start('Downloading')
+      })
       .then( this.download.bind(this) )
+      .then(() => {
+        this._spinner.succeed();
+        this._spinner.start('Creating the sprite')
+      })
+      .then( this.sprite.bind(this) )
       .then(() => {
         this._spinner.succeed()
         return resolve()
       })
       .catch(e => reject(e))
+    })
+  }
+
+  /**
+   * Create the svg sprite
+   * 
+   * @returns {Promise}
+   */
+  sprite(){
+    return new Promise((resolve, reject) => {
+      let s = svgstore()
+      
+      this.icons.forEach(({name}) => {
+        let image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
+        s.add(name, fs.readFileSync(image, 'utf8'))
+      })
+      
+      fs.writeFileSync( path.resolve(this.outputPath, './sprites.svg'), s);
+      return resolve()
     })
   }
 }
