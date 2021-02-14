@@ -1,0 +1,27 @@
+{
+  "author": "Alexandre Masy <hello@alexandremasy.com>",
+  "bin": {
+    "export-icons": "cli.js"
+  },
+  "dependencies": {
+    "@spices/basil": "^1.6.0",
+    "axios": "^0.21.1",
+    "chalk": "^2.4.2",
+    "minimist": "^1.2.5",
+    "mkdirp": "^0.5.1",
+    "ora": "^3.4.0",
+    "prompts": "^2.1.0",
+    "rimraf": "^3.0.2"
+  },
+  "description": "Generate icons sprice from a figma file",
+  "license": "SEE LICENSE IN license.md",
+  "name": "@spices/icons",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:infinity-mobile/pepper.git"
+  },
+  "scripts": {
+    "icon": "node src/cli.js"
+  },
+  "version": "1.0.0"
+}
