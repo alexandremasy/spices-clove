@@ -31,6 +31,7 @@ module.exports = class BuildStage {
    * - Optimize the icons with svgo
    * - Create a svg sprite
    * - Create the scss list of icons
+   * - Create the vue sprite component
    */
   run() {
     return new Promise((resolve, reject) => {
@@ -42,6 +43,7 @@ module.exports = class BuildStage {
       .then(this._fs.optimize.bind(this._fs))
       .then(this._fs.sprite.bind(this._fs))
       .then(this._fs.scss.bind(this._fs))
+      .then(this._fs.vue.bind(this._fs))
       .then(() => resolve())
       .catch(e => {
         console.log(e)

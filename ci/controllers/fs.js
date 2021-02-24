@@ -247,7 +247,7 @@ module.exports = class FileSystemController {
    */
   scss(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Creating the scss utility list')
+      this._spinner.start('Creating the scss')
 
       let icons = this.icons.map(i => i.name)
       let data = ''
@@ -294,7 +294,27 @@ module.exports = class FileSystemController {
 
   vue(){
     return new Promise((resolve, reject) => {
-      
+      this._spinner.start('Creating the vue components')
+      let output = path.resolve(this.outputPath, './spices-icons.svg')
+      let sprite = fs.readFileSync(output, 'utf8')
+
+      let data = `<template>
+  ${sprite}
+</template>
+
+<script>
+// 
+// Warning: Auto-generated file please do not edit directly
+// 
+export default {
+  name: 'SpicesIconSprite'
+}
+</script>
+      `
+
+      fs.writeFileSync(path.resolve(this.outputPath, 'spices-icons-sprite.vue'), data)
+      this._spinner.succeed();
+      return resolve()
     })
   }
 }

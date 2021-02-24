@@ -39,6 +39,7 @@ Finds out the proper version of the bundle.
 
 --------------------
 TODO
+https://css-tricks.com/svg-sprites-use-better-icon-fonts/
 
 - Implement the versionning
 - Implement the changelog 
