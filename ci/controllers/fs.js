@@ -193,6 +193,34 @@ module.exports = class FileSystemController {
   
         return resolve()
       })
+      .catch(e => {
+        console.log('optimization failed for', icon.output)
+        return resolve()
+      })
+    })
+  }
+
+
+  /**
+   * Create the icons variable list
+   * 
+   * @returns {Promise}
+   */
+  scss(){
+    return new Promise((resolve, reject) => {
+      this._spinner.start('Creating the scss utility list')
+
+      let icons = this.icons.map(i => i.name)
+      let data = ''
+      data += `$spices-icon-path: '//cdn.sayl.cloud/spices/spices-icons/2.0.0';`
+      data += `\n$spices-icon-version: '2.0.0';`
+      data += `\n`
+      data += `\n$spices-icon-icons: (\n\t${ icons.join(', \n\t') }\n);`
+
+      fs.writeFileSync(path.resolve(this.outputPath, './spices-icons.scss'), data)
+
+      this._spinner.succeed()
+      resolve()
     })
   }
 
@@ -203,6 +231,8 @@ module.exports = class FileSystemController {
    */
   sprite(){
     return new Promise((resolve, reject) => {
+      this._spinner.start('Creating the sprite')
+
       let s = svgstore()
       
       this.icons.forEach(({name}) => {
@@ -211,6 +241,8 @@ module.exports = class FileSystemController {
       })
       
       fs.writeFileSync( path.resolve(this.outputPath, './spices-icons.svg'), s);
+      
+      this._spinner.succeed()
       return resolve()
     })
   }

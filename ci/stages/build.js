@@ -41,6 +41,7 @@ module.exports = class BuildStage {
       .then(this._fs.download.bind(this._fs))
       .then(this._fs.optimize.bind(this._fs))
       .then(this._fs.sprite.bind(this._fs))
+      .then(this._fs.scss.bind(this._fs))
       .then(() => resolve())
       .catch(e => {
         console.log(e)
