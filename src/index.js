@@ -1,5 +1,6 @@
-import values from './spices-icons.scss';
-export default values;
+export default install = (Vue) => {
+
+}
 
 
 // @TODO Implement the install function to auto declare the file

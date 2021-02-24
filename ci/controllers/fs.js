@@ -291,4 +291,10 @@ module.exports = class FileSystemController {
       return resolve()
     })
   }
+
+  vue(){
+    return new Promise((resolve, reject) => {
+      
+    })
+  }
 }

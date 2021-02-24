@@ -1,0 +1,12 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg"><symbol><path fill="#24282B" d="M12.293 13.707a1 1 0 0 0 1.414-1.414l-1.414 1.414zM2 2V1a1 1 0 0 0-1 1h1zm7 1a1 1 0 0 0 0-2v2zM1 9a1 1 0 1 0 2 0H1zm12.707 3.293l-11-11-1.414 1.414 11 11 1.414-1.414zM2 3h7V1H2v2zM1 2v7h2V2H1z"/></symbol></svg>
+</template>
+
+<script>
+// 
+// Warning: Auto-generated file please do not edit directly
+// 
+export default {
+  name: 'SpicesIconSprite'
+}
+</script>

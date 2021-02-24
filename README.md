@@ -44,6 +44,14 @@ TODO
 - Implement the changelog 
 
 
+- Sass
+  - Generate the icon function
+  - Add the header comment as generated file
+  - 
+
+- Vue
+  - Add the header comment as generated file
+
 
 src
   - assets
