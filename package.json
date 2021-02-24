@@ -1,24 +1,26 @@
 {
   "author": "Alexandre Masy <hello@alexandremasy.com>",
-  "bin": {
-    "export-icons": "cli.js"
-  },
-  "dependencies": {
+  "devDependencies": {
     "@spices/basil": "^1.6.0",
     "axios": "^0.21.1",
     "chalk": "^2.4.2",
-    "minimist": "^1.2.5",
     "mkdirp": "^0.5.1",
     "ora": "^3.4.0",
-    "prompts": "^2.1.0",
     "rimraf": "^3.0.2",
     "semver": "^7.3.4",
     "svgo": "^2.1.0",
     "svgstore": "^3.0.0-2"
   },
   "description": "Spices icon library",
+  "files": [
+    "src"
+  ],
   "license": "SEE LICENSE IN license.md",
   "name": "@spices/icons",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.infinity-commerce.io/"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@bitbucket.org:infinity-mobile/pepper.git"
@@ -27,5 +29,5 @@
     "bundle": "yarn ci build",
     "ci": "node ./ci/ci.js"
   },
-  "version": "1.0.0"
+  "version": "0.0.0"
 }

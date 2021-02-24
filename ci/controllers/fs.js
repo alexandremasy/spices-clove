@@ -20,6 +20,45 @@ module.exports = class FileSystemController {
 
     this._spinner = ora();
     this._current = 0;
+
+    this._svgoConfig = {
+      plugins: [
+        'cleanupAttrs',
+        'removeDoctype',
+        'removeXMLProcInst',
+        'removeComments',
+        'removeMetadata',
+        'removeTitle',
+        'removeDesc',
+        // 'removeUselessDefs',
+        'removeEditorsNSData',
+        'removeEmptyAttrs',
+        'removeHiddenElems',
+        'removeEmptyText',
+        'removeEmptyContainers',
+        'removeViewBox',
+        'cleanupEnableBackground',
+        'convertStyleToAttrs',
+        'convertColors',
+        'convertPathData',
+        'convertTransform',
+        'removeUnknownsAndDefaults',
+        'removeNonInheritableGroupAttrs',
+        'removeUselessStrokeAndFill',
+        'removeUnusedNS',
+        'cleanupIDs',
+        'cleanupNumericValues',
+        'moveElemsAttrsToGroup',
+        'moveGroupAttrsToElems',
+        'collapseGroups',
+        'removeRasterImages',
+        'mergePaths',
+        'convertShapeToPath',
+        'sortAttrs',
+        'removeDimensions',
+        { name: 'removeAttrs', attrs: '(stroke|fill)' },
+      ]
+    }
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
@@ -234,13 +273,19 @@ module.exports = class FileSystemController {
       this._spinner.start('Creating the sprite')
 
       let s = svgstore()
+      let output = path.resolve(this.outputPath, './spices-icons.svg')
       
       this.icons.forEach(({name}) => {
         let image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
         s.add(name, fs.readFileSync(image, 'utf8'))
       })
-      
-      fs.writeFileSync( path.resolve(this.outputPath, './spices-icons.svg'), s);
+
+      let result = optimize(s.toString(), {
+        path: output,
+        ...this._svgoConfig
+      })
+
+      fs.writeFileSync( output, result.data );
       
       this._spinner.succeed()
       return resolve()
