@@ -1,6 +1,7 @@
 const ora = require('ora')
 const path = require('path')
 const fs = require('fs')
+const util = require('util')
 const mkdirp = require('mkdirp')
 const axios = require('axios')
 const rimraf = require('rimraf')
@@ -180,16 +181,18 @@ module.exports = class FileSystemController {
         return reject()
       }
 
-      let data = fs.readFileSync(icon.output)
-      let result = optimize(data, {
-        path: icon.output
+      const readFile = util.promisify(fs.readFile)
+      const writeFile = util.promisify(fs.writeFile)
+
+      readFile(icon.output, 'utf-8')
+      .then(data => optimize(data, { path: icon.output }))
+      .then(res => writeFile(icon.output, res.data))
+      .then(data => {
+        this._current++
+        this._spinner.text = `Optimizing ${this._current} / ${this.nIcons}`
+  
+        return resolve()
       })
-      fs.writeFileSync(icon.output, result.data)
-
-      this._current++
-      this._spinner.text = `Optimizing ${this._current} / ${this.nIcons}`
-
-      return resolve()
     })
   }
 
@@ -207,7 +210,7 @@ module.exports = class FileSystemController {
         s.add(name, fs.readFileSync(image, 'utf8'))
       })
       
-      fs.writeFileSync( path.resolve(this.outputPath, './sprites.svg'), s);
+      fs.writeFileSync( path.resolve(this.outputPath, './spices-icons.svg'), s);
       return resolve()
     })
   }
