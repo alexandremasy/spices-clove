@@ -2,6 +2,12 @@ const execute = require('../utils/execute');
 const https = require('https');
 
 class PublishStep {
+  /**
+   * @constructor
+   * @param {Object} options 
+   * @param {FileSystemController} options.fs
+   * @param {FigmaController} options.figma
+   */
   constructor() {
     this._config = require('../utils/config');
   }

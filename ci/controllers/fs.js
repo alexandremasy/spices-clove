@@ -5,8 +5,8 @@ const mkdirp = require('mkdirp')
 const axios = require('axios')
 const rimraf = require('rimraf')
 const svgstore = require('svgstore')
-const svgo = require('svgo')
-const { default: Icon } = require('../utils/icon')
+const { optimize } = require('svgo')
+const Icon = require('../utils/icon')
 
 module.exports = class FileSystemController {
 
@@ -98,6 +98,7 @@ module.exports = class FileSystemController {
    */
   download(){
     return new Promise((resolve, reject) => {
+      this._current = 0;
       this._spinner.start('Downloading')
       Promise.all(this.icons.map((i, j) => this.downloadImage({ index: j, icon: i })))
       .then(() => {
@@ -153,38 +154,44 @@ module.exports = class FileSystemController {
    * Optimize all the icons with svgo
    */
   optimize(){
-    this._spinner.start('Optimizing')
-    Promise.all(this.icons.map((i, j) => this.optimizeIcon({ index: j, icon: i })))
-
+    return new Promise((resolve, reject) => {
+      this._current = 0;
+      this._spinner.start('Optimizing')
+      Promise.all(this.icons.map((i, j) => this.optimizeIcon({ index: j, icon: i })))
+        .then(() => {
+          this._spinner.succeed()
+          resolve()
+        })
+        .catch(e => reject(e))
+    })
   }
 
-  optimizeIcon(icon){
+  /**
+   * Optimize the given icon with svgo
+   * 
+   * @param {*} icon 
+   */
+  optimizeIcon({index, icon}){
+    return new Promise((resolve, reject) => {
+      if (!icon.output){
+        console.log('Unable to optimize icon without an output path: ', icon.output)
+        console.log(icon)
 
+        return reject()
+      }
+
+      let data = fs.readFileSync(icon.output)
+      let result = optimize(data, {
+        path: icon.output
+      })
+      fs.writeFileSync(icon.output, result.data)
+
+      this._current++
+      this._spinner.text = `Optimizing ${this._current} / ${this.nIcons}`
+
+      return resolve()
+    })
   }
-
-  // /**
-  //  * Run the download to the filesyste:
-  //  * - creating the output directory
-  //  * - purging the previous icons
-  //  * 
-  //  * @returns {Promise}
-  //  */
-  // run(){
-  //   return new Promise((resolve, reject) => {
-  //     this.download()
-  //     .then(this.optimize.bind(this))
-  //     .then(() => {
-  //       this._spinner.succeed();
-  //       this._spinner.start('Creating the sprite')
-  //     })
-  //     .then( this.sprite.bind(this) )
-  //     .then(() => {
-  //       this._spinner.succeed()
-  //       return resolve()
-  //     })
-  //     .catch(e => reject(e))
-  //   })
-  // }
 
   /**
    * Create the svg sprite

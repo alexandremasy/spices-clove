@@ -2,6 +2,12 @@ const execute = require('../utils/execute');
 const chalk = require('chalk');
 
 class DeployStep {
+  /**
+   * @constructor
+   * @param {Object} options 
+   * @param {FileSystemController} options.fs
+   * @param {FigmaController} options.figma
+   */
   constructor() {
     this._config = require('../utils/config');
     this.existOnS3 = null;

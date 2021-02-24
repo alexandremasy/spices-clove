@@ -6,13 +6,12 @@ const FileSystemController = require('../controllers/fs')
 module.exports = class BeforeStep{
 
   /**
-   * 
+   * @constructor
    * @param {Object} options 
-   * @param {Object} options.config 
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
    */
-  constructor({ config, fs, figma }){
+  constructor({ fs, figma }){
     this._spinner = ora();
 
     this._fs = fs

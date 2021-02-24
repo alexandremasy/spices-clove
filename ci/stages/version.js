@@ -3,6 +3,12 @@ const semver = require('semver');
 const execute = require('../utils/execute');
 
 class VersionStep {
+  /**
+   * @constructor
+   * @param {Object} options 
+   * @param {FileSystemController} options.fs
+   * @param {FigmaController} options.figma
+   */
   constructor() {
     this._config = require('../utils/config');
     this.tagVersion = '0.0.0';
