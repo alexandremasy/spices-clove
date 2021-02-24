@@ -116,21 +116,40 @@ module.exports = class FileSystemController {
       mkdirp.sync(this.outputPath)
       mkdirp.sync(path.resolve(this.outputPath, 'icons'))
 
-      resolve()
+      return resolve()
     })
   }
 
   /**
-   * Delete the output directory fi it does exists
+   * Delete the given directory
+   * 
+   * @param {String|Path} dir 
+   * @returns {Promise}
+   */
+  deleteDirectory(dir){
+    return fs.existsSync(dir) ?
+      new Promise((resolve, reject) => {
+        rimraf(dir, (err) => err ? reject(err) : resolve())
+      }) :
+      Promise.resolve()
+  }
+
+  /**
+   * Delete the output directory if it does exists
    * 
    * @returns {Promise}
    */
   deleteOutputDirectory(){
-    return this.outputPathExists ? 
-           new Promise((resolve, reject) => {
-             rimraf(this.outputPath, (err) => err ? reject(err) : resolve())
-           }) :
-           Promise.resolve()
+    return this.deleteDirectory(this.outputPath)
+  }
+
+  /**
+   * Delete the output icon directory if it does exists
+   * 
+   * @returns {Promise}
+   */
+  deleteIconsDirectory(){
+    return this.deleteDirectory(path.resolve(this.outputPath, 'icons'))
   }
 
   /**
@@ -224,7 +243,7 @@ module.exports = class FileSystemController {
       const writeFile = util.promisify(fs.writeFile)
 
       readFile(icon.output, 'utf-8')
-      .then(data => optimize(data, { path: icon.output }))
+      .then(data => optimize(data, { path: icon.output, ...this._svgoConfig }))
       .then(res => writeFile(icon.output, res.data))
       .then(data => {
         this._current++

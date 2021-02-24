@@ -17,11 +17,18 @@ module.exports = class BeforeStep{
     this._fs = fs
   }
 
+  /**
+   * Prepare the condition for the process to work
+   * - Make sure the output path exists
+   * - Remove the existings icons (to compare later on with git)
+   */
   run(){
     return new Promise((resolve, reject) => {
       console.log('---Before---');
       this._spinner.start('Preparing the output folders')
-      this._fs.createOutputDirectory(this._fs)
+
+      this._fs.deleteIconsDirectory()
+      .then(this._fs.createOutputDirectory.bind(this._fs))
       .then(() => {
         this._spinner.succeed()
         resolve()
