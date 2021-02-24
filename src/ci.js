@@ -17,24 +17,6 @@ class CI {
     this._deploy = new (require('./stages/deploy'))(args);
   }
 
-  /**
-   * Retrieve the configuration
-   * 
-   * @returns {Promise}
-   */
-  getConfig() {
-    return new Promise((resolve, reject) => {
-      this._config.run()
-        .then(() => {
-          this._figma.config = this._config.data
-          this._fs.config = this._config.data
-
-          resolve()
-        })
-        .catch(e => reject(e))
-    })
-  }
-
   parse(argv) {
     let steps = ['before', 'build', 'deploy', 'publish', 'version'];
     let valids = steps.concat(['--debug', '--verbose']);
@@ -96,32 +78,21 @@ class CI {
         .catch(e => console.log(e))
     }
 
-    this.spinner.text = 'probing the env';
-    
-    return this.before(this._config.debug)
-      .then(this.version.bind(this))
-      .then(this.sanity.bind(this))
+    return this.before()
       .then(this.build.bind(this))
+      .then(this.version.bind(this))
       .then(this.deploy.bind(this))
       .then(this.publish.bind(this))
       .catch(e => {
         console.log(e);
       })
-
-
-
-    this.getConfig()
-      .then(this.getIcons.bind(this))
-      .then(this.fetchIcons.bind(this))
-      .catch(e => console.error(e))
   }
 
+  /**
+   * 
+   */
   before(){
-    return new Promise((resolve, reject) => {
-      this._before.run()
-        .then(() => resolve())
-        .catch(e => reject(e))
-    })
+    return this._before.run()
   }
 
   /**
@@ -145,29 +116,19 @@ class CI {
   }
 
   build() {
-    return new Promise((resolve, reject) => {
-      this._build.run()
-        .then(() => resolve())
-        .catch(e => reject(e))
-    })
+    return this._build.run()
   }
 
   deploy() {
-    this.spinner.start('deploying')
     return this._deploy.run()
-      .then(() => this.spinner.succeed('deployed'))
   }
 
   publish() {
-    this.spinner.start('publishing')
-    return this._publish.run(this.next)
-      .then(() => this.spinner.succeed('published'))
+    return this._publish.run()
   }
 
   version() {
-    this.spinner.start('versionning');
-
-    return this._version.run.apply(this._version)
+    return this._version.run()
       .then((v) => {
         this.update();
         this.spinner.succeed(`${this._config.name}: ${this._config.version} -> ${this._config.next}`)

@@ -7,6 +7,8 @@ module.exports = class BuildStage {
 
   run() {
     return new Promise((resolve, reject) => {
+      console.log('---Build---');
+
       this._figma.run()
       .then(() => { this._fs.icons = this._figma.icons })
       .then(this._fs.download.bind(this._fs))

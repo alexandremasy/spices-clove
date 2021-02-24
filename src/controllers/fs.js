@@ -99,7 +99,10 @@ module.exports = class FileSystemController {
     return new Promise((resolve, reject) => {
       this._spinner.start('Downloading')
       Promise.all(this.icons.map((i, j) => this.downloadImage({ index: j, name: i.name, url: i.path })))
-      .then(() => resolve())
+      .then(() => {
+        this._spinner.succeed()
+        resolve()
+      })
       .catch(e => reject(e))
     })
   }

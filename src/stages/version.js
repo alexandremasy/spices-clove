@@ -17,6 +17,8 @@ class VersionStep {
   }
 
   run() {
+    console.log('---Version---');
+
     return this.getLatestVersionTag()
       .then(this.getRelease.bind(this))
       .then(this.getNextVersion.bind(this))
