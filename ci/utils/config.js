@@ -11,7 +11,7 @@ module.exports = {
   
   branch: 'master',
   release: 'minor',
-  output: 'dist',
+  output: 'src',
   
   npm: false,
   discord: true,

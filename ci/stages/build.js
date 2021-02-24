@@ -5,11 +5,21 @@ module.exports = class BuildStage {
     this._fs = fs
   }
 
+
+  /**
+   * Build the latest version of the package
+   * 
+   * - Fetch the icon list from Figma
+   * - Download the icons from Figma as svg
+   * - Optimize the icons with svgo
+   * - Create a svg sprite
+   * - Create the scss list of icons
+   */
   run() {
     return new Promise((resolve, reject) => {
       console.log('---Build---');
 
-      this._figma.run()
+      this._figma.getIcons()
       .then(() => { this._fs.icons = this._figma.icons })
       .then(this._fs.download.bind(this._fs))
       .then(this._fs.sprite.bind(this._fs))

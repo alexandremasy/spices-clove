@@ -6,10 +6,12 @@ const FigmaController = require('./controllers/figma')
 class CI {
   constructor() {
     this._config = require('./utils/config'); 
-    this._fs = new FileSystemController(this._config);
-    this._figma = new FigmaController(this._config);
+    global.config = this._config;
 
-    let args = { config: this._config, fs: this._fs, figma: this._figma }
+    this._fs = new FileSystemController();
+    this._figma = new FigmaController();
+
+    let args = { fs: this._fs, figma: this._figma }
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);
@@ -80,9 +82,9 @@ class CI {
 
     return this.before()
       .then(this.build.bind(this))
-      .then(this.version.bind(this))
-      .then(this.deploy.bind(this))
-      .then(this.publish.bind(this))
+      // .then(this.version.bind(this))
+      // .then(this.deploy.bind(this))
+      // .then(this.publish.bind(this))
       .catch(e => {
         console.log(e);
       })

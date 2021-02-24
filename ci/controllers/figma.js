@@ -1,9 +1,10 @@
 const Figma = require('../api/figma')
 const ora = require('ora')
+const Icon = require('../utils/icon')
 
 module.exports = class FigmaController{
-  constructor(config) {
-    this._config = config
+  constructor() {
+    this._config = global.config
     this._spinner = ora()
 
     this._document = null
@@ -51,7 +52,7 @@ module.exports = class FigmaController{
       this.client.get(`/images/${this._config.figma_file_id}?ids=${ids}&format=svg`)
         .then((res) => {
           let images = res.data.images
-          this._icons.forEach(i => i.path = images[i.id])
+          this._icons.forEach(i => i.origin = images[i.id])
 
           return resolve()
         })
@@ -84,7 +85,7 @@ module.exports = class FigmaController{
       let pages = this._document.children;
       pages.filter(p => !p.name.includes('_'))
       .map(p => p.children.forEach(f => {
-        ret.push({ id: f.id, name: f.name })
+        ret.push( new Icon({ id: f.id, name: f.name }) )
       }))
 
       this._icons = ret
@@ -94,11 +95,14 @@ module.exports = class FigmaController{
   }  
 
   /**
-   * Run the Figma process
+   * Get the list of icons from Figma
+   * - Fetch the Figma File
+   * - Go through all the layer in the hunt for layers
+   * - Get all the found layer download links
    * 
    * @returns {Promise}
    */
-  run(){
+  getIcons(){
     return new Promise((resolve, reject) => {
       this._spinner.start('Computing the list of icons')
       this.fetch()

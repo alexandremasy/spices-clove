@@ -42,3 +42,12 @@ TODO
 
 - Implement the versionning
 - Implement the changelog 
+
+
+
+src
+  - assets
+    - icons/**
+    - spices-icons.svg
+    -
+  

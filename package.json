@@ -13,9 +13,10 @@
     "prompts": "^2.1.0",
     "rimraf": "^3.0.2",
     "semver": "^7.3.4",
+    "svgo": "^2.1.0",
     "svgstore": "^3.0.0-2"
   },
-  "description": "Generate icons sprice from a figma file",
+  "description": "Spices icon library",
   "license": "SEE LICENSE IN license.md",
   "name": "@spices/icons",
   "repository": {
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "bundle": "yarn ci build",
-    "ci": "node ./src/ci.js"
+    "ci": "node ./ci/ci.js"
   },
   "version": "1.0.0"
 }
