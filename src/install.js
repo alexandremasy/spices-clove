@@ -1,5 +1,5 @@
-import SpiceIconSprite from './spices-icons-sprite'
+import SpicesIcons from './spices-icons'
 
 export default (Vue, options = {}) => {
-  Vue.component('spices-icons-sprite', SpiceIconSprite)
+  Vue.component('spices-icons', SpicesIcons)
 }

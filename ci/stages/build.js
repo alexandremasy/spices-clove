@@ -1,5 +1,6 @@
 const FigmaController = require('../controllers/figma')
 const FileSystemController = require('../controllers/fs')
+const TemplatesController = require('../controllers/templates')
 const Icon = require('../utils/icon')
 
 module.exports = class BuildStage {
@@ -9,11 +10,13 @@ module.exports = class BuildStage {
    * @param {Object} options 
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
+   * @param {TemplatesController} options.templates
    */
-  constructor({ config, fs, figma }){
+  constructor({ config, fs, figma, templates }){
     this._config = config
     this._figma = figma
     this._fs = fs
+    this._templates = templates
   }
 
   debug(){
@@ -38,12 +41,16 @@ module.exports = class BuildStage {
       console.log('---Build---');
 
       this._figma.getIcons()
-      .then(() => { this._fs.icons = this._figma.icons })
+      .then(() => { 
+        this._fs.icons = 
+        this._templates.icons =
+        this._figma.icons
+      })
       .then(this._fs.download.bind(this._fs))
       .then(this._fs.optimize.bind(this._fs))
-      .then(this._fs.sprite.bind(this._fs))
-      .then(this._fs.scss.bind(this._fs))
-      .then(this._fs.vue.bind(this._fs))
+      .then(this._templates.sprite.bind(this._fs))
+      .then(this._templates.scss.bind(this._fs))
+      .then(this._templates.vue.bind(this._fs))
       .then(() => resolve())
       .catch(e => {
         console.log(e)

@@ -10,12 +10,23 @@ module.exports = class Icon{
     this._id = id
     this._name = name
 
+    this._data = null
     this._origin = null
     this._output = null
   }
 
   ////////////////////////////////////////
   
+  /**
+   * @property {String} data The svg content string
+   */
+  set data(value){
+    this._data = value
+  }
+  get data(){
+    return this._data
+  }
+
   /**
    * @property {String} id The icon id - Comes from the Figma API
    * @readonly

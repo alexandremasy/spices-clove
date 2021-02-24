@@ -25,7 +25,7 @@ module.exports = class BeforeStep{
   run(){
     return new Promise((resolve, reject) => {
       console.log('---Before---');
-      this._spinner.start('Preparing the output folders')
+      this._spinner.start('Preparing the folders')
 
       this._fs.deleteIconsDirectory()
       .then(this._fs.createOutputDirectory.bind(this._fs))

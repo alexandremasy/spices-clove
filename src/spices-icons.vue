@@ -7,7 +7,7 @@
 // Warning: Auto-generated file please do not edit directly
 // 
 export default {
-  name: 'SpicesIconSprite'
+  name: 'SpicesIcons'
 }
 </script>
       

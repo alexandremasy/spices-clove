@@ -2,6 +2,7 @@ const chalk = require('chalk');
 
 const FileSystemController = require('./controllers/fs')
 const FigmaController = require('./controllers/figma')
+const TemplatesController = require('./controllers/templates')
 
 class CI {
   constructor() {
@@ -10,8 +11,9 @@ class CI {
 
     this._fs = new FileSystemController();
     this._figma = new FigmaController();
+    this._templates = new TemplatesController();
 
-    let args = { fs: this._fs, figma: this._figma }
+    let args = { fs: this._fs, figma: this._figma, templates: this._templates }
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);
