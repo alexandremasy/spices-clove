@@ -48,9 +48,10 @@ module.exports = class BuildStage {
       })
       .then(this._fs.download.bind(this._fs))
       .then(this._fs.optimize.bind(this._fs))
-      .then(this._templates.sprite.bind(this._fs))
-      .then(this._templates.scss.bind(this._fs))
-      .then(this._templates.vue.bind(this._fs))
+      .then(this._templates.sprite.bind(this._templates))
+      .then(this._templates.scss.bind(this._templates))
+      .then(this._templates.vue.bind(this._templates))
+      .then(this._templates.demo.bind(this._templates))
       .then(() => resolve())
       .catch(e => {
         console.log(e)

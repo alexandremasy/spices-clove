@@ -15,6 +15,10 @@ module.exports = class TemplatesController{
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
+  get demoPath(){
+    return path.resolve(this.outputPath, './demo.vue')
+  }
+
   /**
    * @property {Array} icons The list of available icons
    */
@@ -30,6 +34,22 @@ module.exports = class TemplatesController{
    */
   get nIcons() {
     return this._icons.length
+  }
+
+  /**
+   * @property {Path} iconPath
+   * @readonly
+   */
+  get outputPath() {
+    return path.resolve(this._config.output)
+  }
+
+  get scssPath(){
+    return path.resolve(this.outputPath, './spices-icons.scss')
+  }
+
+  get spritePath(){
+    return path.resolve(this.outputPath, './spices-icons.svg')
   }
 
   /**
@@ -77,7 +97,26 @@ module.exports = class TemplatesController{
     }
   }
 
+  get vueIconsPath(){
+    return path.resolve(this.outputPath, 'spices-icons.vue')
+  }
+
   ////////////////////////////////////////////////////////////////////////////////////
+
+  demo(){
+    return new Promise((resolve, reject) => {
+      this._spinner.start('Creat the demo page')
+
+      let data = this.icons.map(i => {
+        return `<svg class="icon"><use xlink:href="#${i.name}"></use></svg>`
+      })
+      data = `<template>\n\t<div>\n\t\t${data.join('\n\t\t')}</div>`
+
+      fs.writeFileSync(this.demoPath, data)
+      this._spinner.succeed();
+      return resolve()
+    })
+  }
 
   /**
    * Create the icons variable list
@@ -95,7 +134,7 @@ module.exports = class TemplatesController{
       data += `\n`
       data += `\n$spices-icon-icons: (\n\t${icons.join(', \n\t')}\n);`
 
-      fs.writeFileSync(path.resolve(this.outputPath, './spices-icons.scss'), data)
+      fs.writeFileSync(this.scssPath, data)
 
       this._spinner.succeed()
       resolve()
@@ -112,19 +151,17 @@ module.exports = class TemplatesController{
       this._spinner.start('Creating the sprite')
 
       let s = svgstore()
-      let output = path.resolve(this.outputPath, './spices-icons.svg')
-
       this.icons.forEach(({ name }) => {
         let image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
         s.add(name, fs.readFileSync(image, 'utf8'))
       })
 
       let result = optimize(s.toString(), {
-        path: output,
+        path: this.spritePath,
         ...this.svgoConfig
       })
 
-      fs.writeFileSync(output, result.data);
+      fs.writeFileSync(this.spritePath, result.data);
 
       this._spinner.succeed()
       return resolve()
@@ -134,8 +171,7 @@ module.exports = class TemplatesController{
   vue() {
     return new Promise((resolve, reject) => {
       this._spinner.start('Creating the vue components')
-      let output = path.resolve(this.outputPath, './spices-icons.svg')
-      let sprite = fs.readFileSync(output, 'utf8')
+      let sprite = fs.readFileSync(this.spritePath, 'utf8')
 
       let data = `<template>
   ${sprite}
@@ -151,7 +187,7 @@ export default {
 </script>
       `
 
-      fs.writeFileSync(path.resolve(this.outputPath, 'spices-icons.vue'), data)
+      fs.writeFileSync(this.vueIconsPath, data)
       this._spinner.succeed();
       return resolve()
     })
