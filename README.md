@@ -41,22 +41,5 @@ Finds out the proper version of the bundle.
 TODO
 https://css-tricks.com/svg-sprites-use-better-icon-fonts/
 
-- Implement the versionning
-- Implement the changelog 
-
-
-- Sass
-  - Generate the icon function
-  - Add the header comment as generated file
-  - 
-
-- Vue
-  - Add the header comment as generated file
-
-
-src
-  - assets
-    - icons/**
-    - spices-icons.svg
-    -
-  
+- Include the version in the filename for spices-icons.vue
+- Include the version in the filename for spices-icons.scss
