@@ -1,10 +1,7 @@
-const Icon = require('../utils/icon')
 const ora = require('ora')
 const path = require('path')
 const fs = require('fs')
 const util = require('util')
-const svgstore = require('svgstore')
-const { optimize } = require('svgo')
 
 module.exports = class TemplatesController{
   constructor(){
@@ -52,51 +49,6 @@ module.exports = class TemplatesController{
     return path.resolve(this.outputPath, './spices-icons.svg')
   }
 
-  /**
-   * @property {Object} svgoConfig
-   * @readonly
-   */
-  get svgoConfig() {
-    return {
-      plugins: [
-        'cleanupAttrs',
-        'removeDoctype',
-        'removeXMLProcInst',
-        'removeComments',
-        'removeMetadata',
-        'removeTitle',
-        'removeDesc',
-        // 'removeUselessDefs',
-        'removeEditorsNSData',
-        'removeEmptyAttrs',
-        'removeHiddenElems',
-        'removeEmptyText',
-        'removeEmptyContainers',
-        'removeViewBox',
-        'cleanupEnableBackground',
-        'convertStyleToAttrs',
-        'convertColors',
-        'convertPathData',
-        'convertTransform',
-        'removeUnknownsAndDefaults',
-        'removeNonInheritableGroupAttrs',
-        'removeUselessStrokeAndFill',
-        'removeUnusedNS',
-        'cleanupIDs',
-        'cleanupNumericValues',
-        'moveElemsAttrsToGroup',
-        'moveGroupAttrsToElems',
-        'collapseGroups',
-        'removeRasterImages',
-        'mergePaths',
-        'convertShapeToPath',
-        'sortAttrs',
-        'removeDimensions',
-        { name: 'removeAttrs', attrs: '(stroke|fill)' },
-      ]
-    }
-  }
-
   get vueIconsPath(){
     return path.resolve(this.outputPath, 'spices-icons.vue')
   }
@@ -105,12 +57,12 @@ module.exports = class TemplatesController{
 
   demo(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Creat the demo page')
+      this._spinner.start('Creating the demo page')
 
       let data = this.icons.map(i => {
         return `<svg class="icon"><use xlink:href="#${i.name}"></use></svg>`
       })
-      data = `<template>\n\t<div>\n\t\t${data.join('\n\t\t')}</div>`
+      data = `<template>\n\t<div>\n\t\t${data.join('\n\t\t')}</div></template>`
 
       fs.writeFileSync(this.demoPath, data)
       this._spinner.succeed();
@@ -150,21 +102,33 @@ module.exports = class TemplatesController{
     return new Promise((resolve, reject) => {
       this._spinner.start('Creating the sprite')
 
-      let s = svgstore()
-      this.icons.forEach(({ name }) => {
-        let image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
-        s.add(name, fs.readFileSync(image, 'utf8'))
+      const readFile = util.promisify(fs.readFile)
+      
+      let data = ``
+      Promise.all(this.icons.map(i => {
+        return new Promise((resolve, reject) => {
+          let image = path.resolve(this.outputPath, 'icons', `${i.name}.svg`)
+          readFile(image, 'utf8')
+          .then(content => {
+            content = content.replace(/<svg[^>]+>/g, '')
+                             .replace(/<\/svg>/g, '')
+                             .replace(/\n+/g, '')
+                             .replace(/>\s+</g, '><')
+                             .trim();
+
+            let ret = `<symbol id="${i.name}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${content}</symbol>`
+            resolve(ret)
+          })
+        })
+      }))
+      .then(results => {
+        data = results.join('\n')
+        data = `<svg xmlns="http://www.w3.org/2000/svg"><defs>${data}</defs></svg>`;
+        fs.writeFileSync(this.spritePath, data);
+  
+        this._spinner.succeed()
+        return resolve()
       })
-
-      let result = optimize(s.toString(), {
-        path: this.spritePath,
-        ...this.svgoConfig
-      })
-
-      fs.writeFileSync(this.spritePath, result.data);
-
-      this._spinner.succeed()
-      return resolve()
     })
   }
 

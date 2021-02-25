@@ -69,7 +69,12 @@ module.exports = class FigmaController{
         this._document = res.data.document
         resolve()
       })
-      .catch((err) => reject(err))
+      .catch((err) => {
+        console.log('Error')
+        console.log(err.statusCode)
+        process.exit()
+        reject(err)
+      })
     })
   }
 

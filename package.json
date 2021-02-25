@@ -16,6 +16,7 @@
     "src"
   ],
   "license": "SEE LICENSE IN license.md",
+  "main": "src/index.js",
   "name": "@spices/icons",
   "publishConfig": {
     "access": "public",
