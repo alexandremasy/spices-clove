@@ -1,14 +1,27 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg"><defs><symbol id="debug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="6" height="6" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="abc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="6" height="6" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol></defs></svg>
+  <div ref="root" v-html="sprite"></div>
 </template>
 
 <script>
-// 
-// Warning: Auto-generated file please do not edit directly
-// 
 export default {
-  name: 'SpicesIcons'
+  name: 'SpicesIcons',
+
+  data(){
+    return {
+      sprite: ''
+    }
+  },
+
+  created(){
+    let that = this;
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", "https://cdn.sayl.cloud/spices/icons/spices-icons.svg", true);
+    ajax.send();
+    ajax.onload = function(e) {
+      that.sprite = ajax.responseText
+      console.log('loaded', this)
+    }
+  }
 }
 </script>
       

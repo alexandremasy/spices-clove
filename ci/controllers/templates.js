@@ -135,29 +135,4 @@ module.exports = class TemplatesController{
       })
     })
   }
-
-  vue() {
-    return new Promise((resolve, reject) => {
-      this._spinner.start('Creating the vue components')
-      let sprite = fs.readFileSync(this.spritePath, 'utf8')
-
-      let data = `<template>
-  ${sprite}
-</template>
-
-<script>
-// 
-// Warning: Auto-generated file please do not edit directly
-// 
-export default {
-  name: 'SpicesIcons'
-}
-</script>
-      `
-
-      fs.writeFileSync(this.vueIconsPath, data)
-      this._spinner.succeed();
-      return resolve()
-    })
-  }
 }
