@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const semver = require('semver');
 const execute = require('../utils/execute');
 
@@ -8,20 +7,23 @@ class VersionStep {
    * @param {Object} options 
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
+   * @param {TemplatesController} options.templates
    */
-  constructor() {
-    this._config = require('../utils/config');
+  constructor({ config, fs, figma, templates }) {
+    this._config = config
+
     this.tagVersion = '0.0.0';
   }
 
-  set config(value) {
-    this._config = value;
-  }
 
-  get config() {
-    return this._config;
-  }
-
+  /**
+   * Version the package
+   * 
+   * - Build the changelog since previous tag
+   * - Bump minor if changes
+   * - Update the version in the templates
+   * 
+   */
   run() {
     console.log('---Version---');
 
@@ -33,6 +35,10 @@ class VersionStep {
         console.log(e)
         process.exit(0);
       });
+  }
+
+  getChanges(){
+    
   }
 
   /**
