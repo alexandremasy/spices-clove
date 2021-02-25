@@ -120,14 +120,17 @@ module.exports = class TemplatesController{
                              .replace(/>\s+</g, '><')
                              .trim();
 
-            let ret = `<symbol id="${i.name}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${content}</symbol>`
+            let ret = `<g id="${i.name}" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${content}</g>`
             resolve(ret)
           })
         })
       }))
       .then(results => {
         data = results.join('\n')
-        data = `<svg xmlns="http://www.w3.org/2000/svg"><defs>${data}</defs></svg>`;
+        data = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <defs><style>g{	display: none; } g:target {	display: inline; }</style></defs>
+          ${data}
+        </svg>`;
         fs.writeFileSync(this.spritePath, data);
   
         this._spinner.succeed()
