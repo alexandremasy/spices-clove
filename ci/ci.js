@@ -13,7 +13,7 @@ class CI {
     this._figma = new FigmaController();
     this._templates = new TemplatesController();
 
-    let args = { fs: this._fs, figma: this._figma, templates: this._templates }
+    let args = { config: this._config, fs: this._fs, figma: this._figma, templates: this._templates }
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);
@@ -133,10 +133,6 @@ class CI {
 
   version() {
     return this._version.run()
-      .then((v) => {
-        this.update();
-        this.spinner.succeed(`${this._config.name}: ${this._config.version} -> ${this._config.next}`)
-      })
   }
 }
 

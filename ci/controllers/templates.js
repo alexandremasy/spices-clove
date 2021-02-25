@@ -82,7 +82,7 @@ module.exports = class TemplatesController{
       let icons = this.icons.map(i => i.name)
       let data = ''
       data += `$spices-icon-path: '//cdn.sayl.cloud/spices/spices-icons/2.0.0';`
-      data += `\n$spices-icon-version: '2.0.0';`
+      data += `\n$spices-icon-version: '${this._config.next}';`
       data += `\n`
       data += `\n$spices-icon-icons: (\n\t${icons.join(', \n\t')}\n);`
 

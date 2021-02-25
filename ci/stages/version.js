@@ -1,5 +1,9 @@
 const semver = require('semver');
 const execute = require('../utils/execute');
+const ora = require('ora');
+const TemplatesController = require('../controllers/templates');
+const FigmaController = require('../controllers/figma');
+const FileSystemController = require('../controllers/fs');
 
 class VersionStep {
   /**
@@ -11,137 +15,138 @@ class VersionStep {
    */
   constructor({ config, fs, figma, templates }) {
     this._config = config
+    this._templates = templates
 
     this.tagVersion = '0.0.0';
+    this._changelog = null
+    this._spinner = ora();
   }
 
+  ///////////////////////////////////////////////////
+  
+  get changelog(){
+    let ret = this._changelog.map(c => {
+      let action = ''
+      if (c.deleted) action = 'removed'
+      if (c.added) action = 'added'
+      if (c.modified) action = 'updated'
+
+      return `icon ${c.name} ${action}`
+    })
+
+    return ret.join('\n')
+  }
+
+  /**
+   * @property {Boolean} hasChanges Whether or not the latest build generated some changes to publish 
+   */
+  get hasChanges(){
+    return this._changelog && this._changelog.length > 0
+  }
+  
+  ///////////////////////////////////////////////////
 
   /**
    * Version the package
    * 
-   * - Build the changelog since previous tag
+   * - Proactivaly add new file from the output folder
+   * - Build the list of changes
+   * - Build the changelog (x)
+   * - Commit the changes
    * - Bump minor if changes
-   * - Update the version in the templates
-   * 
    */
   run() {
     console.log('---Version---');
 
-    return this.getLatestVersionTag()
-      .then(this.getRelease.bind(this))
-      .then(this.getNextVersion.bind(this))
-      .then(this.version.bind(this))
+    return new Promise((resolve, reject) => {
+
+      this.addFiles()
+      .then( this.getChanges.bind(this) ) 
+      .then( this.commit.bind(this) )
+      .then(() => {
+        resolve()
+      })
       .catch(e => {
         console.log(e)
-        process.exit(0);
-      });
-  }
-
-  getChanges(){
-    
-  }
-
-  /**
-   * Find the latest version tag on the repository
-   * 
-   * @return {Promise}
-   */
-  getLatestVersionTag() {
-    return new Promise((resolve, reject) => {
-      let command = 'git describe --abbrev=0 --tags';
-      this.config.debug && this.config.verbose && console.log('version.getLatestVersionTag >', chalk.dim(command));
-      execute(command, { verbose: false })
-        .then(({response}) => {
-          this.config.debug && this.config.verbose && console.log('version.getLatestVersionTag <', chalk.dim(response));
-
-          this.tagVersion = semver.clean(response);
-          this.config.debug && console.log('tagVersion', this.tagVersion);
-          resolve();
-        })
-        .catch(e => {
-          this.config.debug && console.log('tagVersion', 'no tags');
-          resolve();
-        })
+        process.exit(4)
+      })
     })
+
+    // return this.getLatestVersionTag()
+    //   .then(this.getRelease.bind(this))
+    //   .then(this.getNextVersion.bind(this))
+    //   .then(this.version.bind(this))
+    //   .catch(e => {
+    //     console.log(e)
+    //     process.exit(0);
+    //   });
   }
 
   /**
-   * Find out the release type based on the git history
-   * The release `major` - `minor` - `patch` - `null`
+   * Add the new icons automatically
    * 
    * @returns {Promise}
    */
-  getRelease() {
+  addFiles(){
     return new Promise((resolve, reject) => {
-      let command = 'git log --oneline $(git describe --tags --abbrev=0 @^)..@';
-      this.config.debug && this.config.verbose && console.log('version.getRelease >', chalk.dim(command));
-      execute(command, { verbose: false })
-      .then(({response}) => {
-        this.config.debug && this.config.verbose && console.log('version.getRelease <', chalk.dim(command));
-        this.config.release = this.parseCommits(response);
-        this.config.debug && console.log('version.getRelease', this.config.release);
-        this.config.release === null ? reject('no changes to publish') : resolve();
-      })
-      .catch(e => {
-        // No tag yet, make sure there are commits
-        command = 'git log --oneline';
-        this.config.debug && this.config.verbose && console.log('version.getRelease >', chalk.dim(command));
-        execute(command, { verbose: false })
-        .then(({response}) => {
-          this.config.debug && this.config.verbose && console.log('version.getRelease <', chalk.dim(command));
-          this.config.release = this.parseCommits(response);
-          this.config.debug && console.log('version.getRelease', this.config.release);
-          this.config.release === null ? reject('no changes to publish') : resolve();
-        })
+      this._spinner.start('Add new files')
+
+      let command = 'git add src/icons'
+      return execute(command)
+      .then(() => {
+        this._spinner.succeed()
+        return resolve()
       })
     })
   }
 
   /**
-   * Parse a given set of commits to find out the 
-   * @param {*} commits 
-   * @private
+   * Commit the changes
    */
-  parseCommits(commits) {
-    commits = commits.split('\n')
-      .filter(c => c.trim().length > 0)
-      .map(c => {
-        let s = c.substr(8);
-        return {
-          sha: c.substr(0, 7),
-          subject: s,
-          isSemver: semver.valid(s) !== null
-        }
-      });
+  commit(){
+    return new Promise((resolve, reject) => {
 
-    let isPublished = commits.length == 1 && commits[0].isSemver === true;
-    let isMajor = commits.find(c => c.subject.includes('bump-major')) !== undefined && !isPublished;
-    let isMinor = commits.find(c => c.subject.includes('bump-minor')) !== undefined && !isMajor && !isPublished;
-    let isPatch = commits.length > 0 && !isMajor && !isMinor && !isPublished;
-
-    let release = null;
-    if (isMajor) release = 'major';
-    if (isMinor) release = 'minor';
-    if (isPatch) release = 'patch';
-
-    return release;
+    })
   }
 
   /**
-   * Get the next version number based on the release type
+   * Retrieve the list of changed files with the latest build
    * 
-   * @param {String} release The release type
+   * @returns {Promise}
    */
-  getNextVersion() {
-    this.config.debug && this.config.verbose && console.log('version.getNextVersion >', this.tagVersion, this.config.version);
+  getChanges(){
+    return new Promise((resolve,  reject) => {
+      this._spinner.start('Computing the changelog')
+      
+      // let command = 'git diff --name-status --staged src/icons'
+      let command = 'git status -s --porcelain --no-renames src/icons'
+      execute(command, { verbose: false })
+      .then((res) => {
+        let data = res.response
+        data = data.split('\n').filter(d => d.trim().length > 0)
 
-    let next = semver.gt(this.tagVersion, this.config.version) ? this.tagVersion : this.config.version;
-    next = semver.inc(next, this.config.release);
+        this._changelog = data.map(e => {
+          let flag = e.substr(0, 1)
+          let path = e.substr(e.indexOf('src'))
+          let name = e.substring(e.indexOf('src') + 10, e.indexOf('.svg'))
+          
+          return {
+            added: flag === 'A',
+            deleted: flag === 'D',
+            modified: flag === 'M',
 
-    this.config.debug && console.log('version.getNextVersion', next);
-    this.config.next = next;
+            name,
+            path
+          }
+        })
 
-    return Promise.resolve(next);
+        this._changelog.sort((a, b) => a.name > b.name)
+        console.log(this.changelog)
+
+        this._spinner.succeed();
+        return resolve()
+      })
+    })
   }
 
   /**
@@ -149,7 +154,7 @@ class VersionStep {
    */
   version() {
     return new Promise((resolve, reject) => {
-      let command = `yarn version --new-version ${this.config.next} --quiet`;
+      let command = `yarn version --new-version ${this._config.next} --quiet`;
       execute(command)
         .then(resolve)
         .catch(reject)

@@ -55,7 +55,7 @@ module.exports = class BuildStage {
       .then(() => resolve())
       .catch(e => {
         console.log(e)
-        process.exit(3)
+        process.exit(2)
       })
     })
   }
