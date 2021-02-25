@@ -21,8 +21,15 @@ class DeployStep {
     return this._config;
   }
 
+  /**
+   * Deploy the build version
+   * 
+   * - On NPM
+   * - On S3
+   */
   run() {
     return new Promise((resolve, reject) => {
+      console.log('---Deploy---');
 
       this.notOnS3()
         .then(this.s3.bind(this))

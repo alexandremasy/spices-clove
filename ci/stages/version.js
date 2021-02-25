@@ -5,7 +5,7 @@ const TemplatesController = require('../controllers/templates');
 const FigmaController = require('../controllers/figma');
 const FileSystemController = require('../controllers/fs');
 
-class VersionStep {
+module.exports = class VersionStep {
   /**
    * @constructor
    * @param {Object} options 
@@ -51,9 +51,7 @@ class VersionStep {
    * 
    * - Proactivaly add new file from the output folder
    * - Build the list of changes
-   * - Build the changelog (x)
    * - Commit the changes
-   * - Bump minor if changes
    */
   run() {
     console.log('---Version---');
@@ -71,15 +69,6 @@ class VersionStep {
         process.exit(4)
       })
     })
-
-    // return this.getLatestVersionTag()
-    //   .then(this.getRelease.bind(this))
-    //   .then(this.getNextVersion.bind(this))
-    //   .then(this.version.bind(this))
-    //   .catch(e => {
-    //     console.log(e)
-    //     process.exit(0);
-    //   });
   }
 
   /**
@@ -105,7 +94,20 @@ class VersionStep {
    */
   commit(){
     return new Promise((resolve, reject) => {
+      this._spinner.start('Commiting the icon change(s)')
 
+      if (!this.hasChanges){
+        this._spinner.info('no changes')
+        return resolve()
+      }
+
+      let command = `git commit ${this._config.output} -m "${this.changelog}"`
+      execute(command, { verbose: false })
+      .then((res) => {
+        this._spinner.succeed()
+        return resolve()
+      })
+      .catch(e => reject(e))
     })
   }
 
@@ -141,24 +143,10 @@ class VersionStep {
         })
 
         this._changelog.sort((a, b) => a.name > b.name)
-        console.log(this.changelog)
 
         this._spinner.succeed();
         return resolve()
       })
     })
   }
-
-  /**
-   * Update the version number
-   */
-  version() {
-    return new Promise((resolve, reject) => {
-      let command = `yarn version --new-version ${this._config.next} --quiet`;
-      execute(command)
-        .then(resolve)
-        .catch(reject)
-    })
-  }
 }
-module.exports = VersionStep

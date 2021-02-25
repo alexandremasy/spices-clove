@@ -49,6 +49,10 @@ module.exports = class TemplatesController{
     return path.resolve(this.outputPath, './spices-icons.svg')
   }
 
+  get spritePublicPath(){
+    return [this._config.s3_url, 'spices-icons.svg'].join('')
+  }
+
   get vueIconsPath(){
     return path.resolve(this.outputPath, 'spices-icons.vue')
   }
@@ -60,7 +64,7 @@ module.exports = class TemplatesController{
       this._spinner.start('Creating the demo page')
 
       let data = this.icons.map(i => {
-        return `<svg class="icon"><use xlink:href="#${i.name}"></use></svg>`
+        return `<svg class="icon"><use xlink:href="${this.spritePublicPath}#${i.name}"></use></svg>`
       })
       data = `<template>\n\t<div>\n\t\t${data.join('\n\t\t')}</div></template>`
 
@@ -81,7 +85,7 @@ module.exports = class TemplatesController{
 
       let icons = this.icons.map(i => i.name)
       let data = ''
-      data += `$spices-icon-path: '//cdn.sayl.cloud/spices/spices-icons/2.0.0';`
+      data += `$spices-icon-path: '${this.spritePublicPath}';`
       data += `\n$spices-icon-version: '${this._config.next}';`
       data += `\n`
       data += `\n$spices-icon-icons: (\n\t${icons.join(', \n\t')}\n);`

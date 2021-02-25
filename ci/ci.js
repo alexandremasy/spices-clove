@@ -84,7 +84,7 @@ class CI {
 
     return this.before()
       .then(this.build.bind(this))
-      // .then(this.version.bind(this))
+      .then(this.version.bind(this))
       // .then(this.deploy.bind(this))
       // .then(this.publish.bind(this))
       .catch(e => {
@@ -124,11 +124,11 @@ class CI {
   }
 
   deploy() {
-    return this._deploy.run()
+    return this._version.hasChanges ? this._deploy.run() : Promise.resolve()
   }
 
   publish() {
-    return this._publish.run()
+    return this._version.hasChanges ? this._publish.run() : Promise.resolve()
   }
 
   version() {
