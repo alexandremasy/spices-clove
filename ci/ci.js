@@ -19,6 +19,8 @@ class CI {
     this._publish = new (require('./stages/publish'))(args);
     this._build = new (require('./stages/build'))(args);
     this._deploy = new (require('./stages/deploy'))(args);
+
+    this._params = null
   }
 
   parse(argv) {
@@ -54,11 +56,11 @@ class CI {
   }
 
   run(argv) {
-    let params = this.parse(argv);
+    this._params = this.parse(argv);
 
-    if (params.step && params.step.length > 0) {
+    if (this._params.step && this._params.step.length > 0) {
       let fn = null;
-      switch (params.step) {
+      switch (this._params.step) {
         case 'before':
           fn = this.before; break;
         case 'build':
@@ -72,11 +74,11 @@ class CI {
       }
 
       if (!fn) {
-        console.log(chalk.red('Unkown step: %s'), params.step);
+        console.log(chalk.red('Unkown step: %s'), this._params.step);
         process.exit(1);
       }
 
-      this._config.debug && console.log('ci.step', params.step)
+      this._config.debug && console.log('ci.step', this._params.step)
 
       return fn.call(this)
         .catch(e => console.log(e))
@@ -124,7 +126,9 @@ class CI {
   }
 
   deploy() {
-    return this._version.hasChanges ? this._deploy.run() : Promise.resolve()
+    return (this._params.step && this._params.step.length > 0) || this._version.hasChanges ? 
+           this._deploy.run() : 
+           Promise.resolve()
   }
 
   publish() {

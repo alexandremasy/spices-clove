@@ -1,38 +1,38 @@
 const execute = require('../utils/execute');
 const chalk = require('chalk');
+const ora = require('ora');
+
+const FigmaController = require('../controllers/figma')
+const FileSystemController = require('../controllers/fs')
+const TemplatesController = require('../controllers/templates')
 
 class DeployStep {
+
   /**
    * @constructor
    * @param {Object} options 
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
+   * @param {TemplatesController} options.templates
    */
-  constructor() {
-    this._config = require('../utils/config');
-    this.existOnS3 = null;
-  }
-
-  set config(value) {
-    this._config = value;
-  }
-
-  get config() {
-    return this._config;
+  constructor({ config, fs, figma, templates }) {
+    this._config = config
+    this._spinner = ora();
   }
 
   /**
    * Deploy the build version
    * 
-   * - On NPM
    * - On S3
+   * - On NPM
+   * - Push to the repository
    */
   run() {
     return new Promise((resolve, reject) => {
       console.log('---Deploy---');
-
-      this.notOnS3()
-        .then(this.s3.bind(this))
+        
+        this.s3()
+        .then(this.npm.bind(this))
         .catch(err => {
           console.log(chalk.red('error'), err);
           process.exit(3);
@@ -42,60 +42,51 @@ class DeployStep {
     })
   }
 
-  get filename() {
-    let ret = `${this.config.name}-${this.config.next}.umd.min.js`;
-    ret = ret.replace('@', '');
-    ret = ret.replace('/', '-');
-    ret = ret.split('.').join('-');
+  npm(){
+    return new Promise((resolve, reject) => {
+      this._spinner.start('publishing on npm')
 
-    return ret;
+      // Make sure we have a changelog to avoid publishing a false positive
+      if (this._config.changelog === null || this._config.changelog !== null && !this._config.changelog.hasChanges){
+        this._spinner.info('nothing to publish on npm')
+        return resolve()
+      }
+
+      let command = `yarn publish --new-version ${this._config.next}`
+      execute(command, { verbose: false })
+      .then(() => {
+        this._spinner.succeed()
+        return resolve()
+      })
+      .catch(e => {
+        this._spinner.fail()
+        return reject(e)
+      })
+    })
   }
 
-  get bucketPath() {
-    let [group, name] = this.config.name.split('/');
-    return [this.config.s3_bucket, name].join('/');
-  }
-
-  /**
-   * Whether the bundle already exists on s3
-   * Resolve if config.s3 === false
-   * Resolve if the file is not on s3 already
-   * Reject if it is present on s3
-   * Reject if an issue occured
-   */
-  notOnS3() {
-    return this.config.s3 === true ?
-      new Promise((resolve, reject) => {
-        if (this.existOnS3 != null) {
-          this.existOnS3 === true ? reject(`${this.filename} already exists on the s3 bucket`) : resolve();
-          return;
-        }
-
-        let path = [this.bucketPath, this.filename].join('/');
-        let command = `aws s3 ls ${path}`;
-        this.config.debug && this.config.verbose && console.log(chalk.dim('deploy.notOnS3 >'), command);
-        execute(command, { successCodes: [0, 1] })
-          .then(({ response, code }) => {
-            // 1 => file does not exists
-            // 0 => file exits
-            this.existOnS3 = code === 0
-            this.config.debug && this.config.verbose && console.log(chalk.dim('deploy.notOnS3 <'), code, response);
-            code === 1 ? resolve() : reject(`${this.filename} already exists on the s3 bucket`)
-          })
-          .catch(({ response, code }) => reject(response))
-      }) : Promise.resolve(false);
+  repository() {
+    return new Promise((resolve, reject) => {
+      let command = `git push origin ${this.config.branch} --tags --quiet`
+      execute(command, { verbose: false })
+        .then(resolve)
+        .catch(reject)
+    })
   }
 
   s3() {
     return new Promise((resolve, reject) => {
-      let command = `aws s3 cp dist ${this.bucketPath} --recursive`;
-      this.config.debug && this.config.verbose && console.log(chalk.dim('deploy.s3 >'), command);
+      this._spinner.start('Uploading to s3')
+      let command = `aws s3 cp src/spices-icons.svg ${this._config.s3_bucket}`;
       execute(command)
       .then(({response}) => {
-        this.config.debug && this.config.verbose && console.log(chalk.dim('deploy.s3 <'), response);
+        this._spinner.succeed()
         resolve();
       })
-      .catch(reject)
+      .catch(e => {
+        this._spinner.fail()
+        reject(e)
+      })
     })
   }
 }

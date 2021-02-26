@@ -1,7 +1,7 @@
 const execute = require('../utils/execute');
 const https = require('https');
 
-class PublishStep {
+module.exports = class PublishStep {
   /**
    * @constructor
    * @param {Object} options 
@@ -27,15 +27,6 @@ class PublishStep {
         console.log(err)
         process.exit(4);
       })
-  }
-
-  repository() {
-    return new Promise((resolve, reject) => {
-      let command = `git push origin ${this.config.branch} --tags --quiet`
-      execute(command, { verbose: false })
-        .then(resolve)
-        .catch(reject)
-    })
   }
 
   discord() {
@@ -84,6 +75,3 @@ class PublishStep {
   }
 
 }
-
-
-module.exports = PublishStep;

@@ -1,9 +1,11 @@
 const semver = require('semver');
 const execute = require('../utils/execute');
 const ora = require('ora');
+
 const TemplatesController = require('../controllers/templates');
 const FigmaController = require('../controllers/figma');
 const FileSystemController = require('../controllers/fs');
+const Changelog = require('../utils/changelog')
 
 module.exports = class VersionStep {
   /**
@@ -18,30 +20,9 @@ module.exports = class VersionStep {
     this._templates = templates
 
     this.tagVersion = '0.0.0';
+
     this._changelog = null
     this._spinner = ora();
-  }
-
-  ///////////////////////////////////////////////////
-  
-  get changelog(){
-    let ret = this._changelog.map(c => {
-      let action = ''
-      if (c.deleted) action = 'removed'
-      if (c.added) action = 'added'
-      if (c.modified) action = 'updated'
-
-      return `icon ${c.name} ${action}`
-    })
-
-    return ret.join('\n')
-  }
-
-  /**
-   * @property {Boolean} hasChanges Whether or not the latest build generated some changes to publish 
-   */
-  get hasChanges(){
-    return this._changelog && this._changelog.length > 0
   }
   
   ///////////////////////////////////////////////////
@@ -96,7 +77,7 @@ module.exports = class VersionStep {
     return new Promise((resolve, reject) => {
       this._spinner.start('Commiting the icon change(s)')
 
-      if (!this.hasChanges){
+      if (!this._changelog.hasChanges){
         this._spinner.info('no changes')
         return resolve()
       }
@@ -143,6 +124,7 @@ module.exports = class VersionStep {
         })
 
         this._changelog.sort((a, b) => a.name > b.name)
+        this._config._changelog = this._changelog = new Changelog(this._changelog)
 
         this._spinner.succeed();
         return resolve()

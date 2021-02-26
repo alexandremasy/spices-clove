@@ -19,13 +19,6 @@ module.exports = class BuildStage {
     this._templates = templates
   }
 
-  debug(){
-    let icon = new Icon({ id: '123', name: 'angle-down-left' })
-    icon.output = '/home/alexandremasy/projects/spices/icons/src/icons/angle-down-left.svg'
-
-    this._fs.optimizeIcon(icon)
-  }
-
   /**
    * Build the latest version of the package
    * 

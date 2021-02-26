@@ -9,6 +9,7 @@ module.exports = {
   name: name,
   version: version,
   next: semver.inc(version, 'minor'),
+  changelog: null,
   
   branch: 'master',
   release: 'minor',
