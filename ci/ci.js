@@ -87,8 +87,8 @@ class CI {
     return this.before()
       .then(this.build.bind(this))
       .then(this.version.bind(this))
-      // .then(this.deploy.bind(this))
-      // .then(this.publish.bind(this))
+      .then(this.deploy.bind(this))
+      .then(this.publish.bind(this))
       .catch(e => {
         console.log(e);
       })

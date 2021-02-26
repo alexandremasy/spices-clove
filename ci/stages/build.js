@@ -13,7 +13,6 @@ module.exports = class BuildStage {
    * @param {TemplatesController} options.templates
    */
   constructor({ config, fs, figma, templates }){
-    this._config = config
     this._figma = figma
     this._fs = fs
     this._templates = templates

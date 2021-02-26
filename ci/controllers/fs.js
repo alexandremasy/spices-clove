@@ -14,7 +14,6 @@ module.exports = class FileSystemController {
    * @constructor
    */
   constructor(){
-    this._config = global.config;
     this._icons = null
 
     this._spinner = ora();
@@ -44,7 +43,7 @@ module.exports = class FileSystemController {
    * @readonly
    */
   get outputPath(){
-    return path.resolve(this._config.output)
+    return path.resolve(global.config.output)
   }
 
   /**

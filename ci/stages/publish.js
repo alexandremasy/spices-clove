@@ -11,7 +11,6 @@ module.exports = class PublishStep {
    * @param {TemplatesController} options.templates
    */
   constructor({ config, fs, figma, templates }) {
-    this._config = config
     this._spinner = ora();
   }
 
@@ -21,6 +20,8 @@ module.exports = class PublishStep {
    */
   run() {
     return new Promise((resolve, reject) => {
+      console.log('---Deploy---');
+
       this.discord()
       .then(() => {
         return resolve();
@@ -34,22 +35,22 @@ module.exports = class PublishStep {
 
   discord() {
     return new Promise((resolve, reject) => {
-      if (this._config.changelog === null || this._config.changelog !== null && !this._config.changelog.hasChanges) {
+      if (global.config.changelog === null || (global.config.changelog && global.config.changelog.hasChanges)) {
         this._spinner.info('Nothing to publish on discord')
         return resolve()
       }
 
       let params = {
-        content: `**${this._config.name}** \`${this._config.next}\` published \n ${this._config.changelog.toString()}`,
+        content: `**${global.config.name}** \`${global.config.next}\` published \n ${global.config.changelog.toString()}`,
         username: 'Jenkins',
-        avatar_url: this._config.avatar,
+        avatar_url: global.config.avatar,
         embeds: []
       }
 
-      if (this._config.npm){
+      if (global.config.npm){
         params.embeds.push({
           title: 'View it on npm',
-          url: `https://npm.infinity-commerce.io/-/web/detail/${this._config.name}`
+          url: `https://npm.infinity-commerce.io/-/web/detail/${global.config.name}`
         })
       }
 

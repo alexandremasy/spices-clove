@@ -5,9 +5,7 @@ const util = require('util')
 
 module.exports = class TemplatesController{
   constructor(){
-    this._config = global.config;
     this._icons = null
-
     this._spinner = ora();
   }
   ////////////////////////////////////////////////////////////////////////////////////
@@ -38,7 +36,7 @@ module.exports = class TemplatesController{
    * @readonly
    */
   get outputPath() {
-    return path.resolve(this._config.output)
+    return path.resolve(global.config.output)
   }
 
   get scssPath(){
@@ -50,8 +48,8 @@ module.exports = class TemplatesController{
   }
 
   get spritePublicPath(){
-    const filename = ['spices-icons.svg', this._config.next].join('?v=')
-    return [this._config.s3_url, filename].join('')
+    const filename = ['spices-icons.svg', global.config.next].join('?v=')
+    return [global.config.s3_url, filename].join('')
   }
 
   get vueIconsPath(){
@@ -87,7 +85,7 @@ module.exports = class TemplatesController{
       let icons = this.icons.map(i => i.name)
       let data = ''
       data += `$spices-icon-path: '${this.spritePublicPath}';`
-      data += `\n$spices-icon-version: '${this._config.next}';`
+      data += `\n$spices-icon-version: '${global.config.next}';`
       data += `\n`
       data += `\n$spices-icon-icons: (\n\t${icons.join(', \n\t')}\n);`
 

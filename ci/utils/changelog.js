@@ -11,7 +11,7 @@ module.exports = class Changelog{
    * @property {Boolean} hasChanges Whether or not the latest build generated some changes to publish 
    */
   get hasChanges() {
-    return this._changelog && this._changelog.length > 0
+    return this._changes && this._changes.length > 0
   }
 
   /**

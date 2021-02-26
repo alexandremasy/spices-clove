@@ -16,13 +16,17 @@ module.exports = class VersionStep {
    * @param {TemplatesController} options.templates
    */
   constructor({ config, fs, figma, templates }) {
-    this._config = config
+    global.config = config
     this._templates = templates
 
     this.tagVersion = '0.0.0';
 
     this._changelog = null
     this._spinner = ora();
+  }
+
+  get hasChanges(){
+    return global.config.changelog === null || (global.config.changelog && global.config.changelog.hasChanges)
   }
   
   ///////////////////////////////////////////////////
@@ -77,12 +81,12 @@ module.exports = class VersionStep {
     return new Promise((resolve, reject) => {
       this._spinner.start('Commiting the icon change(s)')
 
-      if (!this._changelog.hasChanges){
-        this._spinner.info('no changes')
+      if (global.config.changelog === null || global.config.changelog !== null && !global.config.changelog.hasChanges) {
+        this._spinner.info('No changes detected')
         return resolve()
       }
 
-      let command = `git commit ${this._config.output} -m "${this.changelog}"`
+      let command = `git commit ${global.config.output} -m "${this.changelog}"`
       execute(command, { verbose: false })
       .then((res) => {
         this._spinner.succeed()
@@ -124,7 +128,7 @@ module.exports = class VersionStep {
         })
 
         this._changelog.sort((a, b) => a.name > b.name)
-        this._config._changelog = this._changelog = new Changelog(this._changelog)
+        global.config.changelog = this._changelog = new Changelog(this._changelog)
 
         this._spinner.succeed();
         return resolve()

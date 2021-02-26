@@ -16,7 +16,6 @@ class DeployStep {
    * @param {TemplatesController} options.templates
    */
   constructor({ config, fs, figma, templates }) {
-    this._config = config
     this._spinner = ora();
   }
 
@@ -54,12 +53,12 @@ class DeployStep {
       this._spinner.start('Publishing on npm')
 
       // Make sure we have a changelog to avoid publishing a false positive
-      if (this._config.changelog === null || this._config.changelog !== null && !this._config.changelog.hasChanges){
+      if (global.config.changelog === null || (global.config.changelog && global.config.changelog.hasChanges)){
         this._spinner.info('Nothing to publish on npm')
         return resolve()
       }
 
-      let command = `yarn publish --new-version ${this._config.next}`
+      let command = `yarn publish --new-version ${global.config.next}`
       execute(command, { verbose: false })
       .then(() => {
         this._spinner.succeed()
@@ -80,7 +79,7 @@ class DeployStep {
   repository() {
     return new Promise((resolve, reject) => {
       this._spinner.start('Pushing to repository')
-      let command = `git push origin ${this._config.branch} --tags --quiet`
+      let command = `git push origin ${global.config.branch} --tags --quiet`
       execute(command, { verbose: false })
         .then(() => {
           this._spinner.succeed()
@@ -96,7 +95,7 @@ class DeployStep {
   s3() {
     return new Promise((resolve, reject) => {
       this._spinner.start('Uploading to s3')
-      let command = `aws s3 cp src/spices-icons.svg ${this._config.s3_bucket}`;
+      let command = `aws s3 cp src/spices-icons.svg ${global.config.s3_bucket}`;
       execute(command)
       .then(({response}) => {
         this._spinner.succeed()

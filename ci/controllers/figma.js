@@ -4,7 +4,6 @@ const Icon = require('../utils/icon')
 
 module.exports = class FigmaController{
   constructor() {
-    this._config = global.config
     this._spinner = ora()
 
     this._document = null
@@ -13,7 +12,7 @@ module.exports = class FigmaController{
   ////////////////////////////////////////////////////////////////////////////////////
 
   get client(){
-    return Figma(this._config.figma_personal_token)
+    return Figma(global.config.figma_personal_token)
   }
 
   /**
@@ -22,7 +21,7 @@ module.exports = class FigmaController{
    * @property {Object} config
    */
   set config(value){
-    this._config = value
+    global.config = value
   }
 
   /**
@@ -49,7 +48,7 @@ module.exports = class FigmaController{
   computeImageList() {
     return new Promise((resolve, reject) => {
       let ids = this.icons.map(i => i.id).join(',')
-      this.client.get(`/images/${this._config.figma_file_id}?ids=${ids}&format=svg`)
+      this.client.get(`/images/${global.config.figma_file_id}?ids=${ids}&format=svg`)
         .then((res) => {
           let images = res.data.images
           this._icons.forEach(i => i.origin = images[i.id])
@@ -64,7 +63,7 @@ module.exports = class FigmaController{
    */
   fetch(){
     return new Promise((resolve, reject) => {
-      this.client.get(`/files/${this._config.figma_file_id}`)
+      this.client.get(`/files/${global.config.figma_file_id}`)
       .then((res) => {
         this._document = res.data.document
         resolve()
