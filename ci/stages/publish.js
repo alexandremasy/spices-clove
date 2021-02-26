@@ -41,7 +41,7 @@ module.exports = class PublishStep {
       }
 
       let params = {
-        content: `**${global.config.name}** \`${global.config.next}\` published \n ${global.config.changelog.toString()}`,
+        content: `**${global.config.name}** \`${global.config.next}\` \n\n Changelog: \n${global.config.changelog.toString()}`,
         username: 'Jenkins',
         avatar_url: global.config.avatar,
         embeds: []

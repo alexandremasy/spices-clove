@@ -24,7 +24,7 @@ module.exports = class Changelog{
       if (c.added) action = 'added'
       if (c.modified) action = 'updated'
 
-      return `icon ${c.name} ${action}`
+      return `- icon \`${c.name}\` ${action}`
     })
 
     return ret.join('\n')
