@@ -33,6 +33,7 @@ class DeployStep {
         
         this.s3()
         .then(this.npm.bind(this))
+        .then(this.repository.bind(this))
         .catch(err => {
           console.log(chalk.red('error'), err);
           process.exit(3);
@@ -42,13 +43,18 @@ class DeployStep {
     })
   }
 
+  /**
+   * Publish the new version on npm if needed 
+   * 
+   * @returns {Promise}
+   */
   npm(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('publishing on npm')
+      this._spinner.start('Publishing on npm')
 
       // Make sure we have a changelog to avoid publishing a false positive
       if (this._config.changelog === null || this._config.changelog !== null && !this._config.changelog.hasChanges){
-        this._spinner.info('nothing to publish on npm')
+        this._spinner.info('Nothing to publish on npm')
         return resolve()
       }
 
@@ -65,12 +71,24 @@ class DeployStep {
     })
   }
 
+  /**
+   * Push to the repository
+   * 
+   * @returns {Promise}
+   */
   repository() {
     return new Promise((resolve, reject) => {
-      let command = `git push origin ${this.config.branch} --tags --quiet`
+      this._spinner.start('Pushing to repository')
+      let command = `git push origin ${this._config.branch} --tags --quiet`
       execute(command, { verbose: false })
-        .then(resolve)
-        .catch(reject)
+        .then(() => {
+          this._spinner.succeed()
+          return resolve()
+        })
+        .catch((e) => {
+          this._spinner.fail()
+          reject(e)
+        })
     })
   }
 
