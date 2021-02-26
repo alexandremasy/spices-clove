@@ -72,7 +72,6 @@ module.exports = class FigmaController{
       .catch((err) => {
         console.log('Error')
         console.log(err.statusCode)
-        process.exit()
         reject(err)
       })
     })
@@ -118,7 +117,7 @@ module.exports = class FigmaController{
         return resolve()
       })
       .catch(e => {
-        this._spinner.fail()
+        this._spinner.fail('Figma API might have a glitch or two')
         return reject(e)
       })
     })

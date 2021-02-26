@@ -50,7 +50,8 @@ module.exports = class TemplatesController{
   }
 
   get spritePublicPath(){
-    return [this._config.s3_url, 'spices-icons.svg'].join('')
+    const filename = ['spices-icons.svg', this._config.next].join('?v=')
+    return [this._config.s3_url, filename].join('')
   }
 
   get vueIconsPath(){
