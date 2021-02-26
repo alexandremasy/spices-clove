@@ -18,7 +18,7 @@ module.exports = class Changelog{
    * String representation of the changelog
    */
   toString(){
-    let ret = this._changelog.map(c => {
+    let ret = this._changes.map(c => {
       let action = ''
       if (c.deleted) action = 'removed'
       if (c.added) action = 'added'
