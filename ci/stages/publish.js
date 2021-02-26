@@ -1,5 +1,6 @@
-const execute = require('../utils/execute');
 const https = require('https');
+const chalk = require('chalk');
+const ora = require('ora');
 
 module.exports = class PublishStep {
   /**
@@ -7,41 +8,48 @@ module.exports = class PublishStep {
    * @param {Object} options 
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
+   * @param {TemplatesController} options.templates
    */
-  constructor() {
-    this._config = require('../utils/config');
+  constructor({ config, fs, figma, templates }) {
+    this._config = config
+    this._spinner = ora();
   }
 
-  set config(value) {
-    this._config = value;
-  }
-
-  get config() {
-    return this._config;
-  }
-
+  /**
+   * Publishing the new version
+   * - On Discord
+   */
   run() {
-    return this.repository()
-      .then(this.config.discord ? this.discord.bind(this) : Promise.resolve)
-      .catch(err => {
-        console.log(err)
-        process.exit(4);
+    return new Promise((resolve, reject) => {
+      this.discord()
+      .then(() => {
+        return resolve();
       })
+      .catch(err => {
+        console.log(chalk.red('error'), err);
+        process.exit(3);
+      })
+    })
   }
 
   discord() {
     return new Promise((resolve, reject) => {
+      if (this._config.changelog === null || this._config.changelog !== null && !this._config.changelog.hasChanges) {
+        this._spinner.info('Nothing to publish on discord')
+        return resolve()
+      }
+
       let params = {
-        content: `**${this.config.name}** \`${this.config.next}\` published`,
+        content: `**${this._config.name}** \`${this._config.next}\` published \n ${this._config.changelog.toString()}`,
         username: 'Jenkins',
-        avatar_url: this.config.avatar,
+        avatar_url: this._config.avatar,
         embeds: []
       }
 
-      if (this.config.npm){
+      if (this._config.npm){
         params.embeds.push({
           title: 'View it on npm',
-          url: `https://npm.infinity-commerce.io/-/web/detail/${this.config.name}`
+          url: `https://npm.infinity-commerce.io/-/web/detail/${this._config.name}`
         })
       }
 
@@ -49,7 +57,8 @@ module.exports = class PublishStep {
       const options = {
         hostname: 'discordapp.com',
         port: 443,
-        path: '/api/webhooks/742318702997012550/PKufWxrY_X9Oc1XzREac__JJFUuNXpV9_1Z3Y0WwYtl-4WXAHJD8q9Q2RjowAC1Jc3h7',
+        // path: '/api/webhooks/742318702997012550/PKufWxrY_X9Oc1XzREac__JJFUuNXpV9_1Z3Y0WwYtl-4WXAHJD8q9Q2RjowAC1Jc3h7',
+        path: '/api/webhooks/814724599954538506/KWKkWmiGcpmPBdVokmV5XvuOTybGHJw7N4XP40SRAXr3qDs-hr6_nPCNszuPpBqHnA3I',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -31,15 +31,16 @@ class DeployStep {
     return new Promise((resolve, reject) => {
       console.log('---Deploy---');
         
-        this.s3()
-        .then(this.npm.bind(this))
-        .then(this.repository.bind(this))
-        .catch(err => {
-          console.log(chalk.red('error'), err);
-          process.exit(3);
-        })
-
-      return resolve();
+      this.s3()
+      .then(this.npm.bind(this))
+      .then(this.repository.bind(this))
+      .then(() => {
+        return resolve();
+      })
+      .catch(err => {
+        console.log(chalk.red('error'), err);
+        process.exit(3);
+      })
     })
   }
 

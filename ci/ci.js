@@ -132,7 +132,9 @@ class CI {
   }
 
   publish() {
-    return this._version.hasChanges ? this._publish.run() : Promise.resolve()
+    return (this._params.step && this._params.step.length > 0) || this._version.hasChanges ? 
+           this._publish.run() : 
+           Promise.resolve()
   }
 
   version() {
