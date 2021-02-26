@@ -53,7 +53,7 @@ class DeployStep {
       this._spinner.start('Publishing on npm')
 
       // Make sure we have a changelog to avoid publishing a false positive
-      if (global.config.changelog === null || (global.config.changelog && global.config.changelog.hasChanges)){
+      if (global.config.changelog === null || (global.config.changelog && !global.config.changelog.hasChanges)){
         this._spinner.info('Nothing to publish on npm')
         return resolve()
       }
