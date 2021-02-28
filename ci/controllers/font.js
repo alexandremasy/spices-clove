@@ -10,7 +10,6 @@ const outlineStroke = require('svg-outline-stroke')
 module.exports = class FontController{
   constructor(){
     this.config = global.config
-    this._icons = null
     this._unicodes = {}
     this._current = 0;
 
@@ -19,28 +18,13 @@ module.exports = class FontController{
   ////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @property {Array} icons The list of available icons
-   */
-  get icons() {
-    return this._icons
-  }
-  set icons(value) {
-    this._icons = value
-  }
-
-  ////////////////////////////////////////////////////////////////////////////////////
-
-
-  /**
    * Create the iconfont
    */
   create(){
     return new Promise((resolve, reject) => {
       this._spinner.start('Creating the iconfont')
 
-      // this.prepare()
-      Promise.resolve()
-      .then(this.outline.bind(this))
+      this.outline()
       .then(this.iconfontSVG.bind(this))
       .then(this.iconfontTTF.bind(this))
       .then(this.iconfontWoff.bind(this))
@@ -50,30 +34,6 @@ module.exports = class FontController{
         return resolve()
       })
       .catch(e => reject(e))
-    })
-  }
-  
-
-  /**
-   * Find the existing icons
-   * 
-   * @temp
-   * @private
-   */
-  prepare(){
-    return new Promise((resolve, reject) => {
-      this._spinner.start('iconfont::prepare')
-      this._icons = fs.readdirSync(p).map(file => {
-        let ret = new Icon({
-          name: file.substring(0, file.indexOf('.svg'))
-        })
-  
-        ret.output = path.resolve(global.config.icons, file)
-        return ret
-      });
-
-      this._spinner.succeed()
-      return resolve()
     })
   }
 
@@ -86,7 +46,7 @@ module.exports = class FontController{
     return new Promise((resolve, reject) => {
       this._spinner.text = 'Creating the iconfont [Outline]'
 
-      Promise.all(this._icons.map(i => this.outlineIcon(i)))
+      Promise.all(global.config.list.map(i => this.outlineIcon(i)))
       .then( this.fixOutline.bind(this) )
       .then(() => {
         return resolve()
@@ -175,11 +135,12 @@ module.exports = class FontController{
           return reject(err)
         })
 
-      this._icons.forEach(i => {
+      global.config.list.forEach(i => {
         unicode++
         let s = fs.createReadStream(i.output)
+        i.unicode = String.fromCharCode(unicode)
         s.metadata = {
-          unicode: [String.fromCharCode(unicode)],
+          unicode: [i.unicode],
           name: i.name
         }
         stream.write(s)

@@ -14,28 +14,16 @@ module.exports = class FileSystemController {
    * @constructor
    */
   constructor(){
-    this._icons = null
-
     this._spinner = ora();
     this._current = 0;
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @property {Array} icons The list of available icons
-   */
-  get icons(){
-    return this._icons
-  }
-  set icons(value){
-    this._icons = value
-  }
-
-  /**
    * @property {Number} nIcons - Count the number of icons available
    */
   get nIcons(){
-    return this._icons.length
+    return global.config.list.length
   }
 
   /**
@@ -173,7 +161,7 @@ module.exports = class FileSystemController {
     return new Promise((resolve, reject) => {
       this._current = 0;
       this._spinner.start('Downloading')
-      Promise.all(this.icons.map((i, j) => this.downloadImage({ index: j, icon: i })))
+      Promise.all(global.config.list.map((i, j) => this.downloadImage({ index: j, icon: i })))
       .then(() => {
         this._spinner.succeed()
         resolve()
@@ -230,7 +218,7 @@ module.exports = class FileSystemController {
     return new Promise((resolve, reject) => {
       this._current = 0;
       this._spinner.start('Optimizing')
-      Promise.all(this.icons.map((i, j) => this.optimizeIcon({ index: j, icon: i })))
+      Promise.all(global.config.list.map((i, j) => this.optimizeIcon({ index: j, icon: i })))
         .then(() => {
           this._spinner.succeed()
           resolve()

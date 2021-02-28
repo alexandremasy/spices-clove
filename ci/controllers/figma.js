@@ -5,37 +5,12 @@ const Icon = require('../utils/icon')
 module.exports = class FigmaController{
   constructor() {
     this._spinner = ora()
-
     this._document = null
-    this._icons = []
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
   get client(){
     return Figma(global.config.figma_personal_token)
-  }
-
-  /**
-   * Set the config
-   * 
-   * @property {Object} config
-   */
-  set config(value){
-    global.config = value
-  }
-
-  /**
-   * @property {FigmaDocument} document The figma document
-   */
-  get document(){
-    return this._document
-  }
-
-  /**
-   * @property {Array} icons The list of existing icons
-   */
-  get icons(){
-    return this._icons
   }
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -47,11 +22,11 @@ module.exports = class FigmaController{
    */
   computeImageList() {
     return new Promise((resolve, reject) => {
-      let ids = this.icons.map(i => i.id).join(',')
+      let ids = global.config.list.map(i => i.id).join(',')
       this.client.get(`/images/${global.config.figma_file_id}?ids=${ids}&format=svg`)
         .then((res) => {
           let images = res.data.images
-          this._icons.forEach(i => i.origin = images[i.id])
+          global.config.list.forEach(i => i.origin = images[i.id])
 
           return resolve()
         })
@@ -69,9 +44,7 @@ module.exports = class FigmaController{
         resolve()
       })
       .catch((err) => {
-        console.log('Error')
-        console.log(err.statusCode)
-        reject(err)
+        reject()
       })
     })
   }
@@ -87,11 +60,11 @@ module.exports = class FigmaController{
   
       let pages = this._document.children;
       pages.filter(p => !p.name.includes('_'))
-      .map(p => p.children.forEach(f => {
+      .forEach(p => p.children.forEach(f => {
         ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
       }))
 
-      this._icons = ret
+      global.config.list = ret
 
       return resolve();
     })
@@ -112,7 +85,7 @@ module.exports = class FigmaController{
       .then(this.findIcons.bind(this))
       .then(this.computeImageList.bind(this))
       .then(() => {
-        this._spinner.succeed(`${this.icons.length} icon(s) found`)
+        this._spinner.succeed(`${global.config.list.length} icon(s) found`)
         return resolve()
       })
       .catch(e => {

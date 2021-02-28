@@ -37,12 +37,6 @@ module.exports = class BuildStage {
 
       
       this._figma.getIcons()
-      .then(() => { 
-        this._fs.icons = 
-        this._templates.icons =
-        this._font.icons =
-        this._figma.icons
-      })
       .then(this._fs.download.bind(this._fs))
       // .then(this._fs.optimize.bind(this._fs))
       .then(this._font.create.bind(this._font))

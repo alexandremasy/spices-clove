@@ -5,26 +5,15 @@ const util = require('util')
 
 module.exports = class TemplatesController{
   constructor(){
-    this._icons = null
     this._spinner = ora();
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @property {Array} icons The list of available icons
-   */
-  get icons() {
-    return this._icons
-  }
-  set icons(value) {
-    this._icons = value
-  }
-
-  /**
    * @property {Number} nIcons - Count the number of icons available
    */
   get nIcons() {
-    return this._icons.length
+    return global.config.list.length
   }
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -38,7 +27,7 @@ module.exports = class TemplatesController{
     return new Promise((resolve, reject) => {
       this._spinner.start('Creating the scss')
 
-      let icons = this.icons.map(i => i.name)
+      let icons = global.config.list.map(i => i.name)
       let data = ''
       data += `$spices-icons-path: '${global.config.sprite_public}';`
       data += `\n$spices-icons-version: '${global.config.next}';`
@@ -64,7 +53,7 @@ module.exports = class TemplatesController{
       const readFile = util.promisify(fs.readFile)
       
       let data = ``
-      Promise.all(this.icons.map(i => {
+      Promise.all(global.config.list.map(i => {
         return new Promise((resolve, reject) => {
           let image = path.resolve(global.config.icons, `${i.name}.svg`)
           readFile(image, 'utf8')
@@ -99,16 +88,20 @@ module.exports = class TemplatesController{
    */
   list(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Create the json list')
+      this._spinner.start('Create the json')
 
-      let data = this._icons.map(i => {
+      let data = global.config.list.map(i => {
         return {
           category: i.category,
           name: i.name,
-          unicode: i.unicode,
-          src: path.resolve(global.config.s3_url, 'icons/')
+          unicode: i.unicode.codePointAt(0).toString(16),
+          path: [global.config.s3_url, 'icons', '/', i.name, '.svg'].join('')
         }
       })
+
+      fs.writeFileSync(global.config.json, JSON.stringify(data))
+      this._spinner.succeed()
+      return resolve()
     })
   }
 }

@@ -19,6 +19,13 @@ module.exports = class Icon{
   }
 
   ////////////////////////////////////////
+
+  /**
+   * @property {String} category The icon category
+   */
+  get category(){
+    return this._category
+  }
   
   /**
    * @property {String} data The svg content string

@@ -15,6 +15,7 @@ module.exports = {
   version: version,
   next,
   changelog: null,
+  list: [],
   
   branch: 'master',
   release: 'minor',
@@ -45,7 +46,6 @@ module.exports = {
   outlined: path.resolve(output, 'outlined'),
   scss: path.resolve(output, 'spices-icons.scss'),
   sprite: path.resolve(output, 'spices-icons.svg'),
-  sprite_public: [s3_url, ['spices-icons.svg', next].join('?v=')].join('')
-  
-  
+  sprite_public: [s3_url, ['spices-icons.svg', next].join('?v=')].join(''),
+  json: path.resolve(output, 'spices-icons.json'),
 }
