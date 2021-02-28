@@ -84,5 +84,11 @@ module.exports = class Icon{
     return this._unicode
   }
 
+  /**
+   * @property {String} unicodeString the string representation of the unicode
+   */
+  get unicodeString(){
+    return this._unicode.codePointAt(0).toString(16)
+  }
   ////////////////////////////////////////
 }

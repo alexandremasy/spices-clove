@@ -27,7 +27,7 @@ module.exports = class TemplatesController{
     return new Promise((resolve, reject) => {
       this._spinner.start('Creating the scss')
 
-      let icons = global.config.list.map(i => i.name)
+      let icons = global.config.list.map(i => `${i.name}: "\\${i.unicodeString}"`)
       let data = ''
       data += `$spices-icons-path: '${global.config.sprite_public}';`
       data += `\n$spices-icons-version: '${global.config.next}';`
@@ -64,17 +64,14 @@ module.exports = class TemplatesController{
                              .replace(/>\s+</g, '><')
                              .trim();
 
-            let ret = `<g id="${i.name}" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${content}</g>`
+            let ret = `<symbol id="${i.name}" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${content}</symbol>`
             resolve(ret)
           })
         })
       }))
       .then(results => {
         data = results.join('\n')
-        data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs><style>symbol{	display: none; } symbol:target {	display: inline; }</style></defs>
-          ${data}
-        </svg>`;
+        data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>${data}</defs></svg>`;
         fs.writeFileSync(global.config.sprite, data);
   
         this._spinner.succeed()
@@ -94,7 +91,7 @@ module.exports = class TemplatesController{
         return {
           category: i.category,
           name: i.name,
-          unicode: i.unicode.codePointAt(0).toString(16),
+          unicode: i.unicodeString,
           path: [global.config.s3_url, 'icons', '/', i.name, '.svg'].join('')
         }
       })

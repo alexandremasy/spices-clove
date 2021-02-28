@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="spices-icons" horiz-adv-x="1000">
+    <font-face font-family="spices-icons"
+      units-per-em="1000" ascent="1000"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="debug"
+      unicode="&#xE002;"
+      horiz-adv-x="1000" d="M125 687.5H875V125H125V687.5z" />
+    <glyph glyph-name="abc"
+      unicode="&#xE003;"
+      horiz-adv-x="1000" d="M125 875H750V250M125 875V250H750M125 875L750 250" />
+  </font>
+</defs>
+</svg>
