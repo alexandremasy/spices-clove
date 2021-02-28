@@ -24,6 +24,8 @@ module.exports = class VersionStep {
     this._changelog = null
     this._spinner = ora();
   }
+  
+  ///////////////////////////////////////////////////
 
   get hasChanges(){
     return global.config.changelog === null || (global.config.changelog && global.config.changelog.hasChanges)
@@ -65,7 +67,7 @@ module.exports = class VersionStep {
     return new Promise((resolve, reject) => {
       this._spinner.start('Add new files')
 
-      let command = 'git add src/icons'
+      let command = `git add ${global.config.icons}`
       return execute(command)
       .then(() => {
         this._spinner.succeed()
@@ -106,7 +108,7 @@ module.exports = class VersionStep {
       this._spinner.start('Computing the changelog')
       
       // let command = 'git diff --name-status --staged src/icons'
-      let command = 'git status -s --porcelain --no-renames src/icons'
+      let command = `git status -s --porcelain --no-renames ${global.config.icons}`
       execute(command, { verbose: false })
       .then((res) => {
         let data = res.response
@@ -127,7 +129,7 @@ module.exports = class VersionStep {
           }
         })
 
-        this._changelog.sort((a, b) => a.name > b.name)
+        this._changelog.sort((a, b) => ('' + a.name).localeCompare(b.name))
         global.config.changelog = this._changelog = new Changelog(this._changelog)
 
         this._spinner.succeed();

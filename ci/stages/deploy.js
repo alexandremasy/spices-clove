@@ -92,10 +92,15 @@ class DeployStep {
     })
   }
 
+  /**
+   * Publish the generated files to s3
+   * 
+   * @returns {Promise}
+   */
   s3() {
     return new Promise((resolve, reject) => {
       this._spinner.start('Uploading to s3')
-      let command = `aws s3 cp src/spices-icons.svg ${global.config.s3_bucket}`;
+      let command = `aws s3 cp src ${global.config.s3_bucket} --recursive --exclude *.js --exclude *.vue --exclude *.scss`;
       execute(command)
       .then(({response}) => {
         this._spinner.succeed()
