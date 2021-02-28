@@ -39,21 +39,6 @@ module.exports = class FileSystemController {
   }
 
   /**
-   * @property {Path} iconPath
-   * @readonly
-   */
-  get outputPath(){
-    return path.resolve(global.config.output)
-  }
-
-  /**
-   * @property {Boolean} outputPathExists Whether or not the output directory exists
-   */
-  get outputPathExists(){
-    return fs.existsSync(this.outputPath)
-  }
-
-  /**
    * @property {Object} svgoConfig
    * @readonly
    */
@@ -107,10 +92,10 @@ module.exports = class FileSystemController {
    */
   createOutputDirectory(){
     return new Promise((resolve, reject) => {
-      mkdirp.sync(this.outputPath)
-      mkdirp.sync(path.resolve(this.outputPath, 'icons'))
-      mkdirp.sync(path.resolve(this.outputPath, 'iconfont'))
-      mkdirp.sync(path.resolve(this.outputPath, 'outlined'))
+      mkdirp.sync(global.config.output)
+      mkdirp.sync(global.config.icons)
+      mkdirp.sync(global.config.iconfont)
+      mkdirp.sync(global.config.outlined)
 
       return resolve()
     })
@@ -153,7 +138,7 @@ module.exports = class FileSystemController {
    * @returns {Promise}
    */
   deleteOutputDirectory(){
-    return this.deleteDirectory(this.outputPath)
+    return this.deleteDirectory(global.config.output)
   }
 
   /**
@@ -162,7 +147,7 @@ module.exports = class FileSystemController {
    * @returns {Promise}
    */
   deleteFontDirectory(){
-    return this.deleteDirectory(path.resolve(this.outputPath, 'iconfont'))
+    return this.deleteDirectory(global.config.iconfont)
   }
 
   /**
@@ -171,14 +156,14 @@ module.exports = class FileSystemController {
    * @returns {Promise}
    */
   deleteIconsDirectory(){
-    return this.deleteDirectory(path.resolve(this.outputPath, 'icons'))
+    return this.deleteDirectory(global.config.icons)
   }
 
   /**
    * Delete the output icon outline directory if it does exists
    */
   deleteOutlineDirectory(){
-    return this.deleteDirectory(path.resolve(this.outputPath, 'outlined'))
+    return this.deleteDirectory(global.config.outlined)
   }
 
   /**
@@ -212,7 +197,7 @@ module.exports = class FileSystemController {
       
       const name = icon.name
       const url = icon.origin
-      const image = path.resolve(this.outputPath, 'icons', `${name}.svg`)
+      const image = path.resolve(global.config.icons, `${name}.svg`)
       icon.output = image
       
       const writer = fs.createWriteStream(image)

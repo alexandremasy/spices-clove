@@ -35,13 +35,7 @@ module.exports = class BuildStage {
     return new Promise((resolve, reject) => {
       console.log('---Build---');
 
-      this._font.create()
-      .then(() => {
-        process.exit()
-      })
       
-      return
-
       this._figma.getIcons()
       .then(() => { 
         this._fs.icons = 
@@ -49,11 +43,12 @@ module.exports = class BuildStage {
         this._font.icons =
         this._figma.icons
       })
-      // .then(this._fs.download.bind(this._fs))
+      .then(this._fs.download.bind(this._fs))
       // .then(this._fs.optimize.bind(this._fs))
-      .then(this._fs.iconfont.bind(this._fs))
+      .then(this._font.create.bind(this._font))
       .then(this._templates.sprite.bind(this._templates))
       .then(this._templates.scss.bind(this._templates))
+      .then(this._templates.list.bind(this._templates))
       .then(() => resolve())
       .catch(e => {
         console.log(e)

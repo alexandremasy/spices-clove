@@ -6,15 +6,16 @@ module.exports = class Icon{
    * @param {String} options.id 
    * @param {String} options.name 
    */
-  constructor({ id, name }){
+  constructor({ category, data = null, id, name, origin = null, output = null, unicode = 0 }){
+    this._category = category
     this._id = id
     this._name = name
 
-    this._data = null
-    this._origin = null
-    this._output = null
+    this._data = data
+    this._origin = origin
+    this._output = output
 
-    this._unicode = 0
+    this._unicode = unicode
   }
 
   ////////////////////////////////////////

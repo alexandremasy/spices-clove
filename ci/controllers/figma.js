@@ -88,7 +88,7 @@ module.exports = class FigmaController{
       let pages = this._document.children;
       pages.filter(p => !p.name.includes('_'))
       .map(p => p.children.forEach(f => {
-        ret.push( new Icon({ id: f.id, name: f.name }) )
+        ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
       }))
 
       this._icons = ret

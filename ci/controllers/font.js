@@ -1,10 +1,10 @@
 const ora = require('ora')
 const fs = require('fs')
 const path = require('path')
+const util = require('util')
 const Icon = require('../utils/icon')
-const execute = require('../utils/execute')
+const readFile = util.promisify(fs.readFile)
 
-const outline = require('svg-outline-stroke')
 const outlineStroke = require('svg-outline-stroke')
 
 module.exports = class FontController{
@@ -28,14 +28,6 @@ module.exports = class FontController{
     this._icons = value
   }
 
-  /**
-   * @property {Path} iconPath
-   * @readonly
-   */
-  get outputPath() {
-    return path.resolve(global.config.output)
-  }
-
   ////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -44,11 +36,17 @@ module.exports = class FontController{
    */
   create(){
     return new Promise((resolve, reject) => {
-      this.prepare()
+      this._spinner.start('Creating the iconfont')
+
+      // this.prepare()
+      Promise.resolve()
       .then(this.outline.bind(this))
       .then(this.iconfontSVG.bind(this))
       .then(this.iconfontTTF.bind(this))
+      .then(this.iconfontWoff.bind(this))
+      .then(this.iconfontWoff2.bind(this))
       .then(() => {
+        this._spinner.succeed('Creating the iconfont')
         return resolve()
       })
       .catch(e => reject(e))
@@ -65,13 +63,12 @@ module.exports = class FontController{
   prepare(){
     return new Promise((resolve, reject) => {
       this._spinner.start('iconfont::prepare')
-      let p = path.resolve(this.outputPath, 'icons')
       this._icons = fs.readdirSync(p).map(file => {
         let ret = new Icon({
           name: file.substring(0, file.indexOf('.svg'))
         })
   
-        ret.output = path.resolve(p, file)
+        ret.output = path.resolve(global.config.icons, file)
         return ret
       });
 
@@ -87,20 +84,15 @@ module.exports = class FontController{
    */
   outline(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('iconfont::outline')
-  
+      this._spinner.text = 'Creating the iconfont [Outline]'
+
       Promise.all(this._icons.map(i => this.outlineIcon(i)))
       .then( this.fixOutline.bind(this) )
       .then(() => {
-        this._spinner.succeed()
         return resolve()
       })
-      .catch(e => {
-        this._spinner.fail()
-        return reject()
-      })
+      .catch(e => reject(e))
     })
-
   }
 
   /**
@@ -110,18 +102,17 @@ module.exports = class FontController{
    */
   outlineIcon(icon){
     return new Promise((resolve, reject) => {
-      let data = fs.readFileSync(icon.output, 'utf-8')
-
-      outlineStroke(data, {
+      readFile(icon.output, 'utf-8')
+      .then(data => outlineStroke(data, {
         optCurve: false,
         step: 4,
         round: 0,
         centerHorizontally: true,
         fixedWidth: true, 
         color: 'black'
-      })
+      }))
       .then(data => {
-        const image = path.resolve(this.outputPath, 'outlined', `${icon.name}.svg`)
+        const image = path.resolve(global.config.outlined, `${icon.name}.svg`)
         fs.writeFileSync(image, data)
         this._current++
         return resolve()
@@ -140,6 +131,8 @@ module.exports = class FontController{
    */
   fixOutline(){
     return new Promise((resolve, reject) => {
+      const execute = require('../utils/execute')
+
       let script = path.resolve(__dirname, '../outline.py')
       let command = `fontforge -lang=py -script ${script}`
       execute(command, {verbose: false})
@@ -160,10 +153,9 @@ module.exports = class FontController{
    */
   iconfontSVG(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('iconfont::svg')
-      let _spinner = this._spinner
+      this._spinner.text = 'Creating the iconfont [SVG]'
+
       let unicode = 57345
-      const output = path.resolve(this.outputPath, 'iconfont', 'spices-icons.svg')
       
       const SVGIcons2SVGFontStream = require('svgicons2svgfont');
       const stream = new SVGIcons2SVGFontStream({
@@ -175,15 +167,12 @@ module.exports = class FontController{
         normalize: true,
         prependUnicode: true
       })
-      stream.pipe(fs.createWriteStream(output))
+      stream.pipe(fs.createWriteStream(global.config.iconfont_svg))
         .on('finish', function () {
-          _spinner.succeed()
           return resolve()
         })
         .on('error', function (err) {
-          _spinner.fail()
-          console.log(err);
-          reject(err)
+          return reject(err)
         })
 
       this._icons.forEach(i => {
@@ -208,15 +197,15 @@ module.exports = class FontController{
    */
   iconfontTTF(){
     return new Promise((resolve, reject) => {
-      this._spinner.start('iconfont::ttf')
+      this._spinner.text = 'Creating the iconfont [TTF]'
+
       const svg2ttf = require('svg2ttf')
-      const input = path.resolve(this.outputPath, 'iconfont', 'spices-icons.svg')
-      const output = path.resolve(this.outputPath, 'iconfont', 'spices-icons.ttf')
+      const input = global.config.iconfont_svg
+      const output = global.config.iconfont_ttf
 
       let ttf = svg2ttf(fs.readFileSync(input, 'utf-8'), {})
-      fs.writeFileSync(output, new Buffer(ttf.buffer))
+      fs.writeFileSync(output, ttf.buffer)
 
-      this._spinner.succeed()
       return resolve()
     })
   }
@@ -228,25 +217,37 @@ module.exports = class FontController{
    * @see ttf2woff https://github.com/fontello/ttf2woff
    */
   iconfontWoff(){
+    return new Promise((resolve, reject) => {
+      this._spinner.text = 'Creating the iconfont [WOFF]'
+      const ttf2woff = require('ttf2woff')
+      const input = global.config.iconfont_ttf
+      const output = global.config.iconfont_woff
 
+      let woff = ttf2woff(fs.readFileSync(input))
+      fs.writeFileSync(output, woff.buffer)
+      
+      return resolve()
+    })
   }
-
 
   /**
    * Create the woff font
    * 
    * @returns {Promise}
-   * @see ttf2woff2 https://www.npmjs.com/package/ttf2woff2
+   * @see ttf2woff2 https://github.com/nfroidure/ttf2woff2
    */
   iconfontWoff2(){
+    return new Promise((resolve, reject) => {
+      this._spinner.text = 'Creating the iconfont [WOFF2]'
 
-  }
+      const ttf2woff2 = require('ttf2woff2')
+      const input = global.config.iconfont_ttf
+      const output = global.config.iconfont_woff2
 
-  css(){
+      let woff = ttf2woff2(fs.readFileSync(input))
+      fs.writeFileSync(output, woff)
 
-  }
-
-  updateTagsUnicode(){
-
+      return resolve()
+    })
   }
 }

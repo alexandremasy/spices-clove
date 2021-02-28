@@ -10,10 +10,6 @@ module.exports = class TemplatesController{
   }
   ////////////////////////////////////////////////////////////////////////////////////
 
-  get demoPath(){
-    return path.resolve(this.outputPath, './demo.vue')
-  }
-
   /**
    * @property {Array} icons The list of available icons
    */
@@ -31,47 +27,7 @@ module.exports = class TemplatesController{
     return this._icons.length
   }
 
-  /**
-   * @property {Path} iconPath
-   * @readonly
-   */
-  get outputPath() {
-    return path.resolve(global.config.output)
-  }
-
-  get scssPath(){
-    return path.resolve(this.outputPath, './spices-icons.scss')
-  }
-
-  get spritePath(){
-    return path.resolve(this.outputPath, './spices-icons.svg')
-  }
-
-  get spritePublicPath(){
-    const filename = ['spices-icons.svg', global.config.next].join('?v=')
-    return [global.config.s3_url, filename].join('')
-  }
-
-  get vueIconsPath(){
-    return path.resolve(this.outputPath, 'spices-icons.vue')
-  }
-
   ////////////////////////////////////////////////////////////////////////////////////
-
-  demo(){
-    return new Promise((resolve, reject) => {
-      this._spinner.start('Creating the demo page')
-
-      let data = this.icons.map(i => {
-        return `<svg class="icon"><use xlink:href="${this.spritePublicPath}#${i.name}"></use></svg>`
-      })
-      data = `<template>\n\t<div>\n\t\t${data.join('\n\t\t')}</div></template>`
-
-      fs.writeFileSync(this.demoPath, data)
-      this._spinner.succeed();
-      return resolve()
-    })
-  }
 
   /**
    * Create the icons variable list
@@ -84,12 +40,12 @@ module.exports = class TemplatesController{
 
       let icons = this.icons.map(i => i.name)
       let data = ''
-      data += `$spices-icons-path: '${this.spritePublicPath}';`
+      data += `$spices-icons-path: '${global.config.sprite_public}';`
       data += `\n$spices-icons-version: '${global.config.next}';`
       data += `\n`
       data += `\n$spices-icons: (\n\t${icons.join(', \n\t')}\n);`
 
-      fs.writeFileSync(this.scssPath, data)
+      fs.writeFileSync(global.config.scss, data)
 
       this._spinner.succeed()
       resolve()
@@ -110,7 +66,7 @@ module.exports = class TemplatesController{
       let data = ``
       Promise.all(this.icons.map(i => {
         return new Promise((resolve, reject) => {
-          let image = path.resolve(this.outputPath, 'icons', `${i.name}.svg`)
+          let image = path.resolve(global.config.icons, `${i.name}.svg`)
           readFile(image, 'utf8')
           .then(content => {
             content = content.replace(/<svg[^>]+>/g, '')
@@ -130,10 +86,28 @@ module.exports = class TemplatesController{
           <defs><style>symbol{	display: none; } symbol:target {	display: inline; }</style></defs>
           ${data}
         </svg>`;
-        fs.writeFileSync(this.spritePath, data);
+        fs.writeFileSync(global.config.sprite, data);
   
         this._spinner.succeed()
         return resolve()
+      })
+    })
+  }
+
+  /**
+   * Generate the list of available icons
+   */
+  list(){
+    return new Promise((resolve, reject) => {
+      this._spinner.start('Create the json list')
+
+      let data = this._icons.map(i => {
+        return {
+          category: i.category,
+          name: i.name,
+          unicode: i.unicode,
+          src: path.resolve(global.config.s3_url, 'icons/')
+        }
       })
     })
   }
