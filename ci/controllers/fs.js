@@ -109,6 +109,8 @@ module.exports = class FileSystemController {
     return new Promise((resolve, reject) => {
       mkdirp.sync(this.outputPath)
       mkdirp.sync(path.resolve(this.outputPath, 'icons'))
+      mkdirp.sync(path.resolve(this.outputPath, 'iconfont'))
+      mkdirp.sync(path.resolve(this.outputPath, 'outlined'))
 
       return resolve()
     })
@@ -129,6 +131,23 @@ module.exports = class FileSystemController {
   }
 
   /**
+   * Remove the existing output folders
+   * 
+   * @returns {Promise}
+   */
+  deleteOutputDirectories() {
+    return new Promise((resolve, reject) => {
+      this.deleteIconsDirectory()
+        .then(this.deleteOutlineDirectory.bind(this))
+        .then(this.deleteFontDirectory.bind(this))
+        .then(() => {
+          resolve()
+        })
+        .catch(e => reject(e))
+    })
+  }
+
+  /**
    * Delete the output directory if it does exists
    * 
    * @returns {Promise}
@@ -138,12 +157,28 @@ module.exports = class FileSystemController {
   }
 
   /**
+   * Delete the iconfont directory if it does exists
+   * 
+   * @returns {Promise}
+   */
+  deleteFontDirectory(){
+    return this.deleteDirectory(path.resolve(this.outputPath, 'iconfont'))
+  }
+
+  /**
    * Delete the output icon directory if it does exists
    * 
    * @returns {Promise}
    */
   deleteIconsDirectory(){
     return this.deleteDirectory(path.resolve(this.outputPath, 'icons'))
+  }
+
+  /**
+   * Delete the output icon outline directory if it does exists
+   */
+  deleteOutlineDirectory(){
+    return this.deleteDirectory(path.resolve(this.outputPath, 'outlined'))
   }
 
   /**

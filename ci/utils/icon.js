@@ -13,6 +13,8 @@ module.exports = class Icon{
     this._data = null
     this._origin = null
     this._output = null
+
+    this._unicode = 0
   }
 
   ////////////////////////////////////////
@@ -62,6 +64,16 @@ module.exports = class Icon{
   
   get origin(){
     return this._origin
+  }
+
+  /**
+   * @property {Number} unicode The unicode value (iconfont)
+   */
+  set unicode(value){
+    this._unicode = value
+  }
+  get unicode(){
+    return this._unicode
   }
 
   ////////////////////////////////////////

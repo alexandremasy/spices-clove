@@ -2,6 +2,7 @@ const FigmaController = require('../controllers/figma')
 const FileSystemController = require('../controllers/fs')
 const TemplatesController = require('../controllers/templates')
 const Icon = require('../utils/icon')
+const FontController = require('../controllers/font')
 
 module.exports = class BuildStage {
 
@@ -16,6 +17,8 @@ module.exports = class BuildStage {
     this._figma = figma
     this._fs = fs
     this._templates = templates
+
+    this._font = new FontController()
   }
 
   /**
@@ -32,14 +35,23 @@ module.exports = class BuildStage {
     return new Promise((resolve, reject) => {
       console.log('---Build---');
 
+      this._font.create()
+      .then(() => {
+        process.exit()
+      })
+      
+      return
+
       this._figma.getIcons()
       .then(() => { 
         this._fs.icons = 
         this._templates.icons =
+        this._font.icons =
         this._figma.icons
       })
-      .then(this._fs.download.bind(this._fs))
+      // .then(this._fs.download.bind(this._fs))
       // .then(this._fs.optimize.bind(this._fs))
+      .then(this._fs.iconfont.bind(this._fs))
       .then(this._templates.sprite.bind(this._templates))
       .then(this._templates.scss.bind(this._templates))
       .then(() => resolve())

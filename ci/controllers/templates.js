@@ -84,10 +84,10 @@ module.exports = class TemplatesController{
 
       let icons = this.icons.map(i => i.name)
       let data = ''
-      data += `$spices-icon-path: '${this.spritePublicPath}';`
-      data += `\n$spices-icon-version: '${global.config.next}';`
+      data += `$spices-icons-path: '${this.spritePublicPath}';`
+      data += `\n$spices-icons-version: '${global.config.next}';`
       data += `\n`
-      data += `\n$spices-icon-icons: (\n\t${icons.join(', \n\t')}\n);`
+      data += `\n$spices-icons: (\n\t${icons.join(', \n\t')}\n);`
 
       fs.writeFileSync(this.scssPath, data)
 
@@ -126,8 +126,8 @@ module.exports = class TemplatesController{
       }))
       .then(results => {
         data = results.join('\n')
-        data = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-          <defs><style>g{	display: none; } g:target {	display: inline; }</style></defs>
+        data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs><style>symbol{	display: none; } symbol:target {	display: inline; }</style></defs>
           ${data}
         </svg>`;
         fs.writeFileSync(this.spritePath, data);

@@ -27,7 +27,7 @@ module.exports = class BeforeStep{
       console.log('---Before---');
       this._spinner.start('Preparing the folders')
 
-      this._fs.deleteIconsDirectory()
+      this._fs.deleteOutputDirectories()
       .then(this._fs.createOutputDirectory.bind(this._fs))
       .then(() => {
         this._spinner.succeed()
