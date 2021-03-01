@@ -29,6 +29,7 @@ module.exports = class TemplatesController{
 
       let icons = global.config.list.map(i => `${i.name}: "\\${i.unicodeString}"`)
       let data = ''
+      data += `$spices-icons-iconfont-root: '${global.config.s3_url}';`
       data += `$spices-icons-path: '${global.config.sprite_public}';`
       data += `\n$spices-icons-version: '${global.config.next}';`
       data += `\n`
