@@ -1,15 +1,17 @@
-$spices-icons-iconfont-root: 'https://cdn.sayl.cloud/spices/icons/';$spices-icons-path: 'https://cdn.sayl.cloud/spices/icons/spices-icons.svg?v=0.11.0';
-$spices-icons-version: '0.11.0';
+$spices-icons-path: 'https://cdn.sayl.cloud/spices/icons/spices-icons.svg?v=0.12.0';
+$spices-icons-iconfont-root: '/iconfont/';
+$spices-icons-version: '0.12.0';
 
 $spices-icons: (
-	debug: "\e002", 
-	abc: "\e003", 
-	arrow-up-right: "\e004", 
-	arrow-up-left: "\e005", 
-	arrow-up: "\e006", 
-	arrow-right: "\e007", 
-	arrow-left: "\e008", 
-	arrow-down-right: "\e009", 
-	arrow-down-left: "\e00a", 
-	arrow-down: "\e00b"
+	debug: "\ea02", 
+	debug2: "\ea03", 
+	abc: "\ea04", 
+	arrow-up-right: "\ea05", 
+	arrow-up-left: "\ea06", 
+	arrow-up: "\ea07", 
+	arrow-right: "\ea08", 
+	arrow-left: "\ea09", 
+	arrow-down-right: "\ea0a", 
+	arrow-down-left: "\ea0b", 
+	arrow-down: "\ea0c"
 );
