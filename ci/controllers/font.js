@@ -4,6 +4,9 @@ const path = require('path')
 const util = require('util')
 const Icon = require('../utils/icon')
 const readFile = util.promisify(fs.readFile)
+const writeFile= util.promisify(fs.writeFile)
+const { basil } = require('@spices/basil')
+const { scale } = require('scale-that-svg')
 
 const outlineStroke = require('svg-outline-stroke')
 
@@ -27,8 +30,8 @@ module.exports = class FontController{
       this.outline()
       .then(this.iconfontSVG.bind(this))
       .then(this.iconfontTTF.bind(this))
-      .then(this.iconfontWoff.bind(this))
-      .then(this.iconfontWoff2.bind(this))
+      // .then(this.iconfontWoff.bind(this))
+      // .then(this.iconfontWoff2.bind(this))
       .then(() => {
         this._spinner.succeed('Creating the iconfont')
         return resolve()
@@ -46,7 +49,8 @@ module.exports = class FontController{
     return new Promise((resolve, reject) => {
       this._spinner.text = 'Creating the iconfont [Outline]'
 
-      Promise.all(global.config.list.map(i => this.outlineIcon(i)))
+      // basil.sequence(global.config.list.map(i => this.outlineIcon.bind(this, i)))
+      Promise.all(global.config.list.map(i => this.outlineIcon.bind(this, i)))
       .then( this.fixOutline.bind(this) )
       .then(() => {
         return resolve()
@@ -62,22 +66,29 @@ module.exports = class FontController{
    */
   outlineIcon(icon){
     return new Promise((resolve, reject) => {
-      readFile(icon.output, 'utf-8')
-      .then(data => outlineStroke(data, {
-        optCurve: false,
-        step: 4,
-        round: 0,
-        centerHorizontally: true,
-        fixedWidth: true, 
-        color: 'black'
-      }))
+      scale(icon.data, { scale: 100 })
+      .then(data => {
+        return outlineStroke(data, {
+          optCurve: false,
+          step: 4,
+          round: 0,
+          centerHorizontally: true,
+          fixedWidth: true, 
+          color: 'black'
+        })}
+      )
       .then(data => {
         const image = path.resolve(global.config.outlined, `${icon.name}.svg`)
-        fs.writeFileSync(image, data)
+        return writeFile(image, data)
+      })
+      .then(() => {
         this._current++
+        console.log(this._current);
         return resolve()
       })
       .catch(e => {
+        console.log('------ Error -------')
+        console.log(icon.path)
         console.log('issue with', e)
         return reject()
       })
@@ -115,19 +126,38 @@ module.exports = class FontController{
     return new Promise((resolve, reject) => {
       this._spinner.text = 'Creating the iconfont [SVG]'
 
-      let unicode = 57345
+      /**
+       * Unicode Private Use Area start.
+       * https://en.wikipedia.org/wiki/Private_Use_Areas
+       */
+      let startUnicode = 0xea01;
+      let unicode = startUnicode
       
-      const SVGIcons2SVGFontStream = require('svgicons2svgfont');
-      const stream = new SVGIcons2SVGFontStream({
+      const SVGIcons2SVGFont = require('svgicons2svgfont');
+      const fontStream = new SVGIcons2SVGFont({
         // ascent: 986.5,
         // descent: 100,
         fontHeight: 1000,
-        fontName:'spices-icons',
-        log: () => {},
-        normalize: true,
-        prependUnicode: true
+        fontName: 'spices-icons',
+        log: () => { },
+        normalize: false,
+      });
+
+      // Add the icons
+      global.config.list.forEach(i => {
+        unicode++
+
+        let url = path.resolve(global.config.outlined, `${i.name}.svg`)
+        let glyph = fs.createReadStream(url)
+        i.unicode = String.fromCharCode(unicode)
+        glyph.metadata = {
+          unicode: [i.unicode],
+          name: i.name
+        }
+        fontStream.write(glyph)
       })
-      stream.pipe(fs.createWriteStream(global.config.iconfont_svg))
+
+      fontStream.pipe(fs.createWriteStream(global.config.iconfont_svg))
         .on('finish', function () {
           return resolve()
         })
@@ -135,18 +165,7 @@ module.exports = class FontController{
           return reject(err)
         })
 
-      global.config.list.forEach(i => {
-        unicode++
-        let s = fs.createReadStream(i.output)
-        i.unicode = String.fromCharCode(unicode)
-        s.metadata = {
-          unicode: [i.unicode],
-          name: i.name
-        }
-        stream.write(s)
-      })
-
-      stream.end()
+      fontStream.end()
     })
   }
 
@@ -164,8 +183,23 @@ module.exports = class FontController{
       const input = global.config.iconfont_svg
       const output = global.config.iconfont_ttf
 
-      let ttf = svg2ttf(fs.readFileSync(input, 'utf-8'), {})
-      fs.writeFileSync(output, ttf.buffer)
+      readFile(input, 'utf-8')
+      .then(ttf => {
+        ttf = svg2ttf(ttf, {
+          copyright: 'Alexandre Masy',
+          version: '2.0'
+        })
+        ttf = Buffer.from(ttf.buffer);
+
+        return writeFile(output, ttf)
+      })
+      .then((err) => {
+        if (err) {
+          return reject(err);
+        }
+
+        resolve();
+      })
 
       return resolve()
     })

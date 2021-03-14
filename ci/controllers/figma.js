@@ -64,6 +64,7 @@ module.exports = class FigmaController{
         ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
       }))
 
+      ret.sort((a, b) => ('' + a.name).localeCompare(b.name))
       global.config.list = ret
 
       return resolve();

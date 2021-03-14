@@ -29,8 +29,9 @@ module.exports = class TemplatesController{
 
       let icons = global.config.list.map(i => `${i.name}: "\\${i.unicodeString}"`)
       let data = ''
-      data += `$spices-icons-iconfont-root: '${global.config.s3_url}';`
       data += `$spices-icons-path: '${global.config.sprite_public}';`
+      // data += `\n$spices-icons-iconfont-root: '${global.config.s3_url}iconfont/';`
+      data += `\n$spices-icons-iconfont-root: '/iconfont/';`
       data += `\n$spices-icons-version: '${global.config.next}';`
       data += `\n`
       data += `\n$spices-icons: (\n\t${icons.join(', \n\t')}\n);`
@@ -71,7 +72,7 @@ module.exports = class TemplatesController{
         })
       }))
       .then(results => {
-        data = results.join('\n')
+        data = results.join('')
         data = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>${data}</defs></svg>`;
         fs.writeFileSync(global.config.sprite, data);
   

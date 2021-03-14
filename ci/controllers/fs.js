@@ -263,4 +263,41 @@ module.exports = class FileSystemController {
       })
     })
   }
+
+  /**
+   * Find out the list of icons locally.
+   * From the output sources deduct the list of icons.
+   * It allow debugging the other steps more easier.
+   * 
+   * @private
+   * @returns {Promise}
+   */
+  prepare(){
+    return new Promise((resolve, reject) => {
+      const readdir = util.promisify(fs.readdir)
+      
+      readdir(global.config.icons)
+      .then((list) => {
+        const icons = list.map(i => {
+          let output = path.resolve(global.config.icons, i);
+          let name = i.substring(0, i.indexOf('.'))
+          let data = fs.readFileSync(output, 'utf-8')
+
+          return new Icon({ 
+            category: null,
+            data,
+            id: Math.random().toString(36).substring(7),
+            name,
+            output
+          })
+        })
+
+        global.config.list = icons
+        console.log('icons => ', global.config.list.length)
+
+        return resolve()
+      })
+      .catch(e => reject(e))
+    })
+  }
 }

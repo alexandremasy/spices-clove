@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const FileSystemController = require('./controllers/fs')
 const FigmaController = require('./controllers/figma')
 const TemplatesController = require('./controllers/templates')
+const FontController = require('./controllers/font')
 
 class CI {
   constructor() {
@@ -12,8 +13,9 @@ class CI {
     this._fs = new FileSystemController();
     this._figma = new FigmaController();
     this._templates = new TemplatesController();
+    this._font = new FontController()
 
-    let args = { config: this._config, fs: this._fs, figma: this._figma, templates: this._templates }
+    let args = { config: this._config, font: this._font, fs: this._fs, figma: this._figma, templates: this._templates }
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);
@@ -24,7 +26,7 @@ class CI {
   }
 
   parse(argv) {
-    let steps = ['before', 'build', 'deploy', 'publish', 'version'];
+    let steps = ['before', 'build', 'deploy', 'outline', 'publish', 'version'];
     let valids = steps.concat(['--debug', '--verbose']);
     let others = argv.filter(arg => !valids.includes(arg));
 
@@ -65,6 +67,8 @@ class CI {
           fn = this.before; break;
         case 'build':
           fn = this.build; break;
+        case 'outline':
+          fn = this.outline; break;
         case 'deploy':
           fn = this.deploy; break;
         case 'publish':
@@ -129,6 +133,18 @@ class CI {
     return (this._params.step && this._params.step.length > 0) || this._version.hasChanges ? 
            this._deploy.run() : 
            Promise.resolve()
+  }
+
+  outline(){
+    return new Promise((resolve, reject) => {
+      this._fs.prepare()
+      .then(this._font.create.bind(this._font))
+      .then(() => resolve)
+      .catch((e) => {
+        console.log(e)
+        reject()
+      })
+    })
   }
 
   publish() {

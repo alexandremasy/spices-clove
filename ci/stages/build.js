@@ -1,24 +1,24 @@
 const FigmaController = require('../controllers/figma')
+const FontController = require('../controllers/font')
 const FileSystemController = require('../controllers/fs')
 const TemplatesController = require('../controllers/templates')
 const Icon = require('../utils/icon')
-const FontController = require('../controllers/font')
 
 module.exports = class BuildStage {
 
   /**
    * @constructor
    * @param {Object} options 
+   * @param {FontController} options.font
    * @param {FileSystemController} options.fs
    * @param {FigmaController} options.figma
    * @param {TemplatesController} options.templates
    */
-  constructor({ config, fs, figma, templates }){
+  constructor({ font, fs, figma, templates }){
     this._figma = figma
     this._fs = fs
     this._templates = templates
-
-    this._font = new FontController()
+    this._font = font
   }
 
   /**
@@ -40,9 +40,9 @@ module.exports = class BuildStage {
       .then(this._fs.download.bind(this._fs))
       // .then(this._fs.optimize.bind(this._fs))
       .then(this._font.create.bind(this._font))
-      .then(this._templates.sprite.bind(this._templates))
-      .then(this._templates.scss.bind(this._templates))
-      .then(this._templates.list.bind(this._templates))
+      // .then(this._templates.sprite.bind(this._templates))
+      // .then(this._templates.scss.bind(this._templates))
+      // .then(this._templates.list.bind(this._templates))
       .then(() => resolve())
       .catch(e => {
         console.log(e)
