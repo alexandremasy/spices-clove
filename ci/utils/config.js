@@ -31,6 +31,7 @@ module.exports = {
   
   figma_personal_token: "158843-2c12d5ef-af37-44f7-af74-bb0b97e54139",
   figma_file_id: "U2TtGONui0MxqNh6fo0QVX",
+  figma_file_id: "EB8WqwWJ3m2O81xL8QT7Yt",
   
   // 
   //  Outputs

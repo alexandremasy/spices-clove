@@ -34,7 +34,6 @@ module.exports = class BuildStage {
   run() {
     return new Promise((resolve, reject) => {
       console.log('---Build---');
-
       
       this._figma.getIcons()
       .then(this._fs.download.bind(this._fs))

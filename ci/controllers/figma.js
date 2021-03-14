@@ -61,7 +61,9 @@ module.exports = class FigmaController{
       let pages = this._document.children;
       pages.filter(p => !p.name.includes('_'))
       .forEach(p => p.children.forEach(f => {
-        ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
+        if (f.type === 'COMPONENT'){
+          ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
+        }
       }))
 
       ret.sort((a, b) => ('' + a.name).localeCompare(b.name))

@@ -28,8 +28,8 @@ module.exports = class FontController{
       this._spinner.start('Creating the iconfont')
 
       this.outline()
-      .then(this.iconfontSVG.bind(this))
-      .then(this.iconfontTTF.bind(this))
+      // .then(this.iconfontSVG.bind(this))
+      // .then(this.iconfontTTF.bind(this))
       // .then(this.iconfontWoff.bind(this))
       // .then(this.iconfontWoff2.bind(this))
       .then(() => {
@@ -49,10 +49,11 @@ module.exports = class FontController{
     return new Promise((resolve, reject) => {
       this._spinner.text = 'Creating the iconfont [Outline]'
 
-      // basil.sequence(global.config.list.map(i => this.outlineIcon.bind(this, i)))
-      Promise.all(global.config.list.map(i => this.outlineIcon.bind(this, i)))
-      .then( this.fixOutline.bind(this) )
+      // Promise.all(global.config.list.map(i => this.outlineIcon(i)))
+      basil.sequence(global.config.list.map(i => this.outlineIcon.bind(this, i)))
+      // .then( this.fixOutline.bind(this) )
       .then(() => {
+        console.log('outine end')
         return resolve()
       })
       .catch(e => reject(e))
@@ -66,12 +67,13 @@ module.exports = class FontController{
    */
   outlineIcon(icon){
     return new Promise((resolve, reject) => {
-      scale(icon.data, { scale: 100 })
+
+      icon.data ? Promise.resolve(icon.data) : readFile(icon.output, 'utf-8')
+      .then(data => scale(data, { scale: 100 }))
       .then(data => {
         return outlineStroke(data, {
-          optCurve: false,
+          optCurve: true,
           step: 4,
-          round: 0,
           centerHorizontally: true,
           fixedWidth: true, 
           color: 'black'
@@ -83,7 +85,8 @@ module.exports = class FontController{
       })
       .then(() => {
         this._current++
-        console.log(this._current);
+        this._spinner.text = `Creating the iconfont [Outline] ${this._current} / ${global.config.list.length}`
+
         return resolve()
       })
       .catch(e => {
