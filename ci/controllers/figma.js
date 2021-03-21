@@ -1,6 +1,7 @@
 const Figma = require('../api/figma')
 const ora = require('ora')
 const Icon = require('../utils/icon')
+const { default: chalk } = require('chalk')
 
 module.exports = class FigmaController{
   constructor() {
@@ -57,12 +58,22 @@ module.exports = class FigmaController{
   findIcons(){
     return new Promise((resolve, reject) => {
       let ret = []
+      let names = []
   
       let pages = this._document.children;
       pages.filter(p => !p.name.includes('_'))
       .forEach(p => p.children.forEach(f => {
         if (f.type === 'COMPONENT'){
-          ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
+          // Prevent duplicates
+          if (names.includes(f.name)){
+            console.log();
+            console.warn(chalk.red(`ERR: Duplicate icon "${f.name}"`))
+            process.exit();
+          }
+          else{
+            names.push(f.name);
+            ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
+          }
         }
       }))
 

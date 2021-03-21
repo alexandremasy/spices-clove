@@ -4,18 +4,21 @@ const FileSystemController = require('./controllers/fs')
 const FigmaController = require('./controllers/figma')
 const TemplatesController = require('./controllers/templates')
 const FontController = require('./controllers/font')
+const Font = require('./utils/font')
 
 class CI {
   constructor() {
-    this._config = require('./utils/config'); 
-    global.config = this._config;
+    global.config = require('./utils/config');  
+    config.fonts = [
+      new Font({ name: 'pepper-regular', figmaId: 'U2TtGONui0MxqNh6fo0QVX' })
+    ]
 
     this._fs = new FileSystemController();
     this._figma = new FigmaController();
     this._templates = new TemplatesController();
     this._font = new FontController()
 
-    let args = { config: this._config, font: this._font, fs: this._fs, figma: this._figma, templates: this._templates }
+    let args = { config: global.config, font: this._font, fs: this._fs, figma: this._figma, templates: this._templates }
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);
@@ -82,7 +85,7 @@ class CI {
         process.exit(1);
       }
 
-      this._config.debug && console.log('ci.step', this._params.step)
+      global.config.debug && console.log('ci.step', this._params.step)
 
       return fn.call(this)
         .catch(e => console.log(e))
@@ -113,7 +116,7 @@ class CI {
   sanity() {
     return new Promise((resolve, reject) => {
       this.spinner.start('sanity checks');
-      let p = this._config.s3 === true ? this._deploy.notOnS3.bind(this._deploy) : Promise.resolve;
+      let p = global.config.s3 === true ? this._deploy.notOnS3.bind(this._deploy) : Promise.resolve;
       p()
         .then(() => {
           this.spinner.succeed('sane context')

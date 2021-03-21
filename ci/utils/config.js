@@ -30,23 +30,68 @@ module.exports = {
   s3_url,
   
   figma_personal_token: "158843-2c12d5ef-af37-44f7-af74-bb0b97e54139",
-  figma_file_id: "U2TtGONui0MxqNh6fo0QVX",
-  figma_file_id: "EB8WqwWJ3m2O81xL8QT7Yt",
-  
+  fonts: [],
+
   // 
   //  Outputs
   // 
   output,
-  iconfont: path.resolve(output, 'iconfont'),
-  iconfont_svg: path.resolve(output, 'iconfont', 'spices-icons.svg'),
-  iconfont_ttf: path.resolve(output, 'iconfont', 'spices-icons.ttf'),
-  iconfont_woff: path.resolve(output, 'iconfont', 'spices-icons.woff'),
-  iconfont_woff2: path.resolve(output, 'iconfont', 'spices-icons.woff2'),
+
+  folder_icons: 'icons',
+  folder_webfont: 'webfonts',
+  iconsFolderName: 'icons',
+
+
+
+  // iconfont: path.resolve(output, 'iconfont'),
+  // iconfont_svg: path.resolve(output, 'iconfont', 'spices-icons.svg'),
+  // iconfont_ttf: path.resolve(output, 'iconfont', 'spices-icons.ttf'),
+  // iconfont_woff: path.resolve(output, 'iconfont', 'spices-icons.woff'),
+  // iconfont_woff2: path.resolve(output, 'iconfont', 'spices-icons.woff2'),
   
-  icons: path.resolve(output, 'icons'),
-  outlined: path.resolve(output, 'outlined'),
-  scss: path.resolve(output, 'spices-icons.scss'),
-  sprite: path.resolve(output, 'spices-icons.svg'),
-  sprite_public: [s3_url, ['spices-icons.svg', next].join('?v=')].join(''),
-  json: path.resolve(output, 'spices-icons.json'),
+  // icons: path.resolve(output, 'icons'),
+  // outlined: path.resolve(output, 'outlined'),
+  // scss: path.resolve(output, 'spices-icons.scss'),
+  // sprite: path.resolve(output, 'spices-icons.svg'),
+  // sprite_public: [s3_url, ['spices-icons.svg', next].join('?v=')].join(''),
+  // json: path.resolve(output, 'spices-icons.json'),
+
+  svgo: {
+    plugins: [
+      'cleanupAttrs',
+      'removeDoctype',
+      'removeXMLProcInst',
+      'removeComments',
+      'removeMetadata',
+      'removeTitle',
+      'removeDesc',
+      // 'removeUselessDefs',
+      'removeEditorsNSData',
+      'removeEmptyAttrs',
+      // 'removeHiddenElems',
+      'removeEmptyText',
+      'removeEmptyContainers',
+      'removeViewBox',
+      // 'cleanupEnableBackground',
+      // 'convertStyleToAttrs',
+      // 'convertColors',
+      // 'convertPathData',
+      // 'convertTransform',
+      // 'removeUnknownsAndDefaults',
+      'removeNonInheritableGroupAttrs',
+      // 'removeUselessStrokeAndFill',
+      // 'removeUnusedNS',
+      // 'cleanupIDs',
+      // 'cleanupNumericValues',
+      // 'moveElemsAttrsToGroup',
+      // 'moveGroupAttrsToElems',
+      // 'collapseGroups',
+      // 'removeRasterImages',
+      // 'mergePaths',
+      // 'convertShapeToPath',
+      'sortAttrs',
+      // 'removeDimensions',
+      // { name: 'removeAttrs', attrs: '(stroke|fill)' },
+    ]
+  }
 }

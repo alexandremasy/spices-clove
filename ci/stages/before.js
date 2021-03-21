@@ -1,4 +1,5 @@
 const ora = require('ora')
+const { basil } = require('@spices/basil')
 
 const FigmaController = require('../controllers/figma')
 const FileSystemController = require('../controllers/fs')
@@ -26,9 +27,10 @@ module.exports = class BeforeStep{
     return new Promise((resolve, reject) => {
       console.log('---Before---');
       this._spinner.start('Preparing the folders')
-
-      this._fs.deleteOutputDirectories()
-      .then(this._fs.createOutputDirectory.bind(this._fs))
+      
+      basil.sequence(config.fonts.map(f => f.before.bind(f)))
+      // this._fs.deleteOutputDirectories()
+      // .then(this._fs.createOutputDirectory.bind(this._fs))
       .then(() => {
         this._spinner.succeed()
         resolve()

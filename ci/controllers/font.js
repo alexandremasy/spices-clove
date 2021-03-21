@@ -28,8 +28,8 @@ module.exports = class FontController{
       this._spinner.start('Creating the iconfont')
 
       this.outline()
-      // .then(this.iconfontSVG.bind(this))
-      // .then(this.iconfontTTF.bind(this))
+      .then(this.iconfontSVG.bind(this))
+      .then(this.iconfontTTF.bind(this))
       // .then(this.iconfontWoff.bind(this))
       // .then(this.iconfontWoff2.bind(this))
       .then(() => {
@@ -50,10 +50,9 @@ module.exports = class FontController{
       this._spinner.text = 'Creating the iconfont [Outline]'
 
       // Promise.all(global.config.list.map(i => this.outlineIcon(i)))
-      basil.sequence(global.config.list.map(i => this.outlineIcon.bind(this, i)))
-      // .then( this.fixOutline.bind(this) )
+      basil.sequence(global.config.list.map(i => this.outlineIcon.bind(this, i)), 10)
+      .then( this.fixOutline.bind(this) )
       .then(() => {
-        console.log('outine end')
         return resolve()
       })
       .catch(e => reject(e))
