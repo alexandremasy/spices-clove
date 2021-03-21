@@ -29,8 +29,6 @@ module.exports = class BeforeStep{
       this._spinner.start('Preparing the folders')
       
       basil.sequence(config.fonts.map(f => f.before.bind(f)))
-      // this._fs.deleteOutputDirectories()
-      // .then(this._fs.createOutputDirectory.bind(this._fs))
       .then(() => {
         this._spinner.succeed()
         resolve()

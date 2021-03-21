@@ -1,15 +1,16 @@
 const Figma = require('../api/figma')
-const ora = require('ora')
 const Icon = require('../utils/icon')
-const { default: chalk } = require('chalk')
+const chalk = require('chalk')
 
+/**
+ * @class
+ */
 module.exports = class FigmaController{
-  constructor() {
-    this._spinner = ora()
-    this._document = null
-  }
-  ////////////////////////////////////////////////////////////////////////////////////
 
+  /**
+   * @property {Figma} client The figma api client
+   * @readonly
+   */
   get client(){
     return Figma(global.config.figma_personal_token)
   }
@@ -19,48 +20,53 @@ module.exports = class FigmaController{
   /**
    * Compute the list of images to download
    * 
+   * @param {Array} icons The list of icons
+   * @param {String} figmaId The figma file id
    * @returns {Promise}
    */
-  computeImageList() {
+  computeImageList({figmaId, icons}) {
     return new Promise((resolve, reject) => {
-      let ids = global.config.list.map(i => i.id).join(',')
-      this.client.get(`/images/${global.config.figma_file_id}?ids=${ids}&format=svg`)
-        .then((res) => {
-          let images = res.data.images
-          global.config.list.forEach(i => i.origin = images[i.id])
+      let ids = icons.map(i => i.id).join(',')
+      this.client.get(`/images/${figmaId}?ids=${ids}&format=svg`)
+      .then((res) => {
+        let images = res.data.images
+        icons.forEach(i => i.figma = images[i.id])
 
-          return resolve()
-        })
+        return resolve(icons)
+      })
+      .catch(e => {
+        console.log('error with the api from Figma')
+        console.log(e.response);
+      })
     })
   }
 
   /**
    * Fetch the figma file
+   * 
+   * @param {String} figmaId The figma file id
+   * @returns {Promise}
    */
-  fetch(){
+  fetch({ figmaId }){
     return new Promise((resolve, reject) => {
-      this.client.get(`/files/${global.config.figma_file_id}`)
-      .then((res) => {
-        this._document = res.data.document
-        resolve()
-      })
-      .catch((err) => {
-        reject()
-      })
+      this.client.get(`/files/${figmaId}`)
+      .then((res) => resolve({figmaId, document: res.data.document}))
+      .catch((err) => reject())
     })
   }
 
   /**
    * Browse the whole figma document and pages for icons
    * 
+   * @param {Object} document The figma document ast
    * @returns {Promise}
    */
-  findIcons(){
+  findIcons({document, figmaId}){
     return new Promise((resolve, reject) => {
       let ret = []
       let names = []
   
-      let pages = this._document.children;
+      let pages = document.children;
       pages.filter(p => !p.name.includes('_'))
       .forEach(p => p.children.forEach(f => {
         if (f.type === 'COMPONENT'){
@@ -72,15 +78,19 @@ module.exports = class FigmaController{
           }
           else{
             names.push(f.name);
-            ret.push( new Icon({ id: f.id, name: f.name, category: p.name }) )
+            ret.push(
+              new Icon({ 
+                category: p.name, 
+                id: f.id, 
+                name: f.name, 
+              })
+            )
           }
         }
       }))
 
       ret.sort((a, b) => ('' + a.name).localeCompare(b.name))
-      global.config.list = ret
-
-      return resolve();
+      return resolve({document, figmaId, icons: ret})
     })
   }  
 
@@ -90,22 +100,16 @@ module.exports = class FigmaController{
    * - Go through all the layer in the hunt for layers
    * - Get all the found layer download links
    * 
+   * @param {String} figmaId The figma file id
    * @returns {Promise}
    */
-  getIcons(){
+  getIcons(figmaId){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Computing the list of icons')
-      this.fetch()
+    this.fetch({ figmaId })
       .then(this.findIcons.bind(this))
       .then(this.computeImageList.bind(this))
-      .then(() => {
-        this._spinner.succeed(`${global.config.list.length} icon(s) found`)
-        return resolve()
-      })
-      .catch(e => {
-        this._spinner.fail('Figma API might have a glitch or two')
-        return reject(e)
-      })
+      .then(icons => resolve(icons))
+      .catch(e => reject(e))
     })
   }
 }
