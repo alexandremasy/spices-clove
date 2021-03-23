@@ -15,11 +15,16 @@ module.exports = class Icon{
   
   /**
    * @constructor
-   * @param {Object} options 
-   * @param {String} options.id 
-   * @param {String} options.name 
+   * @param {Object} options
+   * @param {String} options.category The category of the glyph
+   * @param {String} options.data The content of the glyph
+   * @param {String} options.id The internal id of the glyph
+   * @param {String} options.name The name of the glyph
+   * @param {Font} options.parent The Font it is related to
+   * @param {String} options.source The path to download the glyph
+   * @param {String} options.unicode The unicode address of the glyph in the font
    */
-  constructor({ category, data = null, figma, id, name, parent, unicode = 0 }){
+  constructor({ category, data = null, id, name, parent, source, unicode = 0 }){
 
     /**
      * @property {String} category The icon category
@@ -47,14 +52,14 @@ module.exports = class Icon{
     this.name = name
   
     /**
-     * @property {String} figma The path to the figma file
+     * @property {String} source The path to the source file
      */
-    this.figma = figma
+    this.source = source
 
     /**
      * @property {Number} unicode The unicode value (iconfont)
      */
-    this._unicode = unicode
+    this.unicode = unicode
   }
 
   ////////////////////////////////////////
@@ -76,10 +81,10 @@ module.exports = class Icon{
   }
 
   /**
-   * @property {String} private The OS path to the icon
+   * @property {String} system The OS path to the icon
    * @readonly
    */
-  get private(){
+  get system(){
     return path.resolve(config.unicodeString, this.parent.name, config.folder_icons, `${this.name}.svg`)
   }
 
@@ -99,8 +104,8 @@ module.exports = class Icon{
    */
   download(){
     return new Promise((resolve, reject) => {
-      const writer = fs.createWriteStream(this.private)
-      axios.get(this.figma, {
+      const writer = fs.createWriteStream(this.system)
+      axios.get(this.source, {
         responseType: 'stream'
       })
       .then((res) => {
@@ -111,7 +116,7 @@ module.exports = class Icon{
         console.log('---------------')
         console.log('Download failed for:')
         console.log(this.name);
-        console.log(this.figma);
+        console.log(this.source);
         console.log(err.message);
         console.log('---------------')
         return reject(e)
