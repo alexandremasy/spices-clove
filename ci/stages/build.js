@@ -1,29 +1,21 @@
 const { basil } = require('@spices/basil')
-const FigmaController = require('../controllers/figma')
-const FontController = require('../controllers/font')
-const FileSystemController = require('../controllers/fs')
-const TemplatesController = require('../controllers/templates')
-const Icon = require('../utils/icon')
-const Font = require('../utils/font')
 const ora = require('ora')
 
+const Font = require('../models/font')
+const FigmaController = require('../controllers/figma')
+
+/**
+ * @class
+ */
 module.exports = class BuildStage {
 
   /**
    * @constructor
    * @param {Object} options 
-   * @param {FontController} options.font
-   * @param {FileSystemController} options.fs
-   * @param {FigmaController} options.figma
-   * @param {TemplatesController} options.templates
    */
-  constructor({ font, fs, figma, templates }){
-    this._figma = figma
-    this._fs = fs
-    this._templates = templates
-    this._font = font
-
+  constructor({}){
     this._spinner = ora()
+    this._figma = new FigmaController()
   }
 
   /**
@@ -40,7 +32,7 @@ module.exports = class BuildStage {
     return new Promise((resolve, reject) => {
       console.log('---Build---');
 
-      basil.sequence(config.fonts.map(f => this.iterator.bind(this, f)))
+      basil.sequence(fonts.map(f => this.iterator.bind(this, f)))
       .then(() => {
         console.log('done');
       })
@@ -60,14 +52,13 @@ module.exports = class BuildStage {
 
       this._figma.getIcons(font.figmaId)
       .then((icons) => {
-        console.log(icons)
-
+        this._spinner.succeed(`${icons.length} found`)
         process.exit();
       })
 
-      .then(this._fs.download.bind(this._fs))
+      // .then(this._fs.download.bind(this._fs))
       // .then(this._fs.optimize.bind(this._fs))
-      .then(this._font.create.bind(this._font))
+      // .then(this._font.create.bind(this._font))
       // .then(this._templates.sprite.bind(this._templates))
       // .then(this._templates.scss.bind(this._templates))
       // .then(this._templates.list.bind(this._templates))

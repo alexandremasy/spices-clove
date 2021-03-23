@@ -30,31 +30,14 @@ module.exports = {
   s3_url,
   
   figma_personal_token: "158843-2c12d5ef-af37-44f7-af74-bb0b97e54139",
-  fonts: [],
 
   // 
   //  Outputs
   // 
   output,
-
   folder_icons: 'icons',
   folder_webfont: 'webfonts',
   iconsFolderName: 'icons',
-
-
-
-  // iconfont: path.resolve(output, 'iconfont'),
-  // iconfont_svg: path.resolve(output, 'iconfont', 'spices-icons.svg'),
-  // iconfont_ttf: path.resolve(output, 'iconfont', 'spices-icons.ttf'),
-  // iconfont_woff: path.resolve(output, 'iconfont', 'spices-icons.woff'),
-  // iconfont_woff2: path.resolve(output, 'iconfont', 'spices-icons.woff2'),
-  
-  // icons: path.resolve(output, 'icons'),
-  // outlined: path.resolve(output, 'outlined'),
-  // scss: path.resolve(output, 'spices-icons.scss'),
-  // sprite: path.resolve(output, 'spices-icons.svg'),
-  // sprite_public: [s3_url, ['spices-icons.svg', next].join('?v=')].join(''),
-  // json: path.resolve(output, 'spices-icons.json'),
 
   svgo: {
     plugins: [

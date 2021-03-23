@@ -1,5 +1,3 @@
-const config = require('./config')
-
 /**
  * FontType
  * 
@@ -15,7 +13,7 @@ class FontType {
    */
   constructor({parent, type}){
     if (!FontType.ALL.includes(type)){
-      console.warn(`unknown FontType: ${type}`)
+      console.error(`${type} is not a valid FontType`)
     }
 
     this.parent = parent

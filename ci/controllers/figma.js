@@ -1,6 +1,6 @@
-const Figma = require('../api/figma')
-const Icon = require('../utils/icon')
 const chalk = require('chalk')
+const Figma = require('../api/figma')
+const config = require('../utils/config')
 
 /**
  * @class
@@ -12,7 +12,7 @@ module.exports = class FigmaController{
    * @readonly
    */
   get client(){
-    return Figma(global.config.figma_personal_token)
+    return Figma(config.figma_personal_token)
   }
 
   ////////////////////////////////////////////////////////////////////////////////////
@@ -78,13 +78,11 @@ module.exports = class FigmaController{
           }
           else{
             names.push(f.name);
-            ret.push(
-              new Icon({ 
-                category: p.name, 
-                id: f.id, 
-                name: f.name, 
-              })
-            )
+            ret.push({ 
+              category: p.name, 
+              id: f.id, 
+              name: f.name, 
+            })
           }
         }
       }))

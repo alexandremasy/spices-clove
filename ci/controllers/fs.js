@@ -3,10 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const util = require('util')
 const mkdirp = require('mkdirp')
-const axios = require('axios')
 const rimraf = require('rimraf')
-const { optimize } = require('svgo')
-const Icon = require('../utils/icon')
 
 module.exports = class FileSystemController {
 

@@ -1,24 +1,14 @@
 const chalk = require('chalk');
-
-const FileSystemController = require('./controllers/fs')
-const FigmaController = require('./controllers/figma')
-const TemplatesController = require('./controllers/templates')
-const FontController = require('./controllers/font')
-const Font = require('./utils/font')
+const Font = require('./models/font')
 
 class CI {
   constructor() {
     global.config = require('./utils/config');  
-    config.fonts = [
+    global.fonts = [
       new Font({ name: 'pepper-regular', figmaId: 'U2TtGONui0MxqNh6fo0QVX' })
     ]
 
-    this._fs = new FileSystemController();
-    this._figma = new FigmaController();
-    this._templates = new TemplatesController();
-    this._font = new FontController()
-
-    let args = { config: global.config, font: this._font, fs: this._fs, figma: this._figma, templates: this._templates }
+    let args = {}
     this._before = new (require('./stages/before'))(args);
     this._version = new (require('./stages/version'))(args);
     this._publish = new (require('./stages/publish'))(args);

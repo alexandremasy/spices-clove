@@ -2,9 +2,8 @@ const path = require('path');
 const util = require('util')
 const fs = require('fs')
 const readFile = util.promisify(fs.readFile)
-const exists = util.promisify(fs.exists)
-const semver = require('semver')
 
+const config = require('../utils/config')
 const FileSystemController = require('../controllers/fs')
 const FontType = require('./font-type')
 
@@ -46,6 +45,7 @@ module.exports = class Font{
      */
     this.version = '0.0.0'
 
+    // Add the types
     types.forEach(t => this.addFontType(t))
   }
 
@@ -84,12 +84,7 @@ module.exports = class Font{
    * @returns {Font} 
    */
   addFontType(type){
-    if (!FontType.ALL.includes(type)){
-      console.error(`${type} is not a valid FontType`)
-      return
-    }
-
-    this.types.push( new FontType(this, type) )
+    this.types.push( new FontType({parent: this, type}) )
   }
 
   /**

@@ -28,7 +28,7 @@ module.exports = class BeforeStep{
       console.log('---Before---');
       this._spinner.start('Preparing the folders')
       
-      basil.sequence(config.fonts.map(f => f.before.bind(f)))
+      basil.sequence(fonts.map(f => f.reset.bind(f)))
       .then(() => {
         this._spinner.succeed()
         resolve()
