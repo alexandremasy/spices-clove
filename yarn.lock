@@ -329,10 +329,10 @@
     core-js "^3.4.1"
     regenerator-runtime "^0.13.3"
 
-"@spices/basil@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@spices/basil/-/basil-1.6.1.tgz#34a1146f426bbc8cc8803e31be26f8838c1735fe"
-  integrity sha512-zDP2a18YXsT9lev2OZvCy5t0f6ghlCrPUbEIYzuI/wshK2XlqLVniKCqJWBjhllk8XY9MrniJoWV1+UVKAAy/A==
+"@spices/basil@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@spices/basil/-/basil-1.7.0.tgz#c5b47df38b302f2aec80968d5507161d4072b4d9"
+  integrity sha512-w8CVYET8wLB+ysRDRgSOvccgS7tuppcfdfIPdtjmWsYhnAooQRtJbyGl3iWUhg6y/qYSfvCTz7aiHwV1aQaQTg==
 
 "@trysound/sax@0.1.1":
   version "0.1.1"

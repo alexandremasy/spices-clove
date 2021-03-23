@@ -1,7 +1,7 @@
 {
   "author": "Alexandre Masy <hello@alexandremasy.com>",
   "devDependencies": {
-    "@spices/basil": "^1.6.1",
+    "@spices/basil": "^1.7.0",
     "axios": "^0.21.1",
     "chalk": "^2.4.2",
     "mkdirp": "^0.5.1",

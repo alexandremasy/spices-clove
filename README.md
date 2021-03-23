@@ -38,8 +38,7 @@ Finds out the proper version of the bundle.
 
 
 --------------------
-TODO
-https://css-tricks.com/svg-sprites-use-better-icon-fonts/
+@TODO
 
-- Include the version in the filename for spices-icons.vue
-- Include the version in the filename for spices-icons.scss
+- Find out the duplicates
+- Find out how to version the ttf in meta
