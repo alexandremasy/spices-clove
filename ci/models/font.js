@@ -117,7 +117,8 @@ module.exports = class Font{
       let icons = path.resolve(root, config.folder_icons)
       let webfont = path.resolve(root, config.folder_webfont)
 
-      fsc.createDirectory(root)
+      this.load()
+      .then( fsc.createDirectory.bind(fsc, root) )
       .then( fsc.deleteDirectory.bind(fsc, icons) )
       .then( fsc.deleteDirectory.bind(fsc, webfont) )
       .then( fsc.createDirectory.bind(fsc, icons) )
@@ -161,5 +162,7 @@ module.exports = class Font{
       name: this.name, 
       version: this.version
     }
+
+    return ret
   }
 }

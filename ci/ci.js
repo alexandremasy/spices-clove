@@ -52,6 +52,7 @@ class CI {
 
   run(argv) {
     this._params = this.parse(argv);
+    let tasks = [];
 
     if (this._params.step && this._params.step.length > 0) {
       let fn = null;
@@ -75,20 +76,32 @@ class CI {
         process.exit(1);
       }
 
-      global.config.debug && console.log('ci.step', this._params.step)
+      config.debug && console.log('ci.step', this._params.step)
 
-      return fn.call(this)
-        .catch(e => console.log(e))
+      tasks = [ fn ]
+    }
+    else{
+      tasks = [
+        this.before.bind(this),
+        this.build.bind(this),
+        // this.version.bind(this),
+        // this.deploy.bind(this),
+        // this.publish.bind(this)
+      ]
     }
 
-    return this.before()
-      .then(this.build.bind(this))
-      // .then(this.version.bind(this))
-      // .then(this.deploy.bind(this))
-      // .then(this.publish.bind(this))
+    let sequence = 
+
+
       .catch(e => {
         console.log(e);
       })
+  }
+
+  iterator(font, tasks){
+    return new Promise((resolve, reject) => {
+      
+    })
   }
 
   /**

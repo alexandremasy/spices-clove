@@ -30,7 +30,7 @@ module.exports = class FigmaController{
       this.client.get(`/images/${figmaId}?ids=${ids}&format=svg`)
       .then((res) => {
         let images = res.data.images
-        icons.forEach(i => i.figma = images[i.id])
+        icons.forEach(i => i.source = images[i.id])
 
         return resolve(icons)
       })

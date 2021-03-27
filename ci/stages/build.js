@@ -48,11 +48,10 @@ module.exports = class BuildStage {
    */
   iterator(font){
     return new Promise((resolve, reject) => {
-      this._spinner.start('Fetching the list of icons')
 
-      this._figma.getIcons(font.figmaId)
+      this.getIconList(font)
       .then((icons) => {
-        this._spinner.succeed(`${icons.length} found`)
+        console.log(font)
         process.exit();
       })
 
@@ -67,6 +66,30 @@ module.exports = class BuildStage {
         console.log(e)
         process.exit(2)
       })
-    })  
+    })
+  }
+
+  /**
+   * Find out the icons available in Figma and populate the font with it
+   * 
+   * @param {Font} font 
+   * @returns {Promise}
+   */
+  getIconList(font) {
+    return new Promise((resolve, reject) => {
+      this._spinner.start('Fetching the list of icons')
+
+      this._figma.getIcons(font.figmaId)
+      .then((icons) => {
+        this._spinner.succeed(`${icons.length} found`)
+        this._spinner.start(`Adding 0/ ${icons.length}`)
+        icons.forEach((i, j) => {
+          font.addGlyph(i)
+          this._spinner.text = `Adding ${j}/ ${icons.length}`
+        })
+
+        return resolve()
+      })
+    })
   }
 }

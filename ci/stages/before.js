@@ -36,4 +36,8 @@ module.exports = class BeforeStep{
       .catch(e => reject(e))
     })
   }
+
+  iterator(font){
+    
+  }
 }
