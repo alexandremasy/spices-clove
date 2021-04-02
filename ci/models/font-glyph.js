@@ -4,6 +4,7 @@ const fs = require('fs')
 const util = require('util')
 const { scale } = require('scale-that-svg')
 const outlineStroke = require('svg-outline-stroke')
+const config = require('../utils/config')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -11,7 +12,7 @@ const writeFile = util.promisify(fs.writeFile)
 /**
  * @class
  */
-module.exports = class Icon{
+module.exports = class FontGlyph{
   
   /**
    * @constructor
@@ -45,6 +46,11 @@ module.exports = class Icon{
      * @property {Font} parent The parent font
      */
     this.parent = parent
+
+    /**
+     * @property {Boolean} pristine Whether or not the glyph has been updated
+     */
+    this.pristine = true
 
     /**
      * @property {String} name The icon name - Comes from the Figma layer name
@@ -92,7 +98,7 @@ module.exports = class Icon{
    * @property {String} unicodeString the string representation of the unicode
    */
   get unicodeString(){
-    return this._unicode.codePointAt(0).toString(16)
+    return this.unicode.codePointAt(0).toString(16)
   }
   
   ////////////////////////////////////////

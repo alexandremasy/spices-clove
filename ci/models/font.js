@@ -1,11 +1,7 @@
-const path = require('path');
-const util = require('util')
-const fs = require('fs')
-const readFile = util.promisify(fs.readFile)
-
 const config = require('../utils/config')
-const FileSystemController = require('../controllers/fs')
 const FontType = require('./font-type')
+const FontGlyph = require('./font-glyph')
+const { basil } = require('@spices/basil')
 
 /**
  * @class
@@ -96,60 +92,63 @@ module.exports = class Font{
    * @param {String} options.id The internal id of the glyph
    * @param {String} options.name The name of the glyph
    * @param {String} options.source The path to download the glyph
-   * @param {String} options.unicode The unicode address of the glyph in the font
+   * @param {String|Number} options.unicode The unicode address of the glyph in the font
    */
-  addGlyph({ category, data, figma, id, name, unicode }){
-    this.glyphs.push({ category, data, figma, id, name, unicode })
+  addGlyph({ category, data, id, name, source, unicode }){
+    // @TODO Validate the unicode value
+    // @TODO Find out the latest valid unicode if unvalid or undefined.
+
+    // find if there is an existing glyph with the same name
+    let glyph = this.glyphs.find(g => g.name === name)
+    
+    // unicode is a number -> convert to a unicode string
+    // unicode is a unicode String -> start with ea...
+    if (basil.isNumber(unicode) ||
+       (basil.isString(unicode) && unicode.length > 1)) {
+      unicode = String.fromCharCode(parseInt(unicode, 16))
+    }
+
+    if (!basil.isNil(glyph)){
+      // console.warn(`Update glyph ${name}`)
+      glyph.category = category || glyph.category
+      glyph.data = data || glyph.data
+      glyph.id = id || glyph.id
+      glyph.source = source || glyph.source
+      glyph.pristine = false
+      // Dont update the unicode of an existing icon
+
+      return
+    }
+
+    // console.log(`Add glyph ${name}`)
+    this.glyphs.push(new FontGlyph({ 
+      category, 
+      data, 
+      id, 
+      name, 
+      parent: this,
+      source, 
+      unicode 
+    }))
   }
 
   /**
-   * Create the condition to build the font
-   * - load & parse the manifest
-   * - make sure the output paths exists
-   * - remove previous generated files
+   * Parse the given data and populate the font with it.
+   * The existing data will be overwritten.
    * 
-   * @returns {Promise}
+   * @param {Object} data The data
    */
-  reset(){
-    return new Promise((resolve, reject) => {
-      const fsc = new FileSystemController()
-      let root = path.resolve(config.output, this.name)
-      let icons = path.resolve(root, config.folder_icons)
-      let webfont = path.resolve(root, config.folder_webfont)
-
-      this.load()
-      .then( fsc.createDirectory.bind(fsc, root) )
-      .then( fsc.deleteDirectory.bind(fsc, icons) )
-      .then( fsc.deleteDirectory.bind(fsc, webfont) )
-      .then( fsc.createDirectory.bind(fsc, icons) )
-      .then( fsc.createDirectory.bind(fsc, webfont) )
-      .then( () => resolve() )
-      .catch( e => reject(e) )
-    })
-  }
-
-  /**
-   * Load the font manifest if it exists 
-   * @returns {Promise}
-   */
-  load() {
-    return new Promise((resolve, reject) => {
-      let p = path.resolve(config.output, this.name, `manifest.json`)
-
-      // Never been generated
-      if (!fs.existsSync(p)) {
-        return Promise.resolve()
-      }
-
-      readFile(p)
-        .then(data => {
-          resolve()
-        })
-        .catch(e => {
-          console.log('[ERR]', e)
-          reject(e)
-        })
-    })
+  parse(data) {
+    this.version = data.version || this.version
+    let glyphs = basil.get(data, 'glyphs', [])
+    this.glyphs = []
+    glyphs.forEach(g => this.addGlyph({
+      category: g.category,
+      id: g.id,
+      name: g.name,
+      source: g.icon,
+      unicode: g.unicode 
+    }))
   }
 
   /**

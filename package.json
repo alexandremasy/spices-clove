@@ -37,6 +37,7 @@
   },
   "version": "0.11.0",
   "dependencies": {
+    "listr": "^0.14.3",
     "scale-that-svg": "^1.0.5"
   }
 }

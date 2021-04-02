@@ -44,13 +44,17 @@ module.exports = class FigmaController{
   /**
    * Fetch the figma file
    * 
-   * @param {String} figmaId The figma file id
+   * @param {Object} ctx Context
+   * @param {String} ctx.figmaId The figma file id
    * @returns {Promise}
    */
-  fetch({ figmaId }){
+  fetch(ctx){
     return new Promise((resolve, reject) => {
-      this.client.get(`/files/${figmaId}`)
-      .then((res) => resolve({figmaId, document: res.data.document}))
+      this.client.get(`/files/${ctx.figmaId}`)
+      .then((res) => {
+        ctx.document = res.data.document
+        resolve(ctx)
+      })
       .catch((err) => reject())
     })
   }
@@ -58,15 +62,16 @@ module.exports = class FigmaController{
   /**
    * Browse the whole figma document and pages for icons
    * 
-   * @param {Object} document The figma document ast
+   * @param {Object} ctx The context
+   * @param {Object} ctx.document The figma document ast
    * @returns {Promise}
    */
-  findIcons({document, figmaId}){
+  findIcons(ctx){
     return new Promise((resolve, reject) => {
       let ret = []
       let names = []
   
-      let pages = document.children;
+      let pages = ctx.document.children;
       pages.filter(p => !p.name.includes('_'))
       .forEach(p => p.children.forEach(f => {
         if (f.type === 'COMPONENT'){
@@ -88,7 +93,9 @@ module.exports = class FigmaController{
       }))
 
       ret.sort((a, b) => ('' + a.name).localeCompare(b.name))
-      return resolve({document, figmaId, icons: ret})
+      ctx.icons = ret
+
+      return resolve(ctx)
     })
   }  
 
