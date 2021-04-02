@@ -1,8 +1,8 @@
 const path = require('path')
 const util = require('util')
 const fs = require('fs')
-const Listr = require('listr')
 const readFile = util.promisify(fs.readFile)
+const { basil } = require('@spices/basil')
 
 const Font = require('../models/font')
 const FileSystemController = require('./fs')
@@ -20,46 +20,65 @@ module.exports = class FontController {
   }
 
   /**
+   * Trigger the download of the icons
    * 
-   * 
-   * @returns {Promise}
+   * @param {Object} options 
+   * @returns 
    */
-  syncWithFigma({ctx, task}){
+  download({ ctx, task }){
+    return this.glyphIterator({ 
+      ctx, 
+      fn: 'download',
+      n: 50,
+      task,
+      title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`
+    })
+  }
+
+  /**
+   * Fetch the icons
+   *  - Download the glyphs
+   *  - Generate the outlines
+   *  - Optimize the glyphs
+   *  - Fix the paths
+   */
+  fetch({ctx, task}){
     return new Promise((resolve, reject) => {
-      const figma = new FigmaController()
-      ctx.figmaId = this.font.figmaId
-
-      let fetch = () => new Promise((resolve, reject) => {
-        task.title = 'Fetching the Figma document'
-        figma.fetch(ctx)
-        .then(() => resolve())
-      })
-
-      let parse = () => new Promise((resolve, reject) => {
-        task.title = 'Hunting down glyphs in the document'
-        figma.findIcons(ctx)
-        .then(() => resolve())
-      })
-
-      let download = () => new Promise((resolve, reject) => {
-        task.title = 'Generating the download links'
-        figma.computeImageList(ctx)
-        .then(() => resolve())
-      })
-
-
-      fetch()
-      .then( parse.bind(this) )
-      .then( download.bind(this) )
+      this.download({ ctx, task })
+      .then(this.outline.bind(this, {ctx, task}))
+      .then(this.optimize.bind(this, {ctx, task}))
       .then(() => {
-        ctx.icons.forEach(i => this.font.addGlyph(i))
-
-        delete ctx.document
-        delete ctx.figmaId
-        delete ctx.icons
-
-        return resolve()
+        console.log('done')
+        resolve()
       })
+    })
+  }
+
+  /**
+   * Iterate over all the glyphs to execute a promise function
+   * 
+   * @param {Object} options 
+   * @param {Object} options.ctx 
+   * @param {Object} options.fn 
+   * @param {Object} options.n 
+   * @param {Object} options.task 
+   * @param {Object} options.title
+   */
+  glyphIterator({ctx, fn, n = 10, task, title}){
+    return new Promise((resolve, reject) => {
+      let i = 0
+      let n = this.font.glyphs.length
+      title(i, n)
+
+      let iterator = (g) => new Promise((resolve, reject) => {
+        g[fn]().then(() => {
+          i++; title(i, n); return resolve()
+        })
+      })
+
+      let tasks = this.font.glyphs.map(g => iterator.bind(this, g))
+      basil.sequence(tasks, n)
+        .then(() => resolve())
     })
   }
 
@@ -90,6 +109,37 @@ module.exports = class FontController {
   }
 
   /**
+   * Create the outline version of the icon
+   * 
+   * @returns {Promise}
+   */
+  outline({ctx, task}){
+    return this.glyphIterator({
+      ctx,
+      fn: 'outline',
+      n: 10,
+      task,
+      title: (i, n) => task.title = `Outlining the glyphs [${i}/${n}]`
+    })
+  }
+
+  /**
+   * Create the outline version of the icon
+   * 
+   * @returns {Promise}
+   */
+  optimize({ ctx, task }) {
+    return this.glyphIterator({
+      ctx,
+      fn: 'optimize',
+      n: 50,
+      task,
+      title: (i, n) => task.title = `Optimizing the glyphs [${i}/${n}]`
+    })
+  }
+
+
+  /**
    * Create the condition to build the font
    * - load & parse the manifest
    * - make sure the output paths exists
@@ -112,6 +162,50 @@ module.exports = class FontController {
         .then(fsc.createDirectory.bind(fsc, webfont))
         .then(() => resolve())
         .catch(e => reject(e))
+    })
+  }
+
+  /**
+   * Sync the figma information
+   * 
+   * @returns {Promise}
+   */
+  syncWithFigma({ ctx, task }) {
+    return new Promise((resolve, reject) => {
+      const figma = new FigmaController()
+      ctx.figmaId = this.font.figmaId
+
+      let fetch = () => new Promise((resolve, reject) => {
+        task.title = 'Fetching the Figma document'
+        figma.fetch(ctx)
+          .then(() => resolve())
+      })
+
+      let parse = () => new Promise((resolve, reject) => {
+        task.title = 'Hunting down glyphs in the document'
+        figma.findIcons(ctx)
+          .then(() => resolve())
+      })
+
+      let download = () => new Promise((resolve, reject) => {
+        task.title = 'Generating the download links'
+        figma.computeImageList(ctx)
+          .then(() => resolve())
+      })
+
+
+      fetch()
+        .then(parse.bind(this))
+        .then(download.bind(this))
+        .then(() => {
+          ctx.icons.forEach(i => this.font.addGlyph(i))
+
+          delete ctx.document
+          delete ctx.figmaId
+          delete ctx.icons
+
+          return resolve()
+        })
     })
   }
 }

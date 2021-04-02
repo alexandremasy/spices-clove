@@ -91,7 +91,7 @@ module.exports = class FontGlyph{
    * @readonly
    */
   get system(){
-    return path.resolve(config.unicodeString, this.parent.name, config.folder_icons, `${this.name}.svg`)
+    return path.resolve(config.output, this.parent.name, config.folder_icons, `${this.name}.svg`)
   }
 
   /**
@@ -137,11 +137,11 @@ module.exports = class FontGlyph{
    */
   optimize(){
     return new Promise((resolve, reject) => {
-      this.data ? Promise.resolve(this.data) : readFile(this.private, 'utf-8')
-        .then(data => optimize(data, { path: this.private, ...config.svgo }))
+      this.data ? Promise.resolve(this.data) : readFile(this.system, 'utf-8')
+        .then(data => optimize(data, { path: this.system, ...config.svgo }))
         .then(res => {
           icon.data = res.data
-          return writeFile(this.private, res.data)
+          return writeFile(this.system, res.data)
         })
         .then(() => resolve())
         .catch(e => {
@@ -159,7 +159,7 @@ module.exports = class FontGlyph{
    */
   outline(){
     return new Promise((resolve, reject) => {
-      this.data ? Promise.resolve(this.data) : readFile(this.private, 'utf-8')
+      this.data ? Promise.resolve(this.data) : readFile(this.system, 'utf-8')
         .then(data => scale(data, { scale: 100 }))
         .then(data => {
           return outlineStroke(data, {
@@ -170,11 +170,11 @@ module.exports = class FontGlyph{
             color: 'black'
           })
         })
-        .then(data => writeFile(this.private, data))
+        .then(data => writeFile(this.system, data))
         .then(() => resolve())
         .catch(e => {
           console.log('------ Error -------')
-          console.log(this.path)
+          console.log(this.system)
           console.log('issue with', e)
           return reject()
         })

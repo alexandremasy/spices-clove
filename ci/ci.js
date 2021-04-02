@@ -16,7 +16,7 @@ class CI{
         task: this.generateFont.bind(this, f)
       }
     }), {
-      // renderer: VerboseRenderer
+      renderer: VerboseRenderer
     })
     tasks.run()
     .catch(e => {
@@ -41,8 +41,8 @@ class CI{
         task: (ctx, task) => controller.syncWithFigma({ctx, task})
       },
       {
-        title: 'Downloading the icons',
-        task: () => Promise.resolve('Yep')
+        title: 'Gathering the icons',
+        task: (ctx, task) => controller.fetch({ctx, task})
       }
     ])
   }
