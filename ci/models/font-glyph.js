@@ -4,6 +4,7 @@ const fs = require('fs')
 const util = require('util')
 const { scale } = require('scale-that-svg')
 const outlineStroke = require('svg-outline-stroke')
+const { optimize } = require('svgo');
 const config = require('../utils/config')
 
 const readFile = util.promisify(fs.readFile)
@@ -140,14 +141,14 @@ module.exports = class FontGlyph{
       this.data ? Promise.resolve(this.data) : readFile(this.system, 'utf-8')
         .then(data => optimize(data, { path: this.system, ...config.svgo }))
         .then(res => {
-          icon.data = res.data
+          this.data = res.data
           return writeFile(this.system, res.data)
         })
         .then(() => resolve())
         .catch(e => {
           console.log('')
           console.log('optimization failed for', this.name)
-          return reject()
+          return reject(e)
         })
     })
   }
