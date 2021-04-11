@@ -33,11 +33,13 @@
   },
   "scripts": {
     "bundle": "yarn ci build",
-    "ci": "node ./ci/ci.js"
+    "ci": "node ./ci/ci.js",
+    "outline": "node ./ci/outline.js"
   },
   "version": "0.11.0",
   "dependencies": {
     "listr": "^0.14.3",
-    "scale-that-svg": "^1.0.5"
+    "scale-that-svg": "^1.0.5",
+    "yargs": "^16.2.0"
   }
 }

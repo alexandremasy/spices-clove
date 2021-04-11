@@ -47,7 +47,7 @@ module.exports = class FontController {
       this.download({ ctx, task })
       .then(this.outline.bind(this, {ctx, task}))
       .then(this.optimize.bind(this, {ctx, task}))
-      .then(this.fixGlyphsPath.bind(this, {ctx, task}))
+      // .then(this.fixGlyphsPath.bind(this, {ctx, task}))
       .then(() => {
         console.log('done')
         resolve()
@@ -233,6 +233,12 @@ module.exports = class FontController {
 
           return resolve()
         })
+    })
+  }
+
+  webfont(){
+    return new Promise((resolve, reject) => {
+      resolve()
     })
   }
 }

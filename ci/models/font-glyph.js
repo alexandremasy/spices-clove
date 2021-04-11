@@ -2,10 +2,9 @@ const path = require('path')
 const axios = require('axios')
 const fs = require('fs')
 const util = require('util')
-const { scale } = require('scale-that-svg')
-const outlineStroke = require('svg-outline-stroke')
 const { optimize } = require('svgo');
 const config = require('../utils/config')
+const execute = require('../utils/execute')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -160,25 +159,13 @@ module.exports = class FontGlyph{
    */
   outline(){
     return new Promise((resolve, reject) => {
-      this.data ? Promise.resolve(this.data) : readFile(this.system, 'utf-8')
-        .then(data => scale(data, { scale: 100 }))
-        .then(data => {
-          return outlineStroke(data, {
-            optCurve: true,
-            step: 4,
-            centerHorizontally: true,
-            fixedWidth: true,
-            color: 'black'
-          })
-        })
-        .then(data => writeFile(this.system, data))
-        .then(() => resolve())
-        .catch(e => {
-          console.log('------ Error -------')
-          console.log(this.system)
-          console.log('issue with', e)
-          return reject()
-        })
+      let command = `yarn outline ${this.toCLI()}`
+      execute(command)
+      .then(() => resolve())
+      .catch(e => {
+        console.log('error', e)
+        reject(e)
+      })
     })
   }
 
@@ -194,5 +181,22 @@ module.exports = class FontGlyph{
       umd: this.umd,
       unicode: this.unicodeString,
     }
+  }
+
+  /**
+   * Convert the glyph to an cli args format
+   * @returns {String}
+   */
+  toCLI(){
+    let ret = [
+      `--category=${this.category}`,
+      `--cdn=${this.cdn}`,
+      `--name=${this.name}`,
+      `--src=${this.system}`,
+      `--umd=${this.umd}`,
+      `--unicode=${this.unicode}`
+    ]
+
+    return ret.join(' ')
   }
 }

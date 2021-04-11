@@ -43,6 +43,10 @@ class CI{
       {
         title: 'Gathering the icons',
         task: (ctx, task) => controller.fetch({ctx, task})
+      },
+      {
+        title: 'Generating the webfonts',
+        task: (ctx, task) => controller.webfont({ctx, task})
       }
     ])
   }
