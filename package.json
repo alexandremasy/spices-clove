@@ -16,27 +16,23 @@
     "ttf2woff": "^2.0.2",
     "ttf2woff2": "^4.0.1"
   },
-  "description": "Spices icon library",
+  "description": "Spices up your UI with some icons",
   "files": [
     "src"
   ],
   "license": "SEE LICENSE IN license.md",
   "main": "src/index.js",
-  "name": "@spices/icons",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.infinity-commerce.io/"
-  },
+  "name": "@spices/clove",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org:infinity-mobile/pepper.git"
+    "url": "git@github.com:alexandremasy/spices-clove.git"
   },
   "scripts": {
     "bundle": "yarn ci build",
     "ci": "node ./ci/ci.js",
     "outline": "node ./ci/outline.js"
   },
-  "version": "0.11.0",
+  "version": "0.0.0",
   "dependencies": {
     "listr": "^0.14.3",
     "scale-that-svg": "^1.0.5",

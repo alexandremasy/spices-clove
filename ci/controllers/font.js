@@ -7,6 +7,7 @@ const { basil } = require('@spices/basil')
 const Font = require('../models/font')
 const FileSystemController = require('./fs')
 const FigmaController = require('./figma')
+const WebfontController = require('./webfont')
 const config = require('../utils/config')
 
 module.exports = class FontController {
@@ -19,21 +20,6 @@ module.exports = class FontController {
     this.font = font
   }
 
-  /**
-   * Trigger the download of the icons
-   * 
-   * @param {Object} options 
-   * @returns 
-   */
-  download({ ctx, task }){
-    return this.glyphIterator({ 
-      ctx, 
-      fn: 'download',
-      n: 50,
-      task,
-      title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`
-    })
-  }
 
   /**
    * Fetch the icons
@@ -44,12 +30,12 @@ module.exports = class FontController {
    */
   fetch({ctx, task}){
     return new Promise((resolve, reject) => {
-      this.download({ ctx, task })
-      .then(this.outline.bind(this, {ctx, task}))
-      .then(this.optimize.bind(this, {ctx, task}))
-      // .then(this.fixGlyphsPath.bind(this, {ctx, task}))
+
+      this.glyphIterator({ ctx, fn: 'download', n: 50, task, title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`})
+      // .then(this.glyphIterator.bind(this, { ctx, fn: 'outline', n: 10, task, title: (i, n) => task.title = `Outlining the glyphs [${i}/${n}]`}))
+      // .then(this.glyphIterator.bind(this, { ctx, fn: 'optimize', n: 50, task, title: (i, n) => task.title = `Optimizing the glyphs [${i}/${n}]`}))
+      .then(this.fixGlyphsPath.bind(this, {ctx, task}))
       .then(() => {
-        console.log('done')
         resolve()
       })
     })
@@ -136,37 +122,6 @@ module.exports = class FontController {
   }
 
   /**
-   * Create the outline version of the icon
-   * 
-   * @returns {Promise}
-   */
-  outline({ctx, task}){
-    return this.glyphIterator({
-      ctx,
-      fn: 'outline',
-      n: 10,
-      task,
-      title: (i, n) => task.title = `Outlining the glyphs [${i}/${n}]`
-    })
-  }
-
-  /**
-   * Create the outline version of the icon
-   * 
-   * @returns {Promise}
-   */
-  optimize({ ctx, task }) {
-    return this.glyphIterator({
-      ctx,
-      fn: 'optimize',
-      n: 50,
-      task,
-      title: (i, n) => task.title = `Optimizing the glyphs [${i}/${n}]`
-    })
-  }
-
-
-  /**
    * Create the condition to build the font
    * - load & parse the manifest
    * - make sure the output paths exists
@@ -194,6 +149,9 @@ module.exports = class FontController {
 
   /**
    * Sync the figma information
+   * - Fetching hte figma document
+   * - Hunting down the glyphs in the document
+   * - Generating the download links
    * 
    * @returns {Promise}
    */
@@ -236,9 +194,22 @@ module.exports = class FontController {
     })
   }
 
+  /**
+   * Create the webfont
+   * 
+   * @returns {Promise}
+   */
   webfont(){
     return new Promise((resolve, reject) => {
-      resolve()
+
+      WebfontController.create({ font: this.font })
+      .then(() => {
+        return resolve()
+      })
+      .catch(e => {
+        console.log(e);
+        return reject(e);
+      })
     })
   }
 }
