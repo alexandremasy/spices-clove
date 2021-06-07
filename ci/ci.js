@@ -38,7 +38,7 @@ class CI{
       },
       {
         title: 'Syncing data from Figma',
-        task: (ctx, task) => controller.syncWithFigma({ctx, task})
+        task: (ctx, task) => controller.figma({ctx, task})
       },
       {
         title: 'Gathering the icons',
@@ -47,6 +47,10 @@ class CI{
       {
         title: 'Generating the webfonts',
         task: (ctx, task) => controller.webfont({ctx, task})
+      },
+      {
+        title: 'Publish the new version',
+        task: (ctx, task) => controller.publish({ctx, task})
       }
     ])
   }

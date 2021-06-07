@@ -42,6 +42,52 @@ module.exports = class FontController {
   }
 
   /**
+   * Sync the figma information
+   * - Fetching the figma document
+   * - Hunting down the glyphs in the document
+   * - Generating the download links
+   * 
+   * @returns {Promise}
+   */
+  figma({ ctx, task }) {
+    return new Promise((resolve, reject) => {
+      const figma = new FigmaController()
+      ctx.figmaId = this.font.figmaId
+
+      let fetch = () => new Promise((resolve, reject) => {
+        task.title = 'Fetching the Figma document'
+        figma.fetch(ctx)
+          .then(() => resolve())
+      })
+
+      let parse = () => new Promise((resolve, reject) => {
+        task.title = 'Hunting down glyphs in the document'
+        figma.findIcons(ctx)
+          .then(() => resolve())
+      })
+
+      let download = () => new Promise((resolve, reject) => {
+        task.title = 'Generating the download links'
+        figma.computeImageList(ctx)
+          .then(() => resolve())
+      })
+
+      fetch()
+        .then(parse.bind(this))
+        .then(download.bind(this))
+        .then(() => {
+          ctx.icons.forEach(i => this.font.addGlyph(i))
+
+          delete ctx.document
+          delete ctx.figmaId
+          delete ctx.icons
+
+          return resolve()
+        })
+    })
+  }
+
+  /**
    * Fix the order of points in the glyphs
    * 
    * @param {Object} options 
@@ -122,77 +168,20 @@ module.exports = class FontController {
   }
 
   /**
-   * Create the condition to build the font
-   * - load & parse the manifest
-   * - make sure the output paths exists
-   * - remove previous generated files
-   * 
-   * @returns {Promise}
+   * Publish the new version of the font
+   * - Compute the new version (auto-patch until better changelog detection)
+   * - Create the manifest
+   * - Create the version
+   * - Publish the font to npm
+   * - Publish the font to s3
    */
-  reset() {
+  publish({ctx, task}){
     return new Promise((resolve, reject) => {
-      const fsc = new FileSystemController()
-      let root = path.resolve(config.output, this.name)
-      let icons = path.resolve(root, config.folder_icons)
-      let webfont = path.resolve(root, config.folder_webfont)
-
-      this.load()
-        .then(fsc.createDirectory.bind(fsc, root))
-        .then(fsc.deleteDirectory.bind(fsc, icons))
-        .then(fsc.deleteDirectory.bind(fsc, webfont))
-        .then(fsc.createDirectory.bind(fsc, icons))
-        .then(fsc.createDirectory.bind(fsc, webfont))
-        .then(() => resolve())
-        .catch(e => reject(e))
+      
     })
   }
 
-  /**
-   * Sync the figma information
-   * - Fetching the figma document
-   * - Hunting down the glyphs in the document
-   * - Generating the download links
-   * 
-   * @returns {Promise}
-   */
-  syncWithFigma({ ctx, task }) {
-    return new Promise((resolve, reject) => {
-      const figma = new FigmaController()
-      ctx.figmaId = this.font.figmaId
-
-      let fetch = () => new Promise((resolve, reject) => {
-        task.title = 'Fetching the Figma document'
-        figma.fetch(ctx)
-          .then(() => resolve())
-      })
-
-      let parse = () => new Promise((resolve, reject) => {
-        task.title = 'Hunting down glyphs in the document'
-        figma.findIcons(ctx)
-          .then(() => resolve())
-      })
-
-      let download = () => new Promise((resolve, reject) => {
-        task.title = 'Generating the download links'
-        figma.computeImageList(ctx)
-          .then(() => resolve())
-      })
-
-
-      fetch()
-        .then(parse.bind(this))
-        .then(download.bind(this))
-        .then(() => {
-          ctx.icons.forEach(i => this.font.addGlyph(i))
-
-          delete ctx.document
-          delete ctx.figmaId
-          delete ctx.icons
-
-          return resolve()
-        })
-    })
-  }
+  
 
   /**
    * Create the webfont
