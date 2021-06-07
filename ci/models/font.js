@@ -70,6 +70,39 @@ module.exports = class Font{
     return `${config.s3_url}${this.name}/${this.name}.svg?v=${config.next}`
   }
 
+  /**
+   * @property {FontType} svg
+   * @returns {FontType}
+   */
+  get svg(){
+    return this.types.find(t => t.type === FontType.SVG)
+  }
+
+  /**
+   * @returns {FontType}
+   * @property {FontType} ttf
+   */
+  get ttf(){
+    return this.types.find(t => t.type === FontType.TTF)
+  }
+  
+  /**
+   * @returns {FontType}
+   * @property {FontType} woff
+   */
+  get woff(){
+    return this.types.find(t => t.type === FontType.WOFF)
+  }
+
+  /**
+   * @returns {FontType}
+   * @property {FontType} woff2
+   */
+  get woff2(){
+    return this.types.find(t => t.type === FontType.WOFF2)
+  }
+
+
   ////////////////////////////////////////////////////////////////////////////////////////
 
   /**
@@ -80,6 +113,11 @@ module.exports = class Font{
    * @returns {Font} 
    */
   addFontType(type){
+    // Auto add the svg type if one is needed
+    if (this.types.length === 0){
+      this.types.push( new FontType({parent: this, type: FontType.SVG}) )
+    }
+    
     this.types.push( new FontType({parent: this, type}) )
   }
 

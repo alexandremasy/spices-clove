@@ -1,0 +1,24 @@
+{
+  "cdn": "https://cdn.sayl.cloud/spices/cloves/",
+  "types": {
+    "ttf": {
+      "cdn": "iconfont/spices-clove-regular.ttf",
+      "umd": "iconfont/spices-clove-regular.ttf"
+    },
+    "woff": {
+      "cdn": "iconfont/spices-clove-regular.woff",
+      "umd": "iconfont/spices-clove-regular.woff"
+    }
+  },
+  "glyphs": [
+    {
+      "category": "debug",
+      "icon": "https://cdn.sayl.cloud/spices/spices-clove-regular/outlined/arrow-left.svg",
+      "id": "abc",
+      "name": "arrow-left",
+      "unicode": "ea02"
+    }
+  ],
+  "name": "spices-clove-regular",
+  "version": "1.0.0"
+}

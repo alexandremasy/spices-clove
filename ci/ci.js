@@ -7,7 +7,7 @@ const FontController = require('./controllers/font')
 class CI{
   run(){
     const fonts = [
-      new Font({ name: 'clove-regular', figmaId: 'U2TtGONui0MxqNh6fo0QVX' })
+      new Font({ name: 'spices-clove-regular', figmaId: 'U2TtGONui0MxqNh6fo0QVX' })
     ]
 
     const tasks = new Listr(fonts.map(f => {

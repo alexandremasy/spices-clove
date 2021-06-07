@@ -5,9 +5,9 @@ yarn.lock
 TODO
 
 # package generated files
-packages/**/dist
-dist/sprites.svg
-src/*
+src/outline
+src/*/icons
+src/*/webfonts
 
 # local env files
 .env

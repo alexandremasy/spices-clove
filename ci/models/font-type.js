@@ -1,3 +1,6 @@
+const path = require('path')
+const config = require('../utils/config')
+
 /**
  * FontType
  * 
@@ -12,7 +15,7 @@ class FontType {
    * @param {String} options.type The type of font
    */
   constructor({parent, type}){
-    if (!FontType.ALL.includes(type)){
+    if (!FontType.ALL.includes(type) && type !== FontType.SVG){
       console.error(`${type} is not a valid FontType`)
     }
 
@@ -36,7 +39,7 @@ class FontType {
    * @readonly
    */
   get system() {
-    return path.resolve(config.output, this.parent.name, 'iconfont', `${this.parent.name}.${this.type}`)
+    return path.resolve(config.output, this.parent.name, 'webfonts', `${this.parent.name}.${this.type}`)
   }
 
   /**
@@ -61,6 +64,7 @@ class FontType {
   }
 }
 
+FontType.SVG = 'svg'
 FontType.TTF = 'ttf'
 FontType.WOFF = 'woff'
 FontType.WOFF2 = 'woff2'

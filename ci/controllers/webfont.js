@@ -23,7 +23,6 @@ module.exports = class WebfontController{
         .map(t => {
           let ret = Promise.resolve.bind(Promise, args)
           if (t.type === FontType.TTF){
-            console.log(this)
             ret = WebfontController.ttf.bind(this, args)
           }
 
@@ -71,28 +70,28 @@ module.exports = class WebfontController{
         // ascent: 986.5,
         // descent: 100,
         fontHeight: 1000,
-        fontName: 'spices-icons',
+        fontName: font.name,
         log: () => { },
         normalize: false,
       });
 
       // Add the icons
-      global.config.list.forEach(i => {
+      font.glyphs.forEach(glyph => {
         unicode++
 
-        let url = path.resolve(global.config.outlined, `${i.name}.svg`)
-        let glyph = fs.createReadStream(url)
-        i.unicode = String.fromCharCode(unicode)
-        glyph.metadata = {
-          unicode: [i.unicode],
-          name: i.name
+        let g = fs.createReadStream(glyph.system)
+        g.metadata = {
+          unicode: [ glyph.unicode ],
+          name: glyph.name
         }
-        fontStream.write(glyph)
+        fontStream.write(g)
       })
 
-      fontStream.pipe(fs.createWriteStream(global.config.iconfont_svg))
+      fontStream.pipe(fs.createWriteStream(font.svg.system))
         .on('finish', function () {
-          return resolve()
+          setTimeout(() => {
+            resolve()
+          }, 300);
         })
         .on('error', function (err) {
           return reject(err)
@@ -113,8 +112,8 @@ module.exports = class WebfontController{
   static ttf({ font }){
     return new Promise((resolve, reject) => {
       const svg2ttf = require('svg2ttf')
-      const input = global.config.iconfont_svg
-      const output = global.config.iconfont_ttf
+      const input = font.svg.system
+      const output = font.ttf.system
 
       readFile(input, 'utf-8')
       .then(ttf => {
@@ -131,10 +130,10 @@ module.exports = class WebfontController{
           return reject(err);
         }
 
-        resolve();
+        setTimeout(() => {
+          resolve()
+        }, 300);
       })
-
-      return resolve()
     })
   }
 
@@ -149,13 +148,15 @@ module.exports = class WebfontController{
   static woff({ font }){
     return new Promise((resolve, reject) => {
       const ttf2woff = require('ttf2woff')
-      const input = global.config.iconfont_ttf
-      const output = global.config.iconfont_woff
+      const input = font.ttf.system
+      const output = font.woff.system
 
       let woff = ttf2woff(fs.readFileSync(input))
       fs.writeFileSync(output, woff.buffer)
       
-      return resolve()
+      setTimeout(() => {
+        resolve()
+      }, 300);
     })
   }
 
@@ -170,8 +171,8 @@ module.exports = class WebfontController{
   static woff2({font}){
     return new Promise((resolve, reject) => {
       const ttf2woff2 = require('ttf2woff2')
-      const input = global.config.iconfont_ttf
-      const output = global.config.iconfont_woff2
+      const input = font.ttf.system
+      const output = font.woff2.system
 
       let woff = ttf2woff2(fs.readFileSync(input))
       fs.writeFileSync(output, woff)

@@ -105,7 +105,7 @@ module.exports = class FontController {
 
       // Never been generated
       if (!fs.existsSync(p)) {
-        return Promise.resolve()
+        return resolve()
       }
 
       readFile(p, 'utf-8')
@@ -149,7 +149,7 @@ module.exports = class FontController {
 
   /**
    * Sync the figma information
-   * - Fetching hte figma document
+   * - Fetching the figma document
    * - Hunting down the glyphs in the document
    * - Generating the download links
    * 
