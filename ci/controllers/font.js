@@ -66,6 +66,12 @@ module.exports = class FontController {
           .then(() => resolve())
       })
 
+      let unicodes = () => new Promise((resolve, reject) => {
+        task.title = 'Computing the unicodes'
+        this.font.computeUnicodes()
+        resolve()
+      })
+
       let download = () => new Promise((resolve, reject) => {
         task.title = 'Generating the download links'
         figma.computeImageList(ctx)
@@ -77,13 +83,13 @@ module.exports = class FontController {
         .then(download.bind(this))
         .then(() => {
           ctx.icons.forEach(i => this.font.addGlyph(i))
-
+          
           delete ctx.document
           delete ctx.figmaId
           delete ctx.icons
-
-          return resolve()
         })
+        .then(unicodes.bind(this))
+        .then(() => resolve())
     })
   }
 

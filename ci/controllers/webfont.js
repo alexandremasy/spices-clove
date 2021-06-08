@@ -58,13 +58,6 @@ module.exports = class WebfontController{
    */
   static svg({ font }){
     return new Promise((resolve, reject) => {
-      /**
-       * Unicode Private Use Area start.
-       * https://en.wikipedia.org/wiki/Private_Use_Areas
-       */
-      let startUnicode = 0xea01;
-      let unicode = startUnicode
-      
       const SVGIcons2SVGFont = require('svgicons2svgfont');
       const fontStream = new SVGIcons2SVGFont({
         // ascent: 986.5,
@@ -77,11 +70,10 @@ module.exports = class WebfontController{
 
       // Add the icons
       font.glyphs.forEach(glyph => {
-        unicode++
-
+        let u = `\\u${glyph.unicodeString.toUpperCase()}`
         let g = fs.createReadStream(glyph.system)
         g.metadata = {
-          unicode: [ glyph.unicode ],
+          unicode: [ glyph.unicodeString ],
           name: glyph.name
         }
         fontStream.write(g)

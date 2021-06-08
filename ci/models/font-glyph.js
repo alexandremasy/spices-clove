@@ -1,5 +1,6 @@
 const path = require('path')
 const axios = require('axios')
+const { basil } = require('@spices/basil')
 const fs = require('fs')
 const util = require('util')
 const { optimize } = require('svgo');
@@ -25,7 +26,7 @@ module.exports = class FontGlyph{
    * @param {String} options.source The path to download the glyph
    * @param {String} options.unicode The unicode address of the glyph in the font
    */
-  constructor({ category, data = null, id, name, parent, source, unicode = 0 }){
+  constructor({ category, data = null, id, name, parent, source, unicode }){
 
     /**
      * @property {String} category The icon category
@@ -63,7 +64,7 @@ module.exports = class FontGlyph{
     this.source = source
 
     /**
-     * @property {Number} unicode The unicode value (iconfont)
+     * @property {Number} unicode The unicode value in number format
      */
     this.unicode = unicode
   }
@@ -95,10 +96,32 @@ module.exports = class FontGlyph{
   }
 
   /**
-   * @property {String} unicodeString the string representation of the unicode
+   * @property {String} unicodeString the string representation of the unicode.
    */
   get unicodeString(){
-    return this.unicode.codePointAt(0).toString(16)
+    return this.unicodeChar.codePointAt(0).toString(16)
+  }
+
+  /**
+   * @property {String} unicodeChar the unicode char for the given unicode.
+   */
+  get unicodeChar(){
+    return String.fromCharCode(this._unicode)
+  }
+
+  /**
+   * @property {Number} unicode The unicode address of the glyph.
+   */
+  get unicode(){
+    return this._unicode
+  }
+  set unicode(value){
+    // Convert a unicode string to number -> ea02 will be converted to 59906
+    if (basil.isString(value) && value.length > 1){
+      value = parseInt(value, 16)
+    }
+
+    this._unicode = value
   }
   
   ////////////////////////////////////////

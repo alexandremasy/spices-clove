@@ -2,6 +2,7 @@ const ora = require('ora')
 const path = require('path')
 const fs = require('fs')
 const util = require('util')
+const Font = require('../models/font')
 
 module.exports = class TemplatesController{
   constructor(){
@@ -101,6 +102,18 @@ module.exports = class TemplatesController{
       fs.writeFileSync(global.config.json, JSON.stringify(data))
       this._spinner.succeed()
       return resolve()
+    })
+  }
+
+  /**
+   * Generate the manifest 
+   * 
+   * @param {Font} font 
+   * @returns 
+   */
+  manifest(font){
+    return new Promise((resolve, reject) => {
+      let data = font.to
     })
   }
 }
