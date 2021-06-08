@@ -2,6 +2,7 @@ const path = require('path')
 const util = require('util')
 const fs = require('fs')
 const readFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
 const { basil } = require('@spices/basil')
 
 const Font = require('../models/font')
@@ -78,6 +79,11 @@ module.exports = class FontController {
           .then(() => resolve())
       })
 
+      let save = () => new Promise((resolve) => {
+        task.title = 'Generating the manifest'
+        this.save().then(() => resolve())
+      })
+
       fetch()
         .then(parse.bind(this))
         .then(download.bind(this))
@@ -89,6 +95,7 @@ module.exports = class FontController {
           delete ctx.icons
         })
         .then(unicodes.bind(this))
+        .then(save.bind(this))
         .then(() => resolve())
     })
   }
@@ -184,6 +191,18 @@ module.exports = class FontController {
   publish({ctx, task}){
     return new Promise((resolve, reject) => {
       
+    })
+  }
+
+  /**
+   * Save the font to the manifest file
+   */
+  save() {
+    return new Promise((resolve, reject) => {
+      let data = JSON.stringify(this.font.toJSON(), null, 2)
+      let p = path.resolve(config.output, this.font.name, `manifest.json`)
+  
+      writeFile(p, data, 'utf-8').then(() => resolve())
     })
   }
 

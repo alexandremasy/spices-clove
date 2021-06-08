@@ -1,22 +1,2224 @@
 {
-  "cdn": "https://cdn.sayl.cloud/spices/cloves/",
-  "types": {
-    "ttf": {
-      "cdn": "iconfont/spices-clove-regular.ttf",
-      "umd": "iconfont/spices-clove-regular.ttf"
+  "types": [
+    {
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/spices-clove-regular.svg?v=0.1.0",
+      "type": "svg",
+      "umd": "spices-clove-regular/iconfont/spices-clove-regular.svg"
     },
-    "woff": {
-      "cdn": "iconfont/spices-clove-regular.woff",
-      "umd": "iconfont/spices-clove-regular.woff"
+    {
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/spices-clove-regular.ttf?v=0.1.0",
+      "type": "ttf",
+      "umd": "spices-clove-regular/iconfont/spices-clove-regular.ttf"
+    },
+    {
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/spices-clove-regular.woff?v=0.1.0",
+      "type": "woff",
+      "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff"
+    },
+    {
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/spices-clove-regular.woff2?v=0.1.0",
+      "type": "woff2",
+      "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff2"
     }
-  },
+  ],
   "glyphs": [
     {
-      "category": "debug",
-      "icon": "https://cdn.sayl.cloud/spices/spices-clove-regular/outlined/arrow-left.svg",
-      "id": "abc",
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-left.svg?v=0.1.0",
       "name": "arrow-left",
+      "umd": "spices-clove-regular/icons/arrow-left.svg",
       "unicode": "ea02"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/activity.svg?v=0.1.0",
+      "name": "activity",
+      "umd": "spices-clove-regular/icons/activity.svg",
+      "unicode": "ea03"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/aerial-lift.svg?v=0.1.0",
+      "name": "aerial-lift",
+      "umd": "spices-clove-regular/icons/aerial-lift.svg",
+      "unicode": "ea04"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/alien.svg?v=0.1.0",
+      "name": "alien",
+      "umd": "spices-clove-regular/icons/alien.svg",
+      "unicode": "ea05"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/analytics.svg?v=0.1.0",
+      "name": "analytics",
+      "umd": "spices-clove-regular/icons/analytics.svg",
+      "unicode": "ea06"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-down.svg?v=0.1.0",
+      "name": "angle-down",
+      "umd": "spices-clove-regular/icons/angle-down.svg",
+      "unicode": "ea07"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-down-left.svg?v=0.1.0",
+      "name": "angle-down-left",
+      "umd": "spices-clove-regular/icons/angle-down-left.svg",
+      "unicode": "ea08"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-down-right.svg?v=0.1.0",
+      "name": "angle-down-right",
+      "umd": "spices-clove-regular/icons/angle-down-right.svg",
+      "unicode": "ea09"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-left.svg?v=0.1.0",
+      "name": "angle-left",
+      "umd": "spices-clove-regular/icons/angle-left.svg",
+      "unicode": "ea0a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-right.svg?v=0.1.0",
+      "name": "angle-right",
+      "umd": "spices-clove-regular/icons/angle-right.svg",
+      "unicode": "ea0b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-up.svg?v=0.1.0",
+      "name": "angle-up",
+      "umd": "spices-clove-regular/icons/angle-up.svg",
+      "unicode": "ea0c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-up-left.svg?v=0.1.0",
+      "name": "angle-up-left",
+      "umd": "spices-clove-regular/icons/angle-up-left.svg",
+      "unicode": "ea0d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angle-up-right.svg?v=0.1.0",
+      "name": "angle-up-right",
+      "umd": "spices-clove-regular/icons/angle-up-right.svg",
+      "unicode": "ea0e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angles-down.svg?v=0.1.0",
+      "name": "angles-down",
+      "umd": "spices-clove-regular/icons/angles-down.svg",
+      "unicode": "ea0f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angles-left.svg?v=0.1.0",
+      "name": "angles-left",
+      "umd": "spices-clove-regular/icons/angles-left.svg",
+      "unicode": "ea10"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angles-right.svg?v=0.1.0",
+      "name": "angles-right",
+      "umd": "spices-clove-regular/icons/angles-right.svg",
+      "unicode": "ea11"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/angles-up.svg?v=0.1.0",
+      "name": "angles-up",
+      "umd": "spices-clove-regular/icons/angles-up.svg",
+      "unicode": "ea12"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/archive.svg?v=0.1.0",
+      "name": "archive",
+      "umd": "spices-clove-regular/icons/archive.svg",
+      "unicode": "ea13"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-down.svg?v=0.1.0",
+      "name": "arrow-bar-down",
+      "umd": "spices-clove-regular/icons/arrow-bar-down.svg",
+      "unicode": "ea14"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-left.svg?v=0.1.0",
+      "name": "arrow-bar-left",
+      "umd": "spices-clove-regular/icons/arrow-bar-left.svg",
+      "unicode": "ea15"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-right.svg?v=0.1.0",
+      "name": "arrow-bar-right",
+      "umd": "spices-clove-regular/icons/arrow-bar-right.svg",
+      "unicode": "ea16"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-to-down.svg?v=0.1.0",
+      "name": "arrow-bar-to-down",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-down.svg",
+      "unicode": "ea17"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-to-left.svg?v=0.1.0",
+      "name": "arrow-bar-to-left",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-left.svg",
+      "unicode": "ea18"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-to-right.svg?v=0.1.0",
+      "name": "arrow-bar-to-right",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-right.svg",
+      "unicode": "ea19"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-to-up.svg?v=0.1.0",
+      "name": "arrow-bar-to-up",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-up.svg",
+      "unicode": "ea1a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bar-up.svg?v=0.1.0",
+      "name": "arrow-bar-up",
+      "umd": "spices-clove-regular/icons/arrow-bar-up.svg",
+      "unicode": "ea1b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-big-down.svg?v=0.1.0",
+      "name": "arrow-big-down",
+      "umd": "spices-clove-regular/icons/arrow-big-down.svg",
+      "unicode": "ea1c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-big-left.svg?v=0.1.0",
+      "name": "arrow-big-left",
+      "umd": "spices-clove-regular/icons/arrow-big-left.svg",
+      "unicode": "ea1d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-big-right.svg?v=0.1.0",
+      "name": "arrow-big-right",
+      "umd": "spices-clove-regular/icons/arrow-big-right.svg",
+      "unicode": "ea1e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-big-top.svg?v=0.1.0",
+      "name": "arrow-big-top",
+      "umd": "spices-clove-regular/icons/arrow-big-top.svg",
+      "unicode": "ea1f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bottom-bar.svg?v=0.1.0",
+      "name": "arrow-bottom-bar",
+      "umd": "spices-clove-regular/icons/arrow-bottom-bar.svg",
+      "unicode": "ea20"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bottom-circle.svg?v=0.1.0",
+      "name": "arrow-bottom-circle",
+      "umd": "spices-clove-regular/icons/arrow-bottom-circle.svg",
+      "unicode": "ea21"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bottom-square.svg?v=0.1.0",
+      "name": "arrow-bottom-square",
+      "umd": "spices-clove-regular/icons/arrow-bottom-square.svg",
+      "unicode": "ea22"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-bottom-tail.svg?v=0.1.0",
+      "name": "arrow-bottom-tail",
+      "umd": "spices-clove-regular/icons/arrow-bottom-tail.svg",
+      "unicode": "ea23"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-diagonal-ew.svg?v=0.1.0",
+      "name": "arrow-diagonal-ew",
+      "umd": "spices-clove-regular/icons/arrow-diagonal-ew.svg",
+      "unicode": "ea24"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-diagonal-we.svg?v=0.1.0",
+      "name": "arrow-diagonal-we",
+      "umd": "spices-clove-regular/icons/arrow-diagonal-we.svg",
+      "unicode": "ea25"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-down.svg?v=0.1.0",
+      "name": "arrow-down",
+      "umd": "spices-clove-regular/icons/arrow-down.svg",
+      "unicode": "ea26"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-down-left.svg?v=0.1.0",
+      "name": "arrow-down-left",
+      "umd": "spices-clove-regular/icons/arrow-down-left.svg",
+      "unicode": "ea27"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-down-right.svg?v=0.1.0",
+      "name": "arrow-down-right",
+      "umd": "spices-clove-regular/icons/arrow-down-right.svg",
+      "unicode": "ea28"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-horizontal.svg?v=0.1.0",
+      "name": "arrow-horizontal",
+      "umd": "spices-clove-regular/icons/arrow-horizontal.svg",
+      "unicode": "ea29"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-left-bar.svg?v=0.1.0",
+      "name": "arrow-left-bar",
+      "umd": "spices-clove-regular/icons/arrow-left-bar.svg",
+      "unicode": "ea2a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-left-circle.svg?v=0.1.0",
+      "name": "arrow-left-circle",
+      "umd": "spices-clove-regular/icons/arrow-left-circle.svg",
+      "unicode": "ea2b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-left-square.svg?v=0.1.0",
+      "name": "arrow-left-square",
+      "umd": "spices-clove-regular/icons/arrow-left-square.svg",
+      "unicode": "ea2c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-left-tail.svg?v=0.1.0",
+      "name": "arrow-left-tail",
+      "umd": "spices-clove-regular/icons/arrow-left-tail.svg",
+      "unicode": "ea2d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-loop-left.svg?v=0.1.0",
+      "name": "arrow-loop-left",
+      "umd": "spices-clove-regular/icons/arrow-loop-left.svg",
+      "unicode": "ea2e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-loop-right.svg?v=0.1.0",
+      "name": "arrow-loop-right",
+      "umd": "spices-clove-regular/icons/arrow-loop-right.svg",
+      "unicode": "ea2f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-ramp-left.svg?v=0.1.0",
+      "name": "arrow-ramp-left",
+      "umd": "spices-clove-regular/icons/arrow-ramp-left.svg",
+      "unicode": "ea30"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-ramp-right.svg?v=0.1.0",
+      "name": "arrow-ramp-right",
+      "umd": "spices-clove-regular/icons/arrow-ramp-right.svg",
+      "unicode": "ea31"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-right.svg?v=0.1.0",
+      "name": "arrow-right",
+      "umd": "spices-clove-regular/icons/arrow-right.svg",
+      "unicode": "ea32"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-right-bar.svg?v=0.1.0",
+      "name": "arrow-right-bar",
+      "umd": "spices-clove-regular/icons/arrow-right-bar.svg",
+      "unicode": "ea33"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-right-circle.svg?v=0.1.0",
+      "name": "arrow-right-circle",
+      "umd": "spices-clove-regular/icons/arrow-right-circle.svg",
+      "unicode": "ea34"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-right-square.svg?v=0.1.0",
+      "name": "arrow-right-square",
+      "umd": "spices-clove-regular/icons/arrow-right-square.svg",
+      "unicode": "ea35"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-right-tail.svg?v=0.1.0",
+      "name": "arrow-right-tail",
+      "umd": "spices-clove-regular/icons/arrow-right-tail.svg",
+      "unicode": "ea36"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-top-bar.svg?v=0.1.0",
+      "name": "arrow-top-bar",
+      "umd": "spices-clove-regular/icons/arrow-top-bar.svg",
+      "unicode": "ea37"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-top-circle.svg?v=0.1.0",
+      "name": "arrow-top-circle",
+      "umd": "spices-clove-regular/icons/arrow-top-circle.svg",
+      "unicode": "ea38"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-top-square.svg?v=0.1.0",
+      "name": "arrow-top-square",
+      "umd": "spices-clove-regular/icons/arrow-top-square.svg",
+      "unicode": "ea39"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-top-tail.svg?v=0.1.0",
+      "name": "arrow-top-tail",
+      "umd": "spices-clove-regular/icons/arrow-top-tail.svg",
+      "unicode": "ea3a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-up.svg?v=0.1.0",
+      "name": "arrow-up",
+      "umd": "spices-clove-regular/icons/arrow-up.svg",
+      "unicode": "ea3b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-up-left.svg?v=0.1.0",
+      "name": "arrow-up-left",
+      "umd": "spices-clove-regular/icons/arrow-up-left.svg",
+      "unicode": "ea3c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-up-right.svg?v=0.1.0",
+      "name": "arrow-up-right",
+      "umd": "spices-clove-regular/icons/arrow-up-right.svg",
+      "unicode": "ea3d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-vertical.svg?v=0.1.0",
+      "name": "arrow-vertical",
+      "umd": "spices-clove-regular/icons/arrow-vertical.svg",
+      "unicode": "ea3e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-wave-left-down.svg?v=0.1.0",
+      "name": "arrow-wave-left-down",
+      "umd": "spices-clove-regular/icons/arrow-wave-left-down.svg",
+      "unicode": "ea3f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-wave-left-up.svg?v=0.1.0",
+      "name": "arrow-wave-left-up",
+      "umd": "spices-clove-regular/icons/arrow-wave-left-up.svg",
+      "unicode": "ea40"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-wave-right-down.svg?v=0.1.0",
+      "name": "arrow-wave-right-down",
+      "umd": "spices-clove-regular/icons/arrow-wave-right-down.svg",
+      "unicode": "ea41"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrow-wave-right-up.svg?v=0.1.0",
+      "name": "arrow-wave-right-up",
+      "umd": "spices-clove-regular/icons/arrow-wave-right-up.svg",
+      "unicode": "ea42"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-double-ne-sw.svg?v=0.1.0",
+      "name": "arrows-double-ne-sw",
+      "umd": "spices-clove-regular/icons/arrows-double-ne-sw.svg",
+      "unicode": "ea43"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-double-nw-se.svg?v=0.1.0",
+      "name": "arrows-double-nw-se",
+      "umd": "spices-clove-regular/icons/arrows-double-nw-se.svg",
+      "unicode": "ea44"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-double-se-nw.svg?v=0.1.0",
+      "name": "arrows-double-se-nw",
+      "umd": "spices-clove-regular/icons/arrows-double-se-nw.svg",
+      "unicode": "ea45"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-double-sw-ne.svg?v=0.1.0",
+      "name": "arrows-double-sw-ne",
+      "umd": "spices-clove-regular/icons/arrows-double-sw-ne.svg",
+      "unicode": "ea46"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-down.svg?v=0.1.0",
+      "name": "arrows-down",
+      "umd": "spices-clove-regular/icons/arrows-down.svg",
+      "unicode": "ea47"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-down-up.svg?v=0.1.0",
+      "name": "arrows-down-up",
+      "umd": "spices-clove-regular/icons/arrows-down-up.svg",
+      "unicode": "ea48"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-horizontal.svg?v=0.1.0",
+      "name": "arrows-horizontal",
+      "umd": "spices-clove-regular/icons/arrows-horizontal.svg",
+      "unicode": "ea49"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-join.svg?v=0.1.0",
+      "name": "arrows-join",
+      "umd": "spices-clove-regular/icons/arrows-join.svg",
+      "unicode": "ea4a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-left.svg?v=0.1.0",
+      "name": "arrows-left",
+      "umd": "spices-clove-regular/icons/arrows-left.svg",
+      "unicode": "ea4b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-left-down.svg?v=0.1.0",
+      "name": "arrows-left-down",
+      "umd": "spices-clove-regular/icons/arrows-left-down.svg",
+      "unicode": "ea4c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-left-right.svg?v=0.1.0",
+      "name": "arrows-left-right",
+      "umd": "spices-clove-regular/icons/arrows-left-right.svg",
+      "unicode": "ea4d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-right.svg?v=0.1.0",
+      "name": "arrows-right",
+      "umd": "spices-clove-regular/icons/arrows-right.svg",
+      "unicode": "ea4e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-right-down.svg?v=0.1.0",
+      "name": "arrows-right-down",
+      "umd": "spices-clove-regular/icons/arrows-right-down.svg",
+      "unicode": "ea4f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-right-left.svg?v=0.1.0",
+      "name": "arrows-right-left",
+      "umd": "spices-clove-regular/icons/arrows-right-left.svg",
+      "unicode": "ea50"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-split.svg?v=0.1.0",
+      "name": "arrows-split",
+      "umd": "spices-clove-regular/icons/arrows-split.svg",
+      "unicode": "ea51"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-up.svg?v=0.1.0",
+      "name": "arrows-up",
+      "umd": "spices-clove-regular/icons/arrows-up.svg",
+      "unicode": "ea52"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-up-down.svg?v=0.1.0",
+      "name": "arrows-up-down",
+      "umd": "spices-clove-regular/icons/arrows-up-down.svg",
+      "unicode": "ea53"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-up-left.svg?v=0.1.0",
+      "name": "arrows-up-left",
+      "umd": "spices-clove-regular/icons/arrows-up-left.svg",
+      "unicode": "ea54"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-up-right.svg?v=0.1.0",
+      "name": "arrows-up-right",
+      "umd": "spices-clove-regular/icons/arrows-up-right.svg",
+      "unicode": "ea55"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/arrows-vertical.svg?v=0.1.0",
+      "name": "arrows-vertical",
+      "umd": "spices-clove-regular/icons/arrows-vertical.svg",
+      "unicode": "ea56"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/at.svg?v=0.1.0",
+      "name": "at",
+      "umd": "spices-clove-regular/icons/at.svg",
+      "unicode": "ea57"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/atom.svg?v=0.1.0",
+      "name": "atom",
+      "umd": "spices-clove-regular/icons/atom.svg",
+      "unicode": "ea58"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/award.svg?v=0.1.0",
+      "name": "award",
+      "umd": "spices-clove-regular/icons/award.svg",
+      "unicode": "ea59"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/back.svg?v=0.1.0",
+      "name": "back",
+      "umd": "spices-clove-regular/icons/back.svg",
+      "unicode": "ea5a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/back-up.svg?v=0.1.0",
+      "name": "back-up",
+      "umd": "spices-clove-regular/icons/back-up.svg",
+      "unicode": "ea5b"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/backspace.svg?v=0.1.0",
+      "name": "backspace",
+      "umd": "spices-clove-regular/icons/backspace.svg",
+      "unicode": "ea5c"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bahraini.svg?v=0.1.0",
+      "name": "bahraini",
+      "umd": "spices-clove-regular/icons/bahraini.svg",
+      "unicode": "ea5d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ball-american-football.svg?v=0.1.0",
+      "name": "ball-american-football",
+      "umd": "spices-clove-regular/icons/ball-american-football.svg",
+      "unicode": "ea5e"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ball-bowling.svg?v=0.1.0",
+      "name": "ball-bowling",
+      "umd": "spices-clove-regular/icons/ball-bowling.svg",
+      "unicode": "ea5f"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ball-football.svg?v=0.1.0",
+      "name": "ball-football",
+      "umd": "spices-clove-regular/icons/ball-football.svg",
+      "unicode": "ea60"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ball-tennis.svg?v=0.1.0",
+      "name": "ball-tennis",
+      "umd": "spices-clove-regular/icons/ball-tennis.svg",
+      "unicode": "ea61"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bandage.svg?v=0.1.0",
+      "name": "bandage",
+      "umd": "spices-clove-regular/icons/bandage.svg",
+      "unicode": "ea62"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bath.svg?v=0.1.0",
+      "name": "bath",
+      "umd": "spices-clove-regular/icons/bath.svg",
+      "unicode": "ea63"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/battery-automotive.svg?v=0.1.0",
+      "name": "battery-automotive",
+      "umd": "spices-clove-regular/icons/battery-automotive.svg",
+      "unicode": "ea64"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bed.svg?v=0.1.0",
+      "name": "bed",
+      "umd": "spices-clove-regular/icons/bed.svg",
+      "unicode": "ea65"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bike.svg?v=0.1.0",
+      "name": "bike",
+      "umd": "spices-clove-regular/icons/bike.svg",
+      "unicode": "ea66"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bitcoin.svg?v=0.1.0",
+      "name": "bitcoin",
+      "umd": "spices-clove-regular/icons/bitcoin.svg",
+      "unicode": "ea67"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bolt.svg?v=0.1.0",
+      "name": "bolt",
+      "umd": "spices-clove-regular/icons/bolt.svg",
+      "unicode": "ea68"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bolt-off.svg?v=0.1.0",
+      "name": "bolt-off",
+      "umd": "spices-clove-regular/icons/bolt-off.svg",
+      "unicode": "ea69"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bone.svg?v=0.1.0",
+      "name": "bone",
+      "umd": "spices-clove-regular/icons/bone.svg",
+      "unicode": "ea6a"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/book.svg?v=0.1.0",
+      "name": "book",
+      "umd": "spices-clove-regular/icons/book.svg",
+      "unicode": "ea6b"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/braces.svg?v=0.1.0",
+      "name": "braces",
+      "umd": "spices-clove-regular/icons/braces.svg",
+      "unicode": "ea6c"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/brackets.svg?v=0.1.0",
+      "name": "brackets",
+      "umd": "spices-clove-regular/icons/brackets.svg",
+      "unicode": "ea6d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/briefcase.svg?v=0.1.0",
+      "name": "briefcase",
+      "umd": "spices-clove-regular/icons/briefcase.svg",
+      "unicode": "ea6e"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/browser.svg?v=0.1.0",
+      "name": "browser",
+      "umd": "spices-clove-regular/icons/browser.svg",
+      "unicode": "ea6f"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bucket.svg?v=0.1.0",
+      "name": "bucket",
+      "umd": "spices-clove-regular/icons/bucket.svg",
+      "unicode": "ea70"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building.svg?v=0.1.0",
+      "name": "building",
+      "umd": "spices-clove-regular/icons/building.svg",
+      "unicode": "ea71"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-arch.svg?v=0.1.0",
+      "name": "building-arch",
+      "umd": "spices-clove-regular/icons/building-arch.svg",
+      "unicode": "ea72"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-bank.svg?v=0.1.0",
+      "name": "building-bank",
+      "umd": "spices-clove-regular/icons/building-bank.svg",
+      "unicode": "ea73"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-bridge.svg?v=0.1.0",
+      "name": "building-bridge",
+      "umd": "spices-clove-regular/icons/building-bridge.svg",
+      "unicode": "ea74"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-bridge-2.svg?v=0.1.0",
+      "name": "building-bridge-2",
+      "umd": "spices-clove-regular/icons/building-bridge-2.svg",
+      "unicode": "ea75"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-church.svg?v=0.1.0",
+      "name": "building-church",
+      "umd": "spices-clove-regular/icons/building-church.svg",
+      "unicode": "ea76"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-community.svg?v=0.1.0",
+      "name": "building-community",
+      "umd": "spices-clove-regular/icons/building-community.svg",
+      "unicode": "ea77"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-cottage.svg?v=0.1.0",
+      "name": "building-cottage",
+      "umd": "spices-clove-regular/icons/building-cottage.svg",
+      "unicode": "ea78"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-factory.svg?v=0.1.0",
+      "name": "building-factory",
+      "umd": "spices-clove-regular/icons/building-factory.svg",
+      "unicode": "ea79"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-hospital.svg?v=0.1.0",
+      "name": "building-hospital",
+      "umd": "spices-clove-regular/icons/building-hospital.svg",
+      "unicode": "ea7a"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-lighthouse.svg?v=0.1.0",
+      "name": "building-lighthouse",
+      "umd": "spices-clove-regular/icons/building-lighthouse.svg",
+      "unicode": "ea7b"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-monument.svg?v=0.1.0",
+      "name": "building-monument",
+      "umd": "spices-clove-regular/icons/building-monument.svg",
+      "unicode": "ea7c"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-pavilon.svg?v=0.1.0",
+      "name": "building-pavilon",
+      "umd": "spices-clove-regular/icons/building-pavilon.svg",
+      "unicode": "ea7d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-skyscraper.svg?v=0.1.0",
+      "name": "building-skyscraper",
+      "umd": "spices-clove-regular/icons/building-skyscraper.svg",
+      "unicode": "ea7e"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-store.svg?v=0.1.0",
+      "name": "building-store",
+      "umd": "spices-clove-regular/icons/building-store.svg",
+      "unicode": "ea7f"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/building-warehouse.svg?v=0.1.0",
+      "name": "building-warehouse",
+      "umd": "spices-clove-regular/icons/building-warehouse.svg",
+      "unicode": "ea80"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bulldozer.svg?v=0.1.0",
+      "name": "bulldozer",
+      "umd": "spices-clove-regular/icons/bulldozer.svg",
+      "unicode": "ea81"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bullhorn.svg?v=0.1.0",
+      "name": "bullhorn",
+      "umd": "spices-clove-regular/icons/bullhorn.svg",
+      "unicode": "ea82"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/bus.svg?v=0.1.0",
+      "name": "bus",
+      "umd": "spices-clove-regular/icons/bus.svg",
+      "unicode": "ea83"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/camera.svg?v=0.1.0",
+      "name": "camera",
+      "umd": "spices-clove-regular/icons/camera.svg",
+      "unicode": "ea84"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/car.svg?v=0.1.0",
+      "name": "car",
+      "umd": "spices-clove-regular/icons/car.svg",
+      "unicode": "ea85"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/caravan.svg?v=0.1.0",
+      "name": "caravan",
+      "umd": "spices-clove-regular/icons/caravan.svg",
+      "unicode": "ea86"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/caret-down.svg?v=0.1.0",
+      "name": "caret-down",
+      "umd": "spices-clove-regular/icons/caret-down.svg",
+      "unicode": "ea87"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/caret-left.svg?v=0.1.0",
+      "name": "caret-left",
+      "umd": "spices-clove-regular/icons/caret-left.svg",
+      "unicode": "ea88"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/caret-right.svg?v=0.1.0",
+      "name": "caret-right",
+      "umd": "spices-clove-regular/icons/caret-right.svg",
+      "unicode": "ea89"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/caret-up.svg?v=0.1.0",
+      "name": "caret-up",
+      "umd": "spices-clove-regular/icons/caret-up.svg",
+      "unicode": "ea8a"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/cash.svg?v=0.1.0",
+      "name": "cash",
+      "umd": "spices-clove-regular/icons/cash.svg",
+      "unicode": "ea8b"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/cent.svg?v=0.1.0",
+      "name": "cent",
+      "umd": "spices-clove-regular/icons/cent.svg",
+      "unicode": "ea8c"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/christmas-tree.svg?v=0.1.0",
+      "name": "christmas-tree",
+      "umd": "spices-clove-regular/icons/christmas-tree.svg",
+      "unicode": "ea8d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/cloud.svg?v=0.1.0",
+      "name": "cloud",
+      "umd": "spices-clove-regular/icons/cloud.svg",
+      "unicode": "ea8e"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/code.svg?v=0.1.0",
+      "name": "code",
+      "umd": "spices-clove-regular/icons/code.svg",
+      "unicode": "ea8f"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/color-swatch.svg?v=0.1.0",
+      "name": "color-swatch",
+      "umd": "spices-clove-regular/icons/color-swatch.svg",
+      "unicode": "ea90"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/comet.svg?v=0.1.0",
+      "name": "comet",
+      "umd": "spices-clove-regular/icons/comet.svg",
+      "unicode": "ea91"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/command.svg?v=0.1.0",
+      "name": "command",
+      "umd": "spices-clove-regular/icons/command.svg",
+      "unicode": "ea92"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-down-left.svg?v=0.1.0",
+      "name": "corner-down-left",
+      "umd": "spices-clove-regular/icons/corner-down-left.svg",
+      "unicode": "ea93"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-down-left-double.svg?v=0.1.0",
+      "name": "corner-down-left-double",
+      "umd": "spices-clove-regular/icons/corner-down-left-double.svg",
+      "unicode": "ea94"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-down-right.svg?v=0.1.0",
+      "name": "corner-down-right",
+      "umd": "spices-clove-regular/icons/corner-down-right.svg",
+      "unicode": "ea95"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-down-right-double.svg?v=0.1.0",
+      "name": "corner-down-right-double",
+      "umd": "spices-clove-regular/icons/corner-down-right-double.svg",
+      "unicode": "ea96"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-left-down.svg?v=0.1.0",
+      "name": "corner-left-down",
+      "umd": "spices-clove-regular/icons/corner-left-down.svg",
+      "unicode": "ea97"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-left-down-double.svg?v=0.1.0",
+      "name": "corner-left-down-double",
+      "umd": "spices-clove-regular/icons/corner-left-down-double.svg",
+      "unicode": "ea98"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-left-up.svg?v=0.1.0",
+      "name": "corner-left-up",
+      "umd": "spices-clove-regular/icons/corner-left-up.svg",
+      "unicode": "ea99"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-left-up-double.svg?v=0.1.0",
+      "name": "corner-left-up-double",
+      "umd": "spices-clove-regular/icons/corner-left-up-double.svg",
+      "unicode": "ea9a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-right-down.svg?v=0.1.0",
+      "name": "corner-right-down",
+      "umd": "spices-clove-regular/icons/corner-right-down.svg",
+      "unicode": "ea9b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-right-down-double.svg?v=0.1.0",
+      "name": "corner-right-down-double",
+      "umd": "spices-clove-regular/icons/corner-right-down-double.svg",
+      "unicode": "ea9c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-right-up.svg?v=0.1.0",
+      "name": "corner-right-up",
+      "umd": "spices-clove-regular/icons/corner-right-up.svg",
+      "unicode": "ea9d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-right-up-double.svg?v=0.1.0",
+      "name": "corner-right-up-double",
+      "umd": "spices-clove-regular/icons/corner-right-up-double.svg",
+      "unicode": "ea9e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-up-left.svg?v=0.1.0",
+      "name": "corner-up-left",
+      "umd": "spices-clove-regular/icons/corner-up-left.svg",
+      "unicode": "ea9f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-up-left-double.svg?v=0.1.0",
+      "name": "corner-up-left-double",
+      "umd": "spices-clove-regular/icons/corner-up-left-double.svg",
+      "unicode": "eaa0"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-up-right.svg?v=0.1.0",
+      "name": "corner-up-right",
+      "umd": "spices-clove-regular/icons/corner-up-right.svg",
+      "unicode": "eaa1"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/corner-up-right-double.svg?v=0.1.0",
+      "name": "corner-up-right-double",
+      "umd": "spices-clove-regular/icons/corner-up-right-double.svg",
+      "unicode": "eaa2"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/crown.svg?v=0.1.0",
+      "name": "crown",
+      "umd": "spices-clove-regular/icons/crown.svg",
+      "unicode": "eaa3"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/curly-loop.svg?v=0.1.0",
+      "name": "curly-loop",
+      "umd": "spices-clove-regular/icons/curly-loop.svg",
+      "unicode": "eaa4"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dashboard.svg?v=0.1.0",
+      "name": "dashboard",
+      "umd": "spices-clove-regular/icons/dashboard.svg",
+      "unicode": "eaa5"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/database.svg?v=0.1.0",
+      "name": "database",
+      "umd": "spices-clove-regular/icons/database.svg",
+      "unicode": "eaa6"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/desktop.svg?v=0.1.0",
+      "name": "desktop",
+      "umd": "spices-clove-regular/icons/desktop.svg",
+      "unicode": "eaa7"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/diamond.svg?v=0.1.0",
+      "name": "diamond",
+      "umd": "spices-clove-regular/icons/diamond.svg",
+      "unicode": "eaa8"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dinar.svg?v=0.1.0",
+      "name": "dinar",
+      "umd": "spices-clove-regular/icons/dinar.svg",
+      "unicode": "eaa9"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/directions.svg?v=0.1.0",
+      "name": "directions",
+      "umd": "spices-clove-regular/icons/directions.svg",
+      "unicode": "eaaa"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dirham.svg?v=0.1.0",
+      "name": "dirham",
+      "umd": "spices-clove-regular/icons/dirham.svg",
+      "unicode": "eaab"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dna.svg?v=0.1.0",
+      "name": "dna",
+      "umd": "spices-clove-regular/icons/dna.svg",
+      "unicode": "eaac"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dollar.svg?v=0.1.0",
+      "name": "dollar",
+      "umd": "spices-clove-regular/icons/dollar.svg",
+      "unicode": "eaad"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dollar-australian.svg?v=0.1.0",
+      "name": "dollar-australian",
+      "umd": "spices-clove-regular/icons/dollar-australian.svg",
+      "unicode": "eaae"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dollar-canadian.svg?v=0.1.0",
+      "name": "dollar-canadian",
+      "umd": "spices-clove-regular/icons/dollar-canadian.svg",
+      "unicode": "eaaf"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/dollar-singapore.svg?v=0.1.0",
+      "name": "dollar-singapore",
+      "umd": "spices-clove-regular/icons/dollar-singapore.svg",
+      "unicode": "eab0"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/download.svg?v=0.1.0",
+      "name": "download",
+      "umd": "spices-clove-regular/icons/download.svg",
+      "unicode": "eab1"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/droplet.svg?v=0.1.0",
+      "name": "droplet",
+      "umd": "spices-clove-regular/icons/droplet.svg",
+      "unicode": "eab2"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ear.svg?v=0.1.0",
+      "name": "ear",
+      "umd": "spices-clove-regular/icons/ear.svg",
+      "unicode": "eab3"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/egg.svg?v=0.1.0",
+      "name": "egg",
+      "umd": "spices-clove-regular/icons/egg.svg",
+      "unicode": "eab4"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ethereum.svg?v=0.1.0",
+      "name": "ethereum",
+      "umd": "spices-clove-regular/icons/ethereum.svg",
+      "unicode": "eab5"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/euro.svg?v=0.1.0",
+      "name": "euro",
+      "umd": "spices-clove-regular/icons/euro.svg",
+      "unicode": "eab6"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/eyeglass.svg?v=0.1.0",
+      "name": "eyeglass",
+      "umd": "spices-clove-regular/icons/eyeglass.svg",
+      "unicode": "eab7"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file.svg?v=0.1.0",
+      "name": "file",
+      "umd": "spices-clove-regular/icons/file.svg",
+      "unicode": "eab8"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-alert.svg?v=0.1.0",
+      "name": "file-alert",
+      "umd": "spices-clove-regular/icons/file-alert.svg",
+      "unicode": "eab9"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-analytics.svg?v=0.1.0",
+      "name": "file-analytics",
+      "umd": "spices-clove-regular/icons/file-analytics.svg",
+      "unicode": "eaba"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-check.svg?v=0.1.0",
+      "name": "file-check",
+      "umd": "spices-clove-regular/icons/file-check.svg",
+      "unicode": "eabb"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-code.svg?v=0.1.0",
+      "name": "file-code",
+      "umd": "spices-clove-regular/icons/file-code.svg",
+      "unicode": "eabc"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-diff.svg?v=0.1.0",
+      "name": "file-diff",
+      "umd": "spices-clove-regular/icons/file-diff.svg",
+      "unicode": "eabd"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-download.svg?v=0.1.0",
+      "name": "file-download",
+      "umd": "spices-clove-regular/icons/file-download.svg",
+      "unicode": "eabe"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-export.svg?v=0.1.0",
+      "name": "file-export",
+      "umd": "spices-clove-regular/icons/file-export.svg",
+      "unicode": "eabf"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-import.svg?v=0.1.0",
+      "name": "file-import",
+      "umd": "spices-clove-regular/icons/file-import.svg",
+      "unicode": "eac0"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-info.svg?v=0.1.0",
+      "name": "file-info",
+      "umd": "spices-clove-regular/icons/file-info.svg",
+      "unicode": "eac1"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-invoice.svg?v=0.1.0",
+      "name": "file-invoice",
+      "umd": "spices-clove-regular/icons/file-invoice.svg",
+      "unicode": "eac2"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-minus.svg?v=0.1.0",
+      "name": "file-minus",
+      "umd": "spices-clove-regular/icons/file-minus.svg",
+      "unicode": "eac3"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-music.svg?v=0.1.0",
+      "name": "file-music",
+      "umd": "spices-clove-regular/icons/file-music.svg",
+      "unicode": "eac4"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-plus.svg?v=0.1.0",
+      "name": "file-plus",
+      "umd": "spices-clove-regular/icons/file-plus.svg",
+      "unicode": "eac5"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-upload.svg?v=0.1.0",
+      "name": "file-upload",
+      "umd": "spices-clove-regular/icons/file-upload.svg",
+      "unicode": "eac6"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/file-x.svg?v=0.1.0",
+      "name": "file-x",
+      "umd": "spices-clove-regular/icons/file-x.svg",
+      "unicode": "eac7"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/files.svg?v=0.1.0",
+      "name": "files",
+      "umd": "spices-clove-regular/icons/files.svg",
+      "unicode": "eac8"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/firetruck.svg?v=0.1.0",
+      "name": "firetruck",
+      "umd": "spices-clove-regular/icons/firetruck.svg",
+      "unicode": "eac9"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/flame.svg?v=0.1.0",
+      "name": "flame",
+      "umd": "spices-clove-regular/icons/flame.svg",
+      "unicode": "eaca"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/flask.svg?v=0.1.0",
+      "name": "flask",
+      "umd": "spices-clove-regular/icons/flask.svg",
+      "unicode": "eacb"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/floppy.svg?v=0.1.0",
+      "name": "floppy",
+      "umd": "spices-clove-regular/icons/floppy.svg",
+      "unicode": "eacc"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/flower.svg?v=0.1.0",
+      "name": "flower",
+      "umd": "spices-clove-regular/icons/flower.svg",
+      "unicode": "eacd"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/folder.svg?v=0.1.0",
+      "name": "folder",
+      "umd": "spices-clove-regular/icons/folder.svg",
+      "unicode": "eace"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/folder-minus.svg?v=0.1.0",
+      "name": "folder-minus",
+      "umd": "spices-clove-regular/icons/folder-minus.svg",
+      "unicode": "eacf"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/folder-plus.svg?v=0.1.0",
+      "name": "folder-plus",
+      "umd": "spices-clove-regular/icons/folder-plus.svg",
+      "unicode": "ead0"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/folder-x.svg?v=0.1.0",
+      "name": "folder-x",
+      "umd": "spices-clove-regular/icons/folder-x.svg",
+      "unicode": "ead1"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/folders.svg?v=0.1.0",
+      "name": "folders",
+      "umd": "spices-clove-regular/icons/folders.svg",
+      "unicode": "ead2"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/forint.svg?v=0.1.0",
+      "name": "forint",
+      "umd": "spices-clove-regular/icons/forint.svg",
+      "unicode": "ead3"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/forklift.svg?v=0.1.0",
+      "name": "forklift",
+      "umd": "spices-clove-regular/icons/forklift.svg",
+      "unicode": "ead4"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/forms.svg?v=0.1.0",
+      "name": "forms",
+      "umd": "spices-clove-regular/icons/forms.svg",
+      "unicode": "ead5"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/forward.svg?v=0.1.0",
+      "name": "forward",
+      "umd": "spices-clove-regular/icons/forward.svg",
+      "unicode": "ead6"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/forward-up.svg?v=0.1.0",
+      "name": "forward-up",
+      "umd": "spices-clove-regular/icons/forward-up.svg",
+      "unicode": "ead7"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/frank.svg?v=0.1.0",
+      "name": "frank",
+      "umd": "spices-clove-regular/icons/frank.svg",
+      "unicode": "ead8"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/gamepad.svg?v=0.1.0",
+      "name": "gamepad",
+      "umd": "spices-clove-regular/icons/gamepad.svg",
+      "unicode": "ead9"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/geometry.svg?v=0.1.0",
+      "name": "geometry",
+      "umd": "spices-clove-regular/icons/geometry.svg",
+      "unicode": "eada"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ghost.svg?v=0.1.0",
+      "name": "ghost",
+      "umd": "spices-clove-regular/icons/ghost.svg",
+      "unicode": "eadb"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/gift.svg?v=0.1.0",
+      "name": "gift",
+      "umd": "spices-clove-regular/icons/gift.svg",
+      "unicode": "eadc"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-branch.svg?v=0.1.0",
+      "name": "git-branch",
+      "umd": "spices-clove-regular/icons/git-branch.svg",
+      "unicode": "eadd"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-commit.svg?v=0.1.0",
+      "name": "git-commit",
+      "umd": "spices-clove-regular/icons/git-commit.svg",
+      "unicode": "eade"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-compare.svg?v=0.1.0",
+      "name": "git-compare",
+      "umd": "spices-clove-regular/icons/git-compare.svg",
+      "unicode": "eadf"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-fork.svg?v=0.1.0",
+      "name": "git-fork",
+      "umd": "spices-clove-regular/icons/git-fork.svg",
+      "unicode": "eae0"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-merge.svg?v=0.1.0",
+      "name": "git-merge",
+      "umd": "spices-clove-regular/icons/git-merge.svg",
+      "unicode": "eae1"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/git-pull-request.svg?v=0.1.0",
+      "name": "git-pull-request",
+      "umd": "spices-clove-regular/icons/git-pull-request.svg",
+      "unicode": "eae2"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/glass.svg?v=0.1.0",
+      "name": "glass",
+      "umd": "spices-clove-regular/icons/glass.svg",
+      "unicode": "eae3"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/globe.svg?v=0.1.0",
+      "name": "globe",
+      "umd": "spices-clove-regular/icons/globe.svg",
+      "unicode": "eae4"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/headphones.svg?v=0.1.0",
+      "name": "headphones",
+      "umd": "spices-clove-regular/icons/headphones.svg",
+      "unicode": "eae5"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/heart.svg?v=0.1.0",
+      "name": "heart",
+      "umd": "spices-clove-regular/icons/heart.svg",
+      "unicode": "eae6"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/helicopter.svg?v=0.1.0",
+      "name": "helicopter",
+      "umd": "spices-clove-regular/icons/helicopter.svg",
+      "unicode": "eae7"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/home.svg?v=0.1.0",
+      "name": "home",
+      "umd": "spices-clove-regular/icons/home.svg",
+      "unicode": "eae8"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ice-cream.svg?v=0.1.0",
+      "name": "ice-cream",
+      "umd": "spices-clove-regular/icons/ice-cream.svg",
+      "unicode": "eae9"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/inbox.svg?v=0.1.0",
+      "name": "inbox",
+      "umd": "spices-clove-regular/icons/inbox.svg",
+      "unicode": "eaea"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/key.svg?v=0.1.0",
+      "name": "key",
+      "umd": "spices-clove-regular/icons/key.svg",
+      "unicode": "eaeb"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/keyboard.svg?v=0.1.0",
+      "name": "keyboard",
+      "umd": "spices-clove-regular/icons/keyboard.svg",
+      "unicode": "eaec"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/krone-czech.svg?v=0.1.0",
+      "name": "krone-czech",
+      "umd": "spices-clove-regular/icons/krone-czech.svg",
+      "unicode": "eaed"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/krone-danish.svg?v=0.1.0",
+      "name": "krone-danish",
+      "umd": "spices-clove-regular/icons/krone-danish.svg",
+      "unicode": "eaee"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/krone-swedish.svg?v=0.1.0",
+      "name": "krone-swedish",
+      "umd": "spices-clove-regular/icons/krone-swedish.svg",
+      "unicode": "eaef"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/laptop.svg?v=0.1.0",
+      "name": "laptop",
+      "umd": "spices-clove-regular/icons/laptop.svg",
+      "unicode": "eaf0"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/leaf.svg?v=0.1.0",
+      "name": "leaf",
+      "umd": "spices-clove-regular/icons/leaf.svg",
+      "unicode": "eaf1"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/leu.svg?v=0.1.0",
+      "name": "leu",
+      "umd": "spices-clove-regular/icons/leu.svg",
+      "unicode": "eaf2"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/license.svg?v=0.1.0",
+      "name": "license",
+      "umd": "spices-clove-regular/icons/license.svg",
+      "unicode": "eaf3"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/lifeboy.svg?v=0.1.0",
+      "name": "lifeboy",
+      "umd": "spices-clove-regular/icons/lifeboy.svg",
+      "unicode": "eaf4"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/lira.svg?v=0.1.0",
+      "name": "lira",
+      "umd": "spices-clove-regular/icons/lira.svg",
+      "unicode": "eaf5"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/litecoin.svg?v=0.1.0",
+      "name": "litecoin",
+      "umd": "spices-clove-regular/icons/litecoin.svg",
+      "unicode": "eaf6"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/login.svg?v=0.1.0",
+      "name": "login",
+      "umd": "spices-clove-regular/icons/login.svg",
+      "unicode": "eaf7"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/logout.svg?v=0.1.0",
+      "name": "logout",
+      "umd": "spices-clove-regular/icons/logout.svg",
+      "unicode": "eaf8"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/lotus.svg?v=0.1.0",
+      "name": "lotus",
+      "umd": "spices-clove-regular/icons/lotus.svg",
+      "unicode": "eaf9"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/magnet.svg?v=0.1.0",
+      "name": "magnet",
+      "umd": "spices-clove-regular/icons/magnet.svg",
+      "unicode": "eafa"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/mars.svg?v=0.1.0",
+      "name": "mars",
+      "umd": "spices-clove-regular/icons/mars.svg",
+      "unicode": "eafb"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/maximize.svg?v=0.1.0",
+      "name": "maximize",
+      "umd": "spices-clove-regular/icons/maximize.svg",
+      "unicode": "eafc"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/minimize.svg?v=0.1.0",
+      "name": "minimize",
+      "umd": "spices-clove-regular/icons/minimize.svg",
+      "unicode": "eafd"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/mobile-h.svg?v=0.1.0",
+      "name": "mobile-h",
+      "umd": "spices-clove-regular/icons/mobile-h.svg",
+      "unicode": "eafe"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/mobile-v.svg?v=0.1.0",
+      "name": "mobile-v",
+      "umd": "spices-clove-regular/icons/mobile-v.svg",
+      "unicode": "eaff"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/moon.svg?v=0.1.0",
+      "name": "moon",
+      "umd": "spices-clove-regular/icons/moon.svg",
+      "unicode": "eb00"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/moped.svg?v=0.1.0",
+      "name": "moped",
+      "umd": "spices-clove-regular/icons/moped.svg",
+      "unicode": "eb01"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/motorbike.svg?v=0.1.0",
+      "name": "motorbike",
+      "umd": "spices-clove-regular/icons/motorbike.svg",
+      "unicode": "eb02"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/mouse.svg?v=0.1.0",
+      "name": "mouse",
+      "umd": "spices-clove-regular/icons/mouse.svg",
+      "unicode": "eb03"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/mug.svg?v=0.1.0",
+      "name": "mug",
+      "umd": "spices-clove-regular/icons/mug.svg",
+      "unicode": "eb04"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/music.svg?v=0.1.0",
+      "name": "music",
+      "umd": "spices-clove-regular/icons/music.svg",
+      "unicode": "eb05"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/naira.svg?v=0.1.0",
+      "name": "naira",
+      "umd": "spices-clove-regular/icons/naira.svg",
+      "unicode": "eb06"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/open.svg?v=0.1.0",
+      "name": "open",
+      "umd": "spices-clove-regular/icons/open.svg",
+      "unicode": "eb07"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/paint.svg?v=0.1.0",
+      "name": "paint",
+      "umd": "spices-clove-regular/icons/paint.svg",
+      "unicode": "eb08"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/paperclip.svg?v=0.1.0",
+      "name": "paperclip",
+      "umd": "spices-clove-regular/icons/paperclip.svg",
+      "unicode": "eb09"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/parent.svg?v=0.1.0",
+      "name": "parent",
+      "umd": "spices-clove-regular/icons/parent.svg",
+      "unicode": "eb0a"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/peace.svg?v=0.1.0",
+      "name": "peace",
+      "umd": "spices-clove-regular/icons/peace.svg",
+      "unicode": "eb0b"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/pencil.svg?v=0.1.0",
+      "name": "pencil",
+      "umd": "spices-clove-regular/icons/pencil.svg",
+      "unicode": "eb0c"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/pennant.svg?v=0.1.0",
+      "name": "pennant",
+      "umd": "spices-clove-regular/icons/pennant.svg",
+      "unicode": "eb0d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/pill.svg?v=0.1.0",
+      "name": "pill",
+      "umd": "spices-clove-regular/icons/pill.svg",
+      "unicode": "eb0e"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/pizza.svg?v=0.1.0",
+      "name": "pizza",
+      "umd": "spices-clove-regular/icons/pizza.svg",
+      "unicode": "eb0f"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/plane.svg?v=0.1.0",
+      "name": "plane",
+      "umd": "spices-clove-regular/icons/plane.svg",
+      "unicode": "eb10"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/plane-arrival.svg?v=0.1.0",
+      "name": "plane-arrival",
+      "umd": "spices-clove-regular/icons/plane-arrival.svg",
+      "unicode": "eb11"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/plane-departure.svg?v=0.1.0",
+      "name": "plane-departure",
+      "umd": "spices-clove-regular/icons/plane-departure.svg",
+      "unicode": "eb12"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/planet.svg?v=0.1.0",
+      "name": "planet",
+      "umd": "spices-clove-regular/icons/planet.svg",
+      "unicode": "eb13"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/plant.svg?v=0.1.0",
+      "name": "plant",
+      "umd": "spices-clove-regular/icons/plant.svg",
+      "unicode": "eb14"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/play-card.svg?v=0.1.0",
+      "name": "play-card",
+      "umd": "spices-clove-regular/icons/play-card.svg",
+      "unicode": "eb15"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/plug.svg?v=0.1.0",
+      "name": "plug",
+      "umd": "spices-clove-regular/icons/plug.svg",
+      "unicode": "eb16"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/pound.svg?v=0.1.0",
+      "name": "pound",
+      "umd": "spices-clove-regular/icons/pound.svg",
+      "unicode": "eb17"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/printer.svg?v=0.1.0",
+      "name": "printer",
+      "umd": "spices-clove-regular/icons/printer.svg",
+      "unicode": "eb18"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/prompt.svg?v=0.1.0",
+      "name": "prompt",
+      "umd": "spices-clove-regular/icons/prompt.svg",
+      "unicode": "eb19"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/propeller.svg?v=0.1.0",
+      "name": "propeller",
+      "umd": "spices-clove-regular/icons/propeller.svg",
+      "unicode": "eb1a"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/real.svg?v=0.1.0",
+      "name": "real",
+      "umd": "spices-clove-regular/icons/real.svg",
+      "unicode": "eb1b"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/recycle.svg?v=0.1.0",
+      "name": "recycle",
+      "umd": "spices-clove-regular/icons/recycle.svg",
+      "unicode": "eb1c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/redo.svg?v=0.1.0",
+      "name": "redo",
+      "umd": "spices-clove-regular/icons/redo.svg",
+      "unicode": "eb1d"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/renminbi.svg?v=0.1.0",
+      "name": "renminbi",
+      "umd": "spices-clove-regular/icons/renminbi.svg",
+      "unicode": "eb1e"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ripple.svg?v=0.1.0",
+      "name": "ripple",
+      "umd": "spices-clove-regular/icons/ripple.svg",
+      "unicode": "eb1f"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/riyal.svg?v=0.1.0",
+      "name": "riyal",
+      "umd": "spices-clove-regular/icons/riyal.svg",
+      "unicode": "eb20"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/rocket.svg?v=0.1.0",
+      "name": "rocket",
+      "umd": "spices-clove-regular/icons/rocket.svg",
+      "unicode": "eb21"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/router.svg?v=0.1.0",
+      "name": "router",
+      "umd": "spices-clove-regular/icons/router.svg",
+      "unicode": "eb22"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/rubel.svg?v=0.1.0",
+      "name": "rubel",
+      "umd": "spices-clove-regular/icons/rubel.svg",
+      "unicode": "eb23"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/ruler.svg?v=0.1.0",
+      "name": "ruler",
+      "umd": "spices-clove-regular/icons/ruler.svg",
+      "unicode": "eb24"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/rupee.svg?v=0.1.0",
+      "name": "rupee",
+      "umd": "spices-clove-regular/icons/rupee.svg",
+      "unicode": "eb25"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/sailboat.svg?v=0.1.0",
+      "name": "sailboat",
+      "umd": "spices-clove-regular/icons/sailboat.svg",
+      "unicode": "eb26"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/scooter.svg?v=0.1.0",
+      "name": "scooter",
+      "umd": "spices-clove-regular/icons/scooter.svg",
+      "unicode": "eb27"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/shekel.svg?v=0.1.0",
+      "name": "shekel",
+      "umd": "spices-clove-regular/icons/shekel.svg",
+      "unicode": "eb28"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/sort.svg?v=0.1.0",
+      "name": "sort",
+      "umd": "spices-clove-regular/icons/sort.svg",
+      "unicode": "eb29"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/sort-desc.svg?v=0.1.0",
+      "name": "sort-desc",
+      "umd": "spices-clove-regular/icons/sort-desc.svg",
+      "unicode": "eb2a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/sort-up.svg?v=0.1.0",
+      "name": "sort-up",
+      "umd": "spices-clove-regular/icons/sort-up.svg",
+      "unicode": "eb2b"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/speaker.svg?v=0.1.0",
+      "name": "speaker",
+      "umd": "spices-clove-regular/icons/speaker.svg",
+      "unicode": "eb2c"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/speedboat.svg?v=0.1.0",
+      "name": "speedboat",
+      "umd": "spices-clove-regular/icons/speedboat.svg",
+      "unicode": "eb2d"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/star.svg?v=0.1.0",
+      "name": "star",
+      "umd": "spices-clove-regular/icons/star.svg",
+      "unicode": "eb2e"
+    },
+    {
+      "category": "life",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/star-full.svg?v=0.1.0",
+      "name": "star-full",
+      "umd": "spices-clove-regular/icons/star-full.svg",
+      "unicode": "eb2f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/switch-horizontal.svg?v=0.1.0",
+      "name": "switch-horizontal",
+      "umd": "spices-clove-regular/icons/switch-horizontal.svg",
+      "unicode": "eb30"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/sync.svg?v=0.1.0",
+      "name": "sync",
+      "umd": "spices-clove-regular/icons/sync.svg",
+      "unicode": "eb31"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/tablet.svg?v=0.1.0",
+      "name": "tablet",
+      "umd": "spices-clove-regular/icons/tablet.svg",
+      "unicode": "eb32"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/taka.svg?v=0.1.0",
+      "name": "taka",
+      "umd": "spices-clove-regular/icons/taka.svg",
+      "unicode": "eb33"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/television.svg?v=0.1.0",
+      "name": "television",
+      "umd": "spices-clove-regular/icons/television.svg",
+      "unicode": "eb34"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/tugrik.svg?v=0.1.0",
+      "name": "tugrik",
+      "umd": "spices-clove-regular/icons/tugrik.svg",
+      "unicode": "eb35"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/undo.svg?v=0.1.0",
+      "name": "undo",
+      "umd": "spices-clove-regular/icons/undo.svg",
+      "unicode": "eb36"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/upload.svg?v=0.1.0",
+      "name": "upload",
+      "umd": "spices-clove-regular/icons/upload.svg",
+      "unicode": "eb37"
+    },
+    {
+      "category": "computers",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/watch.svg?v=0.1.0",
+      "name": "watch",
+      "umd": "spices-clove-regular/icons/watch.svg",
+      "unicode": "eb38"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/won.svg?v=0.1.0",
+      "name": "won",
+      "umd": "spices-clove-regular/icons/won.svg",
+      "unicode": "eb39"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/yen.svg?v=0.1.0",
+      "name": "yen",
+      "umd": "spices-clove-regular/icons/yen.svg",
+      "unicode": "eb3a"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.sayl.cloud/spices/icons/spices-clove-regular/icons/zloty.svg?v=0.1.0",
+      "name": "zloty",
+      "umd": "spices-clove-regular/icons/zloty.svg",
+      "unicode": "eb3b"
     }
   ],
   "name": "spices-clove-regular",

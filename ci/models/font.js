@@ -200,10 +200,6 @@ module.exports = class Font{
     })))
   }
 
-  save(){
-
-  }
-
   /**
    * JSON Object representation of a font
    */

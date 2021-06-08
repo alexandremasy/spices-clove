@@ -59,6 +59,7 @@ class FontType {
   toJSON(){
     return {
       cdn: this.cdn,
+      type: this.type,
       umd: this.umd
     }
   }
