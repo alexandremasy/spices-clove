@@ -2,10 +2,11 @@ const Listr = require('listr');
 const VerboseRenderer = require('listr-verbose-renderer');
 
 const Font = require('./models/font')
-const FontController = require('./controllers/font');
 const FontInit = require('./stages/init');
 const FontFigma = require('./stages/figma');
 const FontFetch = require('./stages/fetch');
+const FontWeb = require('./stages/webfont');
+const FontPublish = require('./stages/publish');
 
 class CI{
   run(){
@@ -33,7 +34,6 @@ class CI{
    * @returns 
    */
   generateFont(font){
-    const controller = new FontController(font)
     return new Listr([
       {
         title: 'Bootstraping the env',
@@ -49,11 +49,11 @@ class CI{
       },
       {
         title: 'Generating the webfonts',
-        task: (ctx, task) => controller.webfont({ctx, task})
+        task: (ctx, task) => FontWeb.exec({ctx, font, task})
       },
       {
         title: 'Publishing the new version',
-        task: (ctx, task) => controller.publish({ctx, task})
+        task: (ctx, task) => FontPublish.publish({ctx, task})
       }
     ])
   }

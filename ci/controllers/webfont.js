@@ -1,54 +1,10 @@
-const { basil } = require('@spices/basil')
 const fs = require('fs')
 const util = require('util')
 const readFile = util.promisify(fs.readFile)
 const writeFile= util.promisify(fs.writeFile)
 const Font = require('../models/font')
-const FontType = require('../models/font-type')
 
 module.exports = class WebfontController{
-
-  /**
-   * Create the iconfont
-   * 
-   * @param {Object} options
-   * @param {Font} options.font The font to convert
-   * @returns {Promise}
-   */
-  static create({ font }){
-    return new Promise((resolve, reject) => {
-      let args = { font }
-      let tasks = font.types
-        .filter(t => FontType.ALL.includes(t.type))
-        .map(t => {
-          let ret = Promise.resolve.bind(Promise, args)
-          if (t.type === FontType.TTF){
-            ret = WebfontController.ttf.bind(this, args)
-          }
-
-          if (t.type === FontType.WOFF){
-            ret = this.woff.bind(this, args)
-          }
-
-          if (t.type == FontType.WOFF2){
-            ret = WebfontController.woff2.bind(this, args)
-          }
-
-          return ret
-        })
-      
-      if (tasks.length > 0){
-        tasks.unshift(WebfontController.svg.bind(this, args))
-      }
-
-      basil.sequence(tasks, 1)
-      .then(() => {
-        console.log('done')
-        resolve()
-      })
-      .catch(e => {console.error(e); reject(e); })
-    })
-  }
   
   /**
    * Create the svg font
