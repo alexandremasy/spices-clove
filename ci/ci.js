@@ -1,5 +1,6 @@
 const Listr = require('listr');
 const VerboseRenderer = require('listr-verbose-renderer');
+const UpdaterRenderer = require('listr-update-renderer');
 
 const Font = require('./models/font')
 const FontInit = require('./stages/init');
@@ -20,7 +21,9 @@ class CI{
         task: this.generateFont.bind(this, f)
       }
     }), {
-      renderer: VerboseRenderer
+      // renderer: VerboseRenderer
+      renderer: UpdaterRenderer,
+      collapse: false
     })
     tasks.run()
     .catch(e => {
@@ -53,7 +56,7 @@ class CI{
       },
       {
         title: 'Publishing the new version',
-        task: (ctx, task) => FontPublish.publish({ctx, task})
+        task: (ctx, task) => FontPublish.exec({ctx, font, task})
       }
     ])
   }

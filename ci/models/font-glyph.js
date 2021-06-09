@@ -220,7 +220,7 @@ module.exports = class FontGlyph{
           console.log(err)
         }
         this.data = data
-        console.log('refresh', this.data.length );
+        // console.log('refresh', this.data.length );
         resolve(this.data)
       }.bind(this))
     })

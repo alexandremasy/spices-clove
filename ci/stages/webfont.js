@@ -20,22 +20,22 @@ module.exports = class FontWeb{
 
     return new Listr([
       {
-        skip: () => svg === false,
+        skip: () => svg === false ? 'No webfont to build' : false,
         title: 'Creating the svg font',
         task: (ctx, task) => FontWeb.svg(ctx, font, task)
       },
       {
-        skip: () => ttf === false,
+        skip: () => ttf === false ? 'No TTF to build' : false,
         title: 'Creating the ttf font',
         task: (ctx, task) => FontWeb.ttf(ctx, font, task)
       },
       {
-        skip: () => woff === false,
+        skip: () => woff === false ? 'No WOFF to build' : false,
         title: 'Creating the woff font',
         task: (ctx, task) => FontWeb.woff(ctx, font, task)
       },
       {
-        skip: () => woff2 === false,
+        skip: () => woff2 === false ? 'No WOFF2 to build' : false,
         title: 'Creating the woff2 font',
         task: (ctx, task) => FontWeb.woff2(ctx, font, task)
       },

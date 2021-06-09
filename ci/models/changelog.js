@@ -18,6 +18,13 @@ module.exports = class Changelog{
   }
 
   /**
+   * @property {Number} length The number of items in the changelog
+   */
+  get length(){
+    return this._changes.length
+  }
+
+  /**
    * Register the add of a new glyph
    * @param {FontGlyph} glyph 
    */
