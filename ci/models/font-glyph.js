@@ -96,7 +96,7 @@ module.exports = class FontGlyph{
    * @property {Boolean} updated Whether or not the glyph has been updated
    */
   get updated(){
-    return this._data !== null && this.data !== data
+    return this._data !== null && this._data !== this.data
   }
 
   /**
@@ -226,8 +226,11 @@ module.exports = class FontGlyph{
    * Create a snapshot of the glyph content
    */
   snapshot(){
-    this._data = this.data
-    return Promise.resolve()
+    return new Promise((resolve,reject) => {
+      this.refresh()
+        .then((data) => this._data = data)
+        .then(() => resolve())
+    })
   }
 
   /**

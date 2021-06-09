@@ -32,11 +32,29 @@ module.exports = class FontController {
   fetch({ctx, task}){
     return new Promise((resolve, reject) => {
 
-      this.glyphIterator({ ctx, fn: 'download', n: 50, task, title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`})
+      let changes = () => new Promise((resolve, reject) => {
+        task.title = 'Updating the changelog'
+        let updates = this.font.glyphs.filter(g => g.updated === true).flatMap(g => g.name)
+
+        let debug = this.font.glyphs.find(g => g.name === 'debug')
+        console.log(debug.data);
+        console.log('---------');
+        console.log(debug._data);
+
+
+        console.log('updates', updates.length)
+        console.log(updates);
+
+        resolve()
+      })
+
+      Promise.resolve()
       .then(this.glyphIterator.bind(this, { ctx, fn: 'snapshot', n: 100, title: (i, n) => task.title = `Snapshoting the glyphs [${i}/${n}]`}))
+      .then(this.glyphIterator.bind(this, { ctx, fn: 'download', n: 50, task, title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`}))
       // .then(this.glyphIterator.bind(this, { ctx, fn: 'outline', n: 10, task, title: (i, n) => task.title = `Outlining the glyphs [${i}/${n}]`}))
       // .then(this.glyphIterator.bind(this, { ctx, fn: 'optimize', n: 50, task, title: (i, n) => task.title = `Optimizing the glyphs [${i}/${n}]`}))
-      .then(this.fixGlyphsPath.bind(this, {ctx, task}))
+      // .then(this.fixGlyphsPath.bind(this, {ctx, task}))
+      .then(changes.bind(this))
       .then(() => {
         resolve()
       })
@@ -62,27 +80,16 @@ module.exports = class FontController {
           .then(() => resolve())
       })
 
-      let parse = () => new Promise((resolve, reject) => {
-        task.title = 'Hunting down glyphs in the document'
-        figma.findIcons(ctx)
-          .then(() => resolve())
-      })
-
-      let unicodes = () => new Promise((resolve, reject) => {
-        task.title = 'Computing the unicodes'
-        this.font.computeUnicodes()
-        resolve()
-      })
-
       let download = () => new Promise((resolve, reject) => {
         task.title = 'Generating the download links'
         figma.computeImageList(ctx)
           .then(() => resolve())
       })
 
-      let save = () => new Promise((resolve) => {
-        task.title = 'Generating the manifest'
-        this.save().then(() => resolve())
+      let parse = () => new Promise((resolve, reject) => {
+        task.title = 'Hunting down glyphs in the document'
+        figma.findIcons(ctx)
+          .then(() => resolve())
       })
 
       let register = () => new Promise((resolve) => {
@@ -102,6 +109,17 @@ module.exports = class FontController {
         delete ctx.figmaId
         delete ctx.icons
 
+        resolve()
+      })
+
+      let save = () => new Promise((resolve) => {
+        task.title = 'Generating the manifest'
+        this.save().then(() => resolve())
+      })
+
+      let unicodes = () => new Promise((resolve, reject) => {
+        task.title = 'Computing the unicodes'
+        this.font.computeUnicodes()
         resolve()
       })
 
