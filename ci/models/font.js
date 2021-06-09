@@ -152,20 +152,18 @@ module.exports = class Font{
     // find if there is an existing glyph with the same name. Avoid duplicates
     let glyph = this.glyphs.find(g => g.name === name)
     
+    // Update the existing icons with the new infos
     if (!basil.isNil(glyph)){
-      // console.warn(`Update glyph ${name}`)
       glyph.category = category || glyph.category
       glyph.data = data || glyph.data
       glyph.id = id || glyph.id
       glyph.source = source || glyph.source
       glyph.pristine = false
 
-      this._changes.edit(glyph)
-
       return
     }
 
-    // console.log(`Add glyph ${name}`)
+    // Add a new Glyph
     glyph = new FontGlyph({
       category,
       data,

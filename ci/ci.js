@@ -49,7 +49,7 @@ class CI{
         task: (ctx, task) => controller.webfont({ctx, task})
       },
       {
-        title: 'Publish the new version',
+        title: 'Publishing the new version',
         task: (ctx, task) => controller.publish({ctx, task})
       }
     ])

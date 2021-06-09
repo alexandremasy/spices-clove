@@ -37,6 +37,11 @@ module.exports = class FontGlyph{
      * @property {String} data The svg content string
      */
     this.data = data
+
+    /**
+     * @property {String} _data A snapshot of the svg content at a given moment.
+     */
+    this._data = null
     
     /**
      * @property {String} id The icon id - Comes from the Figma API
@@ -88,6 +93,13 @@ module.exports = class FontGlyph{
   }
 
   /**
+   * @property {Boolean} updated Whether or not the glyph has been updated
+   */
+  get updated(){
+    return this._data !== null && this.data !== data
+  }
+
+  /**
    * @property {String} system The OS path to the icon
    * @readonly
    */
@@ -125,7 +137,7 @@ module.exports = class FontGlyph{
   }
   
   ////////////////////////////////////////
-
+  
   /**
    * Download the icon from Figma
    * @returns {Promise}
@@ -137,10 +149,9 @@ module.exports = class FontGlyph{
       axios.get(this.source, {
         responseType: 'stream'
       })
-      .then((res) => {
-        res.data.pipe(writer)
-        return resolve()
-      })
+      .then((res) => res.data.pipe(writer))
+      .then(() => this.refresh())
+      .then(() => resolve())
       .catch((err) => {
         console.log('---------------')
         console.log('Download failed for:')
@@ -160,7 +171,7 @@ module.exports = class FontGlyph{
    */
   optimize(){
     return new Promise((resolve, reject) => {
-      this.data ? Promise.resolve(this.data) : readFile(this.system, 'utf-8')
+      this.data ? Promise.resolve(this.data) : this.refresh()
         .then(data => optimize(data, { path: this.system, ...config.svgo }))
         .then(res => {
           this.data = res.data
@@ -184,12 +195,39 @@ module.exports = class FontGlyph{
     return new Promise((resolve, reject) => {
       let command = `yarn outline ${this.toCLI()}`
       execute(command)
+      .then(() => this.refresh())
       .then(() => resolve())
       .catch(e => {
         console.log('error', e)
         reject(e)
       })
     })
+  }
+
+  /**
+   * Refresh the content of the glyph
+   *  - Will fetch the system file data
+   *  - Update the inner value aka `data`
+   *  - Resolve with the new data value
+   * 
+   * @returns {Promise}
+   */
+  refresh() {
+    return new Promise((resolve, reject) => {
+      readFile(this.system, 'utf-8')
+        .then((data) => {
+          this.data = data
+          resolve(data)
+        })
+    })
+  }
+
+  /**
+   * Create a snapshot of the glyph content
+   */
+  snapshot(){
+    this._data = this.data
+    return Promise.resolve()
   }
 
   /**

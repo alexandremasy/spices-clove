@@ -44,8 +44,9 @@ module.exports = class WebfontController{
       basil.sequence(tasks, 1)
       .then(() => {
         console.log('done')
+        resolve()
       })
-      .catch(e => console.error(e))
+      .catch(e => {console.error(e); reject(e); })
     })
   }
   
