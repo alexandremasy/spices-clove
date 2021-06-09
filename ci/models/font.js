@@ -25,9 +25,9 @@ module.exports = class Font{
    */
   constructor({ figmaId, name, types = FontType.ALL }){
     /**
-     * @property {Changelog} _changes
+     * @property {Changelog} changes
      */
-    this._changes = new Changelog()
+    this.changes = new Changelog()
     
     /**
      * @property {String} figmaId The Figma File ID
@@ -197,7 +197,7 @@ module.exports = class Font{
       source
     })
     this.glyphs.push(glyph)
-    this._changes.add(glyph)
+    this.changes.add(glyph)
   }
 
   /**
@@ -270,7 +270,7 @@ module.exports = class Font{
     let glyph = this.glyphs[i]
     this.glyphs.splice(i, 1)
 
-    this._changes.delete(glyph)
+    this.changes.delete(glyph)
   }
 
   /**

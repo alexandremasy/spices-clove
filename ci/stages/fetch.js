@@ -30,7 +30,6 @@ module.exports = class FontFetch {
         task: (ctx, task) => FontFetch.fix(ctx, font, task)
       },
       {
-        enabled: () => false,
         title: 'Update the changelog',
         task: (ctx, task) => FontFetch.changelog(ctx, font, task)
       },
@@ -48,7 +47,7 @@ module.exports = class FontFetch {
     return FontFetch.iterator({ 
       fn: 'snapshot', 
       font,
-      n: 10, 
+      n: 50, 
       title: (i, n) => task.title = `Snapshoting the glyphs [${i}/${n}]` 
     })
   }
@@ -63,7 +62,7 @@ module.exports = class FontFetch {
     return FontFetch.iterator({ 
       fn: 'download', 
       font,
-      n: 50, 
+      n: 10, 
       task, 
       title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]` 
     })
@@ -135,17 +134,15 @@ module.exports = class FontFetch {
    */
   static changelog(ctx, font, task){
     return new Promise((resolve, reject) => {
-      task.title = 'Updating the changelog'
       let updates = font.glyphs.filter(g => g.updated === true).flatMap(g => g.name)
-
-      let debug = font.glyphs.find(g => g.name === updates[0])
-      console.log(debug.data);
-      console.log('---------');
-      console.log(debug._data);
-
-      console.log('updates', updates.length)
-      console.log(updates);
-
+      // Development purpose
+      updates.push('debug')
+      updates.forEach(n => {
+        let glyph = font.glyphs.find(g => g.name === n)
+        font.changes.edit(glyph)
+      })
+      
+      task.title = `Changelog updated: ${font.changes.length} change(s) detected]`
       resolve()
     })
   }

@@ -6,6 +6,7 @@ const util = require('util')
 const { optimize } = require('svgo');
 const config = require('../utils/config')
 const execute = require('../utils/execute')
+const stream = require('stream')
 
 const readFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
@@ -146,10 +147,19 @@ module.exports = class FontGlyph{
   download(){
     return new Promise((resolve, reject) => {
       const writer = fs.createWriteStream(this.system)
-      axios.get(this.source, {
+
+      axios({
+        method: 'GET',
+        url: this.source,
         responseType: 'stream'
       })
-      .then((res) => res.data.pipe(writer))
+      .then((res) => {
+        return new Promise((re, rr) => {
+          res.data.pipe(fs.createWriteStream(this.system))
+          res.data.on('end', () => re())
+          res.data.on('error', () => rr())
+        })
+      })
       .then(() => this.refresh())
       .then(() => resolve())
       .catch((err) => {
@@ -214,13 +224,11 @@ module.exports = class FontGlyph{
    */
   refresh() {
     return new Promise((resolve, reject) => {
-
       fs.readFile(this.system, 'utf-8', function(err, data){
         if (err){
           console.log(err)
         }
         this.data = data
-        // console.log('refresh', this.data.length );
         resolve(this.data)
       }.bind(this))
     })

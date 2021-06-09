@@ -12,7 +12,7 @@ module.exports = class FontPublish {
    * @param {Font} options.font
    */
   static exec({ctx, font, task}){
-    let n = font._changes.length
+    let n = font.changes.length
     return new Listr([
       {
         title: 'Figure out the new version',
@@ -73,10 +73,16 @@ module.exports = class FontPublish {
    * @returns {Promise}
    */
   static commit(ctx, font, task){
-    let message = `Version ${font.version}. ${font._changes.length} changes.
+    const execute = require('../utils/execute')
 
-    ${font._changes.toString()}`
+    let message = `Version ${font.version} with ${font.changes.length} changes.
+${font.changes.toString()}`
     let command = `git add src/* && git commit -a -m ${message}`
+
+    execute(command)
+      .then(() => {
+        
+      })
 
     console.log('mesage', message);
   }

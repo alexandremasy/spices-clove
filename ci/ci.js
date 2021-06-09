@@ -21,9 +21,9 @@ class CI{
         task: this.generateFont.bind(this, f)
       }
     }), {
-      // renderer: VerboseRenderer
       renderer: UpdaterRenderer,
-      collapse: false
+      collapse: false,
+      renderer: VerboseRenderer
     })
     tasks.run()
     .catch(e => {

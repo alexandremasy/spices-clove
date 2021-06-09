@@ -5,9 +5,6 @@ yarn.lock
 TODO
 
 # package generated files
-src/outline
-src/*/icons
-src/*/webfonts
 
 # local env files
 .env
