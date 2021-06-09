@@ -1,6 +1,10 @@
 {
   "author": "Alexandre Masy <hello@alexandremasy.com>",
-  "devDependencies": {
+  "dependencies": {
+    "listr": "^0.14.3",
+    "listr-update-renderer": "^0.5.0",
+    "scale-that-svg": "^1.0.5",
+    "yargs": "^16.2.0",
     "@spices/basil": "^1.7.0",
     "axios": "^0.21.1",
     "chalk": "^2.4.2",
@@ -20,7 +24,7 @@
   "files": [
     "src"
   ],
-  "license": "SEE LICENSE IN license.md",
+  "license": "MIT",
   "main": "src/index.js",
   "name": "@spices/clove",
   "repository": {
@@ -32,11 +36,5 @@
     "ci": "node ./ci/ci.js",
     "outline": "node ./ci/outline.js"
   },
-  "version": "0.0.0",
-  "dependencies": {
-    "listr": "^0.14.3",
-    "listr-update-renderer": "^0.5.0",
-    "scale-that-svg": "^1.0.5",
-    "yargs": "^16.2.0"
-  }
+  "version": "0.0.0"
 }

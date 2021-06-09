@@ -1,6 +1,7 @@
 const Listr = require("listr")
 const semver = require("semver")
 const Font = require("../models/font")
+const execute = require('../utils/execute')
 
 module.exports = class FontPublish {
   /**
@@ -30,14 +31,14 @@ module.exports = class FontPublish {
         task: (ctx, task) => FontPublish.commit(ctx, font, task)
       },
       {
-        title: 'Tag the commit',
-        skip: () => n === 0 ? 'No changes' : false,
-        task: (ctx, task) => FontPublish.tag(ctx, font, task)
-      },
-      {
-        title: 'Publish on npm',
+        title: 'Tag & Publish on npm',
         skip: () => n === 0 ? 'No changes' : false,
         task: (ctx, task) => FontPublish.npm(ctx, font, task)
+      },
+      {
+        title: 'Push to the repository',
+        skip: () => n === 0 ? 'No changes': false,
+        task: (ctx, task) => FontPublish.push(ctx, font, task)
       },
     ])
   }
@@ -73,20 +74,17 @@ module.exports = class FontPublish {
    * @returns {Promise}
    */
   static commit(ctx, font, task){
-    const execute = require('../utils/execute')
-
-    let message = `Version ${font.version} with ${font.changes.length} changes.\n${font.changes.toString()}`
-    let command = `git add src/* && git commit -m '${message}'`
-
-    execute(command)
-      .then(() => {
-        
-      })
-      .catch(e => {
-        console.error(e)
-      })
-
-    console.log('mesage', message);
+    return new Promise((resolve, reject) => {
+      let message = `Version ${font.version} with ${font.changes.length} changes.\n${font.changes.toString()}`
+      let command = `git add src/* && git commit -m '${message}'`
+  
+      execute(command)
+        .then(() => resolve())
+        .catch(e => {
+          console.error(e)
+          reject(e)
+        })
+    })
   }
 
   /**
@@ -95,7 +93,14 @@ module.exports = class FontPublish {
    * @param {Font} font
    * @returns {Promise}
    */
-  static tag(ctx, font, task){}
+  static push(ctx, font, task){
+    return new Promise((resolve, reject) => {
+      let command = `git push --tags origin master`
+      execute(command)
+        .then(() => resolve())
+        .catch(e => reject(e))
+    })
+  }
 
   /**
    * @param {*} client
@@ -103,5 +108,13 @@ module.exports = class FontPublish {
    * @param {Font} font
    * @returns {Promise}
    */
-  static npm(ctx, font, task){}
+  static npm(ctx, font, task){
+    return new Promise((resolve, reject) => {
+      let message = `Version ${font.version} with ${font.changes.length} changes.\n${font.changes.toString()}`
+      let command = `yarn publish --message '${message}' --non-interactive --access public`
+      execute(command)
+        .then(() => resolve())
+        .catch(e => reject(e))
+    })
+  }
 }
