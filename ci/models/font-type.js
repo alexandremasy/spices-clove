@@ -30,7 +30,7 @@ class FontType {
    * @readonly
    */
   get cdn(){
-    return `${config.s3_url}${this.parent.name}/${this.parent.name}.${this.type}?v=${config.next}`
+    return `${config.cdn}@v${this.parent.version}/src/${this.parent.name}/${config.folder_webfont}/${this.parent.name}.${this.type}`
   }
 
   /**

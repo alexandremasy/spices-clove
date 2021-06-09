@@ -82,7 +82,7 @@ module.exports = class FontGlyph{
    * @readonly
    */
   get cdn(){
-    return `${config.s3_url}${this.parent.name}/${config.folder_icons}/${this.name}.svg?v=${config.next}`
+    return `${config.cdn}@v${this.parent.version}/src/${this.parent.name}/${config.folder_icons}/${this.name}.svg`
   }
 
   /**

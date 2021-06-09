@@ -75,13 +75,15 @@ module.exports = class FontPublish {
   static commit(ctx, font, task){
     const execute = require('../utils/execute')
 
-    let message = `Version ${font.version} with ${font.changes.length} changes.
-${font.changes.toString()}`
-    let command = `git add src/* && git commit -a -m ${message}`
+    let message = `Version ${font.version} with ${font.changes.length} changes.\n${font.changes.toString()}`
+    let command = `git add src/* && git commit -m '${message}'`
 
     execute(command)
       .then(() => {
         
+      })
+      .catch(e => {
+        console.error(e)
       })
 
     console.log('mesage', message);
