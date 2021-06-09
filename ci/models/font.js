@@ -2,6 +2,7 @@ const config = require('../utils/config')
 const FontType = require('./font-type')
 const FontGlyph = require('./font-glyph')
 const { basil } = require('@spices/basil')
+const Changelog = require('./changelog')
 
 /**
  * @class
@@ -17,20 +18,30 @@ module.exports = class Font{
    */
   constructor({ figmaId, name, types = FontType.ALL }){
     /**
+     * @property {Changelog} _changes
+     */
+    this._changes = new Changelog()
+    
+    /**
      * @property {String} figmaId The Figma File ID
      */
     this.figmaId = figmaId
 
     /**
-     * @property {String} name The name of the font
-     */
-    this.name = name
-    
-    /**
      * @property {Array<FontGlyph>} glyphs The list of glyphs in the font
      */
     this.glyphs = [];
 
+    /**
+     * @property {Array<String>} _glyphsName The list of all the existing glyphs name
+     */
+    this._glyphsNames = [];
+    
+    /**
+     * @property {String} name The name of the font
+     */
+    this.name = name
+    
     /**
      * @property {Number} _startUnicode The current highest unicode code.
      * @see https://en.wikipedia.org/wiki/Private_Use_Areas Unicode Private Use Area.
@@ -149,18 +160,22 @@ module.exports = class Font{
       glyph.source = source || glyph.source
       glyph.pristine = false
 
+      this._changes.edit(glyph)
+
       return
     }
 
     // console.log(`Add glyph ${name}`)
-    this.glyphs.push(new FontGlyph({ 
-      category, 
-      data, 
-      id, 
-      name, 
+    glyph = new FontGlyph({
+      category,
+      data,
+      id,
+      name,
       parent: this,
-      source 
-    }))
+      source
+    })
+    this.glyphs.push(glyph)
+    this._changes.add(glyph)
   }
 
   /**
@@ -198,6 +213,18 @@ module.exports = class Font{
       source: g.icon,
       unicode: g.unicode 
     })))
+  }
+
+  /**
+   * Remove the given glyph from the existing glyphs
+   * 
+   * @param {FontGlyph} glyph 
+   */
+  removeGlyph(glyph){
+    let i = this.glyphs.indexOf(glyph)
+    this.glyphs.splice(i, 1)
+
+    this._changes.delete(glyph)
   }
 
   /**

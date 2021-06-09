@@ -88,6 +88,14 @@ module.exports = class FontController {
         .then(parse.bind(this))
         .then(download.bind(this))
         .then(() => {
+          // Compare the given list with the existing list of icons to compute the difference
+          // All the icon who were there(manifest) but are not there anymore(figma) are supposed deleted
+          let g = this.font.glyphs.flatMap(g => g.name)
+          let o = ctx.icons.flatMap(o => o.name)
+          let d = g.filter(i => !o.includes(i))
+          d.forEach(i => this.font.removeGlyph(i))
+
+          // Adding the icons found on the Figma File
           ctx.icons.forEach(i => this.font.addGlyph(i))
           
           delete ctx.document
