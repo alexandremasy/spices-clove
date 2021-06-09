@@ -1,21 +1,7 @@
-const chalk = require('chalk')
-const Figma = require('../api/figma')
-const config = require('../utils/config')
-
 /**
  * @class
  */
 module.exports = class FigmaController{
-
-  /**
-   * @property {Figma} client The figma api client
-   * @readonly
-   */
-  get client(){
-    return Figma(config.figma_personal_token)
-  }
-
-  ////////////////////////////////////////////////////////////////////////////////////
 
   /**
    * Compute the list of images to download
@@ -24,10 +10,11 @@ module.exports = class FigmaController{
    * @param {String} figmaId The figma file id
    * @returns {Promise}
    */
-  computeImageList({figmaId, icons}) {
+  static computeImageList(client, ctx, font) {
     return new Promise((resolve, reject) => {
+      let icons = ctx.icons
       let ids = icons.map(i => i.id).join(',')
-      this.client.get(`/images/${figmaId}?ids=${ids}&format=svg`)
+      client.get(`/images/${font.figmaId}?ids=${ids}&format=svg`)
       .then((res) => {
         let images = res.data.images
         icons.forEach(i => i.source = images[i.id])
@@ -48,9 +35,9 @@ module.exports = class FigmaController{
    * @param {String} ctx.figmaId The figma file id
    * @returns {Promise}
    */
-  fetch(ctx){
+  static fetch(client, ctx, font){
     return new Promise((resolve, reject) => {
-      this.client.get(`/files/${ctx.figmaId}`)
+      client.get(`/files/${font.figmaId}`)
       .then((res) => {
         ctx.document = res.data.document
         resolve(ctx)
@@ -66,7 +53,7 @@ module.exports = class FigmaController{
    * @param {Object} ctx.document The figma document ast
    * @returns {Promise}
    */
-  findIcons(ctx){
+  static findIcons(client, ctx, font){
     return new Promise((resolve, reject) => {
       let ret = []
       let names = []
@@ -77,7 +64,6 @@ module.exports = class FigmaController{
         if (f.type === 'COMPONENT'){
           // Prevent duplicates
           if (names.includes(f.name)){
-            console.log();
             console.warn(chalk.red(`ERR: Duplicate icon "${f.name}"`))
             process.exit();
           }

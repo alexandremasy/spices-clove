@@ -1,8 +1,15 @@
+const path = require('path')
+const fs = require('fs')
+const utils = require('util')
+
 const config = require('../utils/config')
 const FontType = require('./font-type')
 const FontGlyph = require('./font-glyph')
 const { basil } = require('@spices/basil')
 const Changelog = require('./changelog')
+
+const readFile = utils.promisify(fs.readFile)
+const writeFile = utils.promisify(fs.writeFile)
 
 /**
  * @class
@@ -65,6 +72,15 @@ module.exports = class Font{
   ////////////////////////////////////////////////////////////////////////////////////////
 
   /**
+   * @property {String} manifest
+   *  The path to the manifest
+   * @readonly
+   */
+  get manifest(){
+    return path.resolve(config.output, this.name, `manifest.json`)
+  }
+
+  /**
    * @property {Number} nFontFaces The number of font-faces available
    */
   get nFontFaces(){
@@ -77,6 +93,14 @@ module.exports = class Font{
    */
   get nGlyphs(){
     return this.glyphs.length
+  }
+
+  /**
+   * @property {String} system The OS path to the font. The root folder.
+   * @readonly
+   */
+  get system(){
+    return path.resolve(config.output, this.name)
   }
 
   /**
@@ -194,6 +218,29 @@ module.exports = class Font{
   }
 
   /**
+   * Load the manifest and parse it
+   */
+  load(){
+    return new Promise((resolve, reject) => {
+      // Never been generated
+      if (!fs.existsSync(this.manifest)) {
+        return resolve()
+      }
+
+      readFile(this.manifest, 'utf-8')
+        .then(data => {
+          data = JSON.parse(data)
+          this.parse(data)
+          resolve()
+        })
+        .catch(e => {
+          console.log('[ERR]', e)
+          reject(e)
+        })
+    })
+  }
+
+  /**
    * Parse the given data and populate the font with it.
    * The existing data will be overwritten.
    * 
@@ -216,13 +263,24 @@ module.exports = class Font{
   /**
    * Remove the given glyph from the existing glyphs
    * 
-   * @param {FontGlyph} glyph 
+   * @param {String} name 
    */
-  removeGlyph(glyph){
-    let i = this.glyphs.indexOf(glyph)
+  removeGlyph(name){
+    let i = this.glyphs.findIndex(g => g.name === name)
+    let glyph = this.glyphs[i]
     this.glyphs.splice(i, 1)
 
     this._changes.delete(glyph)
+  }
+
+  /**
+   * Save the font data to the manifest file
+   */
+  save(){
+    return new Promise((resolve, reject) => {
+      let data = JSON.stringify(this.toJSON(), null, 2)
+      writeFile(this.manifest, data, 'utf-8').then(() => resolve())
+    })
   }
 
   /**

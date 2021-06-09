@@ -37,7 +37,6 @@ module.exports = {
   output,
   folder_icons: 'icons',
   folder_webfont: 'webfonts',
-  iconsFolderName: 'icons',
 
   svgo: {
     plugins: [

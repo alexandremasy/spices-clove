@@ -2,7 +2,10 @@ const Listr = require('listr');
 const VerboseRenderer = require('listr-verbose-renderer');
 
 const Font = require('./models/font')
-const FontController = require('./controllers/font')
+const FontController = require('./controllers/font');
+const FontInit = require('./stages/init');
+const FontFigma = require('./stages/figma');
+const FontFetch = require('./stages/fetch');
 
 class CI{
   run(){
@@ -33,16 +36,16 @@ class CI{
     const controller = new FontController(font)
     return new Listr([
       {
-        title: 'Find out the manifest state',
-        task: (ctx, task) => controller.load()
+        title: 'Bootstraping the env',
+        task: (ctx, task) => FontInit.exec({ ctx, font, task })
       },
       {
         title: 'Syncing data from Figma',
-        task: (ctx, task) => controller.figma({ctx, task})
+        task: (ctx, task) => FontFigma.exec({ ctx, font, task })
       },
       {
         title: 'Gathering the icons',
-        task: (ctx, task) => controller.fetch({ctx, task})
+        task: (ctx, task) => FontFetch.exec({ctx, font, task})
       },
       {
         title: 'Generating the webfonts',

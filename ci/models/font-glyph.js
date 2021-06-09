@@ -104,7 +104,7 @@ module.exports = class FontGlyph{
    * @readonly
    */
   get system(){
-    return path.resolve(config.output, this.parent.name, config.folder_icons, `${this.name}.svg`)
+    return path.resolve(this.parent.system, config.folder_icons, `${this.name}.svg`)
   }
 
   /**
@@ -214,11 +214,15 @@ module.exports = class FontGlyph{
    */
   refresh() {
     return new Promise((resolve, reject) => {
-      readFile(this.system, 'utf-8')
-        .then((data) => {
-          this.data = data
-          resolve(data)
-        })
+
+      fs.readFile(this.system, 'utf-8', function(err, data){
+        if (err){
+          console.log(err)
+        }
+        this.data = data
+        console.log('refresh', this.data.length );
+        resolve(this.data)
+      }.bind(this))
     })
   }
 
