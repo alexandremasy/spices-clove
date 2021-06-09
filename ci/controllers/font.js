@@ -10,6 +10,7 @@ const FileSystemController = require('./fs')
 const FigmaController = require('./figma')
 const WebfontController = require('./webfont')
 const config = require('../utils/config')
+const PublishController = require('./publish')
 
 module.exports = class FontController {
 
@@ -20,7 +21,6 @@ module.exports = class FontController {
   constructor(font){
     this.font = font
   }
-
 
   /**
    * Fetch the icons
@@ -33,6 +33,7 @@ module.exports = class FontController {
     return new Promise((resolve, reject) => {
 
       this.glyphIterator({ ctx, fn: 'download', n: 50, task, title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]`})
+      .then(this.glyphIterator.bind(this, { ctx, fn: 'snapshot', n: 100, title: (i, n) => task.title = `Snapshoting the glyphs [${i}/${n}]`}))
       // .then(this.glyphIterator.bind(this, { ctx, fn: 'outline', n: 10, task, title: (i, n) => task.title = `Outlining the glyphs [${i}/${n}]`}))
       // .then(this.glyphIterator.bind(this, { ctx, fn: 'optimize', n: 50, task, title: (i, n) => task.title = `Optimizing the glyphs [${i}/${n}]`}))
       .then(this.fixGlyphsPath.bind(this, {ctx, task}))
@@ -84,24 +85,30 @@ module.exports = class FontController {
         this.save().then(() => resolve())
       })
 
+      let register = () => new Promise((resolve) => {
+        task.title = 'Registering the icons'
+
+        // Compare the given list with the existing list of icons to compute the difference
+        // All the icon who were there(manifest) but are not there anymore(figma) are supposed deleted
+        let g = this.font.glyphs.flatMap(g => g.name)
+        let o = ctx.icons.flatMap(o => o.name)
+        let d = g.filter(i => !o.includes(i))
+        d.forEach(i => this.font.removeGlyph(i))
+
+        // Adding the icons found on the Figma File
+        ctx.icons.forEach(i => this.font.addGlyph(i))
+
+        delete ctx.document
+        delete ctx.figmaId
+        delete ctx.icons
+
+        resolve()
+      })
+
       fetch()
         .then(parse.bind(this))
         .then(download.bind(this))
-        .then(() => {
-          // Compare the given list with the existing list of icons to compute the difference
-          // All the icon who were there(manifest) but are not there anymore(figma) are supposed deleted
-          let g = this.font.glyphs.flatMap(g => g.name)
-          let o = ctx.icons.flatMap(o => o.name)
-          let d = g.filter(i => !o.includes(i))
-          d.forEach(i => this.font.removeGlyph(i))
-
-          // Adding the icons found on the Figma File
-          ctx.icons.forEach(i => this.font.addGlyph(i))
-          
-          delete ctx.document
-          delete ctx.figmaId
-          delete ctx.icons
-        })
+        .then(register.bind(this))
         .then(unicodes.bind(this))
         .then(save.bind(this))
         .then(() => resolve())
@@ -151,7 +158,9 @@ module.exports = class FontController {
 
       let iterator = (g) => new Promise((resolve, reject) => {
         g[fn]().then(() => {
-          i++; title(i, n); return resolve()
+          i++; 
+          title(i, n); 
+          return resolve()
         })
       })
 
@@ -190,15 +199,14 @@ module.exports = class FontController {
 
   /**
    * Publish the new version of the font
-   * - Compute the new version (auto-patch until better changelog detection)
-   * - Create the manifest
-   * - Create the version
-   * - Publish the font to npm
-   * - Publish the font to s3
+   * 
+   * @returns {Promise}
    */
   publish({ctx, task}){
     return new Promise((resolve, reject) => {
-      
+      PublishController.send({ font: this.font })
+      .then(() => resolve())
+      .catch((e) => console.error(e))
     })
   }
 
@@ -213,8 +221,6 @@ module.exports = class FontController {
       writeFile(p, data, 'utf-8').then(() => resolve())
     })
   }
-
-  
 
   /**
    * Create the webfont
