@@ -29,14 +29,10 @@ module.exports = class WebfontController{
 
       // Add the icons
       font.glyphs.forEach(glyph => {
-        let u = `\\u${glyph.unicodeString.toUpperCase()}`
         let g = fs.createReadStream(glyph.system)
 
-        console.log(glyph.unicodeString, u)
         g.metadata = {
           name: glyph.name,
-          // unicode: [ glyph.unicodeString ],
-          // unicode: ['\uE001'],
           unicode: [ glyph.unicodeChar ]
         }
         fontStream.write(g)
