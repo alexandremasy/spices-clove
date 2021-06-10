@@ -1,3724 +1,889 @@
 {
   "types": [
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/webfonts/spices-clove-regular.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/webfonts/spices-clove-regular.svg",
       "type": "svg",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.svg"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/webfonts/spices-clove-regular.ttf",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/webfonts/spices-clove-regular.ttf",
       "type": "ttf",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.ttf"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/webfonts/spices-clove-regular.woff",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/webfonts/spices-clove-regular.woff",
       "type": "woff",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/webfonts/spices-clove-regular.woff2",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/webfonts/spices-clove-regular.woff2",
       "type": "woff2",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff2"
     }
   ],
   "glyphs": [
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bahraini.svg",
-      "name": "bahraini",
-      "umd": "spices-clove-regular/icons/bahraini.svg",
-      "unicode": "ea25"
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-down.svg",
+      "name": "angle-down",
+      "umd": "spices-clove-regular/icons/angle-down.svg",
+      "unicode": "ea14"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bath.svg",
-      "name": "bath",
-      "umd": "spices-clove-regular/icons/bath.svg",
-      "unicode": "ea26"
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-down-left.svg",
+      "name": "angle-down-left",
+      "umd": "spices-clove-regular/icons/angle-down-left.svg",
+      "unicode": "ea15"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bitcoin.svg",
-      "name": "bitcoin",
-      "umd": "spices-clove-regular/icons/bitcoin.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-down-right.svg",
+      "name": "angle-down-right",
+      "umd": "spices-clove-regular/icons/angle-down-right.svg",
+      "unicode": "ea16"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-left.svg",
+      "name": "angle-left",
+      "umd": "spices-clove-regular/icons/angle-left.svg",
+      "unicode": "ea17"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-right.svg",
+      "name": "angle-right",
+      "umd": "spices-clove-regular/icons/angle-right.svg",
+      "unicode": "ea18"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-up.svg",
+      "name": "angle-up",
+      "umd": "spices-clove-regular/icons/angle-up.svg",
+      "unicode": "ea19"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-up-left.svg",
+      "name": "angle-up-left",
+      "umd": "spices-clove-regular/icons/angle-up-left.svg",
+      "unicode": "ea1a"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angle-up-right.svg",
+      "name": "angle-up-right",
+      "umd": "spices-clove-regular/icons/angle-up-right.svg",
+      "unicode": "ea1b"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angles-down.svg",
+      "name": "angles-down",
+      "umd": "spices-clove-regular/icons/angles-down.svg",
+      "unicode": "ea1c"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angles-left.svg",
+      "name": "angles-left",
+      "umd": "spices-clove-regular/icons/angles-left.svg",
+      "unicode": "ea1d"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angles-right.svg",
+      "name": "angles-right",
+      "umd": "spices-clove-regular/icons/angles-right.svg",
+      "unicode": "ea1e"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/angles-up.svg",
+      "name": "angles-up",
+      "umd": "spices-clove-regular/icons/angles-up.svg",
+      "unicode": "ea1f"
+    },
+    {
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-down.svg",
+      "name": "arrow-bar-down",
+      "umd": "spices-clove-regular/icons/arrow-bar-down.svg",
       "unicode": "ea27"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cent.svg",
-      "name": "cent",
-      "umd": "spices-clove-regular/icons/cent.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-left.svg",
+      "name": "arrow-bar-left",
+      "umd": "spices-clove-regular/icons/arrow-bar-left.svg",
       "unicode": "ea28"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/debug.svg",
-      "name": "debug",
-      "umd": "spices-clove-regular/icons/debug.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-right.svg",
+      "name": "arrow-bar-right",
+      "umd": "spices-clove-regular/icons/arrow-bar-right.svg",
       "unicode": "ea29"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dinar.svg",
-      "name": "dinar",
-      "umd": "spices-clove-regular/icons/dinar.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-to-down.svg",
+      "name": "arrow-bar-to-down",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-down.svg",
       "unicode": "ea2a"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dirham.svg",
-      "name": "dirham",
-      "umd": "spices-clove-regular/icons/dirham.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-to-left.svg",
+      "name": "arrow-bar-to-left",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-left.svg",
       "unicode": "ea2b"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dollar.svg",
-      "name": "dollar",
-      "umd": "spices-clove-regular/icons/dollar.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-to-right.svg",
+      "name": "arrow-bar-to-right",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-right.svg",
       "unicode": "ea2c"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dollar-australian.svg",
-      "name": "dollar-australian",
-      "umd": "spices-clove-regular/icons/dollar-australian.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-to-up.svg",
+      "name": "arrow-bar-to-up",
+      "umd": "spices-clove-regular/icons/arrow-bar-to-up.svg",
       "unicode": "ea2d"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dollar-canadian.svg",
-      "name": "dollar-canadian",
-      "umd": "spices-clove-regular/icons/dollar-canadian.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bar-up.svg",
+      "name": "arrow-bar-up",
+      "umd": "spices-clove-regular/icons/arrow-bar-up.svg",
       "unicode": "ea2e"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dollar-singapore.svg",
-      "name": "dollar-singapore",
-      "umd": "spices-clove-regular/icons/dollar-singapore.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-big-down.svg",
+      "name": "arrow-big-down",
+      "umd": "spices-clove-regular/icons/arrow-big-down.svg",
       "unicode": "ea2f"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ethereum.svg",
-      "name": "ethereum",
-      "umd": "spices-clove-regular/icons/ethereum.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-big-left.svg",
+      "name": "arrow-big-left",
+      "umd": "spices-clove-regular/icons/arrow-big-left.svg",
       "unicode": "ea30"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/euro.svg",
-      "name": "euro",
-      "umd": "spices-clove-regular/icons/euro.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-big-right.svg",
+      "name": "arrow-big-right",
+      "umd": "spices-clove-regular/icons/arrow-big-right.svg",
       "unicode": "ea31"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forint.svg",
-      "name": "forint",
-      "umd": "spices-clove-regular/icons/forint.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-big-top.svg",
+      "name": "arrow-big-top",
+      "umd": "spices-clove-regular/icons/arrow-big-top.svg",
       "unicode": "ea32"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/frank.svg",
-      "name": "frank",
-      "umd": "spices-clove-regular/icons/frank.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bottom-bar.svg",
+      "name": "arrow-bottom-bar",
+      "umd": "spices-clove-regular/icons/arrow-bottom-bar.svg",
       "unicode": "ea33"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/krone-czech.svg",
-      "name": "krone-czech",
-      "umd": "spices-clove-regular/icons/krone-czech.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bottom-circle.svg",
+      "name": "arrow-bottom-circle",
+      "umd": "spices-clove-regular/icons/arrow-bottom-circle.svg",
       "unicode": "ea34"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/krone-danish.svg",
-      "name": "krone-danish",
-      "umd": "spices-clove-regular/icons/krone-danish.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bottom-square.svg",
+      "name": "arrow-bottom-square",
+      "umd": "spices-clove-regular/icons/arrow-bottom-square.svg",
       "unicode": "ea35"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/krone-swedish.svg",
-      "name": "krone-swedish",
-      "umd": "spices-clove-regular/icons/krone-swedish.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-bottom-tail.svg",
+      "name": "arrow-bottom-tail",
+      "umd": "spices-clove-regular/icons/arrow-bottom-tail.svg",
       "unicode": "ea36"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/leu.svg",
-      "name": "leu",
-      "umd": "spices-clove-regular/icons/leu.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-diagonal-ew.svg",
+      "name": "arrow-diagonal-ew",
+      "umd": "spices-clove-regular/icons/arrow-diagonal-ew.svg",
       "unicode": "ea37"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lira.svg",
-      "name": "lira",
-      "umd": "spices-clove-regular/icons/lira.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-diagonal-we.svg",
+      "name": "arrow-diagonal-we",
+      "umd": "spices-clove-regular/icons/arrow-diagonal-we.svg",
       "unicode": "ea38"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/litecoin.svg",
-      "name": "litecoin",
-      "umd": "spices-clove-regular/icons/litecoin.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-down.svg",
+      "name": "arrow-down",
+      "umd": "spices-clove-regular/icons/arrow-down.svg",
       "unicode": "ea39"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/naira.svg",
-      "name": "naira",
-      "umd": "spices-clove-regular/icons/naira.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-down-left.svg",
+      "name": "arrow-down-left",
+      "umd": "spices-clove-regular/icons/arrow-down-left.svg",
       "unicode": "ea3a"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pound.svg",
-      "name": "pound",
-      "umd": "spices-clove-regular/icons/pound.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-down-right.svg",
+      "name": "arrow-down-right",
+      "umd": "spices-clove-regular/icons/arrow-down-right.svg",
       "unicode": "ea3b"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/real.svg",
-      "name": "real",
-      "umd": "spices-clove-regular/icons/real.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-horizontal.svg",
+      "name": "arrow-horizontal",
+      "umd": "spices-clove-regular/icons/arrow-horizontal.svg",
       "unicode": "ea3c"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/renminbi.svg",
-      "name": "renminbi",
-      "umd": "spices-clove-regular/icons/renminbi.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-left.svg",
+      "name": "arrow-left",
+      "umd": "spices-clove-regular/icons/arrow-left.svg",
       "unicode": "ea3d"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ripple.svg",
-      "name": "ripple",
-      "umd": "spices-clove-regular/icons/ripple.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-left-bar.svg",
+      "name": "arrow-left-bar",
+      "umd": "spices-clove-regular/icons/arrow-left-bar.svg",
       "unicode": "ea3e"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/riyal.svg",
-      "name": "riyal",
-      "umd": "spices-clove-regular/icons/riyal.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-left-circle.svg",
+      "name": "arrow-left-circle",
+      "umd": "spices-clove-regular/icons/arrow-left-circle.svg",
       "unicode": "ea3f"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/rubel.svg",
-      "name": "rubel",
-      "umd": "spices-clove-regular/icons/rubel.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-left-square.svg",
+      "name": "arrow-left-square",
+      "umd": "spices-clove-regular/icons/arrow-left-square.svg",
       "unicode": "ea40"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/rupee.svg",
-      "name": "rupee",
-      "umd": "spices-clove-regular/icons/rupee.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-left-tail.svg",
+      "name": "arrow-left-tail",
+      "umd": "spices-clove-regular/icons/arrow-left-tail.svg",
       "unicode": "ea41"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/shekel.svg",
-      "name": "shekel",
-      "umd": "spices-clove-regular/icons/shekel.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-loop-left.svg",
+      "name": "arrow-loop-left",
+      "umd": "spices-clove-regular/icons/arrow-loop-left.svg",
       "unicode": "ea42"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/taka.svg",
-      "name": "taka",
-      "umd": "spices-clove-regular/icons/taka.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-loop-right.svg",
+      "name": "arrow-loop-right",
+      "umd": "spices-clove-regular/icons/arrow-loop-right.svg",
       "unicode": "ea43"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/tugrik.svg",
-      "name": "tugrik",
-      "umd": "spices-clove-regular/icons/tugrik.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-ramp-left.svg",
+      "name": "arrow-ramp-left",
+      "umd": "spices-clove-regular/icons/arrow-ramp-left.svg",
       "unicode": "ea44"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/won.svg",
-      "name": "won",
-      "umd": "spices-clove-regular/icons/won.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-ramp-right.svg",
+      "name": "arrow-ramp-right",
+      "umd": "spices-clove-regular/icons/arrow-ramp-right.svg",
       "unicode": "ea45"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/yen.svg",
-      "name": "yen",
-      "umd": "spices-clove-regular/icons/yen.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-right.svg",
+      "name": "arrow-right",
+      "umd": "spices-clove-regular/icons/arrow-right.svg",
       "unicode": "ea46"
     },
     {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/zloty.svg",
-      "name": "zloty",
-      "umd": "spices-clove-regular/icons/zloty.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-right-bar.svg",
+      "name": "arrow-right-bar",
+      "umd": "spices-clove-regular/icons/arrow-right-bar.svg",
       "unicode": "ea47"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/2fa.svg",
-      "name": "2fa",
-      "umd": "spices-clove-regular/icons/2fa.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-right-circle.svg",
+      "name": "arrow-right-circle",
+      "umd": "spices-clove-regular/icons/arrow-right-circle.svg",
       "unicode": "ea48"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/a-b.svg",
-      "name": "a-b",
-      "umd": "spices-clove-regular/icons/a-b.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-right-square.svg",
+      "name": "arrow-right-square",
+      "umd": "spices-clove-regular/icons/arrow-right-square.svg",
       "unicode": "ea49"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/access-point.svg",
-      "name": "access-point",
-      "umd": "spices-clove-regular/icons/access-point.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-right-tail.svg",
+      "name": "arrow-right-tail",
+      "umd": "spices-clove-regular/icons/arrow-right-tail.svg",
       "unicode": "ea4a"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/access-point-off.svg",
-      "name": "access-point-off",
-      "umd": "spices-clove-regular/icons/access-point-off.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-top-bar.svg",
+      "name": "arrow-top-bar",
+      "umd": "spices-clove-regular/icons/arrow-top-bar.svg",
       "unicode": "ea4b"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/activity.svg",
-      "name": "activity",
-      "umd": "spices-clove-regular/icons/activity.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-top-circle.svg",
+      "name": "arrow-top-circle",
+      "umd": "spices-clove-regular/icons/arrow-top-circle.svg",
       "unicode": "ea4c"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/adjustments.svg",
-      "name": "adjustments",
-      "umd": "spices-clove-regular/icons/adjustments.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-top-square.svg",
+      "name": "arrow-top-square",
+      "umd": "spices-clove-regular/icons/arrow-top-square.svg",
       "unicode": "ea4d"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/adjustments-horizontal.svg",
-      "name": "adjustments-horizontal",
-      "umd": "spices-clove-regular/icons/adjustments-horizontal.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-top-tail.svg",
+      "name": "arrow-top-tail",
+      "umd": "spices-clove-regular/icons/arrow-top-tail.svg",
       "unicode": "ea4e"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/aerial-lift.svg",
-      "name": "aerial-lift",
-      "umd": "spices-clove-regular/icons/aerial-lift.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-up.svg",
+      "name": "arrow-up",
+      "umd": "spices-clove-regular/icons/arrow-up.svg",
       "unicode": "ea4f"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/alarm.svg",
-      "name": "alarm",
-      "umd": "spices-clove-regular/icons/alarm.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-up-left.svg",
+      "name": "arrow-up-left",
+      "umd": "spices-clove-regular/icons/arrow-up-left.svg",
       "unicode": "ea50"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/alert-circle.svg",
-      "name": "alert-circle",
-      "umd": "spices-clove-regular/icons/alert-circle.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-up-right.svg",
+      "name": "arrow-up-right",
+      "umd": "spices-clove-regular/icons/arrow-up-right.svg",
       "unicode": "ea51"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/alert-octagon.svg",
-      "name": "alert-octagon",
-      "umd": "spices-clove-regular/icons/alert-octagon.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-vertical.svg",
+      "name": "arrow-vertical",
+      "umd": "spices-clove-regular/icons/arrow-vertical.svg",
       "unicode": "ea52"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/alert-triangle.svg",
-      "name": "alert-triangle",
-      "umd": "spices-clove-regular/icons/alert-triangle.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-wave-left-down.svg",
+      "name": "arrow-wave-left-down",
+      "umd": "spices-clove-regular/icons/arrow-wave-left-down.svg",
       "unicode": "ea53"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/alien.svg",
-      "name": "alien",
-      "umd": "spices-clove-regular/icons/alien.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-wave-left-up.svg",
+      "name": "arrow-wave-left-up",
+      "umd": "spices-clove-regular/icons/arrow-wave-left-up.svg",
       "unicode": "ea54"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/align-center.svg",
-      "name": "align-center",
-      "umd": "spices-clove-regular/icons/align-center.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-wave-right-down.svg",
+      "name": "arrow-wave-right-down",
+      "umd": "spices-clove-regular/icons/arrow-wave-right-down.svg",
       "unicode": "ea55"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/align-justified.svg",
-      "name": "align-justified",
-      "umd": "spices-clove-regular/icons/align-justified.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrow-wave-right-up.svg",
+      "name": "arrow-wave-right-up",
+      "umd": "spices-clove-regular/icons/arrow-wave-right-up.svg",
       "unicode": "ea56"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/align-left.svg",
-      "name": "align-left",
-      "umd": "spices-clove-regular/icons/align-left.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-double-ne-sw.svg",
+      "name": "arrows-double-ne-sw",
+      "umd": "spices-clove-regular/icons/arrows-double-ne-sw.svg",
       "unicode": "ea57"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/align-right.svg",
-      "name": "align-right",
-      "umd": "spices-clove-regular/icons/align-right.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-double-nw-se.svg",
+      "name": "arrows-double-nw-se",
+      "umd": "spices-clove-regular/icons/arrows-double-nw-se.svg",
       "unicode": "ea58"
     },
     {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/analytics.svg",
-      "name": "analytics",
-      "umd": "spices-clove-regular/icons/analytics.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-double-se-nw.svg",
+      "name": "arrows-double-se-nw",
+      "umd": "spices-clove-regular/icons/arrows-double-se-nw.svg",
       "unicode": "ea59"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-down.svg",
-      "name": "angle-down",
-      "umd": "spices-clove-regular/icons/angle-down.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-double-sw-ne.svg",
+      "name": "arrows-double-sw-ne",
+      "umd": "spices-clove-regular/icons/arrows-double-sw-ne.svg",
       "unicode": "ea5a"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-down-left.svg",
-      "name": "angle-down-left",
-      "umd": "spices-clove-regular/icons/angle-down-left.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-down.svg",
+      "name": "arrows-down",
+      "umd": "spices-clove-regular/icons/arrows-down.svg",
       "unicode": "ea5b"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-down-right.svg",
-      "name": "angle-down-right",
-      "umd": "spices-clove-regular/icons/angle-down-right.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-down-up.svg",
+      "name": "arrows-down-up",
+      "umd": "spices-clove-regular/icons/arrows-down-up.svg",
       "unicode": "ea5c"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-left.svg",
-      "name": "angle-left",
-      "umd": "spices-clove-regular/icons/angle-left.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-horizontal.svg",
+      "name": "arrows-horizontal",
+      "umd": "spices-clove-regular/icons/arrows-horizontal.svg",
       "unicode": "ea5d"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-right.svg",
-      "name": "angle-right",
-      "umd": "spices-clove-regular/icons/angle-right.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-join.svg",
+      "name": "arrows-join",
+      "umd": "spices-clove-regular/icons/arrows-join.svg",
       "unicode": "ea5e"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-up.svg",
-      "name": "angle-up",
-      "umd": "spices-clove-regular/icons/angle-up.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-left.svg",
+      "name": "arrows-left",
+      "umd": "spices-clove-regular/icons/arrows-left.svg",
       "unicode": "ea5f"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-up-left.svg",
-      "name": "angle-up-left",
-      "umd": "spices-clove-regular/icons/angle-up-left.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-left-down.svg",
+      "name": "arrows-left-down",
+      "umd": "spices-clove-regular/icons/arrows-left-down.svg",
       "unicode": "ea60"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angle-up-right.svg",
-      "name": "angle-up-right",
-      "umd": "spices-clove-regular/icons/angle-up-right.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-left-right.svg",
+      "name": "arrows-left-right",
+      "umd": "spices-clove-regular/icons/arrows-left-right.svg",
       "unicode": "ea61"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angles-down.svg",
-      "name": "angles-down",
-      "umd": "spices-clove-regular/icons/angles-down.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-right.svg",
+      "name": "arrows-right",
+      "umd": "spices-clove-regular/icons/arrows-right.svg",
       "unicode": "ea62"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angles-left.svg",
-      "name": "angles-left",
-      "umd": "spices-clove-regular/icons/angles-left.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-right-down.svg",
+      "name": "arrows-right-down",
+      "umd": "spices-clove-regular/icons/arrows-right-down.svg",
       "unicode": "ea63"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angles-right.svg",
-      "name": "angles-right",
-      "umd": "spices-clove-regular/icons/angles-right.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-right-left.svg",
+      "name": "arrows-right-left",
+      "umd": "spices-clove-regular/icons/arrows-right-left.svg",
       "unicode": "ea64"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/angles-up.svg",
-      "name": "angles-up",
-      "umd": "spices-clove-regular/icons/angles-up.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-split.svg",
+      "name": "arrows-split",
+      "umd": "spices-clove-regular/icons/arrows-split.svg",
       "unicode": "ea65"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/antenna-bars-1.svg",
-      "name": "antenna-bars-1",
-      "umd": "spices-clove-regular/icons/antenna-bars-1.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-up.svg",
+      "name": "arrows-up",
+      "umd": "spices-clove-regular/icons/arrows-up.svg",
       "unicode": "ea66"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/antenna-bars-2.svg",
-      "name": "antenna-bars-2",
-      "umd": "spices-clove-regular/icons/antenna-bars-2.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-up-down.svg",
+      "name": "arrows-up-down",
+      "umd": "spices-clove-regular/icons/arrows-up-down.svg",
       "unicode": "ea67"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/antenna-bars-3.svg",
-      "name": "antenna-bars-3",
-      "umd": "spices-clove-regular/icons/antenna-bars-3.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-up-left.svg",
+      "name": "arrows-up-left",
+      "umd": "spices-clove-regular/icons/arrows-up-left.svg",
       "unicode": "ea68"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/antenna-bars-4.svg",
-      "name": "antenna-bars-4",
-      "umd": "spices-clove-regular/icons/antenna-bars-4.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-up-right.svg",
+      "name": "arrows-up-right",
+      "umd": "spices-clove-regular/icons/arrows-up-right.svg",
       "unicode": "ea69"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/antenna-bars-5.svg",
-      "name": "antenna-bars-5",
-      "umd": "spices-clove-regular/icons/antenna-bars-5.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/arrows-vertical.svg",
+      "name": "arrows-vertical",
+      "umd": "spices-clove-regular/icons/arrows-vertical.svg",
       "unicode": "ea6a"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/apps.svg",
-      "name": "apps",
-      "umd": "spices-clove-regular/icons/apps.svg",
-      "unicode": "ea6b"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/archive.svg",
-      "name": "archive",
-      "umd": "spices-clove-regular/icons/archive.svg",
-      "unicode": "ea6c"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-down.svg",
-      "name": "arrow-bar-down",
-      "umd": "spices-clove-regular/icons/arrow-bar-down.svg",
-      "unicode": "ea6d"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-left.svg",
-      "name": "arrow-bar-left",
-      "umd": "spices-clove-regular/icons/arrow-bar-left.svg",
-      "unicode": "ea6e"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-right.svg",
-      "name": "arrow-bar-right",
-      "umd": "spices-clove-regular/icons/arrow-bar-right.svg",
-      "unicode": "ea6f"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-to-down.svg",
-      "name": "arrow-bar-to-down",
-      "umd": "spices-clove-regular/icons/arrow-bar-to-down.svg",
-      "unicode": "ea70"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-to-left.svg",
-      "name": "arrow-bar-to-left",
-      "umd": "spices-clove-regular/icons/arrow-bar-to-left.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/back.svg",
+      "name": "back",
+      "umd": "spices-clove-regular/icons/back.svg",
       "unicode": "ea71"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-to-right.svg",
-      "name": "arrow-bar-to-right",
-      "umd": "spices-clove-regular/icons/arrow-bar-to-right.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/back-up.svg",
+      "name": "back-up",
+      "umd": "spices-clove-regular/icons/back-up.svg",
       "unicode": "ea72"
     },
     {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-to-up.svg",
-      "name": "arrow-bar-to-up",
-      "umd": "spices-clove-regular/icons/arrow-bar-to-up.svg",
-      "unicode": "ea73"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bar-up.svg",
-      "name": "arrow-bar-up",
-      "umd": "spices-clove-regular/icons/arrow-bar-up.svg",
-      "unicode": "ea74"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-big-down.svg",
-      "name": "arrow-big-down",
-      "umd": "spices-clove-regular/icons/arrow-big-down.svg",
-      "unicode": "ea75"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-big-left.svg",
-      "name": "arrow-big-left",
-      "umd": "spices-clove-regular/icons/arrow-big-left.svg",
-      "unicode": "ea76"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-big-right.svg",
-      "name": "arrow-big-right",
-      "umd": "spices-clove-regular/icons/arrow-big-right.svg",
-      "unicode": "ea77"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-big-top.svg",
-      "name": "arrow-big-top",
-      "umd": "spices-clove-regular/icons/arrow-big-top.svg",
-      "unicode": "ea78"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bottom-bar.svg",
-      "name": "arrow-bottom-bar",
-      "umd": "spices-clove-regular/icons/arrow-bottom-bar.svg",
-      "unicode": "ea79"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bottom-circle.svg",
-      "name": "arrow-bottom-circle",
-      "umd": "spices-clove-regular/icons/arrow-bottom-circle.svg",
-      "unicode": "ea7a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bottom-square.svg",
-      "name": "arrow-bottom-square",
-      "umd": "spices-clove-regular/icons/arrow-bottom-square.svg",
-      "unicode": "ea7b"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-bottom-tail.svg",
-      "name": "arrow-bottom-tail",
-      "umd": "spices-clove-regular/icons/arrow-bottom-tail.svg",
-      "unicode": "ea7c"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-diagonal-ew.svg",
-      "name": "arrow-diagonal-ew",
-      "umd": "spices-clove-regular/icons/arrow-diagonal-ew.svg",
-      "unicode": "ea7d"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-diagonal-we.svg",
-      "name": "arrow-diagonal-we",
-      "umd": "spices-clove-regular/icons/arrow-diagonal-we.svg",
-      "unicode": "ea7e"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-down.svg",
-      "name": "arrow-down",
-      "umd": "spices-clove-regular/icons/arrow-down.svg",
-      "unicode": "ea7f"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-down-left.svg",
-      "name": "arrow-down-left",
-      "umd": "spices-clove-regular/icons/arrow-down-left.svg",
-      "unicode": "ea80"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-down-right.svg",
-      "name": "arrow-down-right",
-      "umd": "spices-clove-regular/icons/arrow-down-right.svg",
-      "unicode": "ea81"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-horizontal.svg",
-      "name": "arrow-horizontal",
-      "umd": "spices-clove-regular/icons/arrow-horizontal.svg",
-      "unicode": "ea82"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-left.svg",
-      "name": "arrow-left",
-      "umd": "spices-clove-regular/icons/arrow-left.svg",
-      "unicode": "ea83"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-left-bar.svg",
-      "name": "arrow-left-bar",
-      "umd": "spices-clove-regular/icons/arrow-left-bar.svg",
-      "unicode": "ea84"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-left-circle.svg",
-      "name": "arrow-left-circle",
-      "umd": "spices-clove-regular/icons/arrow-left-circle.svg",
-      "unicode": "ea85"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-left-square.svg",
-      "name": "arrow-left-square",
-      "umd": "spices-clove-regular/icons/arrow-left-square.svg",
-      "unicode": "ea86"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-left-tail.svg",
-      "name": "arrow-left-tail",
-      "umd": "spices-clove-regular/icons/arrow-left-tail.svg",
-      "unicode": "ea87"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-loop-left.svg",
-      "name": "arrow-loop-left",
-      "umd": "spices-clove-regular/icons/arrow-loop-left.svg",
-      "unicode": "ea88"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-loop-right.svg",
-      "name": "arrow-loop-right",
-      "umd": "spices-clove-regular/icons/arrow-loop-right.svg",
-      "unicode": "ea89"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-ramp-left.svg",
-      "name": "arrow-ramp-left",
-      "umd": "spices-clove-regular/icons/arrow-ramp-left.svg",
-      "unicode": "ea8a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-ramp-right.svg",
-      "name": "arrow-ramp-right",
-      "umd": "spices-clove-regular/icons/arrow-ramp-right.svg",
-      "unicode": "ea8b"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-right.svg",
-      "name": "arrow-right",
-      "umd": "spices-clove-regular/icons/arrow-right.svg",
-      "unicode": "ea8c"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-right-bar.svg",
-      "name": "arrow-right-bar",
-      "umd": "spices-clove-regular/icons/arrow-right-bar.svg",
-      "unicode": "ea8d"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-right-circle.svg",
-      "name": "arrow-right-circle",
-      "umd": "spices-clove-regular/icons/arrow-right-circle.svg",
-      "unicode": "ea8e"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-right-square.svg",
-      "name": "arrow-right-square",
-      "umd": "spices-clove-regular/icons/arrow-right-square.svg",
-      "unicode": "ea8f"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-right-tail.svg",
-      "name": "arrow-right-tail",
-      "umd": "spices-clove-regular/icons/arrow-right-tail.svg",
-      "unicode": "ea90"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-top-bar.svg",
-      "name": "arrow-top-bar",
-      "umd": "spices-clove-regular/icons/arrow-top-bar.svg",
-      "unicode": "ea91"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-top-circle.svg",
-      "name": "arrow-top-circle",
-      "umd": "spices-clove-regular/icons/arrow-top-circle.svg",
-      "unicode": "ea92"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-top-square.svg",
-      "name": "arrow-top-square",
-      "umd": "spices-clove-regular/icons/arrow-top-square.svg",
-      "unicode": "ea93"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-top-tail.svg",
-      "name": "arrow-top-tail",
-      "umd": "spices-clove-regular/icons/arrow-top-tail.svg",
-      "unicode": "ea94"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-up.svg",
-      "name": "arrow-up",
-      "umd": "spices-clove-regular/icons/arrow-up.svg",
-      "unicode": "ea95"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-up-left.svg",
-      "name": "arrow-up-left",
-      "umd": "spices-clove-regular/icons/arrow-up-left.svg",
-      "unicode": "ea96"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-up-right.svg",
-      "name": "arrow-up-right",
-      "umd": "spices-clove-regular/icons/arrow-up-right.svg",
-      "unicode": "ea97"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-vertical.svg",
-      "name": "arrow-vertical",
-      "umd": "spices-clove-regular/icons/arrow-vertical.svg",
-      "unicode": "ea98"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-wave-left-down.svg",
-      "name": "arrow-wave-left-down",
-      "umd": "spices-clove-regular/icons/arrow-wave-left-down.svg",
-      "unicode": "ea99"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-wave-left-up.svg",
-      "name": "arrow-wave-left-up",
-      "umd": "spices-clove-regular/icons/arrow-wave-left-up.svg",
-      "unicode": "ea9a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-wave-right-down.svg",
-      "name": "arrow-wave-right-down",
-      "umd": "spices-clove-regular/icons/arrow-wave-right-down.svg",
-      "unicode": "ea9b"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrow-wave-right-up.svg",
-      "name": "arrow-wave-right-up",
-      "umd": "spices-clove-regular/icons/arrow-wave-right-up.svg",
-      "unicode": "ea9c"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-double-ne-sw.svg",
-      "name": "arrows-double-ne-sw",
-      "umd": "spices-clove-regular/icons/arrows-double-ne-sw.svg",
-      "unicode": "ea9d"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-double-nw-se.svg",
-      "name": "arrows-double-nw-se",
-      "umd": "spices-clove-regular/icons/arrows-double-nw-se.svg",
-      "unicode": "ea9e"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-double-se-nw.svg",
-      "name": "arrows-double-se-nw",
-      "umd": "spices-clove-regular/icons/arrows-double-se-nw.svg",
-      "unicode": "ea9f"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-double-sw-ne.svg",
-      "name": "arrows-double-sw-ne",
-      "umd": "spices-clove-regular/icons/arrows-double-sw-ne.svg",
-      "unicode": "eaa0"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-down.svg",
-      "name": "arrows-down",
-      "umd": "spices-clove-regular/icons/arrows-down.svg",
-      "unicode": "eaa1"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-down-up.svg",
-      "name": "arrows-down-up",
-      "umd": "spices-clove-regular/icons/arrows-down-up.svg",
-      "unicode": "eaa2"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-horizontal.svg",
-      "name": "arrows-horizontal",
-      "umd": "spices-clove-regular/icons/arrows-horizontal.svg",
-      "unicode": "eaa3"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-join.svg",
-      "name": "arrows-join",
-      "umd": "spices-clove-regular/icons/arrows-join.svg",
-      "unicode": "eaa4"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-left.svg",
-      "name": "arrows-left",
-      "umd": "spices-clove-regular/icons/arrows-left.svg",
-      "unicode": "eaa5"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-left-down.svg",
-      "name": "arrows-left-down",
-      "umd": "spices-clove-regular/icons/arrows-left-down.svg",
-      "unicode": "eaa6"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-left-right.svg",
-      "name": "arrows-left-right",
-      "umd": "spices-clove-regular/icons/arrows-left-right.svg",
-      "unicode": "eaa7"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-right.svg",
-      "name": "arrows-right",
-      "umd": "spices-clove-regular/icons/arrows-right.svg",
-      "unicode": "eaa8"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-right-down.svg",
-      "name": "arrows-right-down",
-      "umd": "spices-clove-regular/icons/arrows-right-down.svg",
-      "unicode": "eaa9"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-right-left.svg",
-      "name": "arrows-right-left",
-      "umd": "spices-clove-regular/icons/arrows-right-left.svg",
-      "unicode": "eaaa"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-split.svg",
-      "name": "arrows-split",
-      "umd": "spices-clove-regular/icons/arrows-split.svg",
-      "unicode": "eaab"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-up.svg",
-      "name": "arrows-up",
-      "umd": "spices-clove-regular/icons/arrows-up.svg",
-      "unicode": "eaac"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-up-down.svg",
-      "name": "arrows-up-down",
-      "umd": "spices-clove-regular/icons/arrows-up-down.svg",
-      "unicode": "eaad"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-up-left.svg",
-      "name": "arrows-up-left",
-      "umd": "spices-clove-regular/icons/arrows-up-left.svg",
-      "unicode": "eaae"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-up-right.svg",
-      "name": "arrows-up-right",
-      "umd": "spices-clove-regular/icons/arrows-up-right.svg",
-      "unicode": "eaaf"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/arrows-vertical.svg",
-      "name": "arrows-vertical",
-      "umd": "spices-clove-regular/icons/arrows-vertical.svg",
-      "unicode": "eab0"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/artboard.svg",
-      "name": "artboard",
-      "umd": "spices-clove-regular/icons/artboard.svg",
-      "unicode": "eab1"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/aspect-ratio.svg",
-      "name": "aspect-ratio",
-      "umd": "spices-clove-regular/icons/aspect-ratio.svg",
-      "unicode": "eab2"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/asterisk.svg",
-      "name": "asterisk",
-      "umd": "spices-clove-regular/icons/asterisk.svg",
-      "unicode": "eab3"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/at.svg",
-      "name": "at",
-      "umd": "spices-clove-regular/icons/at.svg",
-      "unicode": "eab4"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/atom.svg",
-      "name": "atom",
-      "umd": "spices-clove-regular/icons/atom.svg",
-      "unicode": "eab5"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/award.svg",
-      "name": "award",
-      "umd": "spices-clove-regular/icons/award.svg",
-      "unicode": "eab6"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/back.svg",
-      "name": "back",
-      "umd": "spices-clove-regular/icons/back.svg",
-      "unicode": "eab7"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/back-up.svg",
-      "name": "back-up",
-      "umd": "spices-clove-regular/icons/back-up.svg",
-      "unicode": "eab8"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/backspace.svg",
-      "name": "backspace",
-      "umd": "spices-clove-regular/icons/backspace.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/caret-down.svg",
+      "name": "caret-down",
+      "umd": "spices-clove-regular/icons/caret-down.svg",
       "unicode": "eab9"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bag.svg",
-      "name": "bag",
-      "umd": "spices-clove-regular/icons/bag.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/caret-left.svg",
+      "name": "caret-left",
+      "umd": "spices-clove-regular/icons/caret-left.svg",
       "unicode": "eaba"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ball-american-football.svg",
-      "name": "ball-american-football",
-      "umd": "spices-clove-regular/icons/ball-american-football.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/caret-right.svg",
+      "name": "caret-right",
+      "umd": "spices-clove-regular/icons/caret-right.svg",
       "unicode": "eabb"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ball-bowling.svg",
-      "name": "ball-bowling",
-      "umd": "spices-clove-regular/icons/ball-bowling.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/caret-up.svg",
+      "name": "caret-up",
+      "umd": "spices-clove-regular/icons/caret-up.svg",
       "unicode": "eabc"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ball-football.svg",
-      "name": "ball-football",
-      "umd": "spices-clove-regular/icons/ball-football.svg",
-      "unicode": "eabd"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ball-tennis.svg",
-      "name": "ball-tennis",
-      "umd": "spices-clove-regular/icons/ball-tennis.svg",
-      "unicode": "eabe"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ban.svg",
-      "name": "ban",
-      "umd": "spices-clove-regular/icons/ban.svg",
-      "unicode": "eabf"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bandage.svg",
-      "name": "bandage",
-      "umd": "spices-clove-regular/icons/bandage.svg",
-      "unicode": "eac0"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery.svg",
-      "name": "battery",
-      "umd": "spices-clove-regular/icons/battery.svg",
-      "unicode": "eac1"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery-1.svg",
-      "name": "battery-1",
-      "umd": "spices-clove-regular/icons/battery-1.svg",
-      "unicode": "eac2"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery-2.svg",
-      "name": "battery-2",
-      "umd": "spices-clove-regular/icons/battery-2.svg",
-      "unicode": "eac3"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery-3.svg",
-      "name": "battery-3",
-      "umd": "spices-clove-regular/icons/battery-3.svg",
-      "unicode": "eac4"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery-automotive.svg",
-      "name": "battery-automotive",
-      "umd": "spices-clove-regular/icons/battery-automotive.svg",
-      "unicode": "eac5"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/battery-charging.svg",
-      "name": "battery-charging",
-      "umd": "spices-clove-regular/icons/battery-charging.svg",
-      "unicode": "eac6"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bed.svg",
-      "name": "bed",
-      "umd": "spices-clove-regular/icons/bed.svg",
-      "unicode": "eac7"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bell.svg",
-      "name": "bell",
-      "umd": "spices-clove-regular/icons/bell.svg",
-      "unicode": "eac8"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bell-minus.svg",
-      "name": "bell-minus",
-      "umd": "spices-clove-regular/icons/bell-minus.svg",
-      "unicode": "eac9"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bell-off.svg",
-      "name": "bell-off",
-      "umd": "spices-clove-regular/icons/bell-off.svg",
-      "unicode": "eaca"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bell-plus.svg",
-      "name": "bell-plus",
-      "umd": "spices-clove-regular/icons/bell-plus.svg",
-      "unicode": "eacb"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bell-x.svg",
-      "name": "bell-x",
-      "umd": "spices-clove-regular/icons/bell-x.svg",
-      "unicode": "eacc"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bike.svg",
-      "name": "bike",
-      "umd": "spices-clove-regular/icons/bike.svg",
-      "unicode": "eacd"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bluetooth.svg",
-      "name": "bluetooth",
-      "umd": "spices-clove-regular/icons/bluetooth.svg",
-      "unicode": "eace"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bluetooth-connected.svg",
-      "name": "bluetooth-connected",
-      "umd": "spices-clove-regular/icons/bluetooth-connected.svg",
-      "unicode": "eacf"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bluetooth-off.svg",
-      "name": "bluetooth-off",
-      "umd": "spices-clove-regular/icons/bluetooth-off.svg",
-      "unicode": "ead0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bolt.svg",
-      "name": "bolt",
-      "umd": "spices-clove-regular/icons/bolt.svg",
-      "unicode": "ead1"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bolt-off.svg",
-      "name": "bolt-off",
-      "umd": "spices-clove-regular/icons/bolt-off.svg",
-      "unicode": "ead2"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bone.svg",
-      "name": "bone",
-      "umd": "spices-clove-regular/icons/bone.svg",
-      "unicode": "ead3"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/book.svg",
-      "name": "book",
-      "umd": "spices-clove-regular/icons/book.svg",
-      "unicode": "ead4"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bookmark.svg",
-      "name": "bookmark",
-      "umd": "spices-clove-regular/icons/bookmark.svg",
-      "unicode": "ead5"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bookmark-off.svg",
-      "name": "bookmark-off",
-      "umd": "spices-clove-regular/icons/bookmark-off.svg",
-      "unicode": "ead6"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bookmarks.svg",
-      "name": "bookmarks",
-      "umd": "spices-clove-regular/icons/bookmarks.svg",
-      "unicode": "ead7"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/braces.svg",
-      "name": "braces",
-      "umd": "spices-clove-regular/icons/braces.svg",
-      "unicode": "ead8"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/brackets.svg",
-      "name": "brackets",
-      "umd": "spices-clove-regular/icons/brackets.svg",
-      "unicode": "ead9"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/briefcase.svg",
-      "name": "briefcase",
-      "umd": "spices-clove-regular/icons/briefcase.svg",
-      "unicode": "eada"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/brightness-down.svg",
-      "name": "brightness-down",
-      "umd": "spices-clove-regular/icons/brightness-down.svg",
-      "unicode": "eadb"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/brightness-up.svg",
-      "name": "brightness-up",
-      "umd": "spices-clove-regular/icons/brightness-up.svg",
-      "unicode": "eadc"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/browser.svg",
-      "name": "browser",
-      "umd": "spices-clove-regular/icons/browser.svg",
-      "unicode": "eadd"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/brush.svg",
-      "name": "brush",
-      "umd": "spices-clove-regular/icons/brush.svg",
-      "unicode": "eade"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bucket.svg",
-      "name": "bucket",
-      "umd": "spices-clove-regular/icons/bucket.svg",
-      "unicode": "eadf"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bug.svg",
-      "name": "bug",
-      "umd": "spices-clove-regular/icons/bug.svg",
-      "unicode": "eae0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building.svg",
-      "name": "building",
-      "umd": "spices-clove-regular/icons/building.svg",
-      "unicode": "eae1"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-arch.svg",
-      "name": "building-arch",
-      "umd": "spices-clove-regular/icons/building-arch.svg",
-      "unicode": "eae2"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-bank.svg",
-      "name": "building-bank",
-      "umd": "spices-clove-regular/icons/building-bank.svg",
-      "unicode": "eae3"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-bridge.svg",
-      "name": "building-bridge",
-      "umd": "spices-clove-regular/icons/building-bridge.svg",
-      "unicode": "eae4"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-bridge-2.svg",
-      "name": "building-bridge-2",
-      "umd": "spices-clove-regular/icons/building-bridge-2.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-down-left.svg",
+      "name": "corner-down-left",
+      "umd": "spices-clove-regular/icons/corner-down-left.svg",
       "unicode": "eae5"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-church.svg",
-      "name": "building-church",
-      "umd": "spices-clove-regular/icons/building-church.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-down-left-double.svg",
+      "name": "corner-down-left-double",
+      "umd": "spices-clove-regular/icons/corner-down-left-double.svg",
       "unicode": "eae6"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-community.svg",
-      "name": "building-community",
-      "umd": "spices-clove-regular/icons/building-community.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-down-right.svg",
+      "name": "corner-down-right",
+      "umd": "spices-clove-regular/icons/corner-down-right.svg",
       "unicode": "eae7"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-cottage.svg",
-      "name": "building-cottage",
-      "umd": "spices-clove-regular/icons/building-cottage.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-down-right-double.svg",
+      "name": "corner-down-right-double",
+      "umd": "spices-clove-regular/icons/corner-down-right-double.svg",
       "unicode": "eae8"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-factory.svg",
-      "name": "building-factory",
-      "umd": "spices-clove-regular/icons/building-factory.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-left-down.svg",
+      "name": "corner-left-down",
+      "umd": "spices-clove-regular/icons/corner-left-down.svg",
       "unicode": "eae9"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-hospital.svg",
-      "name": "building-hospital",
-      "umd": "spices-clove-regular/icons/building-hospital.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-left-down-double.svg",
+      "name": "corner-left-down-double",
+      "umd": "spices-clove-regular/icons/corner-left-down-double.svg",
       "unicode": "eaea"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-lighthouse.svg",
-      "name": "building-lighthouse",
-      "umd": "spices-clove-regular/icons/building-lighthouse.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-left-up.svg",
+      "name": "corner-left-up",
+      "umd": "spices-clove-regular/icons/corner-left-up.svg",
       "unicode": "eaeb"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-monument.svg",
-      "name": "building-monument",
-      "umd": "spices-clove-regular/icons/building-monument.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-left-up-double.svg",
+      "name": "corner-left-up-double",
+      "umd": "spices-clove-regular/icons/corner-left-up-double.svg",
       "unicode": "eaec"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-pavilon.svg",
-      "name": "building-pavilon",
-      "umd": "spices-clove-regular/icons/building-pavilon.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-right-down.svg",
+      "name": "corner-right-down",
+      "umd": "spices-clove-regular/icons/corner-right-down.svg",
       "unicode": "eaed"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-skyscraper.svg",
-      "name": "building-skyscraper",
-      "umd": "spices-clove-regular/icons/building-skyscraper.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-right-down-double.svg",
+      "name": "corner-right-down-double",
+      "umd": "spices-clove-regular/icons/corner-right-down-double.svg",
       "unicode": "eaee"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-store.svg",
-      "name": "building-store",
-      "umd": "spices-clove-regular/icons/building-store.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-right-up.svg",
+      "name": "corner-right-up",
+      "umd": "spices-clove-regular/icons/corner-right-up.svg",
       "unicode": "eaef"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/building-warehouse.svg",
-      "name": "building-warehouse",
-      "umd": "spices-clove-regular/icons/building-warehouse.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-right-up-double.svg",
+      "name": "corner-right-up-double",
+      "umd": "spices-clove-regular/icons/corner-right-up-double.svg",
       "unicode": "eaf0"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bulb.svg",
-      "name": "bulb",
-      "umd": "spices-clove-regular/icons/bulb.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-up-left.svg",
+      "name": "corner-up-left",
+      "umd": "spices-clove-regular/icons/corner-up-left.svg",
       "unicode": "eaf1"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bulb-off.svg",
-      "name": "bulb-off",
-      "umd": "spices-clove-regular/icons/bulb-off.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-up-left-double.svg",
+      "name": "corner-up-left-double",
+      "umd": "spices-clove-regular/icons/corner-up-left-double.svg",
       "unicode": "eaf2"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bulldozer.svg",
-      "name": "bulldozer",
-      "umd": "spices-clove-regular/icons/bulldozer.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-up-right.svg",
+      "name": "corner-up-right",
+      "umd": "spices-clove-regular/icons/corner-up-right.svg",
       "unicode": "eaf3"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bullhorn.svg",
-      "name": "bullhorn",
-      "umd": "spices-clove-regular/icons/bullhorn.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/corner-up-right-double.svg",
+      "name": "corner-up-right-double",
+      "umd": "spices-clove-regular/icons/corner-up-right-double.svg",
       "unicode": "eaf4"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/bus.svg",
-      "name": "bus",
-      "umd": "spices-clove-regular/icons/bus.svg",
-      "unicode": "eaf5"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/calculator.svg",
-      "name": "calculator",
-      "umd": "spices-clove-regular/icons/calculator.svg",
-      "unicode": "eaf6"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/calendar.svg",
-      "name": "calendar",
-      "umd": "spices-clove-regular/icons/calendar.svg",
-      "unicode": "eaf7"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/camera.svg",
-      "name": "camera",
-      "umd": "spices-clove-regular/icons/camera.svg",
-      "unicode": "eaf8"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/capture.svg",
-      "name": "capture",
-      "umd": "spices-clove-regular/icons/capture.svg",
-      "unicode": "eaf9"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/car.svg",
-      "name": "car",
-      "umd": "spices-clove-regular/icons/car.svg",
-      "unicode": "eafa"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/caravan.svg",
-      "name": "caravan",
-      "umd": "spices-clove-regular/icons/caravan.svg",
-      "unicode": "eafb"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/caret-down.svg",
-      "name": "caret-down",
-      "umd": "spices-clove-regular/icons/caret-down.svg",
-      "unicode": "eafc"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/caret-left.svg",
-      "name": "caret-left",
-      "umd": "spices-clove-regular/icons/caret-left.svg",
-      "unicode": "eafd"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/caret-right.svg",
-      "name": "caret-right",
-      "umd": "spices-clove-regular/icons/caret-right.svg",
-      "unicode": "eafe"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/caret-up.svg",
-      "name": "caret-up",
-      "umd": "spices-clove-regular/icons/caret-up.svg",
-      "unicode": "eaff"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cash.svg",
-      "name": "cash",
-      "umd": "spices-clove-regular/icons/cash.svg",
-      "unicode": "eb00"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cast.svg",
-      "name": "cast",
-      "umd": "spices-clove-regular/icons/cast.svg",
-      "unicode": "eb01"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-arcs.svg",
-      "name": "chart-arcs",
-      "umd": "spices-clove-regular/icons/chart-arcs.svg",
-      "unicode": "eb02"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-area.svg",
-      "name": "chart-area",
-      "umd": "spices-clove-regular/icons/chart-area.svg",
-      "unicode": "eb03"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-area-line.svg",
-      "name": "chart-area-line",
-      "umd": "spices-clove-regular/icons/chart-area-line.svg",
-      "unicode": "eb04"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-arrows.svg",
-      "name": "chart-arrows",
-      "umd": "spices-clove-regular/icons/chart-arrows.svg",
-      "unicode": "eb05"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-arrows-vertical.svg",
-      "name": "chart-arrows-vertical",
-      "umd": "spices-clove-regular/icons/chart-arrows-vertical.svg",
-      "unicode": "eb06"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-bar.svg",
-      "name": "chart-bar",
-      "umd": "spices-clove-regular/icons/chart-bar.svg",
-      "unicode": "eb07"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-bubble.svg",
-      "name": "chart-bubble",
-      "umd": "spices-clove-regular/icons/chart-bubble.svg",
-      "unicode": "eb08"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-candle.svg",
-      "name": "chart-candle",
-      "umd": "spices-clove-regular/icons/chart-candle.svg",
-      "unicode": "eb09"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-circles.svg",
-      "name": "chart-circles",
-      "umd": "spices-clove-regular/icons/chart-circles.svg",
-      "unicode": "eb0a"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-donut.svg",
-      "name": "chart-donut",
-      "umd": "spices-clove-regular/icons/chart-donut.svg",
-      "unicode": "eb0b"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-dots.svg",
-      "name": "chart-dots",
-      "umd": "spices-clove-regular/icons/chart-dots.svg",
-      "unicode": "eb0c"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-infographic.svg",
-      "name": "chart-infographic",
-      "umd": "spices-clove-regular/icons/chart-infographic.svg",
-      "unicode": "eb0d"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-line.svg",
-      "name": "chart-line",
-      "umd": "spices-clove-regular/icons/chart-line.svg",
-      "unicode": "eb0e"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/chart-pie.svg",
-      "name": "chart-pie",
-      "umd": "spices-clove-regular/icons/chart-pie.svg",
-      "unicode": "eb0f"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/check.svg",
-      "name": "check",
-      "umd": "spices-clove-regular/icons/check.svg",
-      "unicode": "eb10"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/checkbox.svg",
-      "name": "checkbox",
-      "umd": "spices-clove-regular/icons/checkbox.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/download.svg",
+      "name": "download",
+      "umd": "spices-clove-regular/icons/download.svg",
       "unicode": "eb11"
     },
     {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/checks.svg",
-      "name": "checks",
-      "umd": "spices-clove-regular/icons/checks.svg",
-      "unicode": "eb12"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/christmas-tree.svg",
-      "name": "christmas-tree",
-      "umd": "spices-clove-regular/icons/christmas-tree.svg",
-      "unicode": "eb13"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/circle.svg",
-      "name": "circle",
-      "umd": "spices-clove-regular/icons/circle.svg",
-      "unicode": "eb14"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/circle-half.svg",
-      "name": "circle-half",
-      "umd": "spices-clove-regular/icons/circle-half.svg",
-      "unicode": "eb15"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/circle-half-vertical.svg",
-      "name": "circle-half-vertical",
-      "umd": "spices-clove-regular/icons/circle-half-vertical.svg",
-      "unicode": "eb16"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/circle-square.svg",
-      "name": "circle-square",
-      "umd": "spices-clove-regular/icons/circle-square.svg",
-      "unicode": "eb17"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/circles.svg",
-      "name": "circles",
-      "umd": "spices-clove-regular/icons/circles.svg",
-      "unicode": "eb18"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/click.svg",
-      "name": "click",
-      "umd": "spices-clove-regular/icons/click.svg",
-      "unicode": "eb19"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/clipboard.svg",
-      "name": "clipboard",
-      "umd": "spices-clove-regular/icons/clipboard.svg",
-      "unicode": "eb1a"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cloud.svg",
-      "name": "cloud",
-      "umd": "spices-clove-regular/icons/cloud.svg",
-      "unicode": "eb1b"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/code.svg",
-      "name": "code",
-      "umd": "spices-clove-regular/icons/code.svg",
-      "unicode": "eb1c"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cog.svg",
-      "name": "cog",
-      "umd": "spices-clove-regular/icons/cog.svg",
-      "unicode": "eb1d"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/color-picker.svg",
-      "name": "color-picker",
-      "umd": "spices-clove-regular/icons/color-picker.svg",
-      "unicode": "eb1e"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/color-swatch.svg",
-      "name": "color-swatch",
-      "umd": "spices-clove-regular/icons/color-swatch.svg",
-      "unicode": "eb1f"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/column-insert-left.svg",
-      "name": "column-insert-left",
-      "umd": "spices-clove-regular/icons/column-insert-left.svg",
-      "unicode": "eb20"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/column-insert-right.svg",
-      "name": "column-insert-right",
-      "umd": "spices-clove-regular/icons/column-insert-right.svg",
-      "unicode": "eb21"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/comet.svg",
-      "name": "comet",
-      "umd": "spices-clove-regular/icons/comet.svg",
-      "unicode": "eb22"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/command.svg",
-      "name": "command",
-      "umd": "spices-clove-regular/icons/command.svg",
-      "unicode": "eb23"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/compass.svg",
-      "name": "compass",
-      "umd": "spices-clove-regular/icons/compass.svg",
-      "unicode": "eb24"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/contrast.svg",
-      "name": "contrast",
-      "umd": "spices-clove-regular/icons/contrast.svg",
-      "unicode": "eb25"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/copy.svg",
-      "name": "copy",
-      "umd": "spices-clove-regular/icons/copy.svg",
-      "unicode": "eb26"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-down-left.svg",
-      "name": "corner-down-left",
-      "umd": "spices-clove-regular/icons/corner-down-left.svg",
-      "unicode": "eb27"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-down-left-double.svg",
-      "name": "corner-down-left-double",
-      "umd": "spices-clove-regular/icons/corner-down-left-double.svg",
-      "unicode": "eb28"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-down-right.svg",
-      "name": "corner-down-right",
-      "umd": "spices-clove-regular/icons/corner-down-right.svg",
-      "unicode": "eb29"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-down-right-double.svg",
-      "name": "corner-down-right-double",
-      "umd": "spices-clove-regular/icons/corner-down-right-double.svg",
-      "unicode": "eb2a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-left-down.svg",
-      "name": "corner-left-down",
-      "umd": "spices-clove-regular/icons/corner-left-down.svg",
-      "unicode": "eb2b"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-left-down-double.svg",
-      "name": "corner-left-down-double",
-      "umd": "spices-clove-regular/icons/corner-left-down-double.svg",
-      "unicode": "eb2c"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-left-up.svg",
-      "name": "corner-left-up",
-      "umd": "spices-clove-regular/icons/corner-left-up.svg",
-      "unicode": "eb2d"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-left-up-double.svg",
-      "name": "corner-left-up-double",
-      "umd": "spices-clove-regular/icons/corner-left-up-double.svg",
-      "unicode": "eb2e"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-right-down.svg",
-      "name": "corner-right-down",
-      "umd": "spices-clove-regular/icons/corner-right-down.svg",
-      "unicode": "eb2f"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-right-down-double.svg",
-      "name": "corner-right-down-double",
-      "umd": "spices-clove-regular/icons/corner-right-down-double.svg",
-      "unicode": "eb30"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-right-up.svg",
-      "name": "corner-right-up",
-      "umd": "spices-clove-regular/icons/corner-right-up.svg",
-      "unicode": "eb31"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-right-up-double.svg",
-      "name": "corner-right-up-double",
-      "umd": "spices-clove-regular/icons/corner-right-up-double.svg",
-      "unicode": "eb32"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-up-left.svg",
-      "name": "corner-up-left",
-      "umd": "spices-clove-regular/icons/corner-up-left.svg",
-      "unicode": "eb33"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-up-left-double.svg",
-      "name": "corner-up-left-double",
-      "umd": "spices-clove-regular/icons/corner-up-left-double.svg",
-      "unicode": "eb34"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-up-right.svg",
-      "name": "corner-up-right",
-      "umd": "spices-clove-regular/icons/corner-up-right.svg",
-      "unicode": "eb35"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/corner-up-right-double.svg",
-      "name": "corner-up-right-double",
-      "umd": "spices-clove-regular/icons/corner-up-right-double.svg",
-      "unicode": "eb36"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/credit-card.svg",
-      "name": "credit-card",
-      "umd": "spices-clove-regular/icons/credit-card.svg",
-      "unicode": "eb37"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/crop.svg",
-      "name": "crop",
-      "umd": "spices-clove-regular/icons/crop.svg",
-      "unicode": "eb38"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cross.svg",
-      "name": "cross",
-      "umd": "spices-clove-regular/icons/cross.svg",
-      "unicode": "eb39"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/crosshair.svg",
-      "name": "crosshair",
-      "umd": "spices-clove-regular/icons/crosshair.svg",
-      "unicode": "eb3a"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/crown.svg",
-      "name": "crown",
-      "umd": "spices-clove-regular/icons/crown.svg",
-      "unicode": "eb3b"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/curly-loop.svg",
-      "name": "curly-loop",
-      "umd": "spices-clove-regular/icons/curly-loop.svg",
-      "unicode": "eb3c"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cursor-text.svg",
-      "name": "cursor-text",
-      "umd": "spices-clove-regular/icons/cursor-text.svg",
-      "unicode": "eb3d"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/cut.svg",
-      "name": "cut",
-      "umd": "spices-clove-regular/icons/cut.svg",
-      "unicode": "eb3e"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dashboard.svg",
-      "name": "dashboard",
-      "umd": "spices-clove-regular/icons/dashboard.svg",
-      "unicode": "eb3f"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/database.svg",
-      "name": "database",
-      "umd": "spices-clove-regular/icons/database.svg",
-      "unicode": "eb40"
-    },
-    {
-      "category": "sayl",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/delivery.svg",
-      "name": "delivery",
-      "umd": "spices-clove-regular/icons/delivery.svg",
-      "unicode": "eb41"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/desktop.svg",
-      "name": "desktop",
-      "umd": "spices-clove-regular/icons/desktop.svg",
-      "unicode": "eb42"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/diamond.svg",
-      "name": "diamond",
-      "umd": "spices-clove-regular/icons/diamond.svg",
-      "unicode": "eb43"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/directions.svg",
-      "name": "directions",
-      "umd": "spices-clove-regular/icons/directions.svg",
-      "unicode": "eb44"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/disabled.svg",
-      "name": "disabled",
-      "umd": "spices-clove-regular/icons/disabled.svg",
-      "unicode": "eb45"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/divide.svg",
-      "name": "divide",
-      "umd": "spices-clove-regular/icons/divide.svg",
-      "unicode": "eb46"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dna.svg",
-      "name": "dna",
-      "umd": "spices-clove-regular/icons/dna.svg",
-      "unicode": "eb47"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dot-dot-dot.svg",
-      "name": "dot-dot-dot",
-      "umd": "spices-clove-regular/icons/dot-dot-dot.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/forward.svg",
+      "name": "forward",
+      "umd": "spices-clove-regular/icons/forward.svg",
       "unicode": "eb48"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dots.svg",
-      "name": "dots",
-      "umd": "spices-clove-regular/icons/dots.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/forward-up.svg",
+      "name": "forward-up",
+      "umd": "spices-clove-regular/icons/forward-up.svg",
       "unicode": "eb49"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dots-diagonal.svg",
-      "name": "dots-diagonal",
-      "umd": "spices-clove-regular/icons/dots-diagonal.svg",
-      "unicode": "eb4a"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/dots-diagonal-2.svg",
-      "name": "dots-diagonal-2",
-      "umd": "spices-clove-regular/icons/dots-diagonal-2.svg",
-      "unicode": "eb4b"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/download.svg",
-      "name": "download",
-      "umd": "spices-clove-regular/icons/download.svg",
-      "unicode": "eb4c"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/drag.svg",
-      "name": "drag",
-      "umd": "spices-clove-regular/icons/drag.svg",
-      "unicode": "eb4d"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/drag-drop.svg",
-      "name": "drag-drop",
-      "umd": "spices-clove-regular/icons/drag-drop.svg",
-      "unicode": "eb4e"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/droplet.svg",
-      "name": "droplet",
-      "umd": "spices-clove-regular/icons/droplet.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-branch.svg",
+      "name": "git-branch",
+      "umd": "spices-clove-regular/icons/git-branch.svg",
       "unicode": "eb4f"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ear.svg",
-      "name": "ear",
-      "umd": "spices-clove-regular/icons/ear.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-commit.svg",
+      "name": "git-commit",
+      "umd": "spices-clove-regular/icons/git-commit.svg",
       "unicode": "eb50"
     },
     {
-      "category": "sayl",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/eatin.svg",
-      "name": "eatin",
-      "umd": "spices-clove-regular/icons/eatin.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-compare.svg",
+      "name": "git-compare",
+      "umd": "spices-clove-regular/icons/git-compare.svg",
       "unicode": "eb51"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/edit.svg",
-      "name": "edit",
-      "umd": "spices-clove-regular/icons/edit.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-fork.svg",
+      "name": "git-fork",
+      "umd": "spices-clove-regular/icons/git-fork.svg",
       "unicode": "eb52"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/egg.svg",
-      "name": "egg",
-      "umd": "spices-clove-regular/icons/egg.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-merge.svg",
+      "name": "git-merge",
+      "umd": "spices-clove-regular/icons/git-merge.svg",
       "unicode": "eb53"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/envelope.svg",
-      "name": "envelope",
-      "umd": "spices-clove-regular/icons/envelope.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/git-pull-request.svg",
+      "name": "git-pull-request",
+      "umd": "spices-clove-regular/icons/git-pull-request.svg",
       "unicode": "eb54"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/envelope-opened.svg",
-      "name": "envelope-opened",
-      "umd": "spices-clove-regular/icons/envelope-opened.svg",
-      "unicode": "eb55"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/equals.svg",
-      "name": "equals",
-      "umd": "spices-clove-regular/icons/equals.svg",
-      "unicode": "eb56"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/eraser.svg",
-      "name": "eraser",
-      "umd": "spices-clove-regular/icons/eraser.svg",
-      "unicode": "eb57"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/exclamation.svg",
-      "name": "exclamation",
-      "umd": "spices-clove-regular/icons/exclamation.svg",
-      "unicode": "eb58"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/eyeglass.svg",
-      "name": "eyeglass",
-      "umd": "spices-clove-regular/icons/eyeglass.svg",
-      "unicode": "eb59"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/face-id.svg",
-      "name": "face-id",
-      "umd": "spices-clove-regular/icons/face-id.svg",
-      "unicode": "eb5a"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file.svg",
-      "name": "file",
-      "umd": "spices-clove-regular/icons/file.svg",
-      "unicode": "eb5b"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-alert.svg",
-      "name": "file-alert",
-      "umd": "spices-clove-regular/icons/file-alert.svg",
-      "unicode": "eb5c"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-analytics.svg",
-      "name": "file-analytics",
-      "umd": "spices-clove-regular/icons/file-analytics.svg",
-      "unicode": "eb5d"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-check.svg",
-      "name": "file-check",
-      "umd": "spices-clove-regular/icons/file-check.svg",
-      "unicode": "eb5e"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-code.svg",
-      "name": "file-code",
-      "umd": "spices-clove-regular/icons/file-code.svg",
-      "unicode": "eb5f"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-diff.svg",
-      "name": "file-diff",
-      "umd": "spices-clove-regular/icons/file-diff.svg",
-      "unicode": "eb60"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-download.svg",
-      "name": "file-download",
-      "umd": "spices-clove-regular/icons/file-download.svg",
-      "unicode": "eb61"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-export.svg",
-      "name": "file-export",
-      "umd": "spices-clove-regular/icons/file-export.svg",
-      "unicode": "eb62"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-import.svg",
-      "name": "file-import",
-      "umd": "spices-clove-regular/icons/file-import.svg",
-      "unicode": "eb63"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-info.svg",
-      "name": "file-info",
-      "umd": "spices-clove-regular/icons/file-info.svg",
-      "unicode": "eb64"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-invoice.svg",
-      "name": "file-invoice",
-      "umd": "spices-clove-regular/icons/file-invoice.svg",
-      "unicode": "eb65"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-minus.svg",
-      "name": "file-minus",
-      "umd": "spices-clove-regular/icons/file-minus.svg",
-      "unicode": "eb66"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-music.svg",
-      "name": "file-music",
-      "umd": "spices-clove-regular/icons/file-music.svg",
-      "unicode": "eb67"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-plus.svg",
-      "name": "file-plus",
-      "umd": "spices-clove-regular/icons/file-plus.svg",
-      "unicode": "eb68"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-upload.svg",
-      "name": "file-upload",
-      "umd": "spices-clove-regular/icons/file-upload.svg",
-      "unicode": "eb69"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/file-x.svg",
-      "name": "file-x",
-      "umd": "spices-clove-regular/icons/file-x.svg",
-      "unicode": "eb6a"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/files.svg",
-      "name": "files",
-      "umd": "spices-clove-regular/icons/files.svg",
-      "unicode": "eb6b"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/filter.svg",
-      "name": "filter",
-      "umd": "spices-clove-regular/icons/filter.svg",
-      "unicode": "eb6c"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/firetruck.svg",
-      "name": "firetruck",
-      "umd": "spices-clove-regular/icons/firetruck.svg",
-      "unicode": "eb6d"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flag.svg",
-      "name": "flag",
-      "umd": "spices-clove-regular/icons/flag.svg",
-      "unicode": "eb6e"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flag-2.svg",
-      "name": "flag-2",
-      "umd": "spices-clove-regular/icons/flag-2.svg",
-      "unicode": "eb6f"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flag-3.svg",
-      "name": "flag-3",
-      "umd": "spices-clove-regular/icons/flag-3.svg",
-      "unicode": "eb70"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flame.svg",
-      "name": "flame",
-      "umd": "spices-clove-regular/icons/flame.svg",
-      "unicode": "eb71"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flask.svg",
-      "name": "flask",
-      "umd": "spices-clove-regular/icons/flask.svg",
-      "unicode": "eb72"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flip-horizontal.svg",
-      "name": "flip-horizontal",
-      "umd": "spices-clove-regular/icons/flip-horizontal.svg",
-      "unicode": "eb73"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flip-vertical.svg",
-      "name": "flip-vertical",
-      "umd": "spices-clove-regular/icons/flip-vertical.svg",
-      "unicode": "eb74"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/floppy.svg",
-      "name": "floppy",
-      "umd": "spices-clove-regular/icons/floppy.svg",
-      "unicode": "eb75"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/flower.svg",
-      "name": "flower",
-      "umd": "spices-clove-regular/icons/flower.svg",
-      "unicode": "eb76"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/focus.svg",
-      "name": "focus",
-      "umd": "spices-clove-regular/icons/focus.svg",
-      "unicode": "eb77"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/folder.svg",
-      "name": "folder",
-      "umd": "spices-clove-regular/icons/folder.svg",
-      "unicode": "eb78"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/folder-minus.svg",
-      "name": "folder-minus",
-      "umd": "spices-clove-regular/icons/folder-minus.svg",
-      "unicode": "eb79"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/folder-plus.svg",
-      "name": "folder-plus",
-      "umd": "spices-clove-regular/icons/folder-plus.svg",
-      "unicode": "eb7a"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/folder-x.svg",
-      "name": "folder-x",
-      "umd": "spices-clove-regular/icons/folder-x.svg",
-      "unicode": "eb7b"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/folders.svg",
-      "name": "folders",
-      "umd": "spices-clove-regular/icons/folders.svg",
-      "unicode": "eb7c"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forbid.svg",
-      "name": "forbid",
-      "umd": "spices-clove-regular/icons/forbid.svg",
-      "unicode": "eb7d"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forklift.svg",
-      "name": "forklift",
-      "umd": "spices-clove-regular/icons/forklift.svg",
-      "unicode": "eb7e"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forms.svg",
-      "name": "forms",
-      "umd": "spices-clove-regular/icons/forms.svg",
-      "unicode": "eb7f"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forward.svg",
-      "name": "forward",
-      "umd": "spices-clove-regular/icons/forward.svg",
-      "unicode": "eb80"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/forward-up.svg",
-      "name": "forward-up",
-      "umd": "spices-clove-regular/icons/forward-up.svg",
-      "unicode": "eb81"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/gamepad.svg",
-      "name": "gamepad",
-      "umd": "spices-clove-regular/icons/gamepad.svg",
-      "unicode": "eb82"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/geometry.svg",
-      "name": "geometry",
-      "umd": "spices-clove-regular/icons/geometry.svg",
-      "unicode": "eb83"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ghost.svg",
-      "name": "ghost",
-      "umd": "spices-clove-regular/icons/ghost.svg",
-      "unicode": "eb84"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/gift.svg",
-      "name": "gift",
-      "umd": "spices-clove-regular/icons/gift.svg",
-      "unicode": "eb85"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-branch.svg",
-      "name": "git-branch",
-      "umd": "spices-clove-regular/icons/git-branch.svg",
-      "unicode": "eb86"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-commit.svg",
-      "name": "git-commit",
-      "umd": "spices-clove-regular/icons/git-commit.svg",
-      "unicode": "eb87"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-compare.svg",
-      "name": "git-compare",
-      "umd": "spices-clove-regular/icons/git-compare.svg",
-      "unicode": "eb88"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-fork.svg",
-      "name": "git-fork",
-      "umd": "spices-clove-regular/icons/git-fork.svg",
-      "unicode": "eb89"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-merge.svg",
-      "name": "git-merge",
-      "umd": "spices-clove-regular/icons/git-merge.svg",
-      "unicode": "eb8a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/git-pull-request.svg",
-      "name": "git-pull-request",
-      "umd": "spices-clove-regular/icons/git-pull-request.svg",
-      "unicode": "eb8b"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/glass.svg",
-      "name": "glass",
-      "umd": "spices-clove-regular/icons/glass.svg",
-      "unicode": "eb8c"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/globe.svg",
-      "name": "globe",
-      "umd": "spices-clove-regular/icons/globe.svg",
-      "unicode": "eb8d"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/grain.svg",
-      "name": "grain",
-      "umd": "spices-clove-regular/icons/grain.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/login.svg",
+      "name": "login",
+      "umd": "spices-clove-regular/icons/login.svg",
       "unicode": "eb8e"
     },
     {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/greater-than.svg",
-      "name": "greater-than",
-      "umd": "spices-clove-regular/icons/greater-than.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/logout.svg",
+      "name": "logout",
+      "umd": "spices-clove-regular/icons/logout.svg",
       "unicode": "eb8f"
     },
     {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/greater-than-equal.svg",
-      "name": "greater-than-equal",
-      "umd": "spices-clove-regular/icons/greater-than-equal.svg",
-      "unicode": "eb90"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/grid-dots.svg",
-      "name": "grid-dots",
-      "umd": "spices-clove-regular/icons/grid-dots.svg",
-      "unicode": "eb91"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/grip-horizontal.svg",
-      "name": "grip-horizontal",
-      "umd": "spices-clove-regular/icons/grip-horizontal.svg",
-      "unicode": "eb92"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/hand-rock.svg",
-      "name": "hand-rock",
-      "umd": "spices-clove-regular/icons/hand-rock.svg",
-      "unicode": "eb93"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/hash.svg",
-      "name": "hash",
-      "umd": "spices-clove-regular/icons/hash.svg",
-      "unicode": "eb94"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/headphones.svg",
-      "name": "headphones",
-      "umd": "spices-clove-regular/icons/headphones.svg",
-      "unicode": "eb95"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/heart.svg",
-      "name": "heart",
-      "umd": "spices-clove-regular/icons/heart.svg",
-      "unicode": "eb96"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/helicopter.svg",
-      "name": "helicopter",
-      "umd": "spices-clove-regular/icons/helicopter.svg",
-      "unicode": "eb97"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/help.svg",
-      "name": "help",
-      "umd": "spices-clove-regular/icons/help.svg",
-      "unicode": "eb98"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/hexagon.svg",
-      "name": "hexagon",
-      "umd": "spices-clove-regular/icons/hexagon.svg",
-      "unicode": "eb99"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/hidden.svg",
-      "name": "hidden",
-      "umd": "spices-clove-regular/icons/hidden.svg",
-      "unicode": "eb9a"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/hierarchy.svg",
-      "name": "hierarchy",
-      "umd": "spices-clove-regular/icons/hierarchy.svg",
-      "unicode": "eb9b"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/history.svg",
-      "name": "history",
-      "umd": "spices-clove-regular/icons/history.svg",
-      "unicode": "eb9c"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/home.svg",
-      "name": "home",
-      "umd": "spices-clove-regular/icons/home.svg",
-      "unicode": "eb9d"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/i8n.svg",
-      "name": "i8n",
-      "umd": "spices-clove-regular/icons/i8n.svg",
-      "unicode": "eb9e"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ice-cream.svg",
-      "name": "ice-cream",
-      "umd": "spices-clove-regular/icons/ice-cream.svg",
-      "unicode": "eb9f"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/inbox.svg",
-      "name": "inbox",
-      "umd": "spices-clove-regular/icons/inbox.svg",
-      "unicode": "eba0"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/infinity.svg",
-      "name": "infinity",
-      "umd": "spices-clove-regular/icons/infinity.svg",
-      "unicode": "eba1"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/info.svg",
-      "name": "info",
-      "umd": "spices-clove-regular/icons/info.svg",
-      "unicode": "eba2"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/info-circle.svg",
-      "name": "info-circle",
-      "umd": "spices-clove-regular/icons/info-circle.svg",
-      "unicode": "eba3"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/info-square.svg",
-      "name": "info-square",
-      "umd": "spices-clove-regular/icons/info-square.svg",
-      "unicode": "eba4"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/key.svg",
-      "name": "key",
-      "umd": "spices-clove-regular/icons/key.svg",
-      "unicode": "eba5"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/keyboard.svg",
-      "name": "keyboard",
-      "umd": "spices-clove-regular/icons/keyboard.svg",
-      "unicode": "eba6"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/l8n.svg",
-      "name": "l8n",
-      "umd": "spices-clove-regular/icons/l8n.svg",
-      "unicode": "eba7"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/laptop.svg",
-      "name": "laptop",
-      "umd": "spices-clove-regular/icons/laptop.svg",
-      "unicode": "eba8"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/layout.svg",
-      "name": "layout",
-      "umd": "spices-clove-regular/icons/layout.svg",
-      "unicode": "eba9"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/layout-cards.svg",
-      "name": "layout-cards",
-      "umd": "spices-clove-regular/icons/layout-cards.svg",
-      "unicode": "ebaa"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/layout-columns.svg",
-      "name": "layout-columns",
-      "umd": "spices-clove-regular/icons/layout-columns.svg",
-      "unicode": "ebab"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/layout-grid.svg",
-      "name": "layout-grid",
-      "umd": "spices-clove-regular/icons/layout-grid.svg",
-      "unicode": "ebac"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/layout-list.svg",
-      "name": "layout-list",
-      "umd": "spices-clove-regular/icons/layout-list.svg",
-      "unicode": "ebad"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/leaf.svg",
-      "name": "leaf",
-      "umd": "spices-clove-regular/icons/leaf.svg",
-      "unicode": "ebae"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/less-than.svg",
-      "name": "less-than",
-      "umd": "spices-clove-regular/icons/less-than.svg",
-      "unicode": "ebaf"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/less-than-equal.svg",
-      "name": "less-than-equal",
-      "umd": "spices-clove-regular/icons/less-than-equal.svg",
-      "unicode": "ebb0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/license.svg",
-      "name": "license",
-      "umd": "spices-clove-regular/icons/license.svg",
-      "unicode": "ebb1"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lifeboy.svg",
-      "name": "lifeboy",
-      "umd": "spices-clove-regular/icons/lifeboy.svg",
-      "unicode": "ebb2"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/line.svg",
-      "name": "line",
-      "umd": "spices-clove-regular/icons/line.svg",
-      "unicode": "ebb3"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/line-dashed.svg",
-      "name": "line-dashed",
-      "umd": "spices-clove-regular/icons/line-dashed.svg",
-      "unicode": "ebb4"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/line-dotted.svg",
-      "name": "line-dotted",
-      "umd": "spices-clove-regular/icons/line-dotted.svg",
-      "unicode": "ebb5"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/line-height.svg",
-      "name": "line-height",
-      "umd": "spices-clove-regular/icons/line-height.svg",
-      "unicode": "ebb6"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/link.svg",
-      "name": "link",
-      "umd": "spices-clove-regular/icons/link.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/open.svg",
+      "name": "open",
+      "umd": "spices-clove-regular/icons/open.svg",
       "unicode": "ebb7"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/list.svg",
-      "name": "list",
-      "umd": "spices-clove-regular/icons/list.svg",
-      "unicode": "ebb8"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/list-check.svg",
-      "name": "list-check",
-      "umd": "spices-clove-regular/icons/list-check.svg",
-      "unicode": "ebb9"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/list-search.svg",
-      "name": "list-search",
-      "umd": "spices-clove-regular/icons/list-search.svg",
-      "unicode": "ebba"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/live-view.svg",
-      "name": "live-view",
-      "umd": "spices-clove-regular/icons/live-view.svg",
-      "unicode": "ebbb"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/location.svg",
-      "name": "location",
-      "umd": "spices-clove-regular/icons/location.svg",
-      "unicode": "ebbc"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lock.svg",
-      "name": "lock",
-      "umd": "spices-clove-regular/icons/lock.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/parent.svg",
+      "name": "parent",
+      "umd": "spices-clove-regular/icons/parent.svg",
       "unicode": "ebbd"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lock-open.svg",
-      "name": "lock-open",
-      "umd": "spices-clove-regular/icons/lock-open.svg",
-      "unicode": "ebbe"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/login.svg",
-      "name": "login",
-      "umd": "spices-clove-regular/icons/login.svg",
-      "unicode": "ebbf"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/logout.svg",
-      "name": "logout",
-      "umd": "spices-clove-regular/icons/logout.svg",
-      "unicode": "ebc0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lotus.svg",
-      "name": "lotus",
-      "umd": "spices-clove-regular/icons/lotus.svg",
-      "unicode": "ebc1"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/lozange.svg",
-      "name": "lozange",
-      "umd": "spices-clove-regular/icons/lozange.svg",
-      "unicode": "ebc2"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/magnet.svg",
-      "name": "magnet",
-      "umd": "spices-clove-regular/icons/magnet.svg",
-      "unicode": "ebc3"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/map.svg",
-      "name": "map",
-      "umd": "spices-clove-regular/icons/map.svg",
-      "unicode": "ebc4"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/map-pin.svg",
-      "name": "map-pin",
-      "umd": "spices-clove-regular/icons/map-pin.svg",
-      "unicode": "ebc5"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mars.svg",
-      "name": "mars",
-      "umd": "spices-clove-regular/icons/mars.svg",
-      "unicode": "ebc6"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/math.svg",
-      "name": "math",
-      "umd": "spices-clove-regular/icons/math.svg",
-      "unicode": "ebc7"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/math-function.svg",
-      "name": "math-function",
-      "umd": "spices-clove-regular/icons/math-function.svg",
-      "unicode": "ebc8"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/math-symbols.svg",
-      "name": "math-symbols",
-      "umd": "spices-clove-regular/icons/math-symbols.svg",
-      "unicode": "ebc9"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/maximize.svg",
-      "name": "maximize",
-      "umd": "spices-clove-regular/icons/maximize.svg",
-      "unicode": "ebca"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/menu.svg",
-      "name": "menu",
-      "umd": "spices-clove-regular/icons/menu.svg",
-      "unicode": "ebcb"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/message.svg",
-      "name": "message",
-      "umd": "spices-clove-regular/icons/message.svg",
-      "unicode": "ebcc"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/message-circle.svg",
-      "name": "message-circle",
-      "umd": "spices-clove-regular/icons/message-circle.svg",
-      "unicode": "ebcd"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/message-dots.svg",
-      "name": "message-dots",
-      "umd": "spices-clove-regular/icons/message-dots.svg",
-      "unicode": "ebce"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/microphone.svg",
-      "name": "microphone",
-      "umd": "spices-clove-regular/icons/microphone.svg",
-      "unicode": "ebcf"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/microphone-off.svg",
-      "name": "microphone-off",
-      "umd": "spices-clove-regular/icons/microphone-off.svg",
-      "unicode": "ebd0"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/minimize.svg",
-      "name": "minimize",
-      "umd": "spices-clove-regular/icons/minimize.svg",
-      "unicode": "ebd1"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/minus.svg",
-      "name": "minus",
-      "umd": "spices-clove-regular/icons/minus.svg",
-      "unicode": "ebd2"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mist.svg",
-      "name": "mist",
-      "umd": "spices-clove-regular/icons/mist.svg",
-      "unicode": "ebd3"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mobile-h.svg",
-      "name": "mobile-h",
-      "umd": "spices-clove-regular/icons/mobile-h.svg",
-      "unicode": "ebd4"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mobile-v.svg",
-      "name": "mobile-v",
-      "umd": "spices-clove-regular/icons/mobile-v.svg",
-      "unicode": "ebd5"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-confuzed.svg",
-      "name": "mood-confuzed",
-      "umd": "spices-clove-regular/icons/mood-confuzed.svg",
-      "unicode": "ebd6"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-empty.svg",
-      "name": "mood-empty",
-      "umd": "spices-clove-regular/icons/mood-empty.svg",
-      "unicode": "ebd7"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-neutral.svg",
-      "name": "mood-neutral",
-      "umd": "spices-clove-regular/icons/mood-neutral.svg",
-      "unicode": "ebd8"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-sad.svg",
-      "name": "mood-sad",
-      "umd": "spices-clove-regular/icons/mood-sad.svg",
-      "unicode": "ebd9"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-smile.svg",
-      "name": "mood-smile",
-      "umd": "spices-clove-regular/icons/mood-smile.svg",
-      "unicode": "ebda"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mood-suprised.svg",
-      "name": "mood-suprised",
-      "umd": "spices-clove-regular/icons/mood-suprised.svg",
-      "unicode": "ebdb"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/moon.svg",
-      "name": "moon",
-      "umd": "spices-clove-regular/icons/moon.svg",
-      "unicode": "ebdc"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/moped.svg",
-      "name": "moped",
-      "umd": "spices-clove-regular/icons/moped.svg",
-      "unicode": "ebdd"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/motorbike.svg",
-      "name": "motorbike",
-      "umd": "spices-clove-regular/icons/motorbike.svg",
-      "unicode": "ebde"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mouse.svg",
-      "name": "mouse",
-      "umd": "spices-clove-regular/icons/mouse.svg",
-      "unicode": "ebdf"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/mug.svg",
-      "name": "mug",
-      "umd": "spices-clove-regular/icons/mug.svg",
-      "unicode": "ebe0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/music.svg",
-      "name": "music",
-      "umd": "spices-clove-regular/icons/music.svg",
-      "unicode": "ebe1"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/not-equal.svg",
-      "name": "not-equal",
-      "umd": "spices-clove-regular/icons/not-equal.svg",
-      "unicode": "ebe2"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/note.svg",
-      "name": "note",
-      "umd": "spices-clove-regular/icons/note.svg",
-      "unicode": "ebe3"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/notification.svg",
-      "name": "notification",
-      "umd": "spices-clove-regular/icons/notification.svg",
-      "unicode": "ebe4"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/octagon.svg",
-      "name": "octagon",
-      "umd": "spices-clove-regular/icons/octagon.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/redo.svg",
+      "name": "redo",
+      "umd": "spices-clove-regular/icons/redo.svg",
       "unicode": "ebe5"
     },
     {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/omega.svg",
-      "name": "omega",
-      "umd": "spices-clove-regular/icons/omega.svg",
-      "unicode": "ebe6"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/open.svg",
-      "name": "open",
-      "umd": "spices-clove-regular/icons/open.svg",
-      "unicode": "ebe7"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/page-break.svg",
-      "name": "page-break",
-      "umd": "spices-clove-regular/icons/page-break.svg",
-      "unicode": "ebe8"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/paint.svg",
-      "name": "paint",
-      "umd": "spices-clove-regular/icons/paint.svg",
-      "unicode": "ebe9"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/panorama-horizontal.svg",
-      "name": "panorama-horizontal",
-      "umd": "spices-clove-regular/icons/panorama-horizontal.svg",
-      "unicode": "ebea"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/panorama-vertical.svg",
-      "name": "panorama-vertical",
-      "umd": "spices-clove-regular/icons/panorama-vertical.svg",
-      "unicode": "ebeb"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/paperclip.svg",
-      "name": "paperclip",
-      "umd": "spices-clove-regular/icons/paperclip.svg",
-      "unicode": "ebec"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/parent.svg",
-      "name": "parent",
-      "umd": "spices-clove-regular/icons/parent.svg",
-      "unicode": "ebed"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/parentheses.svg",
-      "name": "parentheses",
-      "umd": "spices-clove-regular/icons/parentheses.svg",
-      "unicode": "ebee"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/peace.svg",
-      "name": "peace",
-      "umd": "spices-clove-regular/icons/peace.svg",
-      "unicode": "ebef"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pencil.svg",
-      "name": "pencil",
-      "umd": "spices-clove-regular/icons/pencil.svg",
-      "unicode": "ebf0"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pennant.svg",
-      "name": "pennant",
-      "umd": "spices-clove-regular/icons/pennant.svg",
-      "unicode": "ebf1"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/percent.svg",
-      "name": "percent",
-      "umd": "spices-clove-regular/icons/percent.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/sort.svg",
+      "name": "sort",
+      "umd": "spices-clove-regular/icons/sort.svg",
       "unicode": "ebf2"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/perspective.svg",
-      "name": "perspective",
-      "umd": "spices-clove-regular/icons/perspective.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/sort-desc.svg",
+      "name": "sort-desc",
+      "umd": "spices-clove-regular/icons/sort-desc.svg",
       "unicode": "ebf3"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/phone.svg",
-      "name": "phone",
-      "umd": "spices-clove-regular/icons/phone.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/sort-up.svg",
+      "name": "sort-up",
+      "umd": "spices-clove-regular/icons/sort-up.svg",
       "unicode": "ebf4"
     },
     {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/photo.svg",
-      "name": "photo",
-      "umd": "spices-clove-regular/icons/photo.svg",
-      "unicode": "ebf5"
-    },
-    {
-      "category": "sayl",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pickup.svg",
-      "name": "pickup",
-      "umd": "spices-clove-regular/icons/pickup.svg",
-      "unicode": "ebf6"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pill.svg",
-      "name": "pill",
-      "umd": "spices-clove-regular/icons/pill.svg",
-      "unicode": "ebf7"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pin.svg",
-      "name": "pin",
-      "umd": "spices-clove-regular/icons/pin.svg",
-      "unicode": "ebf8"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pinned.svg",
-      "name": "pinned",
-      "umd": "spices-clove-regular/icons/pinned.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/switch-horizontal.svg",
+      "name": "switch-horizontal",
+      "umd": "spices-clove-regular/icons/switch-horizontal.svg",
       "unicode": "ebf9"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/pizza.svg",
-      "name": "pizza",
-      "umd": "spices-clove-regular/icons/pizza.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/sync.svg",
+      "name": "sync",
+      "umd": "spices-clove-regular/icons/sync.svg",
       "unicode": "ebfa"
     },
     {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plane.svg",
-      "name": "plane",
-      "umd": "spices-clove-regular/icons/plane.svg",
-      "unicode": "ebfb"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plane-arrival.svg",
-      "name": "plane-arrival",
-      "umd": "spices-clove-regular/icons/plane-arrival.svg",
-      "unicode": "ebfc"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plane-departure.svg",
-      "name": "plane-departure",
-      "umd": "spices-clove-regular/icons/plane-departure.svg",
-      "unicode": "ebfd"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/planet.svg",
-      "name": "planet",
-      "umd": "spices-clove-regular/icons/planet.svg",
-      "unicode": "ebfe"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plant.svg",
-      "name": "plant",
-      "umd": "spices-clove-regular/icons/plant.svg",
-      "unicode": "ebff"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/play-card.svg",
-      "name": "play-card",
-      "umd": "spices-clove-regular/icons/play-card.svg",
-      "unicode": "ec00"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-pause.svg",
-      "name": "player-pause",
-      "umd": "spices-clove-regular/icons/player-pause.svg",
-      "unicode": "ec01"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-play.svg",
-      "name": "player-play",
-      "umd": "spices-clove-regular/icons/player-play.svg",
+      "category": "arrows",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/undo.svg",
+      "name": "undo",
+      "umd": "spices-clove-regular/icons/undo.svg",
       "unicode": "ec02"
     },
     {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-record.svg",
-      "name": "player-record",
-      "umd": "spices-clove-regular/icons/player-record.svg",
-      "unicode": "ec03"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-skip-back.svg",
-      "name": "player-skip-back",
-      "umd": "spices-clove-regular/icons/player-skip-back.svg",
-      "unicode": "ec04"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-skip-forward.svg",
-      "name": "player-skip-forward",
-      "umd": "spices-clove-regular/icons/player-skip-forward.svg",
-      "unicode": "ec05"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-stop.svg",
-      "name": "player-stop",
-      "umd": "spices-clove-regular/icons/player-stop.svg",
-      "unicode": "ec06"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-track-next.svg",
-      "name": "player-track-next",
-      "umd": "spices-clove-regular/icons/player-track-next.svg",
-      "unicode": "ec07"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/player-track-prev.svg",
-      "name": "player-track-prev",
-      "umd": "spices-clove-regular/icons/player-track-prev.svg",
-      "unicode": "ec08"
-    },
-    {
-      "category": "editors",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/playlist.svg",
-      "name": "playlist",
-      "umd": "spices-clove-regular/icons/playlist.svg",
-      "unicode": "ec09"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plug.svg",
-      "name": "plug",
-      "umd": "spices-clove-regular/icons/plug.svg",
-      "unicode": "ec0a"
-    },
-    {
-      "category": "mathematics",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/plus.svg",
-      "name": "plus",
-      "umd": "spices-clove-regular/icons/plus.svg",
-      "unicode": "ec0b"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/power.svg",
-      "name": "power",
-      "umd": "spices-clove-regular/icons/power.svg",
-      "unicode": "ec0c"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/printer.svg",
-      "name": "printer",
-      "umd": "spices-clove-regular/icons/printer.svg",
-      "unicode": "ec0d"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/prompt.svg",
-      "name": "prompt",
-      "umd": "spices-clove-regular/icons/prompt.svg",
-      "unicode": "ec0e"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/propeller.svg",
-      "name": "propeller",
-      "umd": "spices-clove-regular/icons/propeller.svg",
-      "unicode": "ec0f"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/question-mark.svg",
-      "name": "question-mark",
-      "umd": "spices-clove-regular/icons/question-mark.svg",
-      "unicode": "ec10"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/record-mail.svg",
-      "name": "record-mail",
-      "umd": "spices-clove-regular/icons/record-mail.svg",
-      "unicode": "ec11"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/recycle.svg",
-      "name": "recycle",
-      "umd": "spices-clove-regular/icons/recycle.svg",
-      "unicode": "ec12"
-    },
-    {
       "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/redo.svg",
-      "name": "redo",
-      "umd": "spices-clove-regular/icons/redo.svg",
-      "unicode": "ec13"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/rocket.svg",
-      "name": "rocket",
-      "umd": "spices-clove-regular/icons/rocket.svg",
-      "unicode": "ec14"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/router.svg",
-      "name": "router",
-      "umd": "spices-clove-regular/icons/router.svg",
-      "unicode": "ec15"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/ruler.svg",
-      "name": "ruler",
-      "umd": "spices-clove-regular/icons/ruler.svg",
-      "unicode": "ec16"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/sailboat.svg",
-      "name": "sailboat",
-      "umd": "spices-clove-regular/icons/sailboat.svg",
-      "unicode": "ec17"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/scooter.svg",
-      "name": "scooter",
-      "umd": "spices-clove-regular/icons/scooter.svg",
-      "unicode": "ec18"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/search.svg",
-      "name": "search",
-      "umd": "spices-clove-regular/icons/search.svg",
-      "unicode": "ec19"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/sort.svg",
-      "name": "sort",
-      "umd": "spices-clove-regular/icons/sort.svg",
-      "unicode": "ec1a"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/sort-desc.svg",
-      "name": "sort-desc",
-      "umd": "spices-clove-regular/icons/sort-desc.svg",
-      "unicode": "ec1b"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/sort-up.svg",
-      "name": "sort-up",
-      "umd": "spices-clove-regular/icons/sort-up.svg",
-      "unicode": "ec1c"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/speaker.svg",
-      "name": "speaker",
-      "umd": "spices-clove-regular/icons/speaker.svg",
-      "unicode": "ec1d"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/speedboat.svg",
-      "name": "speedboat",
-      "umd": "spices-clove-regular/icons/speedboat.svg",
-      "unicode": "ec1e"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/star.svg",
-      "name": "star",
-      "umd": "spices-clove-regular/icons/star.svg",
-      "unicode": "ec1f"
-    },
-    {
-      "category": "life",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/star-full.svg",
-      "name": "star-full",
-      "umd": "spices-clove-regular/icons/star-full.svg",
-      "unicode": "ec20"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/switch-horizontal.svg",
-      "name": "switch-horizontal",
-      "umd": "spices-clove-regular/icons/switch-horizontal.svg",
-      "unicode": "ec21"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/sync.svg",
-      "name": "sync",
-      "umd": "spices-clove-regular/icons/sync.svg",
-      "unicode": "ec22"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/tablet.svg",
-      "name": "tablet",
-      "umd": "spices-clove-regular/icons/tablet.svg",
-      "unicode": "ec23"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/target.svg",
-      "name": "target",
-      "umd": "spices-clove-regular/icons/target.svg",
-      "unicode": "ec24"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/television.svg",
-      "name": "television",
-      "umd": "spices-clove-regular/icons/television.svg",
-      "unicode": "ec25"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/time.svg",
-      "name": "time",
-      "umd": "spices-clove-regular/icons/time.svg",
-      "unicode": "ec26"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/trash.svg",
-      "name": "trash",
-      "umd": "spices-clove-regular/icons/trash.svg",
-      "unicode": "ec27"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/undo.svg",
-      "name": "undo",
-      "umd": "spices-clove-regular/icons/undo.svg",
-      "unicode": "ec28"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/unlink.svg",
-      "name": "unlink",
-      "umd": "spices-clove-regular/icons/unlink.svg",
-      "unicode": "ec29"
-    },
-    {
-      "category": "arrows",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/upload.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.19/src/spices-clove-regular/icons/upload.svg",
       "name": "upload",
       "umd": "spices-clove-regular/icons/upload.svg",
-      "unicode": "ec2a"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/user.svg",
-      "name": "user",
-      "umd": "spices-clove-regular/icons/user.svg",
-      "unicode": "ec2b"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/users.svg",
-      "name": "users",
-      "umd": "spices-clove-regular/icons/users.svg",
-      "unicode": "ec2c"
-    },
-    {
-      "category": "sayl",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/virtual.svg",
-      "name": "virtual",
-      "umd": "spices-clove-regular/icons/virtual.svg",
-      "unicode": "ec2d"
-    },
-    {
-      "category": "interfaces",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/visible.svg",
-      "name": "visible",
-      "umd": "spices-clove-regular/icons/visible.svg",
-      "unicode": "ec2e"
-    },
-    {
-      "category": "computers",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/watch.svg",
-      "name": "watch",
-      "umd": "spices-clove-regular/icons/watch.svg",
-      "unicode": "ec2f"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/wifi.svg",
-      "name": "wifi",
-      "umd": "spices-clove-regular/icons/wifi.svg",
-      "unicode": "ec30"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/wifi-1.svg",
-      "name": "wifi-1",
-      "umd": "spices-clove-regular/icons/wifi-1.svg",
-      "unicode": "ec31"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/wifi-2.svg",
-      "name": "wifi-2",
-      "umd": "spices-clove-regular/icons/wifi-2.svg",
-      "unicode": "ec32"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/wifi-3.svg",
-      "name": "wifi-3",
-      "umd": "spices-clove-regular/icons/wifi-3.svg",
-      "unicode": "ec33"
-    },
-    {
-      "category": "status",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.18/src/spices-clove-regular/icons/wifi-off.svg",
-      "name": "wifi-off",
-      "umd": "spices-clove-regular/icons/wifi-off.svg",
-      "unicode": "ec34"
+      "unicode": "ec04"
     }
   ],
   "name": "spices-clove-regular",
-  "version": "0.0.18"
+  "version": "0.0.19"
 }
