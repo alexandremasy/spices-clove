@@ -1,6 +1,12 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 14C6.65685 14 8 12.6569 8 11C8 9.34315 6.65685 8 5 8C3.34315 8 2 9.34315 2 11C2 12.6569 3.34315 14 5 14Z" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7 8L14 2" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14 5L13 4" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10 6L11 7" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M840 727c56.7937 40.567 130.942 -37.0665 82 -93c-0.43066 -0.86132 -54.139 -47.2383 -55 -48c0 0 11 -13 28 -30c31 -31 34 -34 38 -44c3 -8 4 -14 4 -24c0 -53.6135 -55.934 -80.044 -98 -52c-2 1 -17 16 -36 35l-32 32l-35 -30
+c-20.2544 -17.0563 -35.6349 -29.6349 -38 -32l19 -20c20 -21 24 -24 28 -34c3 -8 5 -15 5 -25c0 -52.0089 -57.2583 -78.1611 -98 -51c-2 1 -13 12 -26 25l-23 23l-2 -1c-1 -1 -24 -20 -50 -43l-48 -41c33.4951 -33.4951 52.9025 -87.0445 58 -137c1 -11 1 -41 0 -52
+c-14.3105 -116.869 -104.673 -209.067 -224 -221c-9 -1 -40 -1 -49 0c-118.865 11.8865 -209.64 103.726 -224 221c-2 13 -2 42 0 55c14.8913 121.612 113.348 217.405 242 222c31.2548 1.07775 62.2068 -3.20254 91 -14l220 188c121 104 221 190 223 191zM299 237
+c-89.6349 -7.79434 -147.455 -118.56 -85 -201c18.755 -28.1326 59.4043 -48 98 -48c27 0 55 9 77 26c5 4 17 14 21 20c36 45 36 109 1 155c-4 5 -14 17 -20 21c-26 21 -59 30 -92 27z" />
+  </g>
+
 </svg>

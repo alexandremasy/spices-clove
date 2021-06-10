@@ -1,4 +1,12 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 4V10M2 12V10M14 12V10M7 10V7H14V10M7 10H14M7 10H2" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.5 8C4.77614 8 5 7.77614 5 7.5C5 7.22386 4.77614 7 4.5 7C4.22386 7 4 7.22386 4 7.5C4 7.77614 4.22386 8 4.5 8Z" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M64 563c7.62288 31.762 36.0921 57.227 77 47c23.8344 -6.50028 40.7796 -23.8981 46 -50v-111c0 -61 1 -106 1 -106c4.33674 43.3674 44.8595 80.1608 89 82c41 2 80 -24 93 -63c2 -6 4 -18 4 -22c0 0 1 6 1 15c0 39.9545 19.8871 63.8619 52 69c5 1 32 1 232 1h226
+c25.8068 -8.60225 45.0365 -21.5678 51 -49c1 -5 1 -12 1 -170s0 -164 -1 -169c-13.5264 -63.1231 -105.337 -64.4868 -122 -2c-1 5 -1 7 -1 41l-1 36h-624l-1 -36c0 -34 0 -36 -1 -41c-7 -28 -30 -46 -58 -47c-30 -2 -57 19 -64 49c-1 5 -1 13 -1 263s0 258 1 263zM303 353
+c-13.7581 13.7581 -32.1907 11.8093 -44 0c-34.3792 -34.3792 35.5581 -81.3256 53 -29c3 10 -1 21 -9 29zM188 322v-84h43s42 -1 37 0c-35 5 -64 30 -75 63c-2 5 -5 16 -5 21zM374 320c-3.58866 -41.2695 -39.2731 -76.9733 -82 -82h83v86s-1 -2 -1 -4zM500 269v-31h312v62
+h-312v-31z" />
+  </g>
+
 </svg>

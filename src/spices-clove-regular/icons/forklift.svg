@@ -1,10 +1,13 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.33333 12.6667C4.06971 12.6667 4.66667 12.0697 4.66667 11.3333C4.66667 10.597 4.06971 10 3.33333 10C2.59695 10 2 10.597 2 11.3333C2 12.0697 2.59695 12.6667 3.33333 12.6667Z" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.33333 12.6667C10.0697 12.6667 10.6667 12.0697 10.6667 11.3333C10.6667 10.597 10.0697 10 9.33333 10C8.59695 10 8 10.597 8 11.3333C8 12.0697 8.59695 12.6667 9.33333 12.6667Z" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.66667 11.3333H8.00001" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 11.3333V7.33333H10.6667V11.3333" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.33333 7.33333V4.66667H5.99999" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 7.33333V3.33333H8.66667L10.6667 7.33333" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M14.6667 10H12.6667V3.33333" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.6667 8.66667H12.6667" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M146 515c3.10841 26.9395 22.8631 49.3726 51 55h58l57 1v13c0 40.7626 22.9607 65.8701 56 70c7 1 173 1 180 0c20.88 -2.088 36.3879 -13.5818 46 -28c4 -6 130 -259 132 -264c1 -3 2 -7 2 -10c1 -4 1 17 1 123l1 128c7.12091 35.6045 51.5229 68.5693 95 42
+c14.7039 -8.40225 27.1004 -28.0044 29 -47v-360h33c20 0 35 -1 38 -1c17 -2 33 -13 43 -27c23 -35 7 -82 -33 -95c-9 -3 -11 -2 -84 -2h-69c-26.6681 4.44468 -47.7494 24.4962 -52 50c-1 4 -1 -1 -1 -35v-47c-9.65161 -110.993 -135.898 -171.068 -226 -111
+c-21 14 -38 33 -50 56l-1 3h-112l-1 -2c-1 -1 -3 -5 -5 -9c-41.2121 -69.9357 -137.366 -93.7558 -206 -48c-30 20 -52 51 -61 85c-5 19 -4 6 -4 156c0 98 -1 135 0 139c3 22 19 42 39 50c9 4 13 4 29 4l15 1v110zM438 529v-125h63c35 0 64 1 64 1l-62 124h-65zM271 446v-42
+h41v42h-41zM452 154c24.9946 51.9293 76.5606 89.956 152 82v43h-416v-43c74.7576 8.50492 126.884 -31.2387 152 -82h112zM209 112c-13.4845 0 -22.2224 -10.9984 -21 -22c1 -18 22 -25 35 -13c4 4 5 7 5 15c0 12.3459 -8.17631 20 -19 20zM577 111c-9 -3 -15 -12 -14 -21
+c1.42133 -25.5839 41 -24.3361 41 1c0 12.2664 -9.21053 21 -20 21c-3 0 -5 0 -7 -1z" />
+  </g>
+
 </svg>

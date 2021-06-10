@@ -1,3 +1,11 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 14H14M2.99999 14V2L13 2V14M6 14V9C6 7.91066 6.91067 6.66667 8 6.66667C9.08933 6.66667 10 7.91066 10 9V14" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M937 -75c0 -34.6641 -22.2278 -57.038 -52 -62h-383c-339 0 -382 -1 -387 0c-37.9737 5.84211 -70.2495 53.6258 -42 96c7 12 19 21 32 25c4 1 14 4 18 4h2v697l2 5c7 25 26 43 50 47c4 1 52 0 325 0h320c28.645 -4.25907 45.6995 -25.4785 53 -52v-697
+c8.93935 -1.78787 19.2473 -3.12367 27 -7c19.9162 -9.37234 35 -27.6489 35 -56zM250 612v-624h62l1 128v136c7.99551 87.9506 71.2666 176.878 162 192c9 2 30 2 40 1c21 -2 43 -9 62 -19c60 -33 104 -102 110 -174v-136l1 -128h62v624h-500zM491 319
+c-25.6439 -7.89042 -46.8982 -40.4911 -53 -71v-130l-1 -130h126l-1 130v130c-6.16325 30.8162 -27.133 63.0443 -54 72c-4 1 -13 0 -17 -1z" />
+  </g>
+
 </svg>

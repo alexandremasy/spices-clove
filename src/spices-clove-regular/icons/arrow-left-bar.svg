@@ -1,3 +1,10 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14 8H2M2 8L5 5M2 8L5 11M14 6V10" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M302 549c-9 -2 -17 -5 -25 -10c-2 -1 -39 -38 -102 -101c-107 -107 -103 -102 -108 -114c-3 -8 -4 -14 -4 -24s1 -16 4 -24c5 -12 1 -7 106 -112l100 -100c38.0042 -32.575 102 -4.14063 102 48c0 10 -2 17 -5 25c-4 11 -5 12 -51 58l-43 43h536l1 -37c0 -34 0 -36 1 -41
+c16.6293 -62.3598 108.445 -61.2589 122 2c1 5 1 10 1 138s0 133 -1 138c-13.5264 63.1231 -105.337 64.4868 -122 2c-1 -5 -1 -7 -1 -41l-1 -37h-536l43 43c36 36 43 43 46 48c30.4873 45.731 -9.66476 103.619 -63 96z" />
+  </g>
+
 </svg>

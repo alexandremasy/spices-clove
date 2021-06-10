@@ -1,3 +1,11 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 5H14M2 5L5 2M2 5L5 8L2 11M5 14L2 11M2 11H14" stroke="#24282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 1010 1000">
+  <g transform="matrix(1 0 0 -1 0 800)">
+   <path fill="currentColor"
+d="M302 737c-9 -2 -17 -6 -25 -11c-2 -1 -39 -37 -102 -100c-107 -107 -103 -102 -108 -114c-3 -8 -4 -14 -4 -24s1 -17 4 -25c5 -11 3 -9 83 -89l74 -74l-74 -74c-80 -80 -78 -78 -83 -89c-3 -8 -4 -15 -4 -25s1 -16 4 -24c5 -12 1 -7 106 -112l100 -100
+c43.2012 -37.0296 114.428 5.28872 100 63c-2 7 -4 14 -8 20c-3 5 -10 12 -46 48l-43 43h609c28.3281 9.44271 52 24.3278 52 62c0 33.4505 -19.5698 54.1052 -46 61l-6 2h-609l43 43c46 46 47 47 51 58c3 8 5 14 5 24s-2 16 -5 24c-4 11 -5 12 -51 58l-43 43h609
+c25.9421 8.64736 43.8666 20.6553 51 48c9.97194 39.8877 -17.7005 67.8784 -45 75l-6 2h-609l43 43c36 36 43 43 46 48c30.1579 45.2369 -10.9467 103.436 -63 96z" />
+  </g>
+
 </svg>
