@@ -62,7 +62,7 @@ module.exports = class FontFetch {
     return FontFetch.iterator({ 
       fn: 'download', 
       font,
-      n: 10, 
+      n: 20, 
       task, 
       title: (i, n) => task.title = `Downloading the glyphs [${i}/${n}]` 
     })
