@@ -15,7 +15,7 @@ module.exports = class FontFetch {
         task: (ctx, task) => FontFetch.download(ctx, font, task)
       },
       {
-        enabled: () => false,
+        enabled: () => true,
         title: 'Outline the glyphs',
         task: (ctx, task) => FontFetch.outline(ctx, font, task)
       },
@@ -25,7 +25,7 @@ module.exports = class FontFetch {
         task: (ctx, task) => FontFetch.optimize(ctx, font, task)
       },
       {
-        enabled: () => false,
+        enabled: () => true,
         title: 'Fix the glyphs paths',
         task: (ctx, task) => FontFetch.fix(ctx, font, task)
       },
