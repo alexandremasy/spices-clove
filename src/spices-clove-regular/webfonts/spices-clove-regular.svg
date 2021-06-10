@@ -5,7 +5,8 @@
   <font id="spices-clove-regular" horiz-adv-x="1020">
     <font-face font-family="spices-clove-regular"
       units-per-em="1000" ascent="1000"
-      descent="0" />
+      descent="0"
+      font-weight="400" />
     <missing-glyph horiz-adv-x="0" />
     <glyph glyph-name="angle-down"
       unicode="&#x65;&#x61;&#x31;&#x34;"
