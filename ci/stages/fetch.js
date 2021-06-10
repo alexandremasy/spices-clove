@@ -135,8 +135,10 @@ module.exports = class FontFetch {
   static changelog(ctx, font, task){
     return new Promise((resolve, reject) => {
       let updates = font.glyphs.filter(g => g.updated === true).flatMap(g => g.name)
+      
       // Development purpose
-      updates.push('debug')
+      // updates.push('debug')
+
       updates.forEach(n => {
         let glyph = font.glyphs.find(g => g.name === n)
         font.changes.edit(glyph)
