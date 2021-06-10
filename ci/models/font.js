@@ -7,6 +7,7 @@ const FontType = require('./font-type')
 const FontGlyph = require('./font-glyph')
 const { basil } = require('@spices/basil')
 const Changelog = require('./changelog')
+const FileSystemController = require('../controllers/fs')
 
 const readFile = utils.promisify(fs.readFile)
 const writeFile = utils.promisify(fs.writeFile)
@@ -53,7 +54,7 @@ module.exports = class Font{
      * @property {Number} _startUnicode The current highest unicode code.
      * @see https://en.wikipedia.org/wiki/Private_Use_Areas Unicode Private Use Area.
      */
-    this._startUnicode = 0xe001;
+    this._startUnicode = 0xe000;
 
     /**
      * @property {Array<FontType>} types The list of font types
@@ -218,8 +219,8 @@ module.exports = class Font{
     let unicode = Math.max(this._startUnicode, Math.max.apply(null, codes))
     this.glyphs.forEach(g => {
       if (!g.unicode){
-        g.unicode = unicode
         unicode++
+        g.unicode = unicode
       }
     })
   }
@@ -278,6 +279,8 @@ module.exports = class Font{
     this.glyphs.splice(i, 1)
 
     this.changes.delete(glyph)
+
+    FileSystemController.deleteDirectory(glyph.system)
   }
 
   /**
