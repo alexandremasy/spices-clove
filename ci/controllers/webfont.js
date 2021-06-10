@@ -21,6 +21,8 @@ module.exports = class WebfontController{
         // descent: 100,
         fontHeight: 1000,
         fontName: font.name,
+        fontId: font.name,
+        fontWeight: 400,
         log: () => { },
         normalize: false,
       });
@@ -29,9 +31,13 @@ module.exports = class WebfontController{
       font.glyphs.forEach(glyph => {
         let u = `\\u${glyph.unicodeString.toUpperCase()}`
         let g = fs.createReadStream(glyph.system)
+
+        console.log(glyph.unicodeString, u)
         g.metadata = {
-          unicode: [ glyph.unicodeString ],
-          name: glyph.name
+          name: glyph.name,
+          // unicode: [ glyph.unicodeString ],
+          // unicode: ['\uE001'],
+          unicode: [ glyph.unicodeChar ]
         }
         fontStream.write(g)
       })

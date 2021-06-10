@@ -109,17 +109,24 @@ module.exports = class FontGlyph{
   }
 
   /**
-   * @property {String} unicodeString the string representation of the unicode.
+   * @property {String} unicodeChar the unicode char for the given unicode.
    */
-  get unicodeString(){
-    return this.unicodeChar.codePointAt(0).toString(16)
+  get unicodeChar() {
+    return String.fromCharCode(this._unicode)
   }
 
   /**
-   * @property {String} unicodeChar the unicode char for the given unicode.
+   * @property {Number} unicodeCodepoint the unicode code point for the given unicode
    */
-  get unicodeChar(){
-    return String.fromCharCode(this._unicode)
+  get unicodeCodepoint(){
+    return this.unicodeChar.codePointAt(0)
+  }
+
+  /**
+   * @property {String} unicodeString the string representation of the unicode.
+   */
+  get unicodeString(){
+    return this.unicodeCodepoint.toString(16)
   }
 
   /**

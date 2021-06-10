@@ -53,7 +53,7 @@ module.exports = class Font{
      * @property {Number} _startUnicode The current highest unicode code.
      * @see https://en.wikipedia.org/wiki/Private_Use_Areas Unicode Private Use Area.
      */
-    this._startUnicode = 0xea01;
+    this._startUnicode = 0xe001;
 
     /**
      * @property {Array<FontType>} types The list of font types
@@ -218,8 +218,8 @@ module.exports = class Font{
     let unicode = Math.max(this._startUnicode, Math.max.apply(null, codes))
     this.glyphs.forEach(g => {
       if (!g.unicode){
-        unicode++
         g.unicode = unicode
+        unicode++
       }
     })
   }

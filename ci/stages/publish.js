@@ -31,11 +31,13 @@ module.exports = class FontPublish {
         task: (ctx, task) => FontPublish.commit(ctx, font, task)
       },
       {
+        enabled: () => false,
         title: 'Tag & Publish on npm',
         skip: () => n === 0 ? 'No changes' : false,
         task: (ctx, task) => FontPublish.npm(ctx, font, task)
       },
       {
+        enabled: () => false,
         title: 'Push to the repository',
         skip: () => n === 0 ? 'No changes': false,
         task: (ctx, task) => FontPublish.push(ctx, font, task)

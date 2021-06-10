@@ -37,10 +37,6 @@ module.exports = class FontFigma {
         title: 'Computing the unicodes',
         task: (ctx, task) => FontFigma.unicodes(client, ctx, font)
       },
-      {
-        title: 'Generating the manifest',
-        task: (ctx, task) => FontFigma.save(client, ctx, font)
-      },
     ])
   }
 
@@ -109,15 +105,5 @@ module.exports = class FontFigma {
   static unicodes(client, ctx, font){
     font.computeUnicodes()
     return Promise.resolve()
-  }
-
-  /**
-   * @param {*} client
-   * @param {*} ctx
-   * @param {Font} font
-   * @returns {Promise}
-   */
-  static save(client, ctx, font){
-    return font.save()
   }
 }
