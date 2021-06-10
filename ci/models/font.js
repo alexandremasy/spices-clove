@@ -96,11 +96,10 @@ module.exports = class Font{
   }
 
   /**
-   * @property {String} system The OS path to the font. The root folder.
-   * @readonly
+   * @property {String} scss The path to the scss manifest
    */
-  get system(){
-    return path.resolve(config.output, this.name)
+  get scss(){
+    return path.resolve(config.output, this.name, `manifest.scss`)
   }
 
   /**
@@ -117,6 +116,14 @@ module.exports = class Font{
    */
   get svg(){
     return this.types.find(t => t.type === FontType.SVG)
+  }
+
+  /**
+   * @property {String} system The OS path to the font. The root folder.
+   * @readonly
+   */
+  get system() {
+    return path.resolve(config.output, this.name)
   }
 
   /**
@@ -279,8 +286,32 @@ module.exports = class Font{
   save(){
     return new Promise((resolve, reject) => {
       let data = JSON.stringify(this.toJSON(), null, 2)
-      writeFile(this.manifest, data, 'utf-8').then(() => resolve())
+      
+      Promise.all([
+        writeFile(this.manifest, data, 'utf-8'),
+        writeFile(this.scss, this.toSCSS(), 'utf-8')
+      ])
+      .then(() => resolve())
     })
+  }
+
+  /**
+   * Generate the scss manifest
+   * 
+   * @returns {String}
+   */
+  toSCSS(){
+    let a = this.glyphs.map(g => {
+      return `\$icon-${g.name}: "\\${g.unicodeString}";`
+    })
+    a = a.join('\n')
+
+    let b = this.glyphs.map(g => {
+      return `icon-${g.name}: \$icon-${g.name}`
+    })
+    b = `\$${this.name}-icons: (\n ${b.join(',\n')});`
+
+    return `${a}\n${b}`
   }
 
   /**

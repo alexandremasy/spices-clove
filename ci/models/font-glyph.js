@@ -224,6 +224,11 @@ module.exports = class FontGlyph{
    */
   refresh() {
     return new Promise((resolve, reject) => {
+      // Check if the file exist first
+      if (!fs.existsSync(this.system)){
+        return resolve(this.data)
+      }
+
       fs.readFile(this.system, 'utf-8', function(err, data){
         if (err){
           console.log(err)
