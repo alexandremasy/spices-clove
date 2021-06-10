@@ -111,7 +111,7 @@ module.exports = class FontPublish {
   static npm(ctx, font, task){
     return new Promise((resolve, reject) => {
       let message = `Version ${font.version} with ${font.changes.length} changes.\n${font.changes.toString()}`
-      let command = `yarn publish --message '${message}' --non-interactive --access public`
+      let command = `yarn publish --message '${message}' --new-version '${font.version}' --non-interactive --access public`
       execute(command)
         .then(() => resolve())
         .catch(e => reject(e))

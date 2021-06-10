@@ -3,11 +3,9 @@
   "dependencies": {
     "@spices/basil": "^1.7.0",
     "axios": "^0.21.1",
-    "chalk": "^2.4.2",
     "listr": "^0.14.3",
     "listr-update-renderer": "^0.5.0",
     "mkdirp": "^0.5.1",
-    "ora": "^3.4.0",
     "rimraf": "^3.0.2",
     "scale-that-svg": "^1.0.5",
     "semver": "^7.3.4",

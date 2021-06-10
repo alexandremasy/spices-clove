@@ -64,7 +64,7 @@ module.exports = class FigmaController{
         if (f.type === 'COMPONENT'){
           // Prevent duplicates
           if (names.includes(f.name)){
-            console.warn(chalk.red(`ERR: Duplicate icon "${f.name}"`))
+            console.warn(`ERR: Duplicate icon "${f.name}"`)
             process.exit();
           }
           else{
