@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const Listr = require('listr');
 const VerboseRenderer = require('listr-verbose-renderer');
 const UpdaterRenderer = require('listr-update-renderer');

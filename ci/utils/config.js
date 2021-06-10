@@ -6,7 +6,7 @@ module.exports = {
   name: name,
   
   cdn: `https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove`,
-  figma_personal_token: "158843-2c12d5ef-af37-44f7-af74-bb0b97e54139",
+  figma_personal_token: process.env.FIGMA_PERSONAL_TOKEN,
 
   // 
   //  Outputs
