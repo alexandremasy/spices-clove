@@ -1,22 +1,22 @@
 {
   "types": [
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/webfonts/spices-clove-regular.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/webfonts/spices-clove-regular.svg",
       "type": "svg",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.svg"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/webfonts/spices-clove-regular.ttf",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/webfonts/spices-clove-regular.ttf",
       "type": "ttf",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.ttf"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/webfonts/spices-clove-regular.woff",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/webfonts/spices-clove-regular.woff",
       "type": "woff",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff"
     },
     {
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/webfonts/spices-clove-regular.woff2",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/webfonts/spices-clove-regular.woff2",
       "type": "woff2",
       "umd": "spices-clove-regular/iconfont/spices-clove-regular.woff2"
     }
@@ -24,243 +24,243 @@
   "glyphs": [
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/bahraini.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/bahraini.svg",
       "name": "bahraini",
       "umd": "spices-clove-regular/icons/bahraini.svg",
+      "unicode": "e001"
+    },
+    {
+      "category": "currencies",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/bath.svg",
+      "name": "bath",
+      "umd": "spices-clove-regular/icons/bath.svg",
       "unicode": "e002"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/bath.svg",
-      "name": "bath",
-      "umd": "spices-clove-regular/icons/bath.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/bitcoin.svg",
+      "name": "bitcoin",
+      "umd": "spices-clove-regular/icons/bitcoin.svg",
       "unicode": "e003"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/bitcoin.svg",
-      "name": "bitcoin",
-      "umd": "spices-clove-regular/icons/bitcoin.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/cent.svg",
+      "name": "cent",
+      "umd": "spices-clove-regular/icons/cent.svg",
       "unicode": "e004"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/cent.svg",
-      "name": "cent",
-      "umd": "spices-clove-regular/icons/cent.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dinar.svg",
+      "name": "dinar",
+      "umd": "spices-clove-regular/icons/dinar.svg",
       "unicode": "e005"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dinar.svg",
-      "name": "dinar",
-      "umd": "spices-clove-regular/icons/dinar.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dirham.svg",
+      "name": "dirham",
+      "umd": "spices-clove-regular/icons/dirham.svg",
       "unicode": "e006"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dirham.svg",
-      "name": "dirham",
-      "umd": "spices-clove-regular/icons/dirham.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dollar.svg",
+      "name": "dollar",
+      "umd": "spices-clove-regular/icons/dollar.svg",
       "unicode": "e007"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dollar.svg",
-      "name": "dollar",
-      "umd": "spices-clove-regular/icons/dollar.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dollar-australian.svg",
+      "name": "dollar-australian",
+      "umd": "spices-clove-regular/icons/dollar-australian.svg",
       "unicode": "e008"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dollar-australian.svg",
-      "name": "dollar-australian",
-      "umd": "spices-clove-regular/icons/dollar-australian.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dollar-canadian.svg",
+      "name": "dollar-canadian",
+      "umd": "spices-clove-regular/icons/dollar-canadian.svg",
       "unicode": "e009"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dollar-canadian.svg",
-      "name": "dollar-canadian",
-      "umd": "spices-clove-regular/icons/dollar-canadian.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/dollar-singapore.svg",
+      "name": "dollar-singapore",
+      "umd": "spices-clove-regular/icons/dollar-singapore.svg",
       "unicode": "e00a"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/dollar-singapore.svg",
-      "name": "dollar-singapore",
-      "umd": "spices-clove-regular/icons/dollar-singapore.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/ethereum.svg",
+      "name": "ethereum",
+      "umd": "spices-clove-regular/icons/ethereum.svg",
       "unicode": "e00b"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/ethereum.svg",
-      "name": "ethereum",
-      "umd": "spices-clove-regular/icons/ethereum.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/euro.svg",
+      "name": "euro",
+      "umd": "spices-clove-regular/icons/euro.svg",
       "unicode": "e00c"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/euro.svg",
-      "name": "euro",
-      "umd": "spices-clove-regular/icons/euro.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/forint.svg",
+      "name": "forint",
+      "umd": "spices-clove-regular/icons/forint.svg",
       "unicode": "e00d"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/forint.svg",
-      "name": "forint",
-      "umd": "spices-clove-regular/icons/forint.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/frank.svg",
+      "name": "frank",
+      "umd": "spices-clove-regular/icons/frank.svg",
       "unicode": "e00e"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/frank.svg",
-      "name": "frank",
-      "umd": "spices-clove-regular/icons/frank.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/krone-czech.svg",
+      "name": "krone-czech",
+      "umd": "spices-clove-regular/icons/krone-czech.svg",
       "unicode": "e00f"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/krone-czech.svg",
-      "name": "krone-czech",
-      "umd": "spices-clove-regular/icons/krone-czech.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/krone-danish.svg",
+      "name": "krone-danish",
+      "umd": "spices-clove-regular/icons/krone-danish.svg",
       "unicode": "e010"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/krone-danish.svg",
-      "name": "krone-danish",
-      "umd": "spices-clove-regular/icons/krone-danish.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/krone-swedish.svg",
+      "name": "krone-swedish",
+      "umd": "spices-clove-regular/icons/krone-swedish.svg",
       "unicode": "e011"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/krone-swedish.svg",
-      "name": "krone-swedish",
-      "umd": "spices-clove-regular/icons/krone-swedish.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/leu.svg",
+      "name": "leu",
+      "umd": "spices-clove-regular/icons/leu.svg",
       "unicode": "e012"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/leu.svg",
-      "name": "leu",
-      "umd": "spices-clove-regular/icons/leu.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/lira.svg",
+      "name": "lira",
+      "umd": "spices-clove-regular/icons/lira.svg",
       "unicode": "e013"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/lira.svg",
-      "name": "lira",
-      "umd": "spices-clove-regular/icons/lira.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/litecoin.svg",
+      "name": "litecoin",
+      "umd": "spices-clove-regular/icons/litecoin.svg",
       "unicode": "e014"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/litecoin.svg",
-      "name": "litecoin",
-      "umd": "spices-clove-regular/icons/litecoin.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/naira.svg",
+      "name": "naira",
+      "umd": "spices-clove-regular/icons/naira.svg",
       "unicode": "e015"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/naira.svg",
-      "name": "naira",
-      "umd": "spices-clove-regular/icons/naira.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/pound.svg",
+      "name": "pound",
+      "umd": "spices-clove-regular/icons/pound.svg",
       "unicode": "e016"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/pound.svg",
-      "name": "pound",
-      "umd": "spices-clove-regular/icons/pound.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/real.svg",
+      "name": "real",
+      "umd": "spices-clove-regular/icons/real.svg",
       "unicode": "e017"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/real.svg",
-      "name": "real",
-      "umd": "spices-clove-regular/icons/real.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/renminbi.svg",
+      "name": "renminbi",
+      "umd": "spices-clove-regular/icons/renminbi.svg",
       "unicode": "e018"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/renminbi.svg",
-      "name": "renminbi",
-      "umd": "spices-clove-regular/icons/renminbi.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/ripple.svg",
+      "name": "ripple",
+      "umd": "spices-clove-regular/icons/ripple.svg",
       "unicode": "e019"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/ripple.svg",
-      "name": "ripple",
-      "umd": "spices-clove-regular/icons/ripple.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/riyal.svg",
+      "name": "riyal",
+      "umd": "spices-clove-regular/icons/riyal.svg",
       "unicode": "e01a"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/riyal.svg",
-      "name": "riyal",
-      "umd": "spices-clove-regular/icons/riyal.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/rubel.svg",
+      "name": "rubel",
+      "umd": "spices-clove-regular/icons/rubel.svg",
       "unicode": "e01b"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/rubel.svg",
-      "name": "rubel",
-      "umd": "spices-clove-regular/icons/rubel.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/rupee.svg",
+      "name": "rupee",
+      "umd": "spices-clove-regular/icons/rupee.svg",
       "unicode": "e01c"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/rupee.svg",
-      "name": "rupee",
-      "umd": "spices-clove-regular/icons/rupee.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/shekel.svg",
+      "name": "shekel",
+      "umd": "spices-clove-regular/icons/shekel.svg",
       "unicode": "e01d"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/shekel.svg",
-      "name": "shekel",
-      "umd": "spices-clove-regular/icons/shekel.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/taka.svg",
+      "name": "taka",
+      "umd": "spices-clove-regular/icons/taka.svg",
       "unicode": "e01e"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/taka.svg",
-      "name": "taka",
-      "umd": "spices-clove-regular/icons/taka.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/tugrik.svg",
+      "name": "tugrik",
+      "umd": "spices-clove-regular/icons/tugrik.svg",
       "unicode": "e01f"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/tugrik.svg",
-      "name": "tugrik",
-      "umd": "spices-clove-regular/icons/tugrik.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/won.svg",
+      "name": "won",
+      "umd": "spices-clove-regular/icons/won.svg",
       "unicode": "e020"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/won.svg",
-      "name": "won",
-      "umd": "spices-clove-regular/icons/won.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/yen.svg",
+      "name": "yen",
+      "umd": "spices-clove-regular/icons/yen.svg",
       "unicode": "e021"
     },
     {
       "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/yen.svg",
-      "name": "yen",
-      "umd": "spices-clove-regular/icons/yen.svg",
-      "unicode": "e022"
-    },
-    {
-      "category": "currencies",
-      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.30/src/spices-clove-regular/icons/zloty.svg",
+      "cdn": "https://cdn.jsdelivr.net/gh/alexandremasy/spices-clove@v0.0.31/src/spices-clove-regular/icons/zloty.svg",
       "name": "zloty",
       "umd": "spices-clove-regular/icons/zloty.svg",
-      "unicode": "e023"
+      "unicode": "e022"
     }
   ],
   "name": "spices-clove-regular",
-  "version": "0.0.30"
+  "version": "0.0.31"
 }
