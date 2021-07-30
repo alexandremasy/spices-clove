@@ -15,7 +15,7 @@
     "svgicons2svgfont": "^10.0.3",
     "svgo": "^2.1.0",
     "svgstore": "^3.0.0-2",
-    "ttf2woff": "^2.0.2",
+    "ttf2woff": "^3.0.0",
     "ttf2woff2": "^4.0.1",
     "yargs": "^17.0.1"
   },
