@@ -16,7 +16,7 @@
     "svgo": "^2.1.0",
     "svgstore": "^3.0.0-2",
     "ttf2woff": "^3.0.0",
-    "ttf2woff2": "^4.0.1",
+    "ttf2woff2": "^5.0.0",
     "yargs": "^17.0.1"
   },
   "description": "Spices up your UI with some icons",
